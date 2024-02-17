@@ -1,0 +1,8 @@
+Flask
+dlib
+opencv-python
+Pillow
+# base64
+numpy
+flask-cors
+requests
