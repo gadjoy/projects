@@ -57,6 +57,7 @@ export default {
       if (!this.imageUrl) return;
 
       try {
+        
         const imageData = this.imageUrl.split(',')[1]; // Get base64 data (exclude header)
         const response = await axios.post(`${this.apiBaseUrl}/process`, { image: imageData });
 
@@ -65,7 +66,7 @@ export default {
         } else {
           console.error("Unexpected status code from /process:", response.status);
         }
-
+        console.log("Waiting for processed image...");
         this.isLoading = true;
         const getResponse = await axios.get(`${this.apiBaseUrl}/processed`);
 
