@@ -1,0 +1,721 @@
+id,title,seo_url,submitdate,budget_minimum,budget_maximum,currency_code,currency_exchange_rate,bid_stats_bid_count,bid_stats_bid_avg,budget_maximum_usd,budget_minimum_usd,description
+37866322,Instagram User Profiles Scraper,python/Instagram-User-Profiles-Scraper,2024-03-11 17:21:37,10.0,30.0,USD,1.0,9,28.0,30.0,10.0,"I'm seeking a skilled developer, proficient in Python, to carry out a specific scraping assignment on Instagram. 
+KEY TASKS:
+* Develop a Python-based scraper to extract followers count from Instagram user profiles
+* This requirement is for a one-time scrape execution, not for continuous or daily updating.
+  
+REQUIRED SKILLS AND EXPERIENCE:
+* Experience in Python programming
+* Proven track record with web scraping, particularly on social media platforms like Instagram
+* Knowledge of Instagram's data privacy regulations to ensure compliance
+* Ability to deliver accurate, clean, and usable data"
+37866248,Python and ChatGPT Tutoring Needed,python/Python-ChatGPT-Tutoring-Needed,2024-03-11 16:58:12,15.0,25.0,USD,1.0,41,22.390243902439025,25.0,15.0,"As a beginner, I'm seeking a mentor who can effectively guide me through the exciting journey of learning Python and its integrations with ChatGPT. My unique learning style involves ""learning by doing"" – I like to first attempt a task, and then need help to understand and rectify the issues if I make any mistakes.
+
+What I hope to achieve:
+
+1. Online Tutorial Guidance: Help me comprehend and learn from online tutorials. You should be able to guide me through any issues I face and help me understand where I went wrong.
+
+2. Video Lectures: Provide me with video lectures that can supplement my learning, leading to a deeper understanding of the topic.
+
+3. Interactive Exercises: Create interactive exercises to help me learn and reinforce Python concepts.
+
+4. Topic Selection: Since I'm not sure which Python topics I want to specialize in, I'd love some assistance in figuring that out. We can discuss whether my interests lie in Data Structures, Object-Oriented Programming, or Web Development.
+
+You should ideally have advanced knowledge of Python, ChatGPT integrations, significant experience in teaching, and a knack for simplifying complex concepts."
+37866216,AI Engineer for Natural Language Processing,python/Engineer-for-Natural-Language-Processing,2024-03-11 16:45:52,25.0,50.0,USD,1.0,31,37.05,50.0,25.0,"I am looking for an AI Engineer with command over Python, TensorFlow, and PyTorch. The main objective of this project is to implement natural language processing algorithms. The tasks would be:
+
+- Developing machine learning algorithms.
+- Implementing deep learning models.
+- Building Convolutional Neural Networks (CNNs).
+
+Proficiency in these areas is a must, as you'd be using these skills to work on a complex algorithm targeting text and language processing. Experience with a similar project would be beneficial. Your primary responsibility will be to create a project that efficiently uses these algorithms to automate a range of language-related tasks."
+37866209,Full-Stack Developer for E-Commerce Site,php/Full-Stack-Developer-for-Commerce-37866209,2024-03-11 16:42:24,250.0,750.0,EUR,1.09276,92,476.0869565217391,819.5699999999999,273.19,"I require a highly skilled full-stack developer to build an e-commerce website. 
+
+Key Requirements:
+
+- Proficiency in JavaScript, Python and PHP – these languages are key to managing both front and backend developments.
+- Experience in developing distinctive, user-friendly e-commerce sites. 
+- Proven track record in all stages of website development - from conception to implementation. 
+
+The ideal candidate will have:
+
+- Extensive experience in the specified programming languages.
+- Prior e-commerce site construction.
+- Strong understanding of UI/UX best practices. 
+
+Only experienced full-stack developers need apply. This project demands a professional who can deliver high-quality work on a timetable. A portfolio of successful e-commerce sites will be a significant advantage. Make sure your bid reflects your experience and skills appropriate for this project."
+37866132,Python Email Filtering with Pfsense Setup,python/Python-Email-Filtering-with-Pfsense,2024-03-11 16:17:17,30.0,250.0,USD,1.0,22,159.0909090909091,250.0,30.0,"I require expert assistance to set up Pfsense in alignment with a Python program installed on my system. The principal objective is to execute content filtering for my Outlook emails. As such, I need to update the settings to either block or allow certain emails based on their contents or attachments.
+
+Key Tasks and Requirements:
+- Pfsense configuration for Python program integration
+- Email filtering setup for Outlook
+- Implementing measures to block/allow emails based on their contents or attachments
+
+The ideal candidate should have extensive experience with Python, Pfsense, and Outlook's email filtering options. Familiarity with implementing similar content filtering solutions will be highly favorable."
+37866054,Python Expert for Diverse Tech Project,python/Python-Expert-for-Diverse-Tech,2024-03-11 15:54:17,250.0,750.0,USD,1.0,44,461.30909090909086,750.0,250.0,"I'm seeking a seasoned Python developer with a versatile skill set. A wide range of technological competencies will be essential for this project, including but not limited to:
+
+- Web development
+- Data analysis
+- Machine learning
+
+The ideal candidate should also be an expert in the following frameworks and libraries:
+
+- Django
+- Pandas
+
+If you're a senior developer with a strong grasp of these technical requirements, I would love for you to bid on the project. Please provide proof of your experience and competencies in your proposal."
+37866023,Typescript to intyeract with Telethon and Telegram Bot - Crypto Project,typescript/Typescript-intyeract-with-Telethon,2024-03-11 15:41:41,30.0,250.0,USD,1.0,2,114.5,250.0,30.0,"Preferably coded in Typescript for faster transaction, but will also consider Python
+
+I need you to get data from a website from an URL string every second, I believe this can also be found in the public API.
+
+Once the data triggers and you find a new token - I need it to trigger a buy and sell using a telegram bot (I have this already), you could achieve this using the Telethon API, however, if you could make a custom script to do this via Typescript that would be excellent.
+
+I then need it to buy crypto token using the bot, look at price movement and once certain % is filled it needs to buy or sell the token (this feature exists in the telegram bot I am using already, but it needs to happen programmatically instead of me doing it manually).
+
+This programme will need to continue buy and sell simultaneously, 5-6 tokens at the same time, and continue to check the buy and sell profit trigger as well as look for any new tokens from the URL.
+
+If you think you can do it, please message me and I will send you full details with link."
+37866019,Python Script & Telegram API,python/Python-Script-Telegram-API,2024-03-11 15:41:41,8.0,10.0,EUR,1.09276,8,8.625,10.9276,8.74208,"Need an expert in Telegram's API and Python scripting for a fast task
+
+8$ budget"
+37865995,Customized Basic Calculator Development,website-design/Customized-Basic-Calculator-Development,2024-03-11 15:33:30,250.0,750.0,GBP,1.280893,94,448.01063829787233,960.66975,320.22325,"I am seeking a competent and inventive programmer to craft a unique basic calculator that uses both traditional numerical inputs and category-based inputs (i.e., Male vs. Female) to make calculations. 
+
+Key Requirements:
+
+- The calculator should handle addition, subtraction, multiplication, division, and percentage calculations seamlessly.
+- Must incorporate memory function, decimal point button, and clear button for user convenience. These are non-negotiable.
+- Must implement a unique feature to input and process calculations based not only on numbers but also categories (e.g., Male vs Female).
+
+Ideal Skills and Experience:
+
+- Proficiency in programming languages suitable for calculator development, like JavaScript, Python, or C++
+- Excellent understanding of user interface design principles for intuitive use
+- Experience with similar projects or calculator application development is highly valued
+
+The end product should be user-friendly and error-free, demonstrating both functionality and ingenuity. Please provide a portfolio of similar projects completed, if available."
+37865881,YouTube Transcript Extractor & Downloader,linux/YouTube-Transcript-Extractor-Downloader,2024-03-11 15:00:44,30.0,250.0,USD,1.0,8,180.625,250.0,30.0,"I need a proficient Python developer to design a script for me. This script should be capable of scanning a specific YouTube channel, downloading all videos from that channel, and then extracting the transcripts from each video. 
+
+Essential skills and experience for the job:
+
+• Proficiency in Python programming language
+• Familiarity with YouTube API
+• Experience in Video Downloading and Transcript Extraction
+
+The project needs to be completed as soon as possible. Speed without sacrificing quality is key.
+
+I want help from the freelancer to design the final project specifications. I have not created a project like this one before."
+37865865,Social Media Data Extraction Tool,web-scraping/Social-Media-Data-Extraction-Tool,2024-03-11 14:55:50,10.0,30.0,USD,1.0,6,21.5,30.0,10.0,"I'm seeking a competent developer to create a website scraper that can effectively extract data from various social media platforms for analysis. The primary data of interest are user profiles. 
+
+Key Responsibilities: 
+- Develop a website scraper that can extract user profiles from social media platforms 
+- Ensure the scraper can handle data from multiple sources at a time 
+
+Ideal Skills and Experience: 
+- Demonstrated expertise in web scraping 
+- Proficient in programming languages such as Python or Java 
+- Familiarity with social media APIs 
+- Experience in the field of data analysis 
+
+Please note, the success of this project will be judged on the quality and practicality of the data extracted."
+37865839,Python Appium Expert for Mobile Testing,python/Python-Appium-Expert-for-Mobile,2024-03-11 14:48:57,30.0,250.0,USD,1.0,15,158.0,250.0,30.0,"1. Hi, how's it going? I want to automate some of the tasks that I perform every day. For example, I want to automatically navigate to all my WhatsApp messages, and then fetch the new messages, and then summarize and reply. I know how to do automation using Selenium in Chrome Drive on laptop, but I was wondering if there is any other way to do that in mobile app. I read about this Appium, and I hope this works for that purpose.
+
+2. If you know exactly what I should do, please contact. If you don't know, or if you haven't done this, then please note that I can only pay when the work is complete. Thank you.
+
+3. If you read until here, please include 'I know how to do it' in front of your proposal. 
+
+4. In a Zoom chat with us, we expect you to show the work from scratch. It is very important for us, and please be ready to be asked for it. Usually, people who know how to do their stuff and simply start making it from scratch. You can use chatGPT if you want. That means you share your screen in Zoom, make a new repository, name your project, import libraries, and start building it from scratch. You can use chatGPT if you want.
+
+5. At the end of the contract, we expect to receive a screen recording of your work you explaining each part of you have done. It should be minimum 5 minutes explaining what is going on."
+37865739,JSON Creation & System Integration Specialist,python/JSON-Creation-System-Integration,2024-03-11 14:14:12,10.0,50.0,SGD,0.751634,12,36.02166666666667,37.5817,7.5163400000000005,"I'm in need of a skilled programmer and developer proficient in c programimng JavaScript and Python. Tasks include creating JSON files and integrating these into our existing systems. This proficient professional would essentially help us in:
+
+- Crafting custom-made JSON files
+- Seamlessly integrating these files with our current systems
+
+This role aims to create and integrate JSON files as configuration files for our project. It would be an added advantage if one has previous experience dealing with similar tasks. Demonstrated ability to successfully create and integrate JSON files will be highly valued. The ideal freelancer would offer innovative solutions and ideas on how these configuration files may improve or streamline our project."
+37865713,Python Code for Data Analysis,python/Python-Code-for-Data-Analysis-37865713,2024-03-11 14:07:34,100.0,400.0,INR,0.012084,15,278.6666666666667,4.8336,1.2084,"I'm in need of a skilled Python coder to create a script for data analysis. The project is urgent and delivery is expected ASAP. The data type to be analyzed isn't limited to the listed choices - it's an 'Other' type, which we can discuss further privately. The coder should possess excellent Python coding skills, in-depth understanding of data structures and algorithms, particularly those used in data analysis. Knowledge of specific Python data analysis libraries like Pandas, Numpy would be an added advantage. Simplicity of the script and clear, well-commented code is crucial, as one of the requirements is to explain how the code works. Looking forward to a fruitful collaboration!"
+37865701,Plaid API Asset Keys Integration,python/Plaid-API-Asset-Keys-Integration,2024-03-11 14:04:58,250.0,750.0,USD,1.0,50,517.84,750.0,250.0,"I am seeking an experienced developer with the skills to implement our Plaid API asset keys. This implementation is aimed at accessing banking data in a web application environment. Though the language wasn't specified, proficiency in Python, Ruby, or JavaScript will be beneficial to interpret my needs effectively and deliver a solution. 
+
+Skills and Experience required:
+- Familiarity with Plaid API Asset keys 
+- Profound knowledge in at least one of the given programming languages; Python, Ruby or JavaScript
+- Proven experience working on web applications
+- Understanding of online banking data structures and protocols
+
+Responsibilities:
+- Implementing Plaid API asset keys for banking data access
+- Ensuring the seamless integration of the API to the web application
+- Ensuring privacy and security measures are in place after integration
+- Conducting testing to ensure full functionality after implementation
+
+Desired outcomes:
+- Successful integration of Plaid API asset keys that provides secure access to banking data on our web application efficiently."
+37865617,Implement GNNs with PyTorch,python/Implement-GNNs-with-PyTorch,2024-03-11 13:42:41,10.0,80.0,AUD,0.660722,7,62.142857142857146,52.85776,6.60722,"I’m seeking a Python expert with substantial experience in applying Graph Neural Networks (GNNs) using PyTorch. Though I've left the purpose open, please be prepared for potential tasks such as node classification, link prediction or graph level representation learning. 
+
+Key skills required:
+
+- Extensive understanding and practical experience in GNNs
+- Proficient with PyTorch
+- Ability to complete work as quickly as possible
+ 
+The target completion date for this project is ASAP. Looking forward to seeing your proposal."
+37865515,Python Code Explanation - Data Analysis,mathematics/Python-Code-Explanation-Data-Analysis,2024-03-11 13:11:09,250.0,750.0,AUD,0.660722,25,489.2,495.54150000000004,165.1805,"I require a professional with a solid understanding of Python, particularly at an intermediate level, to thoroughly explain an existing Python code to me. The code under scrutiny is primarily used for data analysis purposes, and so an expert in this area would undoubtedly be suitable for the task.
+
+Key Requirements:
+- Mastery in Python, especially in the field of data analysis (MATPLOT, SCIPY, NUMPY, Tkinter mainly).
+- Exceptional communication skills in order to successfully explain the code.
+- Ability to dissect complex Python codes into comprehensible sections and explain them.
+
+The ideal candidate should have a knack for making complex terminologies and codes easy to understand. Demonstrated previous experience in tutorials or as a Python instructor would certainly give added value to your bid."
+37865428,Python developer and Data Scientist for making  a Interview Scheduling System  -- 2,python/Python-developer-Data-Scientist-for,2024-03-11 12:38:02,10.0,30.0,USD,1.0,3,45.0,30.0,10.0,"I require a skilled data analyst with proficiency in Python, tasked with creating an interview scheduling system for bus lane interviews. The scope of the job includes:
+
+- Data cleaning and preprocessing of the information involved in the project.
+- Analysis of relevant data using python
+- Integrating interviewer details, interview time-slots, and each corresponding bus lane location into the scheduling system.
+
+The ideal candidate should have thorough experience in Python-based data analysis, and is able to construct intuitive organizational systems. A background in scheduling and data organization is an advantage. Please, only apply if you can demonstrate similar past projects or pertinent skills.
+
+You have to make a program which will give output as shown in sample sheet, the output should follow all of the constraints
+This project has many sheets and should be done asap , please read the given sheets and then send proposal if you can do it"
+37865305,Monday.com App or API Development,monday-com/Monday-com-App-API-Development,2024-03-11 11:57:24,30.0,250.0,EUR,1.09276,50,170.88,273.19,32.7828,"We are looking for someone to help us implement some features for Monday.com. On monday it is possible to add functionality either by connecting to their API or by creating an app in javascript to integrate to Monday using their SDK. We would only need one of the two methods, in case a backend is created that communicates via API we would like to use python.
+
+On Monday we are currently creating boards that we call masters in which we enter all the data. We want that when an item is created in this board it will also be created in an other daughter boards. What we have been able to do with what monday gives us is an automation that when an item is created in the master board it is also created in the daughter boards. In addition, the data in the daughter boards are linked to the master one via mirror type columns, so that we have the updated data in all the boards. However, there are some features missing in this connection.
+
+The functions we need are:
+- automatically create subitems in a daughter board. This functionality exists for items but is not available for subitems
+- create mirror columns to subitems. Currently it is only possible to link mirror columns to items and not to subitems, we need this so that we can update subitems from one place so that they are synchronized. In case it is not possible to change the column type we can use a support board for this function, where we create all the items that will become subitems in the master board, so we can link them with the mirror column.
+- Move the created item into a group. At the moment when an item is automatically created in the child board it is placed in the first group of the board, we would like it instead to be placed in a group with the same name as the status assigned to it
+
+
+Requirements
+- Punctuality in delivery
+- Good communication
+- Participation in the project by proposing solutions or new ideas
+
+
+Main Technical Requirements
+- knowledge of Monday.com
+- React (if only app)
+- Python (if only backend)"
+37865183,Niagara Framework Application Developer,javascript/Niagara-Framework-Application-Developer,2024-03-11 11:28:36,750.0,1250.0,INR,0.012084,6,975.0,15.104999999999999,9.062999999999999,"I'm in need of an expert in the Niagara Framework. The task here is to create a brand new application, one that needs your competency in Java, Python, and JavaScript, as well as your proficiency and practical knowledge of Niagara. Your previous experience developing with Niagara Framework will be a key highlight. In summary:
+
+
+- You must have familiarity with Java, Python, and JavaScript
+
+- Prior work with the Niagara Framework is necessary
+
+- The task is to create a new application from scratch. 
+
+Your creativity, understanding of user experience, and technical expertise will be the driving force behind this project. Let's build something extraordinary together."
+37865134,Python Script for Advanced HTML Parsing,aws-lambda/Python-Script-for-Advanced-HTML,2024-03-11 11:08:41,15.0,25.0,USD,1.0,62,20.120967741935484,25.0,15.0,"I am looking for an experienced Python developer with knowledge in DevOps, S3, SQL and AWS Lambda. The main task will be developing a script for parsing HTML and perform the following tasks:
+
+- Extract specific data points such as text contents, meta tags, and hyperlinks
+- Clean and format the extracted data
+- Store the cleaned and formatted data in a database
+
+Prior experience in dealing with HTML parsing using Python is a must. Also, knowledge of SQL for database management and AWS Lambda for automating the parsing process would be highly beneficial.
+
+Thanks!"
+37865058,Comprehensive Email Scraping Service,python/Comprehensive-Email-Scraping-Service,2024-03-11 10:47:09,10.0,20.0,GBP,1.280893,4,15.75,25.61786,12.80893,"I am looking to develop a versatile tool capable of scraping both personal and business email addresses. The ideal freelancer for this project would understand how to scrap not only from social networking sites but also online directories. It won’t be a simple collecting job, as the tool should be able to apply specific industry-based filter options to the scraped email addresses. Key skills needed for this project consist of web scraping, data mining, Python, and understanding of various web platforms' structures. Familiarity with different sectors and industry types would be a plus. Make sure you are aware of privacy regulations for such task."
+37865042,Python developer and Data Scientist for making  a Interview Scheduling System ,python/Data-Analyst-For-Interview-Scheduling,2024-03-11 10:42:07,600.0,1500.0,INR,0.012084,3,1218.3333333333333,18.125999999999998,7.2504,"I require a skilled data analyst with proficiency in Python, tasked with creating an interview scheduling system for bus lane interviews. The scope of the job includes:
+
+- Data cleaning and preprocessing of the information involved in the project.
+- Analysis of relevant data using python
+- Integrating interviewer details, interview time-slots, and each corresponding bus lane location into the scheduling system.
+
+The ideal candidate should have thorough experience in Python-based data analysis, and is able to construct intuitive organizational systems. A background in scheduling and data organization is an advantage. Please, only apply if you can demonstrate similar past projects or pertinent skills.
+
+You have to make a program which will give output as shown in sample sheet, the output should follow all of the constraints
+This project has many sheets and should be done asap , please read the given sheets and then send proposal if you can do it"
+37865039,Profitable AI-Powered Fully Automated Trading and Arbitrage Bot with minimal manual intervention,python/Profitable-Powered-Fully-Automated,2024-03-11 10:41:36,750.0,1500.0,USD,1.0,14,2047.142857142857,1500.0,750.0,"I'm seeking a highly skilled developer to create an AI-powered automated trading and arbitrage bot that operates across all major centralized exchanges (CEXs) and decentralized exchanges (DEXs), with a focus on Binance, Coinbase, and all other CEXs. My goal is to implement this tool with minimal ongoing input from my side, leveraging AI to make informed trading decisions based on market data and trends. Since I do not have specific trading strategies in mind yet, I am open to, and in need of, expert suggestions to maximize profits through effective and efficient trading tactics.
+
+**Some Key Requirements (not fully detailled):**
+- Strong programming skills, particularly in languages such as Python, Java, C#, especially in writing efficient, clean, and maintainable code.
+- Integration with all major CEXs and DEXs (specifically Binance, etc.)
+- AI-driven trade decision-making
+- Minimal manual intervention needed; high level of automation
+- Development and integration of profitable trading strategies
+- Financial Analysis: Ability to implement trading strategies that require comprehensive financial analysis and adaptability to the highly volatile crypto market.
+Experience in artificial intelligence and machine learning to enable the bot to make intelligent trading decisions based on market analysis and trend predictions.
+- User-friendly interface for occasional strategy adjustments or reviews
+
+**Some Ideal Skills and Experience (not fully detailled):**
+- Proficiency in AI/ML for trading bots
+- Strong understanding of cryptocurrency markets and arbitrage opportunities
+- Experience with API integration for various cryptocurrency exchanges
+- Knowledge in developing and testing trading strategies
+- Ability to create a user-friendly interface for non-technical users
+- Experience in spot and futures trading.
+- Creation of a detailed control panel displaying analytical data.
+- Data analysis and big data processing skills.
+
+**Some Objectives (not fully detailled):**
+- Maximize profit through effective arbitrage across multiple platforms
+- Ensure the bot is adaptable to changing market conditions and can update strategies accordingly with minimal user input
+- Develop a secure, reliable, and efficient bot that requires minimal maintenance
+- Verification of the bot's successful operation on demo and real accounts.
+
+I am looking forward to working with someone who is enthusiastic about creating cutting-edge trading technologies. Your expertise in AI, cryptocurrency, and trading bot development will be crucial to the success of this project. I will share with you all my expectations. Feel free to contact me. Thank you."
+37864940,Python Programming Project for MCS Students,c-programming/Python-Programming-Project-for-MCS,2024-03-11 10:28:26,750.0,1250.0,INR,0.012084,19,1015.7963157894735,15.104999999999999,9.062999999999999,"As a MCS student, I'm looking for a proficient and experienced Python programmer to help me complete a Computer Science project. 
+
+- You should be well versed with the fundamentals and advanced concepts of Python language.
+- The project primarily focuses on problem-solving and coding solutions.
+- Having a Computer Science background will be beneficial in better understanding and execution of the project.
+- This will not just be a programming project, but a learning experience to promote skills and knowledge.
+  
+Previous experience in academic projects in Python is an added advantage."
+37864870,Python-Based Minimum Spanning Tree in Stress Testing in Risk Management,python/Python-Based-Minimum-Spanning-Tree,2024-03-11 09:58:56,600.0,15000.0,INR,0.012084,12,8631.583333333334,181.26,7.2504,"As an active member of the risk management sector, I am in need of a dedicated individual who can efficiently implement a minimum spanning tree algorithm in Python for stress testing. This project has a direct correlation with financial data, where scenario analysis is a critical requirement. 
+
+Key tasks:
+
+- Development of a robust Python-based solution for testing financial stress
+- Implementation of scenario analysis using minimum spanning tree algorithms 
+
+Ideal Candidate:
+
+- Strong programming skills in Python 
+- Experience with algorithms, specifically minimum spanning tree
+- Exceptional understanding of financial data processing 
+- Knowledge in risk management and stress testing methodologies, specifically scenario analysis 
+
+In conclusion, I am hoping to collaborate with a seasoned Python developer with rich experience in computational algorithms and a solid understanding of the risk management domain, to effectively implement this system. A knack for financial data analysis would also favor your bid."
+37864855,PowerBI Interface for Manual Numerical/text Data Entry,excel/PowerBI-Interface-for-Manual-Numerical,2024-03-11 09:53:56,1500.0,12500.0,INR,0.012084,9,6796.666666666667,151.04999999999998,18.125999999999998,"I'm seeking a professional who can script a user-friendly interface in PowerBI for my team to manually enter numerical data/ text directly without the need for excel. The main task will be to design and implement a data entry system suitable for a non-technical team. Key responsibilities include:
+
+- Setting up this custom data entry system within PowerBI
+- Ensuring the system allows for manual input of numerical data which is then stored in sharepoint excel
+- Verifying the accuracy and consistency of the data entered
+
+The ideal candidate for this project will have:
+
+- Significant experience with PowerBI, Python, and data visualization
+- Understanding of data management and integrity checks
+- Proven track record of creating custom data entry forms in PowerBI 
+
+Expertise in an environment where non-technical personnel handle data will be highly regarded. The end goal is to have a system where my team can input costs directly into PowerBI, thus increasing efficiency and data consistency for our business operations."
+37864773,Python-Based User Data Organization System,python/Python-Based-User-Data-Organization,2024-03-11 09:31:50,8.0,30.0,EUR,1.09276,17,28.58823529411765,32.7828,8.74208,"I'm in need of a proficient Python developer, ideally with mid-level experience, to conceive, develop, and implement an efficient, reliable database system. The primary purpose of this system will be to store and organize user data effectively. 
+
+I would like create a ddbb of clients (personal info), contracts (length, contract code, price) and payments (monthly, extra, punctual, deductions, etc). Payment would be calculated through fixed info and through input info.
+I would need to feed this ddbb every week, and would need to have a clear control panel.
+
+Key responsibilities will include:
+- Designing and creating a scalable database architecture
+- Ensuring secure and reliable data storage
+- Crafting logical and physical data models 
+
+The ideal freelancer for this project should have:
+- Strong skills in Python programming
+- Proficiency in Database Management
+- Experience in managing and organizing user data
+- Understanding of Data Security and Protection
+- Good problem-solving skills and attention to detail. 
+
+This is a great opportunity to showcase your Python and data organization skills and make a direct impact on our operations. I look forward to collaborating with you on this important project."
+37864756,[One Time Project] Golang Migration for Python Project,python/One-Time-Project-Golang-Migration,2024-03-11 09:28:33,250.0,750.0,SGD,0.751634,27,561.3703703703703,563.7255,187.9085,"As an up-and-coming business, we're on the lookout for a proficient Golang engineer with experience in migrating Python Django projects. The task at hand is simple yet crucial to our operations. 
+
+Key Responsibilities:
+- Understand python language, strong skills in Golang 
+- Understand mime protocol
+- Migrate Existing Django+Celery project into Golang language
+
+Project Specifics:
+The project is small and relatively uncomplicated, primarily involving the transformation of our current Python project to Golang. 
+
+Feature Retention:
+Hosting webServer to provide Http Json APIs for user to fetch, send, reply, forward, search Email (Including attachments)
+
+Please reach out to me with your sample Golang code.
+
+Candidates with a similar project portfolio and a demonstrated understanding of user interface considerations will be highly favoured in the selection process."
+37864712,AI Python ,machine-learning/Python,2024-03-11 09:15:55,18.0,36.0,EUR,1.09276,66,26.406060606060606,39.33936,19.66968,"I am looking for a skilled developer with an expertise in AI, specifically in Machine Learning and Image Recognition for an Image Search project. 
+MUST MUST SHOW EXAMPLES OF WORK IN PYTHON - FIREBASE AND NODE JS. DO NOT PLEASE RESPOND IF YOU DO NOT HAVE ALL 3 SKILLS SETS AND CAN PROVE IT PLEASE. THANKS 
+
+Key Requirements:
+
+Hi we need skill sets in Node JS - Firebase and Python  to work on our team to complete our image generator - it is already working on our site an we need to intergrate it to our new site so most of our hard work has been done, now we need a Dev for one day's work under the supervision of our CTO. 
+
+If you have the skills and experience listed above, I look forward to seeing your bid."
+37864353,Troubleshoot AI generated code for apps,python/Troubleshoot-generated-code-for-apps,2024-03-11 07:35:26,1500.0,12500.0,INR,0.012084,7,8405.714285714286,151.04999999999998,18.125999999999998,"Looking for a blockchain and Python expect (or other languages) that will look at our prompts and code generated by ChatGPT and other AI, and fix errors to get usable apps and bots.
+
+With your bid please specify:
+1. How many apps using AI generated code (ChatGpt or other) have you created?
+2. Have your created UI code for it as well with AI?
+3. Please show at least 5 apps like this
+4. How long in average did it take you to create each?
+5. How long will it take for you to fix our AI generated prompts and codes for 50 apps?"
+37864349,MusicVibration code for iOS& Android app,python/MusicVibration-code-for-iOS-Android,2024-03-11 07:34:10,12500.0,37500.0,INR,0.012084,13,32510.76923076923,453.15,151.04999999999998,"We need is an app code for iOS and Android in FLUTTER and LAVAVEL for already existing app (android Google and iOS Apple) 
+
+The needed effect is to make the smartphone emitting music and music vibrations being generated from online downloaded music and mp3 music of the own library.The effect of the music vibration should be a haptic sensation by holding the phone in the palm, like putting hands on a speaker. 
+
+Pls. take in consideration that it is not the normal vibration like in timer but it has to be generated by the heard music (music vibration). 
+
+The user should be able to have his own library and history of his music.
+
+Send me a written message if you understand what I mean and how you intend to find a solution. 
+
+Knowledge of Flutter,Lavavel,Python
+
+Mac iOS device"
+37864228,"Python & C Programming, Typing Assistance",data-entry/Python-Programming-Typing-Assistance,2024-03-11 07:03:05,750.0,1250.0,INR,0.012084,36,949.6527777777778,15.104999999999999,9.062999999999999,"I am currently seeking a professional who can assist me with typing, Python programming, and C programming for academic assignments. These are entry-level tasks, so an understanding of basic programming concepts is crucial, but you won't have to dive too deep into complex coding issues. 
+
+Skills and Experience:
+- Proficiency in Python and C Programming
+- Efficient typing skills
+- Experience with academic projects
+
+Your role will include:
+1. Python and C programming:
+   - The ability to interpret academic project requirements.
+   - Programming solutions according to guidelines.
+
+2. Typing assistance:
+   - Efficient data entry and transcription for written academic materials."
+37864197,Python and Django Framework Specialist Needed,python/Python-Django-Framework-Specialist,2024-03-11 06:54:13,600.0,1500.0,INR,0.012084,12,2361.6666666666665,18.125999999999998,7.2504,"There is an Open Source Project . https://github.com/mandiant/flare-floss. There is an issue https://github.com/mandiant/flare-floss/issues/693 .
+I want a a person proficient in Python and Django to resolve the issue as fast as he can."
+37864139,"I need a Machine Learning and Python dev
+",python/need-Machine-Learning-Python-dev,2024-03-11 06:36:27,1500.0,12500.0,INR,0.012084,19,6793.421052631579,151.04999999999998,18.125999999999998,"I need a skilled machine learning and python developer.
+
+I will give my details via chat more detail.
+
+Thanks"
+37864083,Python Expert for Face Recognition Project,python/Python-Expert-for-Face-Recognition-37864083,2024-03-11 06:20:41,1500.0,12500.0,INR,0.012084,19,7552.631578947368,151.04999999999998,18.125999999999998,"As part of my M.Tech project, I require a skilled Python developer proficient in image processing and object detection specifically. Your primary focus will be on face recognition in images. 
+- Ideally, you'll possess experience in Machine Learning, Data Analysis, and Web Development.
+- Your task will be concentrated on coding for face detection in images.
+A robust knowledge of image segmentation will be beneficial. With your help, I'm aiming at accomplishing a successful image processing project."
+37864010,Versatile Software Developer Needed,cplusplus-programming/Versatile-Software-Developer-Needed,2024-03-11 05:51:23,10.0,30.0,USD,1.0,7,22.142857142857142,30.0,10.0,"I'm in search of a proficient and adaptable software developer who can handle a variety of programming languages. Even though I've skipped those details, your ability to work with Java, Python, C# or others will be an asset.
+
+Key Responsibilities:
+- Develop and implement new software programs
+- Maintaining and improving the performance of existing software
+
+Skills & Experience:
+- Demonstrated experience with a wide range of programming languages
+- High degree of independent judgment 
+- Able to solve complex problems
+
+Application:
+Kindly provide a detailed project proposal showcasing your comprehensive understanding of diverse programming languages. An understanding of the project's reach and the potential challenges that might come up would be greatly appreciated. This project could range from a CRM Software to Accounting or MIS- your versatility will be your strength. Your bid should demonstrate your wide skill set and provide confidence in your ability to tackle this undetermined project."
+37863993,eCommerce Site Frontend Development,html/eCommerce-Site-Frontend-Development,2024-03-11 05:47:21,1500.0,12500.0,INR,0.012084,58,9934.0,151.04999999999998,18.125999999999998,"I am in need of an adept frontend developer specializing in HTML/CSS to undertake the creation of the frontend for my e-commerce site. Key objectives include, but are not limited to:
+
+- Developing an appealing visual layout
+- Ensuring user-friendly interface for customers
+- Integrating comprehensive shopping cart functionality
+
+Ideal candidate should have profound HTML/CSS knowledge alongside good understanding of eCommerce website best practices. Proficiency with JavaScript or Python will be a bonus. A proven track record of similar projects is required. Be prepared to show portfolio pieces that demonstrate your aptitude in these areas. The design should be modern and sharp, with a seamless shopping cart integration. Your attention to detail and ability to align with my vision will drive the success of this project."
+37863629,Advanced Flet & FastAPI Python Tutorial -VIDEO,python/Advanced-Flet-FastAPI-Python-Tutorial,2024-03-11 03:17:16,30.0,250.0,USD,1.0,35,171.85714285714286,250.0,30.0,"I'm looking for a Python pro to create an insightful, in-depth, and highly engaging video tutorial. This should focus exclusively on the Python-based Flet and FastApi libraries with Postgresql. A simple noteapp with the right folder structure...
+
+Key Requirements:
+I would like to understand how to use both technologies with a simple Note Api (restful api) where you can create a note, edit it and erase it and create also a simple registration and login.. My goal is :
+1. to learn how to set up the right project structure for big applications that can scale up..(MVC pattern)
+2. how to properly create endpoints and connect backend with frontend
+
+FRONTEND:
+note_api_project/
+│
+├── api/
+│   ├── __init__.py
+│   ├── routes.py          # API routes for handling notes
+│   └── views.py           # Views for handling the logic of each route
+│
+├── models/
+│   ├── __init__.py
+│   └── note_model.py      # Data model for the note
+│
+├── services/
+│   ├── __init__.py
+│   └── note_service.py    # Business logic to interact with note data
+│
+├── utils/
+│   ├── __init__.py
+│   └── database.py        # Database connection and utilities
+│
+├── app.py                 # Main application entry point
+│
+└── requirements.txt  
+
+----
+BACKEND -> FASTAPI
+noteapp/
+│
+├── backend/               # All backend related files
+│   ├── db/                # Database models and session management
+│   │   ├── database.py    # Database connection and session management
+│   │   └── models.py      # SQLAlchemy models for Users and Notes
+│   │
+│   ├── schemas/           # Pydantic schemas for data validation and serialization
+│   │   ├── note.py        # Schemas for Notes
+│   │   └── user.py        # Schemas for User operations
+│   │
+│   ├── auth/              # Authentication mechanisms (JWT, OAuth, etc.)
+│   │   └── auth_handler.py# Authentication utility functions
+│   │
+│   ├── routes/            # API routes for the application
+│   │   ├── note.py        # Routes for note-related operations
+│   │   └── user.py        # Routes for user-related operations
+│   │
+│   └── main.py            # FastAPI app instance, CORS, middleware, route inclusion
+│
+├── frontend/              # Flet frontend application
+│   └── main.py            # Main file for Flet application logic and UI
+│
+├── requirements.txt       # Project dependencies
+│
+└── README.md              # Project documentation"
+37863605,Python Trading Bot for Solana Blockchain,python/Python-Trading-Bot-for-Solana-37863605,2024-03-11 03:07:43,250.0,750.0,USD,1.0,22,539.6363636363636,750.0,250.0,"For this project I require:
+
+* The expertise of an experienced Python developer with a comprehensive understanding of blockchain technology.
+
+* Development of a Python-based trading bot for the Solana blockchain platform. This bot should be capable of autonomous trading and have risk management features integrated.
+
+* The bot needs to implement Quantitative strategies algorithms and be automated, lending to your experience with these or similar algorithms would be highly advantageous.
+
+* A deep understanding of trading strategies is essential for this position. The trading strategy and its metabolism should be in direct interaction with the blockchain, not through exchanges like Coinbase Pro or Kraken.
+
+* An additional requirement is an understanding of integrating the developed product in an environment that is primarily dealing with the Solana blockchain platform.
+
+*  * Anti-Rug features, Rug Protection to prevent dev liquidity pulls and if contract is a Rug then bot can detect before liquidity is pulled by devs and frontrun sell and exit position before rug is executed 
+
+* Anti-bot Protection (Block delay, comprehensive contract open trading unlocks).
+
+*  Liquidity detection: The bot is able to detect when the liquidity pool is created and be able to snipe trades immediately within seconds on the same block if possible. This will be the main function.
+
+* Should scan contracts and filter out parameters in regards to rugs/scams like honeypots, if contract is freezable, liquidity not locked, has airdrops, mintable, liquidity exploits, dev exploits,  etc. and filter those out and automatically trigger good contracts and as soon as liquidity is added on those good contracts triggered then it should buy/snipe tokens immediately dealing directly with blockchain to ensure we are one of the first to snipe once liquidity is added. Need to be able to buy in whatever denomination i set that is editable by me at any point or it can trade based on wallet size. 
+
+*  Filtering or AI processing is extremely important since 90% of newly launched tokens are scams so this function must be top tier.
+
+*  Customized priority fee:
+You can customize the priority fee in order to get transactions confirmed faster.
+
+*  Telegram scrapping:
+The bot can automatically pick the Token address from DMs and channels/groups both public or private. It also supports links.
+
+*  WSOL Sniping:
+Snipe using WSOL instead of normal SOL to accelerate your snipes. Wrap and unwrap WSOL from the same interface.
+
+*  Take profit / Stop loss / Trailing / Timers:
+Automate the selling based on multiple strategies which i can customize and select at any given time. Will need to also be able to execute via keyboard or phone  to force sell or change settings 
+
+*  Latency checks:
+Test the latency of any node with a simple ping test.
+
+*  Text filters:
+When scrapping a telegram group define text filters to choose which tokens to snipe.
+
+*  Sniping:
+Ability to snipe any token as soon as liquidity is added. Be the first to buy any coin.
+Supported pools should be Raydium AMM, Jupiter, ORCA, Raydium CLMM, Flux.
+
+*  Should be computer and mobile friendly so that I may use on my computer or Mobile device.
+
+*  Be able to Maximize profits by exploiting positive arbitrage opportunities. Also the ability to frontrun and execute sandwiching attacks if need be. 
+
+*  MEV Protection: 
+Ability to send transactions privately and avoid getting frontrun
+
+*  Also need ability to completely control access to the bot. So if I wish to give access to someone else for testing i can control timeframe they have access via license keys that can be auto generated and expire after any timeframe that I set. Either they can link their personal Solana wallet or have a feature where wallet can be generated. 
+
+It would help the progress of this project immensely if you are already familiar with the underlying technology of the Solana Blockchain, and python-based trading bots. This might be a challenging project, but it's an exciting one that could potentially redefine trading strategies in the blockchain space."
+37863563,Full-Stack Developer (Filipinos Only),mobile-app-development/Full-Stack-Developer-Filipinos-Only,2024-03-11 02:41:24,8.0,15.0,USD,1.0,26,13.173076923076923,15.0,8.0,"We are looking for a full stack developer who can design, develop, and maintain mobile applications using the latest technologies and best practices. You will be responsible for the entire development lifecycle, from planning and architecture to testing and deployment. You will work closely with the team to deliver high-quality products that meet the client's requirements and expectations.
+In this role, you'll:
+•	Design, develop, test, deploy, and maintain high-quality mobile applications for both iOS and Android platforms 
+•	Develop robust and scalable web applications with a focus on clean, maintainable code
+•	Collaborate with the team to translate ideas into user-friendly and functional applications
+•	Ensure high performance and responsiveness to requests from the front-end
+•	Identify and correct bottlenecks and fix bugs
+•	Maintain code quality, organisation, and automatisation
+•	Stay up-to-date with the latest trends and technologies in the mobile and web development landscape
+To be successful, you'll have:
+Experience/Knowledge
+•	A solid experience in both mobile and full-stack web development
+•	A strong understanding of the full development lifecycle (design, development, testing, deployment, maintenance)
+•	Excellent problem-solving and analytical skills
+•	Proven ability to work independently and as part of a collaborative team
+Technical Skills
+Front-End Development:
+•	Proficiency in HTML, CSS, and JavaScript.
+•	Experience with a front-end framework like React or Angular (a plus).
+Back-End Development:
+•	Knowledge of back-end languages like Python, Java, or C#.
+•	Familiarity with web APIs and integration.
+Mobile App Development:
+•	Proficiency in mobile development frameworks like React Native or Flutter
+•	Experience with mobile development tools and IDEs (Xcode, Android Studio)
+Cloud Platforms:
+•	Familiarity with cloud platforms (AWS, Google Cloud Platform)
+Additional Skills:
+•	Basic understanding of web servers
+•	Testing methodologies and tools (unit testing, integration testing).
+•	Familiarity with UI/UX design principles (a plus).
+
+Ready to join and help us build something amazing? We look forward to hearing from you!"
+37863505,Advanced Legal Documents Web Scraping,web-scraping/Advanced-Legal-Documents-Web-Scraping,2024-03-11 02:13:06,30.0,250.0,USD,1.0,44,166.70454545454547,250.0,30.0,"Bid on some or all. Dm message me for any questions
+
+For the purpose of in-depth analysis, I require a skilled data acquisition specialist to develop a script for web scraping legal documents. Key data points of interest include:
+- Case title
+- Document date 
+- Details of the lawsuit
+- Analysis for legal issues 
+- Case citations
+
+Adherence to ethical guidelines and laws is necessary, thus a strong understanding of legal operation is essential. The script needs to ensure efficient data retrieval and storage. 
+
+A high standard for accuracy and reliability will be expected in the delivered work. Candidates with hands-on experience using Beautiful Soup, Scrapy, or similar web scraping tools will find this relevant. Sufficient knowledge in legal documentation and practice is also an added advantage.
+
+I have these other tasks that can be combined or individually parsed out. 
+
+Project Workload Breakdown
+
+	1.	Data Collection and Preparation
+	•	Task: Web Scraping and Data Acquisition
+	•	Task: PDF Text Extraction and Data Cleaning
+	2.	AI Model Development
+	•	Task: NLP Model Fine-Tuning for Legal Text
+	•	Task: User Interaction and Feedback Loop Implementation
+	3.	System Integration and Testing
+	•	Task: Front-End Development for User Interface
+	•	Task: Backend System and API Integration
+	•	Task: System Testing and Quality Assurance
+	4.	Legal and Ethical Compliance
+	•	Task: Legal Review for Compliance and Ethics
+	•	Task: Data Privacy and Security Measures Implementation
+
+Task Descriptions and Job Postings
+
+1. Web Scraping and Data Acquisition Specialist
+
+Description: Develop a script to scrape legal documents from specified websites, adhering to legal and ethical guidelines. The specialist will ensure efficient data retrieval and storage for further processing.
+
+Posting:
+
+	•	Experience with web scraping tools (e.g., Beautiful Soup, Scrapy).
+	•	Familiarity with legal and ethical aspects of web scraping.
+	•	Ability to work with large datasets and manage data storage solutions.
+
+2. PDF Text Extraction and Data Cleaning Expert
+
+Description: Extract text from PDFs of legal documents and clean the data for AI processing. This involves removing irrelevant elements and ensuring the data is in a usable format.
+
+Posting:
+
+	•	Proficiency in Python and PDF manipulation libraries.
+	•	Experience in data cleaning and preprocessing.
+	•	Understanding of legal document formats and structures.
+
+3. NLP Model Fine-Tuning Specialist (Legal Text)
+
+Description: Fine-tune an existing NLP model to understand and analyze legal text based on the collected data, incorporating user feedback for iterative improvement.
+
+Posting:
+
+	•	Strong background in NLP and machine learning.
+	•	Experience with transformer models and fine-tuning techniques.
+	•	Knowledge of legal terminology and document analysis.
+
+4. Front-End Developer
+
+Description: Develop a user-friendly web interface that allows users to upload documents, receive AI-generated insights, and interact with the system for detailed analysis.
+
+Posting:
+
+	•	Expertise in front-end technologies (e.g., React, Vue.js).
+	•	Experience in designing intuitive UI/UX for complex systems.
+	•	Ability to integrate front-end with backend APIs.
+
+5. Backend Developer and API Integration Specialist
+
+Description: Build the backend infrastructure to support AI processing, manage user interactions, and integrate external APIs for enhanced functionality.
+
+Posting:
+
+	•	Proficiency in backend development languages (e.g., Python, Node.js).
+	•	Experience with API development and integration.
+	•	Knowledge of cloud services and database management.
+
+6. Legal Consultant for Compliance and Ethics
+
+Description: Review the project’s legal and ethical framework, ensuring compliance with data protection laws, copyright regulations, and ethical AI use.
+
+Posting:
+
+	•	Qualified legal professional with experience in tech law.
+	•	Understanding of data privacy laws and AI ethics.
+	•	Ability to provide actionable legal advice for project development."
+37863503,Game design,game-design/Game-design-37863503,2024-03-11 02:10:21,30.0,250.0,CAD,0.741583,26,173.42307692307693,185.39575,22.24749,"I'm in search of a dedicated professional who can deliver an interactive technology solution with an emphasis on user interface design.
+
+Key responsibilities:
+-coding Java python 
+- Design and implement a responsive and intuitive touch screen interface.
+- Incorporate gesture recognition capabilities, enhancing user-friendly interaction.
+- Include voice command support for a seamless user experience.
+
+Ideal candidate:
+- Must have substantial experience in user interface design.
+- A background in creating interactive technology solutions is preferred.
+- A portfolio showcasing similar projects would be impressive, but isn’t compulsory.
+
+Please note that past experience is critical, and it will be a major determining factor in the selection process. Let's create an innovative, interactive technology experience together."
+37863451,Customizable Accounting Automation - Offline/Online,accounting/Customizable-Accounting-Automation,2024-03-11 01:42:38,250.0,750.0,USD,1.0,23,412.4782608695652,750.0,250.0,"I'm looking for a skilled developer to build an offline automation system catering to account processing tasks: 
+
+Key Tasks:
+- Data entry
+- Calculation of financial transactions
+- Report generation
+- MLM Plan Incorporation with recurring functions
+
+Aligned to eventually be accessible online, this system will be primarily used by one administrator. I operate in the consumer industry, so related experience and understanding is advantageous. Proficiency in VBA or Python programming is paramount. Accounting knowledge is also indispensable, as well as familiarity with Multi-level Marketing (MLM) schemes. 
+
+This project offers an opportunity to create something that could greatly enhance efficiency in consumer finance. Please bid keeping in mind the balance between quality and cost. Looking forward to your proposals."
+37863242,Urgent API Integration with Python with amazon lambda,python/Urgent-API-Integration-with-Python,2024-03-10 23:46:35,30.0,250.0,USD,1.0,35,186.4857142857143,250.0,30.0,"I need someone with experience in amazon lambda and able to make an integration in 24 hours..
+
+The workflow is the following:
+External app (a payment gateway) will send a webhook to a lambda function with a transaction data, and this transaction needs to be integrated with a CRM (I provide all the documentation of the API in the attached document)"
+37863134,Python flask development  -- 2,python/Python-flask-development-37863134,2024-03-10 23:06:55,30.0,250.0,USD,1.0,17,153.52941176470588,250.0,30.0,"We are seeking a talented Python Developer with expertise in Flask. The ideal candidate will have a strong background in backend development using Python and Flask framework, as well as experience with basic front-end technologies including HTML, CSS, and Javascript. Additionally, some minimal experience with the Postgres database is required.
+Requirements:
+•	Proficiency in Python programming language.
+•	Extensive experience with Flask framework.
+•	Strong understanding of basic front-end technologies including HTML, CSS, and Javascript.
+•	Minimal experience with Postgres database.
+•	Good understanding of software development best practices.
+•	Excellent problem-solving and communication skills.
+•	Ability to work independently and in a team environment.
+Requirements document is attached. Also, a demo of the current status of the app is attached."
+37863119,Python flask project  -- 2,python/Python-flask-project-37863119,2024-03-10 23:00:57,8.0,15.0,USD,1.0,9,13.488888888888889,15.0,8.0,"We are seeking a talented Python Developer with expertise in Flask. The ideal candidate will have a strong background in backend development using Python and Flask framework, as well as experience with basic front-end technologies including HTML, CSS, and Javascript. Additionally, some minimal experience with the Postgres database is required.
+Requirements:
+•	Proficiency in Python programming language.
+•	Extensive experience with Flask framework.
+•	Strong understanding of basic front-end technologies including HTML, CSS, and Javascript.
+•	Minimal experience with Postgres database.
+•	Good understanding of software development best practices.
+•	Excellent problem-solving and communication skills.
+•	Ability to work independently and in a team environment.
+Requirements document is attached. Also, a demo of the current status of the app is attached."
+37863085,Property Rental Management Web App,python/Property-Rental-Management-Web-App,2024-03-10 22:43:22,30.0,250.0,USD,1.0,42,193.21428571428572,250.0,30.0,"I wish to build a web app leveraging react and python, designed specifically for managing property rentals. Essential features include:
+
+- User registration and login capabilities
+- Property listing
+- Online payment system
+
+The app isn't anticipated to have a vast number of listings initially, so there is no requirement for a search function. Experience in both back-end and front-end development, particularly with React and Python, is crucial. Being familiar with secure online payment integration will be a great advantage. A strong portfolio with relevant projects will be highly considered."
+37863017,Python Main Program Logic Refinement,python/Python-Main-Program-Logic-Refinement,2024-03-10 22:03:02,30.0,250.0,USD,1.0,32,158.09375,250.0,30.0,"I am seeking an experienced Python developer to amend the logic within my main program code, specifically the user interaction portion. 
+
+Key Duties:
+- Assess the main program code to gain an understanding of its current structure and function
+- Identify areas in the user interaction logic that need refinement 
+- Implement the necessary logic modifications to improve the user's interaction with the program 
+
+Ideal Skills and Experience:
+- Strong expertise in Python
+- Extensive experience with user interaction logic
+- Proven ability to modify and refine code logic
+- Good understanding of data processing and error handling in Python
+- Solid problem-solving skills with attention to detail
+
+This project requires a professional who can adeptly navigate Python code and finesse user interactions for improved coherence and usability."
+37863002,Python flask project ,python/Python-flask-project-37863002,2024-03-10 21:52:32,30.0,250.0,USD,1.0,16,137.5,250.0,30.0,"We are seeking a talented Python Developer with expertise in Flask. The ideal candidate will have a strong background in backend development using Python and Flask framework, as well as experience with basic front-end technologies including HTML, CSS, and Javascript. Additionally, some minimal experience with the Postgres database is required.
+Requirements:
+•	Proficiency in Python programming language.
+•	Extensive experience with Flask framework.
+•	Strong understanding of basic front-end technologies including HTML, CSS, and Javascript.
+•	Minimal experience with Postgres database.
+•	Good understanding of software development best practices.
+•	Excellent problem-solving and communication skills.
+•	Ability to work independently and in a team environment.
+Requirements document is attached. Also, a demo of the current status of the app is attached."
