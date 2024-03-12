@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facial Landmark Detection</title>
+</head>
+<body>
+    <h1>Facial Landmark Detection</h1>
+    <form method="POST" action="/" enctype="multipart/form-data">
+        <input type="file" name="file">
+        <input type="submit" value="Detect Marks">
+    </form>
+
+    {% if img_base64 and img_landmarks_base64 %}
+        <div style="display: flex;">
+            <div style="flex-basis: 50%; text-align: center;">
+                <h2>Original Image without Landmarks</h2>
+                <img src="data:image/jpeg;base64,{{ img_base64 }}" alt="Original Image without Landmarks">
+            </div>
+            <div style="flex-basis: 50%; text-align: center;">
+                <h2>Original Image with Landmarks and Face Detection</h2>
+                <img src="data:image/jpeg;base64,{{ img_landmarks_base64 }}" alt="Original Image with Landmarks and Face Detection">
+            </div>
+        </div>
+    {% endif %}
+</body>
+</html>
