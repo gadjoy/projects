@@ -1,0 +1,149 @@
+,id,title,seo_url,submitdate,budget_minimum,budget_maximum,currency_code,currency_exchange_rate,bid_stats_bid_count,bid_stats_bid_avg,budget_maximum_usd,budget_minimum_usd,description,proposal
+0,37870363,Python Web Development for Company Profile,html/Python-Web-Development-for-Company,2024-03-12 16:02:48,250000.0,500000.0,INR,0.012078,0,,6039.0,3019.5,"Looking for an expert in Python programming for a web development project. The purpose is to create a compelling Company Profile website. 
+
+Key Details:
+- You should have solid experience in Python coding, specifically for web development.
+- The project involves creating a Company Profile website, programming it to deliver clear, navigable, and user-friendly interfaces.
+- Experience in working with similar business-focused websites is preferable, as it will ensure a better understanding of the requirements and goals of the project.
+
+Skills Needed:
+- Strong expertise in Python programming
+- Proven experience in web development using Python
+- Ability to create a functional, appealing Company Profile website
+- Excellent problem-solving skills with a high attention to detail
+- Prior experience in creating business-focused websites
+
+The right freelancer for this project should be ready to start as soon as possible. Please provide examples of your previous Python web development projects when bidding. Thanks!","**Project Summary:**
+
+We propose a Python-based web development solution for your Company Profile website, designed to elevate your online presence with a user-friendly, engaging experience.
+
+**Project Understanding:**
+
+Our meticulous analysis of your requirements has informed a comprehensive project description, ensuring alignment with your vision. We have proactively defined project scope and objectives to lay a solid foundation for success.
+
+**Solution Fit:**
+
+Our Python web development expertise translates into a website design that seamlessly fulfills your need for a clear, navigable platform. With a focus on user experience, we prioritize delivering an intuitive interface that showcases your company's story and capabilities.
+
+**Client-Centric Value:**
+
+Our project outline provides transparency and empowers you to actively shape the project's evolution. We welcome your feedback and invite collaborative refinement of project goals, ensuring that the final product aligns with your aspirations.
+
+**Invitation to Collaboration:**
+
+We are eager to schedule a meeting to discuss a formal development plan. Together, we can explore the specifics of our proposed solution and initiate the software development process. Our commitment to a proof of concept, including SRS, architecture, and UI wireframes, demonstrates our confidence in our abilities and our desire to prove our value before moving forward with the full development."
+1,37870316,Captcha Solver Development (Automatic),python/Cloud-based-Captcha-Solver-Development,2024-03-12 15:44:13,50.0,80.0,USD,1.0,6,70.83333333333333,80.0,50.0,"As the team lead for this project, I am looking for a proficient developer with experience in robust programming languages sush as Python, Java, or C++. Your main task will be creating a CloudFlare Turnstile captcha automatic solver.
+
+Thanks","**Project Proposal**
+
+**Project Title:** Captcha Solver Development (Automatic)
+
+**Project Summary:**
+
+Leveraging our deep understanding of your vision, we propose an innovative solution to enhance your business processes by automating CloudFlare Turnstile captcha solving. This will streamline your operations, improve efficiency, and maximize productivity.
+
+**Project Understanding:**
+
+Our comprehensive analysis of your requirements revealed a clear need for an automatic captcha solver. We have carefully crafted a project description that aligns perfectly with your objectives. Our commitment to rigorous planning ensures a well-defined project scope and a clear roadmap for success.
+
+**Solution Fit:**
+
+Our solution is meticulously designed to meet your specific requirements. We propose utilizing robust programming languages such as Python, Java, or C++ to ensure high performance and scalability. This technical foundation ensures a robust and efficient solution that will seamlessly integrate with your existing infrastructure.
+
+**Client-Centric Value:**
+
+Clarity is paramount for successful collaboration. Our project outline provides a transparent framework that empowers you to track progress and ensure that the project evolves in accordance with your vision. We welcome your feedback at every stage to refine project goals and ensure alignment with your strategic objectives.
+
+**Invitation to Collaboration:**
+
+We are eager to collaborate closely with your team to refine project goals and develop a formal development plan. Let's schedule a meeting to discuss our proposed approach further and explore how this solution can transform your business operations.
+
+**Call to Action:**
+
+To demonstrate our commitment to exceeding your expectations, we propose developing a comprehensive Proof of Concept that includes SRS, Architecture, Workflows, Message sequence charts, and UI wireframes. This tangible showcase of our capabilities will provide you with confidence in our ability to deliver exceptional results.
+
+**Additional Considerations:**
+
+* **Tone:** Proactive and client-focused, demonstrating our unwavering commitment to your success.
+* **Client Ownership:** We fully acknowledge your pivotal role in shaping project direction and welcome your active participation.
+* **Conciseness:** Our proposal is designed to be easily digestible, providing key information in a clear and concise manner."
+2,37870166,Create 4 in a row game in python console application,python/Create-row-game-python-console,2024-03-12 15:01:46,30.0,250.0,USD,1.0,23,155.56521739130434,250.0,30.0,"Hello, I have an existing code of client/server 4 in a row python console application. I need to refactor existing code and add some more functionallity that missing for example AI logic (when player want to plays against the computer). the code should run on Linux.","**Project Summary**
+
+Harnessing our expertise in client-centric project proposals, we present a comprehensive solution for your 4 in a Row game in Python. Our tailored approach ensures alignment with your vision, delivering a powerful gaming experience.
+
+**Project Understanding**
+
+Through meticulous analysis, we have captured the essence of your requirements, resulting in a lucid project description. Our solution steadfastly addresses your needs, proactively defining the scope and objectives to pave the way for a successful outcome.
+
+**Solution Fit**
+
+Our design meticulously integrates your requirements, seamlessly blending functionality and user experience. The console application's intuitive interface and intelligent AI logic elevate gameplay, fulfilling the core objectives of your project.
+
+**Client-Centric Value**
+
+Your vision remains paramount. Our meticulously crafted project outline fosters clarity and ensures the project evolution aligns with your aspirations. Regular client feedback sessions empower you to mold the project's direction, ensuring absolute satisfaction.
+
+**Invitation to Collaboration**
+
+We are eager to elevate this collaboration. Your insights are invaluable in refining project goals. Let's embark on this journey together, shaping the project's destiny.
+
+**Call to Action**
+
+To initiate the next phase of collaboration, we propose discussing a formal development plan. This plan will outline a comprehensive roadmap, showcasing our capabilities and solidifying our commitment to delivering a groundbreaking gaming experience.
+
+**Outcome**
+
+As a pre-development undertaking, we propose crafting a comprehensive suite of artifacts, including SRS, Architecture, Workflows, Message Sequence Charts, and UI Wireframes. This tangible demonstration of our skills will serve as a testament to our unwavering dedication to exceeding your expectations."
+3,37870051,Trading View Indicators Coding in Python,python/Trading-View-Indicators-Coding-Python,2024-03-12 14:31:05,600.0,1500.0,INR,0.012078,1,1050.0,18.117,7.2468,"In this project, I am seeking a proficient Python developer with a good understanding of trading indicators. The task involves coding three indicators that are available on Trading View into Python code functions. 
+
+The chosen indicators are as follows: 
+
+- OKX signal bot by OKX
+- Range detector
+- OBV with MACD
+
+Further specifications of each are as follows:
+
+- OKX Signal Bot: The functionality I need from this is the 'Buy/Sell' signals. Your job will be to write a Python function that can generate these signals, same as OKX signal bot.
+  
+- Range Detector: This function should consider the ‘Range’. I would like the function to input 'Range' in determining the price levels.
+
+Ideal Skills:
+
+- Proficient in Python
+- Knowledge of trading indicators
+- Experience with Trading View or similar financial analytics platform
+
+By combining these skills, you'll be well-prepared to tackle this task successfully. I look forward to seeing your proposals.",
+4,37870014,Docker Image Creation for Python REST API - Google Cloud Run,python/Docker-Image-Creation-for-Python,2024-03-12 14:19:46,10.0,30.0,USD,1.0,8,25.0,30.0,10.0,"I need assistance with creating a Dockerfile and a Docker image for my Python-based REST API in Google Cloud Run.
+
+- Windows operating system 
+- It's critical that you have experience dealing with GCP and with Python REST API's dependency on specific libraries or frameworks. The exact specifics will be shared once the project commences. 
+
+Ideal skills and experience: 
+- Proficient in Docker and containerization, specifically Dockerfile creation and Docker image building. 
+- Extensive experience with Python and its REST API operations.
+- Proficient in GCP - Google Cloud Run
+- Strong understanding of package dependencies and managing them in a containerized environment.","**Project Summary:**
+
+To streamline your software development, we propose a comprehensive solution to create Docker images for your Python REST API, leveraging Google Cloud Run. Our approach ensures seamless integration and efficient deployment.
+
+**Project Understanding:**
+
+We have meticulously analyzed your requirements and crafted a project description that aligns precisely with your vision. Our focus on scope and objectives ensures a clear path forward, while our proactive approach to understanding your needs establishes a solid foundation for collaboration.
+
+**Solution Fit:**
+
+Our solution employs a Dockerfile tailored specifically to your Python REST API, ensuring seamless containerization. We employ advanced techniques to manage package dependencies within the containerized environment, guaranteeing reliable execution in Google Cloud Run.
+
+**Client-Centric Value:**
+
+Our proposal provides a comprehensive outline of our approach, ensuring transparency and alignment with your objectives. This clarity fosters ongoing collaboration, empowering you to shape the project's direction as it evolves.
+
+**Invitation to Collaboration:**
+
+We value your feedback and actively seek your input to refine the project's goals. Together, we can refine our solution to perfectly meet your evolving needs.
+
+**Call to Action:**
+
+To take the next step, we recommend scheduling a meeting to discuss a formal development plan that includes a proof-of-concept, showcasing our capabilities in SRS, architecture, workflows, message sequence charts, and UI wireframes. We're confident that our collaborative approach will deliver an exceptional outcome that exceeds your expectations."
