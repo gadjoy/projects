@@ -1,11 +1,12 @@
 import pandas as pd
 from datetime import datetime
+import os
 
 from components.freelancer import _get_project_by_id, _search_projects
 from components.proposal import generate_proposal
 
-def create_df(query, limit):
-    p = _search_projects(query, limit)
+def create_df(query):
+    p = _search_projects(query)
 
     # Assuming 'p' is your JSON data
     data = p['projects']
@@ -15,6 +16,39 @@ def create_df(query, limit):
 
     # Convert column names with '.' to '_'
     df.columns = df.columns.str.replace('.', '_')
+
+    # create a column with the query string
+    df['query'] = query
+
+    # update the csv file with the new data
+    csv = 'data/projects.csv'
+    dir = os.path.dirname(csv)
+
+    # Check if the directory exists, and if not, create it
+    if not os.path.exists(dir):
+        os.makedirs(dir)
+
+    # Read the existing data
+    if os.path.exists(csv):
+        df_existing = pd.read_csv(csv)
+
+        # Find the IDs in the new DataFrame that are not in the existing DataFrame
+        new_ids = set(df['id']) - set(df_existing['id'])
+
+        # Keep only the rows with new IDs
+        df_new = df[df['id'].isin(new_ids)]
+
+        # Append the new rows to the CSV file
+        df_new.to_csv(csv, mode='a', header=False)
+    else:
+        # If the CSV file doesn't exist, write the entire DataFrame
+        df.to_csv(csv)
+
+    return df
+
+def create_filtered_df(query):
+
+    df = create_df(query)
 
     # Define the columns you want to keep
     columns = ['id', 'title', 'seo_url', 'submitdate', 'budget_minimum', 'budget_maximum', 'currency_code', 'currency_exchange_rate', 'bid_stats_bid_count', 'bid_stats_bid_avg']
@@ -40,7 +74,39 @@ def create_df(query, limit):
     # Convert the 'submitdate' to a datetime object
     df_filtered['submitdate'] = pd.to_datetime(df_filtered['submitdate'])
 
+    # populate the new columns into the csv file only for the ids that are there in the df_filtered
+
+    csv = 'data/projects.csv'
+
+    # Read the existing data
+    df_existing = pd.read_csv(csv)
+
+    # Merge the existing DataFrame with df_filtered on the 'id' column
+    df_updated = pd.merge(df_existing, df_filtered, on='id', how='left')
+
+    # Write the updated DataFrame back to the CSV file
+    df_updated.to_csv(csv, index=False)
+
+    return df_filtered
+
+def create_proposals(id):
+
+    csv='data/projects.csv'
+
+    # Read the existing data
+    df_existing = pd.read_csv(csv)
+
+    # Filter the DataFrame to include only the row with the specified ID
+    df_filtered = df_existing[df_existing['id'] == id]
+
     # Generate proposals
     df_filtered['proposal'] = df_filtered.apply(lambda row: generate_proposal(row['title'], row['description']), axis=1)
 
-    return df
+    # Update the specific row in the existing DataFrame
+    df_existing.loc[df_existing['id'] == id, 'proposal'] = df_filtered['proposal']
+
+    # Write the updated DataFrame back to the CSV file
+    df_existing.to_csv(csv, index=False)
+
+    # Return the row with the specified ID
+    return df_filtered.loc[df_filtered['id'] == id]

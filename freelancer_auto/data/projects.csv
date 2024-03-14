@@ -1,0 +1,140 @@
+Unnamed: 0,id,owner_id,title_x,status,sub_status,seo_url_x,description_x,jobs,submitdate_x,preview_description,deleted,nonpublic,hidebids,type,bidperiod,hourly_project_info,featured,urgent,assisted,active_prepaid_milestone,time_submitted,time_updated,qualifications,language,attachments,hireme,hireme_initial_bid,invited_freelancers,recommended_freelancers,frontend_project_status,nda_signatures,true_location,local,negotiated,negotiated_bid,time_free_bids_expire,can_post_review,files,user_distance,from_user_location,project_collaborations,support_sessions,track_ids,drive_files,nda_details,pool_ids,enterprise_ids,timeframe,deloitte_details,is_escrow_project,is_seller_kyc_required,is_buyer_kyc_required,local_details,equipment,nda_signatures_new,billing_code,enterprises,enterprise_metadata_values,repost_id,client_engagement,contract_signatures,quotation_id,quotation_version_id,enterprise_linked_projects_details,equipment_groups,project_source,project_source_reference,quality_details,previous_recruiter_project_details,project_note,is_quotation_project,quotation_initial_bid,requires_upfront_funding,group_ids,currency_id,currency_code_x,currency_sign,currency_name,currency_exchange_rate_x,currency_country,currency_is_external,currency_is_escrowcom_supported,budget_minimum_x,budget_maximum_x,budget_name,budget_project_type,budget_currency_id,bid_stats_bid_count_x,bid_stats_bid_avg_x,upgrades_featured,upgrades_sealed,upgrades_nonpublic,upgrades_fulltime,upgrades_urgent,upgrades_qualified,upgrades_NDA,upgrades_assisted,upgrades_active_prepaid_milestone,upgrades_ip_contract,upgrades_success_bundle,upgrades_non_compete,upgrades_project_management,upgrades_pf_only,upgrades_recruiter,upgrades_listed,upgrades_extend,upgrades_unpaid_recruiter,upgrades_premium,upgrades_enterprise,location_country_name,location_country_flag_url,location_country_code,location_country_highres_flag_url,location_country_flag_url_cdn,location_country_highres_flag_url_cdn,location_country_iso3,location_country_region_id,location_country_phone_code,location_country_demonym,location_country_person,location_country_seo_url,location_country_sanction,location_country_language_code,location_country_language_id,location_city,location_latitude,location_longitude,location_vicinity,location_administrative_area,location_full_address,location_administrative_area_code,location_postal_code,location_id,project_reject_reason_description,project_reject_reason_message,hourly_project_info_commitment_hours,hourly_project_info_commitment_interval,hourly_project_info_duration_enum,query,title_y,seo_url_y,submitdate_y,budget_minimum_y,budget_maximum_y,currency_code_y,currency_exchange_rate_y,bid_stats_bid_count_y,bid_stats_bid_avg_y,budget_maximum_usd,budget_minimum_usd,description_y
+0,37874831,59498958,Real-time GoTo API- SQL Database Integration,active,,sql/Real-time-GoTo-API-SQL,,,1710351220,I am looking for a proficient developer who can successfully integrate our Phone system API with our,False,False,False,fixed,7,,False,False,,,1710351220,1710351220,,en,,False,,,,open,,,False,False,,1710347620,,,,,,,,,,['freelancer'],[],,,False,False,False,,,,,[],,,,,,,,,,,,,,,,,[],1,USD,$,US Dollar,1.0,US,False,True,30.0,250.0,,,,26,236.03846153846155,False,False,False,False,False,False,False,,,False,,False,False,False,,,,,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,python,Real-time GoTo API- SQL Database Integration,sql/Real-time-GoTo-API-SQL,2024-03-13 17:33:40,30.0,250.0,USD,1.0,26,236.03846153846155,250.0,30.0,"I am looking for a proficient developer who can successfully integrate our Phone system API with our SQL server. The purpose of this task is mainly:
+
+- To fetch specific data fields from the call logs which include:
+1. Caller ID
+2. Call duration
+3. Time of call
+4. Call outcome
+5. Call type
+6. Caller's location
+7. Internal/External Flag
+8. Recipient Name/Internal Extension
+
+- Store this information in the SQL server.
+
+About the Database:
+- The storage should be in raw format.
+- Importantly, the call logs should be segmented by the call type.
+- A strong emphasis must be put on timestamps while storing data.
+
+Necessary Skills:
+- Proficiency in working with APIs, SQL servers
+- Knowledge and experience in data extraction and storage
+- Strong understanding of call log data and its important aspects
+- Skills in data segmentation based on chosen parameters
+
+Here is a link to the GoTo developer center where you can find information about their API.
+https://developer.goto.com/
+
+It is important to me to find someone who is communicative, able to have virtual meetings via video calls, and can explain to me their plan of action. I also prefer this API to be developed with the Python coding language but I'm very open to alternative coding languages being used if I find the right developer to help with this task."
+1,37874800,7454566,Python Developer for OMR Survey Analysis -- 2,active,,python/Python-Developer-for-OMR-Survey-37874800,,,1710350670,I am searching for an experienced Python developer proficient in Optical Mark Recognition (OMR). The,False,False,False,fixed,7,,False,False,,,1710350670,1710350670,,en,,False,,,,open,,,False,False,,1710347070,,,,,,,,,,['freelancer'],[],,,False,False,False,,,,,[],,,,,,,,,,,,,,,,,[],11,INR,₹,Indian Rupee,0.01207,IN,False,False,1500.0,12500.0,,,,3,9666.666666666666,False,False,False,False,False,False,False,,,False,,False,False,False,,,,,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,python,Python Developer for OMR Survey Analysis -- 2,python/Python-Developer-for-OMR-Survey-37874800,2024-03-13 17:24:30,1500.0,12500.0,INR,0.01207,3,9666.666666666666,150.875,18.105,"I am searching for an experienced Python developer proficient in Optical Mark Recognition (OMR). The main task is to read and capture data from digital images of my survey forms. 
+
+Ideal Skills and Experiences:
+- Strong Python Programming capabilities
+- Proven experience in OMR
+- Familiarity with data extraction from digital images
+
+Your Application:
+Please ensure to include past work regarding Python programming and OMR in your application. Assignments involving data extraction from digital images will be highly regarded. It will demonstrate your capacity to successfully complete this task."
+2,37874736,63640411,Retail Shelf Planogram Image Analysis,active,,python/Retail-Shelf-Planogram-Image-Analysis,,,1710349743,I'm looking for a proficient Python programmer who can assist me in examining and counting how many ,False,False,False,fixed,7,,False,False,,,1710349743,1710349743,,en,,False,,,,open,,,False,False,,1710346143,,,,,,,,,,['freelancer'],[],,,False,False,False,,,,,[],,,,,,,,,,,,,,,,,[],1,USD,$,US Dollar,1.0,US,False,True,30.0,250.0,,,,3,191.66666666666663,False,False,False,False,False,False,False,,,False,,False,False,False,,,,,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,python,Retail Shelf Planogram Image Analysis,python/Retail-Shelf-Planogram-Image-Analysis,2024-03-13 17:09:03,30.0,250.0,USD,1.0,3,191.66666666666666,250.0,30.0,"I'm looking for a proficient Python programmer who can assist me in examining and counting how many times multiple images appear within a given retail store shelf planogram. 
+
+Skills and Experience:
+- Proficient in Python programming
+- Image analysis experience, preferably with planogram images
+- Familiarity with retail or merchandising environments would be an asset
+
+Project Scope:
+- Scrutinize the image files from the designated folder
+- Detect the presence of a planogram in each image
+- Count how many times multiple images are present in the planogram
+
+The output of these counts should be directly displayed on the screen. The script needs to be accurate and efficient as speedy results are of utmost importance. Expertise in image processing will strongly benefit this task. If you're a problem-solver with strong Python coding skills, I'd love to work with you."
+3,37874701,75096655,Enhance Python FastAPI + Anthropic Integration,active,,python/Enhance-Python-FastAPI-Anthropic,,,1710349366,I'm in need of an adept developer well-versed in Python and FastAPI and has extensive experience wit,False,False,False,hourly,7,,False,False,,,1710349366,1710349366,,en,,False,,,,open,,,False,False,,1710345636,,,,,,,,,,['freelancer'],[],,,False,False,False,,,,,[],,,,,,,,,,,,,,,,,[],9,CAD,$,Canadian Dollar,0.74273,CA,False,False,15.0,25.0,,,,32,21.375,False,False,False,False,False,False,False,,,False,,False,False,False,,,,,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,40.0,week,unspecified,python,Enhance Python FastAPI + Anthropic Integration,python/Enhance-Python-FastAPI-Anthropic,2024-03-13 17:02:46,15.0,25.0,CAD,0.74273,32,21.375,18.56825,11.14095,"I'm in need of an adept developer well-versed in Python and FastAPI and has extensive experience with OpenAI, or better yet, Anthropic. 
+
+The primary task is to update an existing FastAPI script by:
+
+- Incorporating a user authentication system
+- Implementing database integration
+- Providing comprehensive API documentation
+
+Moreover, the system needs to shift from OpenAI to Anthropic, a move aimed at dramatically enhancing precision. Experience in both AI models would be invaluable for this assignment.
+
+Skills:
+- Mastery of Python and FastAPI
+- Experience with OpenAI and Anthropic
+- Ability to troubleshoot and optimize scripts
+
+This project is an exciting opportunity to refine a tool as well as explore the functionality and precision of Anthropic compared to OpenAI. I welcome any interested, qualified professional to contribute."
+4,37874685,9270257,VST3 Plugin Development for Vocal Model Training,active,,python/VST-Plugin-Development-for-Vocal,,,1710348944,I'm looking for an experienced developer who can create a VST3 plugin compatible with all the DAWs. ,False,False,False,fixed,7,,False,False,,,1710348944,1710348944,,en,,False,,,,open,,,False,False,,1710345344,,,,,,,,,,['freelancer'],[],,,False,False,False,,,,,[],,,,,,,,,,,,,,,,,[],1,USD,$,US Dollar,1.0,US,False,True,1500.0,3000.0,,,,34,2321.470588235294,False,False,False,False,False,False,False,,,False,,False,False,False,,,,,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,python,VST3 Plugin Development for Vocal Model Training,python/VST-Plugin-Development-for-Vocal,2024-03-13 16:55:44,1500.0,3000.0,USD,1.0,34,2321.470588235294,3000.0,1500.0,"I'm looking for an experienced developer who can create a VST3 plugin compatible with all the DAWs. The main function of this plugin will be to accurately train a vocal model from any reference audio file and convert the current track to new voice (Eg: changing the vocal to a preferred singers voice) . Freelancers proficient in audio software development, specifically for VST3 plugins, are preferred.
+
+There is an open source project with this technology and this project is to convert it into a VST3 plugin 
+(check GitHub for Source project example  - Mangio-RVC-Fork  ) 
+
+NEEDS:
+- The plugin must support WAV, MP3, and FLAC audio formats.
+- It will have the capacity to carry out real-time training of the vocal model.
+- It should provide precise, high-quality results when working with vocal model training.
+
+SKILLS:
+- Experience in VST3 plugin development and python
+- Familiarity with DAWs and audio processing (wav, mp3, flac formats)
+- An understanding of vocal model training algorithms
+
+Note: Please provide previous work examples related to audio plugin development projects, specifically VST3 plugins."
+5,37874604,75023554,Urgent Python ML/DL & Pre-processing Expert,active,,python/Urgent-Python-Pre-processing-Expert,,,1710347416,"I'm in immediate need of a proficient Python expert, specializing in machine learning, deep learning",False,False,False,fixed,7,,False,False,,,1710347416,1710347416,,en,,False,,,,open,,,False,False,,1710343768,,,,,,,,,,['freelancer'],[],,,False,False,False,,,,,[],,,,,,,,,,,,,,,,,[],1,USD,$,US Dollar,1.0,US,False,True,10.0,30.0,,,,9,175.77777777777777,False,False,False,False,False,False,False,,,False,,False,False,False,,,,,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,python,Urgent Python ML/DL & Pre-processing Expert,python/Urgent-Python-Pre-processing-Expert,2024-03-13 16:30:16,10.0,30.0,USD,1.0,9,175.77777777777777,30.0,10.0,"I'm in immediate need of a proficient Python expert, specializing in machine learning, deep learning model implementation, and data preprocessing. 
+
+Key tasks entail:
+
+- Feature Engineering: Transforming raw data into features that represent the underlying patterns, assisting in improving the performance of my machine learning models.
+- Data Cleaning: Ensuring data integrity by removing any noise, inaccuracies, or irrelevant components. 
+- Model Implementation: Developing, tailoring and executing machine learning and deep learning models. 
+
+Please note that the size of the dataset isn't confirmed at this stage, but preparedness to handle large datasets is a plus. 
+
+Ideally, you should have significant experience with data preprocessing, ML and DL models, and a strong hold on Python. I need the project to be completed ASAP, demonstrating your capability to work under tight deadlines effectively."
+6,37874596,73927434,Website Chatbox Implementation with NLP,active,,Website-Chatbox-Implementation-with-NLP,,,1710347282,"I am seeking a skilled developer, preferably fluent in Python, to integrate a chatGPT-type chatbox d",False,False,False,fixed,7,,False,False,,,1710347282,1710347282,,en,,False,,,,open,,,False,False,,1710343682,,,,,,,,,,['freelancer'],[],,,False,False,False,,,,,[],,,,,,,,,,,,,,,,,[],1,USD,$,US Dollar,1.0,US,False,True,250.0,750.0,,,,77,513.5324675324675,False,False,False,False,False,False,False,,,False,,False,False,False,,,,,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,python,Website Chatbox Implementation with NLP,Website-Chatbox-Implementation-with-NLP,2024-03-13 16:28:02,250.0,750.0,USD,1.0,77,513.5324675324675,750.0,250.0,"I am seeking a skilled developer, preferably fluent in Python, to integrate a chatGPT-type chatbox demo into my website. The purpose of this chatbox is to effectively engage users and comprehend queries in varying wordings, using a predefined list of questions and answers. 
+
+Here are some essentials for the job:
+
+* Extensive understanding of Natural Language Processing (NLP). 
+* Experience in website development and Python programming. 
+* Familiarity with chatGPT or similar AI chatbots. 
+
+In your application, please include examples of similar work you've done in the past, especially with NLP and chatbot development. This will greatly assist in making the selection process smoother and more efficient. I look forward to working with you.
+
+example: 
+- what is the current usage of the charging site? -> 15 kWh
+- what is the energy usage of the charging site? -> 15 kWh
+- give me current energy usage -> 15 kWh"
+7,37874498,75095266,Python Developer for Desktop Application - 13/03/2024 11:57 EDT,active,,django/Python-Developer-for-Desktop-Application-37874498,,,1710346105,I'm in need of an expert Python programmer to create a desktop application for Windows. In this proj,False,False,False,hourly,7,,False,False,,,1710346105,1710346105,,en,,False,,,,open,,,False,False,,1710341826,,,,,,,,,,['freelancer'],[],,,False,False,False,,,,,[],,,,,,,,,,,,,,,,,[],11,INR,₹,Indian Rupee,0.01207,IN,False,False,750.0,1250.0,,,,11,1068.1818181818182,False,False,False,False,False,False,False,,,False,,False,False,False,,,,,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,40.0,week,unspecified,python,Python Developer for Desktop Application - 13/03/2024 11:57 EDT,django/Python-Developer-for-Desktop-Application-37874498,2024-03-13 16:08:25,750.0,1250.0,INR,0.01207,11,1068.1818181818182,15.0875,9.0525,"I'm in need of an expert Python programmer to create a desktop application for Windows. In this project, your primary role will be building a functional, user-friendly software that runs smoothly on Windows OS.
+
+Key Responsibilities:
+- Design and develop the desktop application using Python
+- Thoroughly test to ensure compatibility with Windows OS
+- Debug issues and implement fixes as necessary
+
+Ideal Freelancer:
+- Proficient in Python and familiar with working on Windows platform
+- Expert in creating user-friendly desktop applications
+- Strong experience in testing and debugging to ensure software functionality 
+
+I need a project of pdf summariser .With full description of project ."
+8,37874518,65450598,Skilled Data Scientist/Engineer with Python and Azure,active,,machine-learning/Skilled-Data-Scientist-Engineer-with,,,1710345827,"I am looking for an experienced Data Scientist/Engineer with Python and azure experience.
+
+Project:
+",False,False,False,hourly,7,,False,False,,,1710345827,1710345827,,en,,False,,,,open,,,False,False,,1710342227,,,,,,,,,,['freelancer'],[],,,False,False,False,,,,,[],,,,,,,,,,,,,,,,,[],1,USD,$,US Dollar,1.0,US,False,True,8.0,15.0,,,,35,15.685714285714283,False,False,False,False,False,False,False,,,False,,False,False,False,,,,,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,40.0,week,unspecified,python,Skilled Data Scientist/Engineer with Python and Azure,machine-learning/Skilled-Data-Scientist-Engineer-with,2024-03-13 16:03:47,8.0,15.0,USD,1.0,35,15.685714285714285,15.0,8.0,"I am looking for an experienced Data Scientist/Engineer with Python and azure experience.
+
+Project:
+1. Create Azure data factory pipeline that reads azure queue messages text , retrieves/open the  url path in the message text ,opens the json files and sends the content to Azure eventhub
+
+2. Also want the above in  Python"
+9,37874491,33706183,Trading Project: Python/Java Proficiency Needed,active,,python/Trading-Project-Python-Java-Proficiency,,,1710345248,"Python Algo for Trading with Java to place orders
+
+
+for you to be able to do this project you should",False,False,True,fixed,7,,False,False,,,1710345248,1710345248,,en,,False,,,,open,,,False,False,,1710341648,,,,,,,,,,['freelancer'],[],,,False,False,False,,,,,[],,,,,,,,,,,,,,,,,[],9,CAD,$,Canadian Dollar,0.74273,CA,False,False,10.0,30.0,,,,4,20.0,False,True,False,False,False,False,False,,,False,,False,False,False,,,,,False,False,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,python,Trading Project: Python/Java Proficiency Needed,python/Trading-Project-Python-Java-Proficiency,2024-03-13 15:54:08,10.0,30.0,CAD,0.74273,4,20.0,22.2819,7.4273,"Python Algo for Trading with Java to place orders
+
+
+for you to be able to do this project you should be a python and Java expert with experience in trading
+
+if you think you are best at these skill, kindly place your bid to discuss further about full details and timeline for delivery"
