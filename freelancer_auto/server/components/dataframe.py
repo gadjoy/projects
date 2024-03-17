@@ -79,34 +79,43 @@ def create_filtered_df(query):
     csv = 'data/projects.csv'
 
     # Read the existing data
-    df_existing = pd.read_csv(csv)
+    # df_existing = pd.read_csv(csv)
 
-    # Merge the existing DataFrame with df_filtered on the 'id' column
-    df_updated = pd.merge(df_existing, df_filtered, on='id', how='left')
+    # In the create_filtered_df function in components/dataframe.py
+
+    # df_updated = pd.merge(df_existing, df_filtered, on='id', how='left', suffixes=('_existing', '_filtered'))
 
     # Write the updated DataFrame back to the CSV file
-    df_updated.to_csv(csv, index=False)
+    # df_updated.to_csv(csv, index=False)
 
     return df_filtered
 
-def create_proposals(id):
+from flask import jsonify
 
-    csv='data/projects.csv'
+def create_proposals(id):
+    csv = 'data/projects.csv'
 
     # Read the existing data
     df_existing = pd.read_csv(csv)
+    print("DataFrame read from CSV:", df_existing)
 
     # Filter the DataFrame to include only the row with the specified ID
     df_filtered = df_existing[df_existing['id'] == id]
+    print("Filtered DataFrame:", df_filtered)
 
     # Generate proposals
-    df_filtered['proposal'] = df_filtered.apply(lambda row: generate_proposal(row['title'], row['description']), axis=1)
+    proposals = []
+    for _, row in df_filtered.iterrows():
+        proposal = generate_proposal(row['title'], row['description'])
+        print("Proposal generated:", proposal)
+        proposals.append(proposal)
 
     # Update the specific row in the existing DataFrame
-    df_existing.loc[df_existing['id'] == id, 'proposal'] = df_filtered['proposal']
+    df_existing.loc[df_existing['id'] == id, 'proposal'] = proposals
+    print("Updated DataFrame:", df_existing)
 
     # Write the updated DataFrame back to the CSV file
     df_existing.to_csv(csv, index=False)
 
-    # Return the row with the specified ID
-    return df_filtered.loc[df_filtered['id'] == id]
+    # Return the row with the specified ID as JSON
+    return jsonify(df_existing.loc[df_existing['id'] == id].to_dict(orient='records'))

@@ -1,5 +1,14 @@
-def generate_proposal(title, description):
+import os
+import requests
+import re
+from dotenv import load_dotenv
+def generate_proposal(project_title: str, project_description: str):
+    # set api key and api endpoint
+    load_dotenv()
+    api_key = os.environ.get('GOOGLE_API_KEY')
+    endpoint = "https://generativelanguage.googleapis.com/v1beta2"
 
+    # generate the prompt to get my proposal
     prompt = f"""
 
     INPUT:
@@ -8,8 +17,8 @@ def generate_proposal(title, description):
 
     Context: The client's requirements are analyzed for a software project. You have a solid understanding of their needs and have prepared the following:
 
-    Project Title: {title}
-    Project Description: {description}
+    Project Title: {project_title}
+    Project Description: {project_description}
 
     Project Summary: Begin with a 2-3 sentence overview of the potential project, emphasizing its key benefits derived from the client's requirements.
     Project Understanding: Write 2-3 paragraphs highlighting how your solution addresses their needs:
@@ -31,41 +40,31 @@ def generate_proposal(title, description):
     Keep it within 1400 characters with spaces
     """
 
-
-    from dotenv import load_dotenv, find_dotenv
-    import os, requests
-
-    # Load environment variables from .env file
-    _ = load_dotenv(find_dotenv())
-
-    # Set the API key
-    api_key = os.environ['GOOGLE_API_KEY']
-
-    # Set the API endpoint
-    endpoint = "https://generativelanguage.googleapis.com/v1beta"
-
-    # Prepare the request body
+    # prepare the request body
     request_body = {
-        "contents": [
-            {
-                "parts": [
-                    {
-                        "text": prompt
-                    }
-                ]
-            }
-        ]
+        "prompt": {
+            "text": prompt
+        }
     }
 
-    # Make the request to Generative Language API
-    response = requests.post(
-        f"{endpoint}/models/gemini-pro:generateContent?key={api_key}",
-        json=request_body,
-    )
+    # make the request to generative language api
+    response = requests.post(f"{endpoint}/models/text-bison-001:generateText?key={api_key}", json=request_body)
 
-    # Check if 'questions' key exists in the response JSON
-    if response.status_code == 200:
-        # response_json = response.json()
-        # print(response.json())
-        proposal = response.json()['candidates'][0]['content']['parts'][0]['text']
-        return proposal
+    # get the generated proposal from the response
+    try:
+        proposal = response.json()['candidates'][0]['output']
+    except KeyError:
+        # Handle the error if the response does not contain the expected data
+        print('Error: The API response does not contain the expected data.')
+        return None
+
+    
+    print(f"Generated proposal: {proposal}")
+
+    # save the generated proposal to a file
+    with open("proposal.txt", "w") as f:
+        f.write(proposal)
+    print("Proposal saved to proposal.txt")
+
+    # return the generated proposal
+    return proposal
