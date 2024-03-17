@@ -100,7 +100,6 @@ export default {
   data() {
     return {
       query: '',
-      searchLimit: '',
       projects: [],
       selectedProjects: [],
       loading: false,
@@ -114,7 +113,6 @@ export default {
         'budget_minimum',
         'budget_maximum',
         'currency_code',
-        'currency_exchange_rate',
         'bid_stats_bid_count',
         'bid_stats_bid_avg',
         'budget_maximum_usd',
@@ -237,7 +235,7 @@ export default {
 </script>
 
 <style scoped>
-  /* Spinner container style */
+/* Spinner container style */
 .spinner-container {
   position: relative;
   width: 100%;
