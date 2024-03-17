@@ -18,7 +18,7 @@
         <thead>
           <tr>
             <th>Select</th>
-            <th v-for="header in projectHeaders" :key="header">{{ formatHeader(header) }}</th>
+            <th v-for="header in projectHeaders" :key="header">{{ header }}</th>
           </tr>
         </thead>
         <!-- Table body -->
@@ -65,57 +65,23 @@
         </div>
       </div>
 
-      <!-- Modal window for proposal -->
-      <div v-if="showProposalModal" class="modal">
-        <div class="modal-content">
-          <span class="close" @click="closeProposalModal">&times;</span>
-          <p>{{ modalProposal }}</p>
-        </div>
-      </div>
-
       <!-- Display Preview -->
       <div v-if="preview" class="preview-container">
         <h2>Preview:</h2>
         <table v-if="selectedProjects.length > 0">
           <thead>
             <tr>
-              <th>ID</th>
-              <th>Title</th>
-              <th>SEO URL</th>
-              <th>Submit Date</th>
-              <th>Budget Minimum</th>
-              <th>Budget Maximum</th>
-              <th>Currency Code</th>
-              <th>Bid Stats Bid Count</th>
-              <th>Bid Stats Bid Avg</th>
-              <th>Budget Maximum USD</th>
-              <th>Budget Minimum USD</th>
-              <th>Description</th>
+              <th v-for="(header, index) in projectHeaders" :key="index">{{ header }}</th>
               <th>Proposal</th>
               <th>Bid Amount</th>
             </tr>
           </thead>
           <tbody>
-            <!-- Iterate over preview items -->
             <tr v-for="(item, index) in preview" :key="index">
-              <td>{{ item.id }}</td>
-              <td>{{ item.title }}</td>
-              <td>{{ item.seo_url }}</td>
-              <td>{{ formatDate(item.submitdate) }}</td>
-              <td>{{ item.budget_minimum }}</td>
-              <td>{{ item.budget_maximum }}</td>
-              <td>{{ item.currency_code }}</td>
-              <td>{{ item.bid_stats_bid_count }}</td>
-              <td>{{ parseFloat(item.bid_stats_bid_avg).toFixed(1) }}</td>
-              <td>${{ parseFloat(item.budget_maximum_usd).toFixed(0) }}</td>
-              <td>${{ parseFloat(item.budget_minimum_usd).toFixed(0) }}</td>
-              <td>
-                <button @click="openModal(item.description)">View Description</button>
+              <td v-for="(value, key) in item" :key="key">
+                {{ value || 'Not available' }}
               </td>
-              <td>
-                <!-- Open modal on click -->
-                <button @click="openProposalModal(item.proposal)">View Proposal</button>
-              </td>
+              <td>{{ item.proposal || 'No proposal available' }}</td>
               <td><input type="number" v-model="item.bidAmount" placeholder="Enter bid amount"></td>
             </tr>
           </tbody>
@@ -151,12 +117,10 @@ export default {
         'bid_stats_bid_avg',
         'budget_maximum_usd',
         'budget_minimum_usd',
-        'description',
+        'description'
       ],
       showModal: false,
-      modalDescription: '',
-      showProposalModal: false,
-      modalProposal: ''
+      modalDescription: ''
     };
   },
   methods: {
@@ -185,25 +149,17 @@ export default {
       this.showModal = false;
       this.modalDescription = '';
     },
-    openProposalModal(proposal) {
-      this.showProposalModal = true;
-      this.modalProposal = proposal;
-    },
-    closeProposalModal() {
-      this.showProposalModal = false;
-      this.modalProposal = '';
-    },
-    async generateAndShowProposal(id) {
+    async generateProposal(projectId) {
       try {
         const response = await axios.get(`${this.backendUrl}/generate_proposal`, {
           params: {
-            project_id: id,  // Send project ID as a query parameter
+            id: projectId,
           },
         });
-        return response.data.proposal || 'No proposal available';
+        return response.data ? response.data : 'No proposal available';
       } catch (error) {
         console.error('Error generating proposal:', error);
-        return 'No proposal available';
+        return 'Error generating proposal';
       }
     },
     async previewBid() {
@@ -216,6 +172,8 @@ export default {
 
       for (const projectId of this.selectedProjects) {
         const project = this.projects.find((p) => p.id === projectId);
+        const proposal = await this.generateProposal(projectId);
+
         const previewItem = {};
 
         this.projectHeaders.forEach((header) => {
@@ -223,9 +181,7 @@ export default {
         });
 
         previewItem.bidAmount = ''; // Initialize bid amount property
-
-        // Call generateAndShowProposal method for each selected project
-        previewItem.proposal = await this.generateAndShowProposal(projectId);
+        previewItem.proposal = proposal;
 
         this.preview.push(previewItem);
       }
@@ -263,10 +219,6 @@ export default {
       // Format the date to a human-readable format
       return date.toLocaleString();
     },
-    formatHeader(header) {
-      // Capitalize the first letter of each word after an underscore
-      return header.split('_').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
-    },
   },
   computed: {
     // Compute rounded values for budget_minimum_usd and budget_maximum_usd
@@ -276,7 +228,6 @@ export default {
         budget_minimum_usd: parseFloat(project.budget_minimum_usd).toFixed(0), // Round to 2 decimal places
         budget_maximum_usd: parseFloat(project.budget_maximum_usd).toFixed(0), // Round to 2 decimal places
         submitdate: this.formatDate(project.submitdate), // Convert Unix timestamp to human-readable date
-        bid_stats_bid_avg: parseFloat(project.bid_stats_bid_avg).toFixed(1), // Format to display only one digit after the decimal point
       }));
     },
   },
