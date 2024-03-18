@@ -24,9 +24,6 @@ release/
 node_modules/
 bower_components/
 
-.venv/
-.vscode/
-
 # Cache files
 *.cache
 *.class
