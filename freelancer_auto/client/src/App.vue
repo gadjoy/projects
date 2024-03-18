@@ -18,7 +18,7 @@
         <thead>
           <tr>
             <th>Select</th>
-            <th v-for="header in projectHeaders" :key="header">{{ formatHeader(header) }}</th>
+            <th v-for="header in projectHeaders" :key="header" v-if="header !== 'proposal'">{{ formatHeader(header) }}</th>
           </tr>
         </thead>
         <!-- Table body -->
@@ -29,7 +29,7 @@
               <input type="checkbox" v-model="selectedProjects" :value="project.id" />
             </td>
             <!-- Display project data -->
-            <td v-for="header in projectHeaders" :key="header">
+            <td v-for="header in projectHeaders" :key="header" v-if="header !== 'proposal'">
               <template v-if="header !== 'description'">
                 <!-- Check if header is budget_minimum_usd or budget_maximum_usd -->
                 <template v-if="header === 'budget_minimum_usd' || header === 'budget_maximum_usd'">
@@ -69,7 +69,7 @@
       <div v-if="showProposalModal" class="modal">
         <div class="modal-content">
           <span class="close" @click="closeProposalModal">&times;</span>
-          <p>{{ modalProposal }}</p>
+          <div v-html="modalProposal"></div>
         </div>
       </div>
 
@@ -124,11 +124,17 @@
         <button @click="confirmBid">Confirm</button>
       </div>
     </div>
+
+    <!-- Loading indicator for preview -->
+    <div v-if="loadingPreview" class="loading-preview">
+      Loading...
+    </div>
   </div>
 </template>
 
 <script>
 import axios from 'axios';
+import showdown from 'showdown';
 
 export default {
   data() {
@@ -137,6 +143,7 @@ export default {
       projects: [],
       selectedProjects: [],
       loading: false,
+      loadingPreview: false, // Added loading indicator for preview
       backendUrl: 'http://127.0.0.1:5000',
       preview: null,
       projectHeaders: [
@@ -152,6 +159,7 @@ export default {
         'budget_maximum_usd',
         'budget_minimum_usd',
         'description',
+        'proposal'
       ],
       showModal: false,
       modalDescription: '',
@@ -186,25 +194,12 @@ export default {
       this.modalDescription = '';
     },
     openProposalModal(proposal) {
-      this.showProposalModal = true;
       this.modalProposal = proposal;
+      this.showProposalModal = true;
     },
     closeProposalModal() {
       this.showProposalModal = false;
       this.modalProposal = '';
-    },
-    async generateAndShowProposal(id) {
-      try {
-        const response = await axios.get(`${this.backendUrl}/generate_proposal`, {
-          params: {
-            project_id: id,  // Send project ID as a query parameter
-          },
-        });
-        return response.data.proposal || 'No proposal available';
-      } catch (error) {
-        console.error('Error generating proposal:', error);
-        return 'No proposal available';
-      }
     },
     async previewBid() {
       if (this.selectedProjects.length === 0) {
@@ -212,6 +207,7 @@ export default {
         return;
       }
 
+      this.loadingPreview = true; // Show loading indicator
       this.preview = [];
 
       for (const projectId of this.selectedProjects) {
@@ -222,25 +218,24 @@ export default {
           previewItem[header] = project[header] || 'Not available';
         });
 
-        previewItem.bidAmount = ''; // Initialize bid amount property
+        previewItem.bidAmount = '';
 
         // Call generateAndShowProposal method for each selected project
         previewItem.proposal = await this.generateAndShowProposal(projectId);
 
         this.preview.push(previewItem);
       }
+
+      this.loadingPreview = false; // Hide loading indicator
     },
     submitBid() {
       console.log('Submitting bids:', this.selectedProjects);
-      // You can add logic here to send bid details to the backend
       this.createBid();
     },
     confirmBid() {
-      // Logic for confirming bid
       this.createBid();
     },
     createBid() {
-      // Example of how to send a POST request to create a bid
       const bidData = {
         projects: this.selectedProjects,
         bids: this.preview.map(item => ({ id: item.id, bidAmount: item.bidAmount }))
@@ -249,7 +244,6 @@ export default {
       axios.post(`${this.backendUrl}/create_bid`, bidData)
         .then(response => {
           console.log('Bid created successfully:', response.data);
-          // Optionally, you can reset the selectedProjects and preview arrays after successful bid creation
           this.selectedProjects = [];
           this.preview = null;
         })
@@ -257,26 +251,38 @@ export default {
           console.error('Error creating bid:', error);
         });
     },
+    async generateAndShowProposal(id) {
+      try {
+        const response = await axios.get(`${this.backendUrl}/generate_proposal`, {
+          params: {
+            project_id: id,
+          },
+        });
+
+        // Convert Markdown proposal to HTML using Showdown
+        const converter = new showdown.Converter();
+        return converter.makeHtml(response.data.proposal || 'No proposal available');
+      } catch (error) {
+        console.error('Error fetching proposal:', error);
+        return 'No proposal available';
+      }
+    },
     formatDate(timestamp) {
-      // Create a new Date object with the timestamp (in milliseconds)
       const date = new Date(timestamp);
-      // Format the date to a human-readable format
       return date.toLocaleString();
     },
     formatHeader(header) {
-      // Capitalize the first letter of each word after an underscore
       return header.split('_').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
     },
   },
   computed: {
-    // Compute rounded values for budget_minimum_usd and budget_maximum_usd
     roundedProjects() {
       return this.projects.map(project => ({
         ...project,
-        budget_minimum_usd: parseFloat(project.budget_minimum_usd).toFixed(0), // Round to 2 decimal places
-        budget_maximum_usd: parseFloat(project.budget_maximum_usd).toFixed(0), // Round to 2 decimal places
-        submitdate: this.formatDate(project.submitdate), // Convert Unix timestamp to human-readable date
-        bid_stats_bid_avg: parseFloat(project.bid_stats_bid_avg).toFixed(1), // Format to display only one digit after the decimal point
+        budget_minimum_usd: parseFloat(project.budget_minimum_usd).toFixed(0),
+        budget_maximum_usd: parseFloat(project.budget_maximum_usd).toFixed(0),
+        submitdate: this.formatDate(project.submitdate),
+        bid_stats_bid_avg: parseFloat(project.bid_stats_bid_avg).toFixed(1),
       }));
     },
   },
@@ -410,5 +416,11 @@ button:hover {
   color: black;
   text-decoration: none;
   cursor: pointer;
+}
+
+/* Loading indicator style */
+.loading-preview {
+  margin-top: 20px;
+  font-style: italic;
 }
 </style>
