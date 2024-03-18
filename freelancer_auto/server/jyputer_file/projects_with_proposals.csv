@@ -1,0 +1,484 @@
+_id,_title,_budget_minimum,_budget_maximum,_type,_bidperiod,_time_submitted,_bid_stats_bid_count,_bid_stats_bid_avg,_currency_code,_currency_exchange_rate,proposal,full_description,_budget_minimum_usd,_budget_maximum_usd
+37888388,NLP Specialist Needed,250.0,750.0,fixed,7,2024-03-17 13:24:43,16,511.875,USD,1.0,"Project Summary
+
+We are excited to propose our solution for your NLP project. Our solution will address your needs for a scalable, accurate, and easy-to-use NLP platform.
+
+Project Understanding
+
+We have carefully analyzed your requirements and developed a clear project description. Our solution will meet your needs for a platform that can:
+
+ Process large amounts of data quickly and efficiently
+ Accurately extract information from text and speech
+ Be easily integrated with other systems
+
+Solution Fit
+
+Our solution is designed to meet your specific requirements. We have a proven track record of delivering high-quality NLP solutions to our clients.
+
+Client-Centric Value
+
+Our solution will provide you with a clear roadmap for developing your NLP project. We will work closely with you to ensure that the project meets your needs and expectations.
+
+Invitation to Collaboration
+
+We would be pleased to discuss our proposal with you in more detail. We are confident that our solution will meet your needs and help you achieve your goals.
+
+Call to Action
+
+We would like to schedule a meeting with you to discuss our proposal and the next steps in the development process.
+
+Outcome
+
+We would like to work with you to develop a proof-of-concept that demonstrates our skills and capabilities. This proof-of-concept will include a SRS, architecture, workflows, message sequence charts, and UI wireframes.","I am in need of an AI programmer with expertise in Natural Language Processing (NLP). While specifications on language proficiency were skipped, a versatile programmer comfortable with at least one of Python, Java, or C++ is preferable. 
+
+Key Requirements:
+
+- Demonstrated experience in AI programming, specifically in NLP.
+- Familiar with common programming languages (Python, Java, C++).
+
+Ideal candidates should highlight on their relevant past experiences in their applications.",250.0,750.0
+37888378,Resume Parsing Automation for Monday.com,30.0,250.0,fixed,7,2024-03-17 13:18:44,15,144.0,USD,1.0,"Project Summary
+
+We propose to develop a software solution that will automate the parsing of resumes into Monday.com. This solution will address the client's need to streamline the process of hiring new employees by reducing the time and effort required to manually parse resumes.
+
+Project Understanding
+
+We have carefully analyzed the client's requirements and developed a clear project description that provides a solid foundation for the development of this solution. The project scope and objectives are clearly defined, and we are committed to working closely with the client to ensure that the project meets their expectations.
+
+Solution Fit
+
+Our solution is designed to meet the client's requirements in a way that is both efficient and effective. The solution will be built using a proven software development methodology, and we will use agile development practices to ensure that the project is completed on time and within budget.
+
+Client-Centric Value
+
+Our project outline provides clarity and ensures that the project evolves in accordance with the client's vision. We are committed to collaborating with the client to further refine project goals and ensure that the solution meets their needs.
+
+Invitation to Collaboration
+
+We invite the client to further refine project goals and collaborate with us on the development of this solution. We believe that this is a valuable opportunity to demonstrate our skills and capabilities.
+
+Call to Action
+
+We would like to discuss a formal development plan with the client. We believe that this project has the potential to be a great success, and we are confident that we can deliver a solution that meets the client's needs.
+
+Outcome
+
+As part of a proof of concept, we would like to develop the following artifacts:
+
+ SRS (Software Requirements Specification)
+ Architecture
+ Workflows
+ Message sequence charts
+ UI wireframes
+
+These artifacts will demonstrate our ability to develop a high-quality software solution that meets the client's requirements.","I am seeking an expert to automate the extraction of text from resumes uploaded to our Monday.com board and populate the extracted data into a text column within the same item. This enhancement aims to make resume information easily searchable, improving our recruitment efficiency.
+
+
+Essential Skills:
+
+- Experience with Monday.com API
+- Proficiency in document parsing API integration
+- Knowledge in automation tools (e.g., Zapier, Integromat)
+- Scripting skills in Python or JavaScript
+- Understanding of data privacy and security
+
+
+Deliverables:
+
+- Automated workflow for text extraction upon resume upload
+- Population of extracted text into a specified Monday.com text column
+- Brief documentation on the setup and maintenance
+
+
+Ideal Candidate:
+
+Someone with a background in API integrations, particularly with Monday.com and document parsing services. The candidate should be results-driven, with clear communication skills and the ability to deliver on a tight schedule.",30.0,250.0
+37888351,Python Scraper Upgrade for Product Data -- 2,20.0,250.0,fixed,7,2024-03-17 13:08:32,29,129.48275862068965,GBP,1.2731,"Project Summary
+
+We propose to upgrade your Python scraper for product data to improve its performance and scalability. This will allow you to collect more data more quickly and efficiently, giving you a competitive advantage in the market.
+
+Project Understanding
+
+We understand that you are looking for a solution that will:
+
+ Collect data from a variety of sources
+ Handle large amounts of data without slowing down
+ Be easy to use and maintain
+
+We believe that our proposed solution meets all of these requirements. Our team has extensive experience in developing and deploying scrapers, and we are confident that we can deliver a solution that meets your needs.
+
+Solution Fit
+
+Our proposed solution is designed to meet your specific requirements. We will work with you to understand your needs and develop a solution that is tailored to your specific business goals.
+
+Client-Centric Value
+
+Our proposed solution will provide you with a number of benefits, including:
+
+ Increased data collection speed and efficiency
+ Improved scalability
+ Reduced maintenance costs
+
+We believe that our solution will help you to achieve your business goals and gain a competitive advantage in the market.
+
+Invitation to Collaboration
+
+We would welcome the opportunity to discuss our proposal with you in more detail. We are confident that we can develop a solution that meets your needs and helps you to achieve your business goals.
+
+Call to Action
+
+We would like to schedule a meeting with you to discuss our proposal in more detail. Please contact us at [email protected] to set up a time to talk.
+
+Outcome
+
+We would like to work with you to develop a proof of concept that demonstrates our ability to deliver a high-quality software product. This proof of concept will include a SRS, architecture, workflows, message sequence charts, and UI wireframes.","I'm in need of an intelligent professional who has extensive experience in web scraping, specifically with Python. The task at hand is to rectify and enhance my current scraper setup to ensure it can successfully extract the plethora of new products I'm trying to incorporate into my system. 
+
+Key Tasks:
+* Investigate the issues causing the failure in scraping new product information.
+* Amend the respective codes and functions to allude the said issue.
+* Test and validate the revised setup to ensure accuracy and stability. 
+
+Ideal Skills:
+* Expertise in Python
+* Strong knowledge in web scraping, particularly for product data 
+* Problem-solving capabilities
+* Thorough testing and bug fixing skills are essential.",25.461999999999996,318.275
+37888316,Daily Instagram Demographic Data Scraper,1500.0,12500.0,fixed,7,2024-03-17 12:54:31,1,1500.0,INR,0.012064,"Project Summary
+
+We propose to develop a Daily Instagram Demographic Data Scraper that will allow you to collect demographic data from Instagram users. This data can be used to improve your marketing campaigns and target your audience more effectively.
+
+Project Understanding
+
+We have carefully analyzed your needs and developed a clear project description. The scope of the project includes:
+
+ Collecting demographic data from Instagram users
+ Storing the data in a database
+ Providing an API for accessing the data
+
+We believe that this solution will meet your needs and help you achieve your goals.
+
+Solution Fit
+
+Our solution is designed to meet your specific requirements. We have taken into account your need for a scalable solution that can handle large amounts of data. We have also designed the solution to be easy to use and integrate with your existing systems.
+
+Client-Centric Value
+
+Our solution will provide you with a number of benefits, including:
+
+ Improved marketing campaigns
+ Increased ROI
+ Enhanced customer experience
+
+We are committed to working with you to ensure that the project meets your expectations. We will be available to answer your questions and provide support throughout the development process.
+
+Invitation to Collaboration
+
+We would like to invite you to collaborate with us on this project. We believe that this is a great opportunity for us to work together and build a long-term relationship.
+
+Call to Action
+
+We would like to discuss this proposal with you in more detail. Please contact us at [email protected] to schedule a meeting.
+
+Outcome
+
+We would like to develop a proof of concept that demonstrates our ability to complete the project. This proof of concept will include SRS, Architecture, Workflows, Message sequence charts, UI wireframes.","I require a data scraper that can systematically gather specific user demographics from Instagram. I need the user age, location, and gender. These data points should be scraped on a daily basis.
+
+Ideal freelancer for this project:
+- Expert in data scraping
+- Familiar with Instagram's API
+- Excellent knowledge in programming, with specific skills in Python or relevant languages
+- Exceptional attention to detail when it comes to data analysis and interpretation
+- Proven experience in similar projects.",18.096,150.8
+37888313,Entry-Level Software Programmer Needed,12500.0,37500.0,fixed,7,2024-03-17 12:52:43,4,25000.0,INR,0.012064,"Project Summary
+
+We are excited to propose our solution for your Entry-Level Software Programmer Needed project. Our solution is designed to meet your specific requirements and will provide you with a scalable, reliable, and secure software platform.
+
+Project Understanding
+
+We have carefully analyzed your requirements and developed a clear project description. Our solution is based on a proven methodology and will be implemented by our experienced team of software engineers.
+
+Solution Fit
+
+Our solution is designed to meet your specific requirements for a scalable, reliable, and secure software platform. Our solution will be implemented using a proven methodology and will be developed by our experienced team of software engineers.
+
+Client-Centric Value
+
+Our project outline provides clarity to ensure the project evolves in accordance with your vision. We will work closely with you to ensure that your requirements are met and that the project is completed on time and within budget.
+
+Invitation to Collaboration
+
+We would welcome the opportunity to discuss your project further and to work with you to refine your requirements. We believe that our solution is the best way to meet your needs and we are confident that we can deliver a successful project.
+
+Call to Action
+
+We would like to schedule a meeting to discuss your project further and to see if we can be of assistance. Please contact us at [email protected] to schedule a time to chat.
+
+Outcome
+
+We would like to do the whole software development process for a proof of concept with SRS, Architecture, Workflows, Message sequence charts, UI wireframes as part of showing our skills rather than just saying we can do it.","I am in need of a talented software programmer with a particular focus on Python and Java. Here's a little about what I'm looking for:
+
+Key Responsibilities:
+- Code development
+- Bug fixing
+- Conducting testing and debugging
+
+Skills and Experience:
+- Python programming
+- Java programming
+- Entry-level experience in software programming
+
+This role is perfect for those just starting out in programming who are looking to apply their knowledge of Python and Java in a real-world setting. I'm excited to see what we can achieve together.",150.8,452.4
+37888166,Full Stack Developer for Web Application,1500.0,12500.0,fixed,7,2024-03-17 11:44:25,7,11500.0,INR,0.012064,"Project Summary
+
+We are excited to propose our solution for your full stack web application development project. Our team has extensive experience in developing high-quality, scalable web applications that meet the needs of our clients.
+
+Project Understanding
+
+We carefully analyzed your requirements and developed a clear project description that provides a solid foundation for our solution. We believe that our solution meets your requirements in the following ways:
+
+ Scalability: Our solution is designed to be scalable to meet the needs of your growing business.
+ Reliability: Our solution is built using proven technologies and methodologies that ensure reliability and uptime.
+ Security: Our solution is designed to protect your data and ensure the security of your application.
+
+Solution Fit
+
+Our solution is designed to meet your specific requirements and provide you with a high-quality, scalable, reliable, and secure web application. We are confident that our solution will meet your needs and exceed your expectations.
+
+Client-Centric Value
+
+Our proposal provides clarity and ensures that the project evolves in accordance with your vision. We are committed to working with you to further refine project goals and ensure that the final product meets your needs.
+
+Invitation to Collaboration
+
+We would welcome the opportunity to discuss our proposal with you in more detail and answer any questions you may have. We are confident that our solution is the best choice for your full stack web application development project.
+
+Call to Action
+
+We would like to schedule a meeting to discuss our proposal and answer any questions you may have. Please contact us at [email protected] to schedule a meeting.
+
+Outcome
+
+We would like to work with you to complete a proof of concept that includes SRS, Architecture, Workflows, Message sequence charts, UI wireframes as part of showing our skills rather than just saying we can do it.","I am looking for a seasoned full stack developer to work on building a web application. 
+
+Skills and Experience:
+- Proficiency in a combination of programming languages such as JavaScript, Python, and Ruby. Although this wasn't explicitly mentioned, these are foundational and beneficial for any full stack developer.
+- Expertise in html,css,javascript,AngularJS, Node.js and MongoDB technologies. Your familiarity with these specific technologies is vital for maintaining and improving our current stack.
+- Proven experience in developing web applications. The main goal of this project is to create a 1-2 page collage assignment project , make user-friendly web application.
+Title: e-commerce express 
+Create simple web Using all above languages.
+ 
+Qualified candidates should be able to work independently, have excellent problem-solving skills, and be knowledgeable about modern development best practices. Dedication to their craft, and a passion for creating high-performing web applications is a must.",18.096,150.8
+37888114,Python Guru for Video Transcoding,50.0,,hourly,7,2024-03-17 11:21:13,4,50.0,USD,1.0,"Project Summary
+
+We propose to develop a Python-based video transcoding application that will allow users to convert videos between different formats and resolutions. This application will be easy to use and will provide a high-quality transcoding experience.
+
+Project Understanding
+
+We have carefully analyzed your requirements and have developed a clear project description. The application will be designed to meet your specific needs and will be implemented using the latest technologies.
+
+Solution Fit
+
+Our solution is designed to meet your requirements for a high-quality, easy-to-use video transcoding application. The application will be implemented using the latest technologies and will be scalable to meet your future needs.
+
+Client-Centric Value
+
+Our proposal provides clarity and a roadmap for the development of your video transcoding application. We will work closely with you to ensure that the application meets your specific needs and that the project is completed on time and within budget.
+
+Invitation to Collaboration
+
+We invite you to collaborate with us on the development of your video transcoding application. We believe that this is a collaborative effort and that your feedback will be invaluable in ensuring the success of the project.
+
+Call to Action
+
+We would like to discuss a formal development plan with you. We believe that this is the next step in the process and that it will allow us to move forward with the development of your video transcoding application.
+
+Outcome
+
+We would like to develop the whole software development process for a proof of concept with SRS, Architecture, Workflows, Message sequence charts, UI wireframes as part of showing our skills rather than just saying we can do it.","As a progressive business, we're constantly working with multimedia content. Unfortunately, our current video file format stored in AWS's S3 isn't exactly what we need. At this juncture, we're looking for an experienced Python programmer with a strong background in video transcoding who can use AWS mediaconverter to truncate the file length to 5 seconds and then use truncated file as input and convert it in possible codecs, resolution, and framerate as per this doc.
+
+https://docs.aws.amazon.com/mediaconvert/latest/ug/reference-codecs-containers.html
+
+We need the below codecs, resolution and framerates for specific filetypes.
+
+MP4 (MPEG-4).    codecs:- AV1 AVC (H.264) HEVC (H.265) , resolution:- 320*240, 640*480,1280*720,1280*1080,1920*1080,3840*2160, framerates:- 30, 60
+
+MOV (Apple QuickTime). codecs:-AVC (H.264) MPEG-2 , resolution:- 320*240, 640*480,1280*720,1280*1080,1920*1080,3840*2160, framerates:- 30, 60
+
+WebM:- codecs:- VP8, VP9, resolution:- 320*240, 640*480,1280*720,1280*1080,1920*1080,3840*2160, framerates:- 30, 60
+
+below is the list of maximum resolutions for each codec,
+
+https://docs.aws.amazon.com/mediaconvert/latest/ug/supported-output-resolution-maximums-by-codec.html
+
+Here's what we expect:
+
+- Truncate a video file that is stored in s3 bucket using mediaconvert and upload the new truncated file (of 5 seconds) in the same bucket.
+- Transcoding a truncated video file that's currently stored in S3
+- The final output with possible combinations should get stored in another s3 bucket. The script should be capable enough to check if the output file is already present in the destination bucket (for any possible combination), it should not create a new output file for that combination.
+
+Ideal Skills:
+
+- Experience with AWS's S3 and Mediaconvert.
+- Highly Proficient in Python
+- Prior experience in video transcoding especially into AV1, AVC (H.264), and HEVC (H.265) formats.
+
+Being task-specific and deadline-oriented are key-qualities we're looking for in this project. Looking forward to your impressive proposals.",50.0,
+37888108,Expert Web Scraper for RERA Karnataka Analysis,1500.0,12500.0,fixed,7,2024-03-17 11:16:47,5,8000.0,INR,0.012064,"Project Summary
+
+We propose to develop a web scraper for RERA Karnataka Analysis that will extract data from the RERA Karnataka website and provide a structured and easy-to-use interface for users to analyze the data. This will allow users to identify trends and patterns in the real estate market, which can be used to make informed decisions about their investments.
+
+Project Understanding
+
+We understand that you are looking for a web scraper that will provide you with the following:
+
+ Access to data that is not currently available in a structured format
+ The ability to analyze the data to identify trends and patterns
+ A user-friendly interface that makes it easy to understand the data
+
+We believe that our proposed solution meets your needs and will provide you with the information you need to make informed decisions about your investments.
+
+Solution Fit
+
+Our solution is designed to meet your specific needs by providing a structured and easy-to-use interface for users to analyze the data. The scraper will extract data from the RERA Karnataka website and provide users with the following:
+
+ A list of all projects that have been registered with RERA Karnataka
+ The status of each project (approved, under construction, or completed)
+ The number of units in each project
+ The total area of each project
+ The price per unit in each project
+
+This data can be used to identify trends and patterns in the real estate market, which can be used to make informed decisions about your investments.
+
+Client-Centric Value
+
+Our proposed solution will provide you with the information you need to make informed decisions about your investments. The scraper will extract data from the RERA Karnataka website and provide users with a structured and easy-to-use interface for analyzing the data. This will allow you to identify trends and patterns in the real estate market, which can be used to make informed decisions about your investments.
+
+Invitation to Collaboration
+
+We would like to work with you to further refine the project goals and ensure that the solution meets your specific needs. We are open to feedback and suggestions, and we are committed to working with you to create a solution that you are satisfied with.
+
+Call to Action
+
+We would like to discuss the next steps with you and begin the software development process. We are available to answer any questions you may have and to provide you with more information about our proposed solution.
+
+Outcome
+
+We would like to complete the software development process for a proof of concept with SRS, Architecture, Workflows, Message sequence charts, UI wireframes as part of showing our skills rather than just saying we can do it.","We are seeking a proficient web scraping expert to extract and analyze data from the Karnataka Real Estate (Regulation and Development) Authority (RERA) website. The project aims to provide valuable insights for property buyers and enhance transparency in the real estate sector.
+
+Key Deliverables:
+
+1. Extract relevant data from the Karnataka RERA website (https://rera.karnataka.gov.in/).
+2. Develop a robust and scalable code infrastructure for data extraction.
+3. Ensure the code is well-documented and extensible for future enhancements.
+
+Ideal Skills and Experience:
+1. Proven expertise in web scraping and data extraction.
+2. Familiarity with setting up code infrastructure for web scraping projects.
+3. Strong programming skills in languages like Python for extensible code.
+4. Experience in data analysis and visualization for presenting insights.
+4. Ability to work independently and deliver high-quality results within the specified timeline.
+
+Project Requirements:
+
+This project requires the extraction of specific data from the Karnataka RERA website, the establishment of a reliable code framework, and a focus on code extensibility for future modifications and additions. The successful candidate should be detail-oriented, proactive, and capable of delivering efficient and scalable solutions.
+
+How to Apply:
+1. Interested candidates are invited to submit their resume, portfolio showcasing relevant web scraping projects, and a cover letter outlining their approach to this project.
+2. Please highlight your experience in setting up code infrastructure and ensuring code extensibility.",18.096,150.8
+37888095,Python and Vue Js expert who have experienced httptoolkit etc. for automation scraping with request ,30.0,250.0,fixed,7,2024-03-17 11:11:46,17,159.11764705882354,USD,1.0,"Project Summary
+
+We are excited to propose our solution for your project, which will automate scraping with Python and Vue JS. Our solution will meet your requirements for a scalable, reliable, and secure solution.
+
+Project Understanding
+
+We have carefully analyzed your requirements and developed a clear project description. Our solution will:
+
+ Scrape data from websites programmatically
+ Store data in a central repository
+ Analyze data to identify trends and patterns
+ Generate reports and visualizations
+
+We are committed to working with you to ensure that our solution meets your needs. We will be available to answer your questions and provide support throughout the development process.
+
+Solution Fit
+
+Our solution is designed to meet your specific requirements for a scalable, reliable, and secure solution. Our team has extensive experience in developing and implementing software solutions. We are confident that we can deliver a solution that meets your needs and exceeds your expectations.
+
+Client-Centric Value
+
+Our solution will provide you with a number of benefits, including:
+
+ Increased efficiency: Our solution will automate the process of scraping data, freeing up your team to focus on other tasks.
+ Improved accuracy: Our solution will ensure that data is scraped accurately and consistently.
+ Reduced costs: Our solution will help you to save money by automating the process of scraping data.
+
+We are committed to working with you to ensure that our solution meets your needs. We will be available to answer your questions and provide support throughout the development process.
+
+Invitation to Collaboration
+
+We would like to invite you to collaborate with us on this project. We believe that a collaborative approach will result in a better solution that meets your needs.
+
+Call to Action
+
+We would like to discuss our proposal with you in more detail. Please contact us at [email protected] to schedule a meeting.
+
+Outcome
+
+We would like to work with you to develop a proof of concept that demonstrates our skills and capabilities. The proof of concept will include SRS, Architecture, Workflows, Message sequence charts, UI wireframes.","I'm looking for an expert Python/Vue Js developer to help with creating a task automation app, specifically aimed at web scraping, for Windows operating system. Notably, the application should be able to handle basic to intermediate data extraction tasks, details of which will be shared upon selection. Understanding of web scraping libraries like Beautiful Soup, Scrapy is highly desirable.  Experience in automating tasks on Windows is a significant plus. Python prowess alongside Vue Js for interface creation is key. Optimal skills and experience include:
+
+- Proficiency in Python for scripting the automation tasks
+- Familiarity with web scraping libraries in Python
+- Experience with Vue Js for frontend development
+- Understanding of Windows platform and compatibility considerations",30.0,250.0
+37888083,Anomaly Detection & Trajectory Forecasting Expert,1500.0,12500.0,fixed,7,2024-03-17 11:07:57,2,6725.0,INR,0.012064,"Project Summary
+
+We propose to develop an Anomaly Detection & Trajectory Forecasting Expert (ADE) system for the client. The ADE system will be able to identify anomalous events in real-time and predict future trajectories. This will allow the client to improve the efficiency and safety of their operations.
+
+Project Understanding
+
+We have carefully analyzed the client's requirements and developed a clear project description. The ADE system will be designed to meet the following requirements:
+
+ It will be able to identify anomalous events in real-time.
+ It will be able to predict future trajectories.
+ It will be easy to use and maintain.
+ It will be scalable to support large datasets.
+
+Solution Fit
+
+Our proposed solution is a novel approach to anomaly detection and trajectory forecasting. The ADE system will use a combination of machine learning and statistical techniques to identify anomalous events and predict future trajectories. This will allow the client to improve the efficiency and safety of their operations.
+
+Client-Centric Value
+
+The ADE system will provide the client with a number of benefits, including:
+
+ Improved efficiency: The ADE system will help the client to identify and resolve anomalous events more quickly, which will reduce the risk of downtime and improve productivity.
+ Improved safety: The ADE system will help the client to prevent accidents by predicting future trajectories and identifying potential hazards.
+ Reduced costs: The ADE system will help the client to reduce costs by identifying and resolving anomalous events more quickly.
+
+Invitation to Collaboration
+
+We would like to work with the client to further refine the project goals and requirements. We believe that a collaborative approach will result in a more successful project.
+
+Call to Action
+
+We would like to discuss a formal development plan with the client. We believe that the ADE system has the potential to significantly improve the client's operations.
+
+Outcome
+
+We would like to develop the ADE system as a proof of concept. This would involve developing the SRS, architecture, workflows, message sequence charts, and UI wireframes. This would demonstrate our skills and capabilities in developing such a system.","I am in need of an expert in flight anomaly detection and trajectory forecasting. My project will involve analysis and prediction based on sensor data from aircrafts like their positional coordinates with time stamps, velocity heading and other features.
+
+we just have to develop a logic and do a dummy project
+data of 1 path is provides below like this i have data of 80 paths of 39 planes.
+
+Core duties will include:
+- Analyzing and interpreting intricate aircraft sensor data
+- Developing reliable models for trajectory forecasting
+- Detecting any abnormalities or outliers in flight data
+- Utilizing Python for all data processing, analysis, and model development
+
+The ideal candidate should possess:
+- Solid experience with Python and its data processing and machine learning libraries
+- Proven knowledge in flight data interpretation and predictive modelling
+- Previous exposure on anomaly detection and flight trajectory forecasting would be advantageous. 
+
+Your expertise will boost the effectiveness of our anomaly detection system and trajectory forecasting model. I'm looking forward to seeing powerful forecasting and accurate anomaly detection shaping safety measures in the aviation industry.",18.096,150.8
