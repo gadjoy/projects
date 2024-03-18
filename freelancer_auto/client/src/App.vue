@@ -2,16 +2,22 @@
   <div>
     <h1>FREELANCER AUTO BIDDING</h1>
 
+    <!-- Search input and button -->
     <div>
       <label for="query">Query:</label>
-      <input v-model="query" type="text" id="query" />
-      <button @click="fetchProjects" :disabled="loading">Search</button>
-
+      <input v-model="query" type="text" id="query" placeholder="Type your query here..." />
+      <button @click="handleSearch" :disabled="!isQueryTyped || loading">Search</button>
+      
+      <!-- Message for empty query -->
+      <p v-if="!isQueryTyped && searchClicked" style="color: red;">Please enter a query.</p>
+      
+      <!-- Spinner while loading projects -->
       <div v-if="loading" class="spinner-container">
         <div class="spinner"></div>
       </div>
     </div>
 
+    <!-- Display projects -->
     <div v-if="!loading && roundedProjects.length > 0">
       <table>
         <!-- Table headers -->
@@ -69,14 +75,19 @@
       <div v-if="showProposalModal" class="modal">
         <div class="modal-content">
           <span class="close" @click="closeProposalModal">&times;</span>
-          <p>{{ modalProposal }}</p>
+          <!-- Use Showdown to render proposal in proper format -->
+          <div class="proposal-content" v-html="renderedProposal"></div>
         </div>
       </div>
 
       <!-- Display Preview -->
-      <div v-if="preview" class="preview-container">
+      <div v-if="preview !== null" class="preview-container">
         <h2>Preview:</h2>
-        <table v-if="selectedProjects.length > 0">
+        <div v-if="previewLoading" class="spinner-container">
+          <div class="spinner"></div>
+        </div>
+        <table v-else-if="selectedProjects.length > 0" class="preview-table">
+          <!-- Table headers -->
           <thead>
             <tr>
               <th>ID</th>
@@ -95,6 +106,7 @@
               <th>Bid Amount</th>
             </tr>
           </thead>
+          <!-- Table body -->
           <tbody>
             <!-- Iterate over preview items -->
             <tr v-for="(item, index) in preview" :key="index">
@@ -116,12 +128,16 @@
                 <!-- Open modal on click -->
                 <button @click="openProposalModal(item.proposal)">View Proposal</button>
               </td>
-              <td><input type="number" v-model="item.bidAmount" placeholder="Enter bid amount"></td>
+              <!-- Dynamically set colspan to the number of columns minus 13 -->
+              <td :colspan="projectHeaders.length - 13">
+                <input class="bid-input" type="number" v-model="item.bidAmount" placeholder="Enter bid amount">
+              </td>
             </tr>
           </tbody>
         </table>
         <p v-else>No projects selected for preview.</p>
-        <button @click="confirmBid">Confirm</button>
+        <!-- Confirm button conditionally displayed -->
+        <button v-if="!previewLoading && canConfirmBid" @click="confirmBid">Confirm</button>
       </div>
     </div>
   </div>
@@ -129,6 +145,7 @@
 
 <script>
 import axios from 'axios';
+import showdown from 'showdown';
 
 export default {
   data() {
@@ -139,6 +156,7 @@ export default {
       loading: false,
       backendUrl: 'http://127.0.0.1:5000',
       preview: null,
+      previewLoading: false,
       projectHeaders: [
         'id',
         'title',
@@ -156,10 +174,24 @@ export default {
       showModal: false,
       modalDescription: '',
       showProposalModal: false,
-      modalProposal: ''
+      modalProposal: '',
+      renderedProposal: '', // Holds the rendered HTML of the proposal
+      searchClicked: false, // Track if search button is clicked
     };
   },
   methods: {
+    async handleSearch() {
+      // Set searchClicked to true when search button is clicked
+      this.searchClicked = true;
+      
+      // If query is empty, return and show the message
+      if (!this.isQueryTyped) {
+        return;
+      }
+      
+      // If query is not empty, proceed with fetching projects
+      this.fetchProjects();
+    },
     async fetchProjects() {
       try {
         this.loading = true;
@@ -188,29 +220,35 @@ export default {
     openProposalModal(proposal) {
       this.showProposalModal = true;
       this.modalProposal = proposal;
+      // Convert Markdown proposal to HTML using Showdown
+      this.renderedProposal = new showdown.Converter().makeHtml(proposal);
     },
     closeProposalModal() {
       this.showProposalModal = false;
       this.modalProposal = '';
+      this.renderedProposal = '';
     },
     async generateAndShowProposal(id) {
-      try {
-        const response = await axios.get(`${this.backendUrl}/generate_proposal`, {
-          params: {
-            project_id: id,  // Send project ID as a query parameter
-          },
-        });
-        return response.data.proposal || 'No proposal available';
-      } catch (error) {
-        console.error('Error generating proposal:', error);
-        return 'No proposal available';
-      }
-    },
+        try {
+          const response = await axios.get(`${this.backendUrl}/generate_proposal`, {
+            params: {
+              project_id: id,
+            },
+          });
+          return response.data.proposal || 'No proposal available';
+        } catch (error) {
+          console.error('Error generating proposal:', error);
+          return 'Failed to generate proposal. Please try again later.';
+        }
+      },
     async previewBid() {
       if (this.selectedProjects.length === 0) {
         this.preview = [];
         return;
       }
+
+      // Set preview loading state to true to show spinner
+      this.previewLoading = true;
 
       this.preview = [];
 
@@ -229,7 +267,11 @@ export default {
 
         this.preview.push(previewItem);
       }
+
+      // Set preview loading state back to false after preview is complete
+      this.previewLoading = false;
     },
+
     submitBid() {
       console.log('Submitting bids:', this.selectedProjects);
       // You can add logic here to send bid details to the backend
@@ -265,8 +307,14 @@ export default {
     },
     formatHeader(header) {
       // Capitalize the first letter of each word after an underscore
-      return header.split('_').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
+      let formattedHeader = header.split('_').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
+      
+      // Check if the header contains 'Usd' and replace it with 'USD'
+      formattedHeader = formattedHeader.replace('Usd', 'USD');
+      
+      return formattedHeader;
     },
+
   },
   computed: {
     // Compute rounded values for budget_minimum_usd and budget_maximum_usd
@@ -278,6 +326,13 @@ export default {
         submitdate: this.formatDate(project.submitdate), // Convert Unix timestamp to human-readable date
         bid_stats_bid_avg: parseFloat(project.bid_stats_bid_avg).toFixed(1), // Format to display only one digit after the decimal point
       }));
+    },
+    isQueryTyped() {
+      return this.query.trim().length > 0; // Check if query is typed (ignores leading/trailing whitespace)
+    },
+    // Check if bid amount is entered for all selected projects
+    canConfirmBid() {
+      return this.preview.every(item => item.bidAmount !== '');
     },
   },
 };
@@ -309,6 +364,13 @@ export default {
   100% { transform: rotate(360deg); }
 }
 
+/* CSS for Bid Amount input field */
+.bid-input {
+  width: 100%; /* Ensure the input field fills the entire cell */
+  box-sizing: border-box; /* Include padding and border in the width */
+}
+
+
 /* Container style */
 div {
   font-family: 'Arial', sans-serif;
@@ -321,6 +383,14 @@ div {
   border: 1px solid #ddd;
   padding: 10px;
   margin-top: 20px;
+  overflow-x: auto;
+}
+
+/* Preview table style */
+.preview-table {
+  width: 100%;
+  max-width: 100%; /* Limit maximum width */
+  table-layout: fixed; /* Ensure even distribution of width among columns */
 }
 
 h1 {
@@ -410,5 +480,21 @@ button:hover {
   color: black;
   text-decoration: none;
   cursor: pointer;
+}
+
+/* Proposal content style */
+.proposal-content {
+  text-align: left;
+}
+/* Style for disabled search button */
+button:disabled {
+  background-color: #ccc; /* Change background color */
+  color: #666; /* Change text color */
+  cursor: not-allowed; /* Change cursor to indicate it's not clickable */
+}
+
+button:disabled:hover {
+  background-color: #ccc; /* Change background color on hover */
+  color: #666; /* Change text color on hover */
 }
 </style>
