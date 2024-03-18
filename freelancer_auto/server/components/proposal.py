@@ -2,6 +2,7 @@ import os
 import requests
 import re
 from dotenv import load_dotenv
+
 def generate_proposal(project_title: str, project_description: str):
     # set api key and api endpoint
     load_dotenv()

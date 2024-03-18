@@ -25,7 +25,7 @@ def _search_projects(query_str):
     search_filter = create_search_projects_filter(
         sort_field= 'time_updated',
         or_search_query= True,
-        languages='en',
+        languages= 'en',
     )
 
     try:
