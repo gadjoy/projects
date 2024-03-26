@@ -154,7 +154,6 @@ export default {
   data() {
     return {
       query: '',
-      searchLimit: '',
       projects: [],
       selectedProjects: [],
       loading: false,

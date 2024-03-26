@@ -119,5 +119,3 @@ def create_proposals(id):
 
     # Return the row with the specified ID as JSON
     return jsonify(df_existing.loc[df_existing['id'] == id].to_dict(orient='records'))
-
-
