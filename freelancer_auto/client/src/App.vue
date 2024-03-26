@@ -23,17 +23,13 @@
         <!-- Table headers -->
         <thead>
           <tr>
-            <th>Select</th>
             <th v-for="header in projectHeaders" :key="header">{{ formatHeader(header) }}</th>
+            <th>Select</th> <!-- Move checkbox column to the last position -->
           </tr>
         </thead>
         <!-- Table body -->
         <tbody>
           <tr v-for="project in roundedProjects" :key="project.id">
-            <!-- Checkbox for selection -->
-            <td>
-              <input type="checkbox" v-model="selectedProjects" :value="project.id" />
-            </td>
             <!-- Display project data -->
             <td v-for="header in projectHeaders" :key="header">
               <template v-if="header !== 'description'">
@@ -53,14 +49,18 @@
                 <button @click="openModal(project.description)">View Description</button>
               </template>
             </td>
+            <!-- Checkbox for selection -->
+            <td>
+              <input type="checkbox" v-model="selectedProjects" :value="project.id" />
+            </td>
           </tr>
         </tbody>
       </table>
 
       <!-- Buttons for preview and submit -->
       <div>
-        <button @click="previewBid" :disabled="selectedProjects.length === 0">Preview</button>
-        <button @click="submitBid" :disabled="selectedProjects.length === 0 || !preview">Submit</button>
+        <button @click="previewBid" :disabled="selectedProjects.length === 0">Propose</button>
+        
       </div>
 
       <!-- Modal window for project description -->
@@ -104,6 +104,7 @@
               <th>Description</th>
               <th>Proposal</th>
               <th>Bid Amount</th>
+              <th>Confirm</th> <!-- New column for confirm button -->
             </tr>
           </thead>
           <!-- Table body -->
@@ -128,17 +129,19 @@
                 <!-- Open modal on click -->
                 <button @click="openProposalModal(item.proposal)">View Proposal</button>
               </td>
-              <!-- Dynamically set colspan to the number of columns minus 13 -->
-              <td :colspan="projectHeaders.length - 13">
+              <!-- Dynamically set colspan to the number of columns minus 14 -->
+              <td :colspan="projectHeaders.length - 14">
                 <input class="bid-input" type="number" v-model="item.bidAmount" placeholder="Enter bid amount">
+              </td>
+              <td>
+                <button @click="confirmBid(index)" :disabled="!item.bidAmount">Confirm</button>
               </td>
             </tr>
           </tbody>
         </table>
         <p v-else>No projects selected for preview.</p>
-        <!-- Confirm button conditionally displayed -->
-        <button v-if="!previewLoading && canConfirmBid" @click="confirmBid">Confirm</button>
       </div>
+
     </div>
   </div>
 </template>
@@ -289,7 +292,7 @@ export default {
         bids: this.preview.map(item => ({ id: item.id, bidAmount: item.bidAmount }))
       };
 
-      axios.post(`${this.backendUrl}/create_bid`, bidData)
+      axios.post(`${this.backendUrl}/place_bid`, bidData)
         .then(response => {
           console.log('Bid created successfully:', response.data);
           // Optionally, you can reset the selectedProjects and preview arrays after successful bid creation
@@ -371,7 +374,6 @@ export default {
   box-sizing: border-box; /* Include padding and border in the width */
 }
 
-
 /* Container style */
 div {
   font-family: 'Arial', sans-serif;
@@ -390,8 +392,17 @@ div {
 /* Preview table style */
 .preview-table {
   width: 100%;
-  max-width: 100%; /* Limit maximum width */
-  table-layout: fixed; /* Ensure even distribution of width among columns */
+  table-layout: auto; /* Allow table to adjust layout based on content */
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.preview-table th,
+.preview-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+  word-wrap: break-word; /* Wrap long words */
 }
 
 h1 {
@@ -408,6 +419,7 @@ button {
 /* Table style */
 table {
   width: 100%;
+  table-layout: auto; /* Allow table to adjust layout based on content */
   border-collapse: collapse;
   margin-top: 20px;
 }
