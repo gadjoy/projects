@@ -1,3 +1,17 @@
+# Golden Configuration as March-26-2024
+
+Please use the below versions for optimal use and easy setup. This would be updated to the latest stable build continously. Check these version before you start troubleshooting.
+
+|Software	| Version |
+| --------- | ------- |
+| Ubuntu	| 20.04 |
+| python*	| 3.10.13 |
+| VSCode	| 1.87.2 |
+| node*    | 18.3.0 |
+| npm | 8.11.0 |
+| nvm | 0.39.1 |
+
+
 # Branch Naming
 Git branch naming policy for Gadjoy Team
 
