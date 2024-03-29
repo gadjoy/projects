@@ -11,6 +11,14 @@ Please use the below versions for optimal use and easy setup. This would be upda
 | npm | 8.11.0 |
 | nvm | 0.39.1 |
 
+# Setup
+
+wsl_python.md
+github_setup.md
+virutal_environment_setup.md
+aws_codewhisperer_setup.md
+server_setup.md
+client_setup.md
 
 # Branch Naming
 Git branch naming policy for Gadjoy Team
