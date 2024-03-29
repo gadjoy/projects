@@ -1,28 +1,5 @@
 **Project Summary**
 
-<<<<<<< HEAD
-We propose to develop a comprehensive WhatsApp chatbot for your firearms training centre. This bot will be able to answer frequently asked questions, provide information about your training programs, and detail pricing. It will be designed to provide a general price range when prompted about the cost of your courses.
-
-**Project Understanding**
-
-We have carefully analyzed your needs and developed a clear project description. We believe that our solution will meet your requirements and provide a valuable resource for your customers.
-
-**Solution Fit**
-
-Our solution is designed to meet your specific needs. It will be easy to use and navigate, and it will provide your customers with the information they need in a timely manner.
-
-**Client-Centric Value**
-
-Our project outline provides clarity and ensures that the project evolves in accordance with your vision. We are committed to working with you to refine project goals and ensure that the final product meets your expectations.
-
-**Invitation to Collaboration**
-
-We invite you to further refine project goals as a collaborative effort. We believe that this will result in a better product for your customers.
-
-**Call to Action**
-
-We would like to discuss a formal development plan with you. We believe that this is the best way to ensure that the project is completed on time and within budget.
-=======
 We are excited to propose our solution for your System Testing with BDD Framework project. Our solution will address your key requirements for user authentication, data validation, and error handling. We have a proven track record of delivering high-quality software, and we are confident that we can meet your expectations.
 
 **Project Understanding**
@@ -48,4 +25,3 @@ We would like to discuss a formal development plan with you. We are confident th
 **Outcome**
 
 We would like to do the whole software development process for a proof of concept with SRS, Architecture, Workflows, Message sequence charts, UI wireframes as part of showing our skills rather than just saying we can do it.
->>>>>>> master
