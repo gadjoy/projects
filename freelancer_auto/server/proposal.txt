@@ -23,5 +23,5 @@ We would like to invite you to further refine project goals as a collaborative e
 We would like to discuss a formal development plan with you. We are confident that our solution will meet your needs and that we can deliver a high-quality product on time and within budget.
 
 **Outcome**
-
 We would like to do the whole software development process for a proof of concept with SRS, Architecture, Workflows, Message sequence charts, UI wireframes as part of showing our skills rather than just saying we can do it.
+
