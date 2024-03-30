@@ -1,0 +1,386 @@
+[33mcommit d694657ace3811fff03bb35752dc9fcbd21847e7[m[33m ([m[1;36mHEAD -> [m[1;32mash/freelancer/dev[m[33m)[m
+Merge: 35724c89 ff29d23b
+Author: Ashwinbe <achuashwinxx@gmail.com>
+Date:   Sat Mar 30 17:09:44 2024 +0530
+
+    Resolved conflicts and staged changes
+
+[33mcommit ff29d23bec1d11faf7b7ff3870ee0bacaa47d909[m[33m ([m[1;31morigin/ash/freelancer/dev[m[33m)[m
+Author: Ashwinbe <113685754+Ashwinbe@users.noreply.github.com>
+Date:   Sat Mar 30 13:20:26 2024 +0530
+
+    Update App.vue
+
+[33mcommit 3d78fa7e82f159a46d64114b7a032c7d27c3ef30[m
+Author: Ashwinbe <113685754+Ashwinbe@users.noreply.github.com>
+Date:   Sat Mar 30 13:20:12 2024 +0530
+
+    Update App.vue
+
+[33mcommit 748036cb6cd6a3f73192c40b421b823732a6088e[m
+Author: Ashwinbe <113685754+Ashwinbe@users.noreply.github.com>
+Date:   Sat Mar 30 13:19:45 2024 +0530
+
+    Update App.vue
+
+[33mcommit c27a229362e4e253feee72caae3180223281ede7[m
+Author: SANTHOSHS12 <113892960+SANTHOSHS12@users.noreply.github.com>
+Date:   Sat Mar 30 13:08:37 2024 +0530
+
+    Update App.vue
+
+[33mcommit cd180f323caede174bb4d4cd31181c978358cc79[m
+Author: Ashwinbe <113685754+Ashwinbe@users.noreply.github.com>
+Date:   Sat Mar 30 13:01:44 2024 +0530
+
+    Update App.vue
+
+[33mcommit 00e1364fe155d6061ca0850dac2abfb5180728db[m
+Author: Ashwinbe <113685754+Ashwinbe@users.noreply.github.com>
+Date:   Sat Mar 30 12:59:47 2024 +0530
+
+    Update App.vue
+
+[33mcommit 4cc4808e3cd4ada0c8c35cf56fbb04d6702fb01a[m
+Author: Ashwinbe <113685754+Ashwinbe@users.noreply.github.com>
+Date:   Sat Mar 30 12:51:07 2024 +0530
+
+    Update App.vue
+
+[33mcommit 9f671f85d549361d8f455eebc21b8111cbd8fb93[m
+Author: Ashwinbe <113685754+Ashwinbe@users.noreply.github.com>
+Date:   Sat Mar 30 12:48:10 2024 +0530
+
+    Update App.vue
+
+[33mcommit 625063458ff0624a0a82c4e792f8917fcf515861[m
+Author: Ashwinbe <113685754+Ashwinbe@users.noreply.github.com>
+Date:   Sat Mar 30 12:44:30 2024 +0530
+
+    Update App.vue
+
+[33mcommit f3093a05059c4f58496814a2f4d94270ddce2f61[m
+Author: Ashwinbe <113685754+Ashwinbe@users.noreply.github.com>
+Date:   Sat Mar 30 12:41:52 2024 +0530
+
+    Update projects.csv
+
+[33mcommit 81b4c88c11e819d0e0cf0464f63c0ea94802184c[m
+Author: Ashwinbe <113685754+Ashwinbe@users.noreply.github.com>
+Date:   Sat Mar 30 12:41:22 2024 +0530
+
+    Update projects.csv
+
+[33mcommit bec326b4a65b75bb879cdd173c410dc308c16b34[m
+Author: Ashwinbe <113685754+Ashwinbe@users.noreply.github.com>
+Date:   Sat Mar 30 12:40:01 2024 +0530
+
+    Update proposal.txt
+
+[33mcommit 5b6a754a937c61fded5dcca2e6c675e7a61a64ce[m
+Author: Ashwinbe <113685754+Ashwinbe@users.noreply.github.com>
+Date:   Sat Mar 30 12:36:14 2024 +0530
+
+    Update proposal.txt
+
+[33mcommit 1ed6dd5e503217ea1103e297b44b46ee46a1616b[m
+Author: Ashwinbe <113685754+Ashwinbe@users.noreply.github.com>
+Date:   Sat Mar 30 12:35:13 2024 +0530
+
+    Update projects.csv
+
+[33mcommit bae38b458d1a6b7f48a7a3c51586831b73e4432b[m
+Author: Ashwinbe <113685754+Ashwinbe@users.noreply.github.com>
+Date:   Sat Mar 30 12:33:21 2024 +0530
+
+    Update projects.csv
+
+[33mcommit d6785b7a1146f7ce6b3250411acb355619035a75[m
+Author: Ashwinbe <113685754+Ashwinbe@users.noreply.github.com>
+Date:   Sat Mar 30 12:30:45 2024 +0530
+
+    Update App.vue
+
+[33mcommit 86a031297391fe396eff7e4034ac59464b282600[m
+Author: Ashwinbe <113685754+Ashwinbe@users.noreply.github.com>
+Date:   Sat Mar 30 12:22:45 2024 +0530
+
+    Delete freelancer_auto/server/virtualenvironment.md
+
+[33mcommit de1c986d796c5702fd5a43ea7ebb2a9adadf8340[m
+Author: Ashwinbe <113685754+Ashwinbe@users.noreply.github.com>
+Date:   Sat Mar 30 12:16:30 2024 +0530
+
+    Update proposal.txt
+
+[33mcommit 92b81ffcaef90881504256b12ecf3ab8f21c2bab[m
+Author: Ashwinbe <113685754+Ashwinbe@users.noreply.github.com>
+Date:   Sat Mar 30 12:15:25 2024 +0530
+
+    Update projects.csv
+
+[33mcommit 7cdd5e0b5d60802d06cfc5b963f9b672c874d459[m
+Author: Ashwinbe <113685754+Ashwinbe@users.noreply.github.com>
+Date:   Sat Mar 30 12:13:28 2024 +0530
+
+    Update App.vue
+
+[33mcommit 0a3779ef51c2f35fcbccaf9a73a7e52c28b4526f[m
+Author: Ashwinbe <113685754+Ashwinbe@users.noreply.github.com>
+Date:   Sat Mar 30 12:12:18 2024 +0530
+
+    Update package-lock.json
+
+[33mcommit 004db2688dae51a1fb1813b9eb9a4b055242a63c[m
+Author: Ashwinbe <113685754+Ashwinbe@users.noreply.github.com>
+Date:   Sat Mar 30 12:08:45 2024 +0530
+
+    Update package.json
+
+[33mcommit 35724c897a8a4f76a446f7a7de155fc9ffe8c4f1[m
+Author: Ashwinbe <achuashwinxx@gmail.com>
+Date:   Sat Mar 30 10:41:37 2024 +0530
+
+    ash
+
+[33mcommit 8145b2d184a82de23e10d1e35312770330f5e1d2[m
+Author: Ashwinbe <113685754+Ashwinbe@users.noreply.github.com>
+Date:   Sat Mar 30 10:33:31 2024 +0530
+
+    Update package.json
+
+[33mcommit 9172a3a1ff24f91100ccd792c5852153710e3b72[m
+Author: Ashwinbe <113685754+Ashwinbe@users.noreply.github.com>
+Date:   Sat Mar 30 10:30:04 2024 +0530
+
+    Update proposal.txt
+
+[33mcommit 1d0ed4d6e0c210f79bda5d2bc18a3a408e033a01[m
+Author: Ashwinbe <113685754+Ashwinbe@users.noreply.github.com>
+Date:   Sat Mar 30 10:28:57 2024 +0530
+
+    Update projects.csv
+
+[33mcommit 76c602616a1ec1ee33987444f5f63eb960624e4d[m
+Author: Ashwinbe <113685754+Ashwinbe@users.noreply.github.com>
+Date:   Sat Mar 30 10:27:02 2024 +0530
+
+    Update App.vue
+
+[33mcommit ad53981178be28f2fd781ff11b7256ae20dd4115[m
+Author: Ashwinbe <113685754+Ashwinbe@users.noreply.github.com>
+Date:   Sat Mar 30 10:25:54 2024 +0530
+
+    Update package.json
+
+[33mcommit 3e0c7c1919ba0ac62dabd7b4955d9b273c32d2e4[m
+Author: Ashwinbe <achuashwinxx@gmail.com>
+Date:   Sat Mar 30 10:20:11 2024 +0530
+
+    initial commit
+
+[33mcommit 4fd0c3b663ed3ebf702c5a6c4977b5a19d6a5363[m
+Author: Ashwinbe <113685754+Ashwinbe@users.noreply.github.com>
+Date:   Sat Mar 30 10:17:27 2024 +0530
+
+    Update virutal_environment_setup.md
+
+[33mcommit 5a86b9cf2ddaba53ee30aff10449378132d0d89b[m
+Author: Ashwinbe <113685754+Ashwinbe@users.noreply.github.com>
+Date:   Thu Mar 28 17:48:35 2024 +0530
+
+    Update virutal_environment_setup.md
+
+[33mcommit 723d7aecc1cc72c69d4e7a1cca72524739e5195b[m
+Author: Ashwinbe <achuashwinxx@gmail.com>
+Date:   Thu Mar 28 17:45:47 2024 +0530
+
+    ash
+
+[33mcommit 34214262b332281ff2aa7f777e273c9274996ee6[m
+Author: Ashwinbe <achuashwinxx@gmail.com>
+Date:   Tue Mar 26 22:33:00 2024 +0530
+
+    inital
+
+[33mcommit ab2c336830f2992ca6581a9d2a19a400bc512b82[m
+Author: Ashwinbe <113685754+Ashwinbe@users.noreply.github.com>
+Date:   Mon Mar 18 13:48:06 2024 +0530
+
+    Update App.vue
+
+[33mcommit c56304b579135c5a66698e2cdc076529b9d2838a[m
+Author: Ashwinbe <achuashwinxx@gmail.com>
+Date:   Mon Mar 18 13:42:53 2024 +0530
+
+    initial commit
+
+[33mcommit d78ce682f330058858f379e76b6bb4caa8be344c[m
+Author: Ashwinbe <113685754+Ashwinbe@users.noreply.github.com>
+Date:   Sun Mar 17 23:33:05 2024 +0530
+
+    Update App.vue
+
+[33mcommit ea1a935ec5458ed682ed62c6613eb9cf93035fdd[m
+Merge: a204111f 41bedc21
+Author: Vivek <vivek@novasignal.com>
+Date:   Sun Mar 17 23:14:02 2024 +0530
+
+    Merge branch 'vivek/freelancer/dev' into ash/freelancer/dev
+
+[33mcommit 41bedc21e3ef142afd376960edd76b92e7d53456[m
+Author: Vivek <vivek@novasignal.com>
+Date:   Sun Mar 17 23:11:30 2024 +0530
+
+    intermediate changes
+
+[33mcommit a204111fd55da41580ec7494ac4dc17fd40f73a8[m
+Author: Ashwinbe <achuashwinxx@gmail.com>
+Date:   Sun Mar 17 22:55:28 2024 +0530
+
+    inital proper commit
+
+[33mcommit e1307e2552cfe6c3db0618ebfc17956286b9ace5[m[33m ([m[1;32mmaster[m[33m)[m
+Merge: 88831485 15bd7863
+Author: vivekanandba <47303711+vivekanandba@users.noreply.github.com>
+Date:   Thu Mar 14 15:59:04 2024 +0530
+
+    Merge pull request #6 from gadjoy/vivek/freelancer/dev
+    
+    Vivek/freelancer/dev
+
+[33mcommit 15bd7863c861a40fc10062b97feb6c77a4c7686a[m
+Merge: efec90eb 88831485
+Author: Vivek <vivek@novasignal.com>
+Date:   Thu Mar 14 15:56:51 2024 +0530
+
+    Merge branch 'master' of github.com:gadjoy/projects into vivek/freelancer/dev
+
+[33mcommit efec90eb176ecb61a0f254f73a53f1a91659cfaf[m
+Author: Vivek <vivek@novasignal.com>
+Date:   Thu Mar 14 15:54:17 2024 +0530
+
+    freelancer auto client checkin
+
+[33mcommit 8883148560290afb45a9a8f332c36157419243d5[m
+Merge: c1503607 6e79020c
+Author: vivekanandba <47303711+vivekanandba@users.noreply.github.com>
+Date:   Wed Mar 13 21:57:50 2024 +0530
+
+    Merge pull request #4 from gadjoy/vivek/freelancer/dev
+    
+    Vivek/freelancer/dev
+
+[33mcommit c15036076bfd77a1a2aa407a85161be10f7d2db2[m
+Merge: e9471873 c6c4a6b7
+Author: vivekanandba <47303711+vivekanandba@users.noreply.github.com>
+Date:   Wed Mar 13 21:57:15 2024 +0530
+
+    Merge pull request #2 from gadjoy/shrishaila/freelancer/dev
+    
+    initial release for facial landmark detect
+
+[33mcommit 6e79020c1ef07e17afadfe1ddee72a1eb6263410[m
+Merge: 3d2e2352 e9471873
+Author: vivekanandba <47303711+vivekanandba@users.noreply.github.com>
+Date:   Wed Mar 13 21:51:54 2024 +0530
+
+    Merge pull request #3 from gadjoy/master
+    
+    Merge pull request #1 from gadjoy/vivek/freelancer/dev
+
+[33mcommit c6c4a6b70bdd269c50acb7ab62f1938194464298[m
+Author: Shrirealstar <93472852+Shrirealstar@users.noreply.github.com>
+Date:   Wed Mar 13 17:47:12 2024 +0530
+
+    Delete Facial_landmark_detect directory
+
+[33mcommit 23dd4ea94c994b92da6e3517ce7f609c2446dff0[m
+Merge: e2e18871 4344a1b3
+Author: Shrirealstar <Shrishankarnag@gmail.com>
+Date:   Wed Mar 13 14:45:58 2024 +0530
+
+    Merge branch 'shrishaila/freelancer/dev' of https://github.com/gadjoy/projects into shrishaila/freelancer/dev
+
+[33mcommit e2e1887174065ac391961331baa44cd7cbb8cc55[m
+Author: Shrirealstar <Shrishankarnag@gmail.com>
+Date:   Wed Mar 13 14:41:41 2024 +0530
+
+    explore replease
+
+[33mcommit 3d2e23523903d5500ceed7dc186c580b48a79f31[m
+Author: Vivek <vivek@novasignal.com>
+Date:   Tue Mar 12 22:07:03 2024 +0530
+
+    initial checkin for freelancer_auto exploration, server
+
+[33mcommit 4344a1b378c815469a4ddf42ad8b03b538675b93[m
+Author: Shrirealstar <93472852+Shrirealstar@users.noreply.github.com>
+Date:   Tue Mar 12 17:49:25 2024 +0530
+
+    initial release
+
+[33mcommit e9471873df74e6a977371fb951a7e1d175eca08d[m
+Merge: dce28a41 fd1351d2
+Author: vivekanandba <47303711+vivekanandba@users.noreply.github.com>
+Date:   Sat Mar 2 10:11:06 2024 +0530
+
+    Merge pull request #1 from gadjoy/vivek/freelancer/dev
+    
+    Vivek/freelancer/dev
+
+[33mcommit fd1351d20bac99f6f1556c0ec750973150953b32[m
+Author: Vivek <vivek@novasignal.com>
+Date:   Sat Mar 2 10:08:10 2024 +0530
+
+    quiz generator and the docs and explanation for others
+
+[33mcommit d4a312e761af63a4b58eebc4587ffec076f6bff8[m
+Merge: 2236621d 0d43bcf8
+Author: Vivek <vivek@novasignal.com>
+Date:   Wed Feb 21 18:30:03 2024 +0530
+
+    Merge branch 'vivek/freelancer/dev' of github.com:gadjoy/projects into vivek/freelancer/dev
+
+[33mcommit 2236621d5b980290ce7fd97fa2845277f912edaf[m
+Author: Vivek <vivek@novasignal.com>
+Date:   Wed Feb 21 18:27:56 2024 +0530
+
+    chatbot testing PoC complete
+
+[33mcommit d3cd924ecf7053ef3c0dbd1bb35ccee649915882[m
+Merge: 0717afa7 dce28a41
+Author: Vivek <vivek@novasignal.com>
+Date:   Wed Feb 21 18:26:51 2024 +0530
+
+    Merge branch 'master' of github.com:gadjoy/projects into vivek/freelancer/dev
+
+[33mcommit 0717afa73a86d0a1232d0f953386fcef2112ca80[m
+Author: Vivek <vivek@novasignal.com>
+Date:   Wed Feb 21 18:25:09 2024 +0530
+
+    chatbot testing PoC complete
+
+[33mcommit 0d43bcf8e9387498577f24a45818f8972291de9f[m
+Author: vivekanandba <47303711+vivekanandba@users.noreply.github.com>
+Date:   Tue Feb 20 22:56:33 2024 +0530
+
+    Delete chatbot_testing/.env
+
+[33mcommit a69d440e2c6e8e33605978ee9a267cc32af68d29[m
+Author: Vivek <vivek@novasignal.com>
+Date:   Tue Feb 20 22:14:38 2024 +0530
+
+    chatbot testing
+
+[33mcommit dce28a4181198ef4d8ea85cf47a279bd526a62ad[m
+Author: vivekanandba <47303711+vivekanandba@users.noreply.github.com>
+Date:   Mon Feb 19 08:04:34 2024 +0530
+
+    Create README.md
+
+[33mcommit 76111181c84130c7a7389971288ac9107598ed83[m
+Author: Vivek <vivek@novasignal.com>
+Date:   Sun Feb 18 01:04:37 2024 +0530
+
+    facial analysis first checkin
