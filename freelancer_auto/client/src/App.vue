@@ -2,7 +2,7 @@
   <div>
     <h1>FREELANCER AUTO BIDDING</h1>
 
-    <!-- Search input and button --
+    <!-- Search input and button -->
     <div>
       <label for="query">Query:</label>
       <input v-model="query" type="text" id="query" placeholder="Type your query here..." />
