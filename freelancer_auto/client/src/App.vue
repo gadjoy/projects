@@ -157,11 +157,7 @@ export default {
       projects: [],
       selectedProjects: [],
       loading: false,
-<<<<<<< HEAD
-      backendUrl: 'https://freelancer-auto-bidding.onrender.com',
-=======
-      backendUrl: 'https://freelancer-auto-backend.onrender.com',
->>>>>>> 6bedc61d78f85784c6de3437b3e7bd5bab6b7b53
+      backendUrl: 'http://127.0.0.1:5000',
       preview: null,
       previewLoading: false,
       projectHeaders: [
