@@ -4,9 +4,18 @@ from components.dataframe import create_filtered_df
 from components.proposal import generate_proposal
 from components.freelancer import _get_project_by_id
 from components.freelancer import _place_project_bid
+import os
+import datetime
 
 app = Flask(__name__)
 CORS(app, supports_credentials=True)
+
+# Define backend version
+backend_version = '1.0.0'  # Update with your backend version
+build = 'built:001'
+
+# Manually set the modified date here
+backend_modified_date = "01-04-2024"
 
 @app.route('/')
 def index():
@@ -57,6 +66,12 @@ def place_bid():
     amount = request.args.get('amount')
     proposal = request.args.get('proposal')
     return _place_project_bid(project_id, amount, proposal)
+
+@app.route('/version', methods=['GET'])
+def get_version():
+    return jsonify({
+        'backend_version': f"api@{backend_version} {build} {backend_modified_date}",
+    })
 
 if __name__ == '__main__':
     app.run(debug=True)
