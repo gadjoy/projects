@@ -1,6 +1,6 @@
 # Setup
 
-* WSL-Python - docs/wsl_python.md
+* [WSL-Python](docs/wsl_python_setup.md)
 * Github - docs/github_setup.md
 * [Virtual-Env-Python](docs/virtual_environment_setup.md)
 * AI-Pair-AWS - docs/aws_codewhisperer_setup.md
