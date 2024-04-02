@@ -143,41 +143,14 @@
       </div>
 
     </div>
-
-     <!-- Info button in the right-side upper corner -->
-     <div class="info-button" @click="showAbout">
-      <i class="fas fa-info-circle"></i>
-    </div>
-
-     <!-- About component -->
-     <AboutModal v-if="showAboutModal" @close="hideAbout" 
-            :frontendVersion="frontendVersion" 
-            :frontendModifiedDate="frontendModifiedDate" 
-            :buildNumber="buildNumber" 
-            :backendVersion="backendVersion" 
-            :backendModifiedDate="backendModifiedDate" 
-            :backendUrl="backendUrl"/>
-<!-- Page to Display Versions -->
-<AboutPage v-if="showVersions && !showAboutModal" class="versions">
-  <span>{{ backendVersion }}</span>
-  <span>{{ backendModifiedDate }}</span>
-  <span>{{ frontendVersion }}</span>
-  <span>{{ frontendModifiedDate }}</span>
-  <span>{{ buildNumber }}</span>
-  <span>{{ backend_Url }}</span>
-</AboutPage>
   </div>
 </template>
 
 <script>
 import axios from 'axios';
 import showdown from 'showdown';
-import AboutModal from './AboutModal.vue';
 
 export default {
-  components: {
-    AboutModal,
-  },
   data() {
     return {
       query: '',
@@ -185,7 +158,6 @@ export default {
       selectedProjects: [],
       loading: false,
       backendUrl: 'http://127.0.0.1:5000',
-      apiVersion: 'v1',
       preview: null,
       previewLoading: false,
       projectHeaders: [
@@ -206,16 +178,8 @@ export default {
       modalDescription: '',
       showProposalModal: false,
       modalProposal: '',
-      renderedProposal: '',
-      searchClicked: false,
-      backendVersion: '',
-      backendModifiedDate: '',
-      frontendVersion: 'v1.0.0',
-      frontendModifiedDate: '01-04-2024',
-      buildNumber: '001',
-      backend_Url: 'http://127.0.0.1:5000',
-      showAboutModal: false,
-      showVersions: false,
+      renderedProposal: '', // Holds the rendered HTML of the proposal
+      searchClicked: false, // Track if search button is clicked
     };
   },
   methods: {
@@ -353,28 +317,7 @@ export default {
       
       return formattedHeader;
     },
-    showAbout() {
-      this.showAboutModal = true;
-      this.showVersions = true;
-      this.fetchBackendVersion();
-      this.fetchFrontendModifiedDate();
-    },
-    hideAbout() {
-      this.showAboutModal = false;
-      this.showVersions = false;
-    },
-    async fetchBackendVersion() {
-      try {
-        const response = await axios.get(`${this.backendUrl}/version`);
-        this.backendVersion = response.data.backend_version;
-        this.backendModifiedDate = response.data.backend_modified_date;
-      } catch (error) {
-        console.error('Error fetching backend version:', error);
-      }
-    },
-    fetchFrontendModifiedDate() {
-      this.frontendModifiedDate = '01-04-2024';
-    },
+
   },
   computed: {
     // Compute rounded values for budget_minimum_usd and budget_maximum_usd
@@ -565,31 +508,5 @@ button:disabled {
 button:disabled:hover {
   background-color: #ccc; /* Change background color on hover */
   color: #666; /* Change text color on hover */
-}
-
-/* Info button style */
-.info-button {
-  position: absolute; /* Position it relative to the nearest positioned ancestor */
-  top: 20px; /* Adjust top position */
-  right: 20px; /* Adjust right position */
-  cursor: pointer;
-  color: #3498db;
-  z-index: 999; /* Ensure it's above other content */
-}
-
-.info-button i {
-  font-size: 24px;
-}
-
-/* Versions display style */
-.versions {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-}
-
-.versions span {
-  display: block;
-  margin-bottom: 5px;
 }
 </style>
