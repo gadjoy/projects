@@ -6,6 +6,8 @@
 * [AI-Tools](/docs/ai_tools_setup.md)
 * [Server-Python-Flask](/docs/server_setup.md)
 * [Client-JS-Vue](docs/client_setup.md)
+* [FE-Deploy-Vercel](docs/frontend_deploy.md)
+* [BE-Deploy-Render](docs/backend_deploy.md)
 
 # Configuration
 ## Golden Configuration as March-26-2024
