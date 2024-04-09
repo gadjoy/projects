@@ -16,10 +16,11 @@
 6. **Configure service and deploy:**
 - After the configuration and deploy page loads, verify that your repository and branch are correct in the "Source" column.
 -If your code uses environment variables like "FLN_OAUTH_TOKEN" or "API_KEY":
-      - Add them in the "Environment Variables" column by clicking "Add variables."
-      - Enter the name of the variable and select its type. For secret variables, choose "Secret" and add the value in the secret section.
-      - Click "Create New Secret" to enter the variable value, then click "Create."
-      - Repeat this process for additional variables.
+- Add them in the "Environment Variables" column by clicking "Add variables."
+- Enter the name of the variable and select its type. For secret variables, choose "Secret" 
+  and add the value in the secret section.
+- Click "Create New Secret" to enter the variable value, then click "Create."
+- Repeat this process for additional variables.
 - Adjust the port number in the "Exposed Ports" column if needed by clicking on it and entering the desired port number.
 - Finally, click on the "Deploy" button to start the deployment process.
 7. **Monitor the deployment:**
