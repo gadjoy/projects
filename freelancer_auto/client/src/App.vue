@@ -185,7 +185,6 @@ export default {
       selectedProjects: [],
       loading: false,
       backendUrl: 'http://127.0.0.1:5000',
-      apiVersion: 'v1',
       preview: null,
       previewLoading: false,
       projectHeaders: [
