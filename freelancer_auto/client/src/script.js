@@ -23,4 +23,3 @@ form.addEventListener('submit', (event) => {
   // Clear form after submission
   form.reset();
 });
-  
