@@ -9,13 +9,14 @@
   },
   "dependencies": {
     "@vitejs/plugin-vue": "^5.0.4",
+    "@vue/cli": "^5.0.8",
     "@vue/compiler-sfc": "^3.4.21",
     "axios": "^1.6.7",
     "core-js": "^3.8.3",
     "markdown-it": "^14.0.0",
     "marked": "^12.0.0",
     "showdown": "^2.1.0",
-    "vue": "^3.4.21",
+    "vue": "^3.4.15",
     "vue-markdown": "^2.1.3",
     "vue-router": "^4.2.5"
   },
@@ -52,3 +53,4 @@
     "not dead"
   ]
 }
+
