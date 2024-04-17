@@ -1,147 +1,161 @@
 <template>
   <div>
     <h1>FREELANCER AUTO BIDDING</h1>
+    <!-- Display tokens input if tokens are not submitted -->
+    <div v-if="!tokensSubmitted">
+      <h2>Enter Tokens</h2>
+      <div>
+        <label for="oauth_token">OAuth Token:</label>
+        <input v-model="oauthToken" type="text" id="oauth_token" placeholder="Enter OAuth Token">
+      </div>
+      <div>
+        <label for="api_key">API Key:</label>
+        <input v-model="apiKey" type="text" id="api_key" placeholder="Enter API Key">
+      </div>
+      <button @click="submitTokens" :disabled="!oauthToken || !apiKey">Submit Tokens</button>
+    </div>
 
-    <!-- Search input and button -->
-    <div>
+    <!-- Display query input if tokens are submitted -->
+    <div v-else>
       <label for="query">Query:</label>
       <input v-model="query" type="text" id="query" placeholder="Type your query here..." />
       <button @click="handleSearch" :disabled="!isQueryTyped || loading">Search</button>
-      
+
       <!-- Message for empty query -->
       <p v-if="!isQueryTyped && searchClicked" style="color: red;">Please enter a query.</p>
-      
+
       <!-- Spinner while loading projects -->
       <div v-if="loading" class="spinner-container">
         <div class="spinner"></div>
       </div>
-    </div>
 
-    <!-- Display projects -->
-    <div v-if="!loading && roundedProjects.length > 0">
-      <table>
-        <!-- Table headers -->
-        <thead>
-          <tr>
-            <th v-for="header in projectHeaders" :key="header">{{ formatHeader(header) }}</th>
-            <th>Select</th> <!-- Move checkbox column to the last position -->
-          </tr>
-        </thead>
-        <!-- Table body -->
-        <tbody>
-          <tr v-for="project in roundedProjects" :key="project.id">
-            <!-- Display project data -->
-            <td v-for="header in projectHeaders" :key="header">
-              <template v-if="header !== 'description'">
-                <!-- Check if header is budget_minimum_usd or budget_maximum_usd -->
-                <template v-if="header === 'budget_minimum_usd' || header === 'budget_maximum_usd'">
-                  ${{ project[header] || 'Not available' }}
-                </template>
-                <!-- If header is not budget_minimum_usd or budget_maximum_usd -->
-                <template v-else-if="header === 'submitdate'">
-                  {{ formatDate(project[header]) || 'Not available' }}
-                </template>
-                <template v-else>
-                  {{ project[header] || 'Not available' }}
-                </template>
-              </template>
-              <template v-else>
-                <button @click="openModal(project.description)">View Description</button>
-              </template>
-            </td>
-            <!-- Checkbox for selection -->
-            <td>
-              <input type="checkbox" v-model="selectedProjects" :value="project.id" />
-            </td>
-          </tr>
-        </tbody>
-      </table>
-
-      <!-- Buttons for preview and submit -->
-      <div>
-        <button @click="previewBid" :disabled="selectedProjects.length === 0">Propose</button>
-        
-      </div>
-
-      <!-- Modal window for project description -->
-      <div v-if="showModal" class="modal">
-        <div class="modal-content">
-          <span class="close" @click="closeModal">&times;</span>
-          <p>{{ modalDescription }}</p>
-        </div>
-      </div>
-
-      <!-- Modal window for proposal -->
-      <div v-if="showProposalModal" class="modal">
-        <div class="modal-content">
-          <span class="close" @click="closeProposalModal">&times;</span>
-          <!-- Use Showdown to render proposal in proper format -->
-          <div class="proposal-content" v-html="renderedProposal"></div>
-        </div>
-      </div>
-
-      <!-- Display Preview -->
-      <div v-if="preview !== null" class="preview-container">
-        <h2>Preview:</h2>
-        <div v-if="previewLoading" class="spinner-container">
-          <div class="spinner"></div>
-        </div>
-        <table v-else-if="selectedProjects.length > 0" class="preview-table">
+      <!-- Display projects -->
+      <div v-if="!loading && roundedProjects.length > 0">
+        <table>
           <!-- Table headers -->
           <thead>
             <tr>
-              <th>ID</th>
-              <th>Title</th>
-              <th>SEO URL</th>
-              <th>Submit Date</th>
-              <th>Budget Minimum</th>
-              <th>Budget Maximum</th>
-              <th>Currency Code</th>
-              <th>Bid Stats Bid Count</th>
-              <th>Bid Stats Bid Avg</th>
-              <th>Budget Maximum USD</th>
-              <th>Budget Minimum USD</th>
-              <th>Description</th>
-              <th>Proposal</th>
-              <th>Bid Amount</th>
-              <th>Confirm</th> <!-- New column for confirm button -->
+              <th v-for="header in projectHeaders" :key="header">{{ formatHeader(header) }}</th>
+              <th>Select</th> <!-- Move checkbox column to the last position -->
             </tr>
           </thead>
           <!-- Table body -->
           <tbody>
-            <!-- Iterate over preview items -->
-            <tr v-for="(item, index) in preview" :key="index">
-              <td>{{ item.id }}</td>
-              <td>{{ item.title }}</td>
-              <td>{{ item.seo_url }}</td>
-              <td>{{ formatDate(item.submitdate) }}</td>
-              <td>{{ item.budget_minimum }}</td>
-              <td>{{ item.budget_maximum }}</td>
-              <td>{{ item.currency_code }}</td>
-              <td>{{ item.bid_stats_bid_count }}</td>
-              <td>{{ parseFloat(item.bid_stats_bid_avg).toFixed(1) }}</td>
-              <td>${{ parseFloat(item.budget_maximum_usd).toFixed(0) }}</td>
-              <td>${{ parseFloat(item.budget_minimum_usd).toFixed(0) }}</td>
-              <td>
-                <button @click="openModal(item.description)">View Description</button>
+            <tr v-for="project in roundedProjects" :key="project.id">
+              <!-- Display project data -->
+              <td v-for="header in projectHeaders" :key="header">
+                <template v-if="header !== 'description'">
+                  <!-- Check if header is budget_minimum_usd or budget_maximum_usd -->
+                  <template v-if="header === 'budget_minimum_usd' || header === 'budget_maximum_usd'">
+                    ${{ project[header] || 'Not available' }}
+                  </template>
+                  <!-- If header is not budget_minimum_usd or budget_maximum_usd -->
+                  <template v-else-if="header === 'submitdate'">
+                    {{ formatDate(project[header]) || 'Not available' }}
+                  </template>
+                  <template v-else>
+                    {{ project[header] || 'Not available' }}
+                  </template>
+                </template>
+                <template v-else>
+                  <button @click="openModal(project.description)">View Description</button>
+                </template>
               </td>
+              <!-- Checkbox for selection -->
               <td>
-                <!-- Open modal on click -->
-                <button @click="openProposalModal(item.proposal)">View Proposal</button>
-              </td>
-              <!-- Dynamically set colspan to the number of columns minus 14 -->
-              <td :colspan="projectHeaders.length - 14">
-                <input class="bid-input" type="number" v-model="item.bidAmount" placeholder="Enter bid amount">
-              </td>
-              <td>
-                <button @click="confirmBid(index)" :disabled="!item.bidAmount">Confirm</button>
+                <input type="checkbox" v-model="selectedProjects" :value="project.id" />
               </td>
             </tr>
           </tbody>
         </table>
-        <p v-else>No projects selected for preview.</p>
-      </div>
 
+        <!-- Buttons for preview and submit -->
+        <div>
+          <button @click="previewBid" :disabled="selectedProjects.length === 0">Propose</button>
+          <button @click="previousPage" :disabled="nextOffset === 0">Previous</button>
+          <button @click="nextPage" :disabled="!isQueryTyped || loading">Next</button>
+        </div>
+
+        <!-- Modal window for project description -->
+        <div v-if="showModal" class="modal">
+          <div class="modal-content">
+            <span class="close" @click="closeModal">&times;</span>
+            <p>{{ modalDescription }}</p>
+          </div>
+        </div>
+
+        <!-- Modal window for proposal -->
+        <div v-if="showProposalModal" class="modal">
+          <div class="modal-content">
+            <span class="close" @click="closeProposalModal">&times;</span>
+            <!-- Use Showdown to render proposal in proper format -->
+            <div class="proposal-content" v-html="renderedProposal"></div>
+          </div>
+        </div>
+
+        <!-- Display Preview -->
+        <div v-if="preview !== null" class="preview-container">
+          <h2>Preview:</h2>
+          <div v-if="previewLoading" class="spinner-container">
+            <div class="spinner"></div>
+          </div>
+          <table v-else-if="selectedProjects.length > 0" class="preview-table">
+            <!-- Table headers -->
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Title</th>
+                <th>SEO URL</th>
+                <th>Submit Date</th>
+                <th>Budget Minimum</th>
+                <th>Budget Maximum</th>
+                <th>Currency Code</th>
+                <th>Bid Stats Bid Count</th>
+                <th>Bid Stats Bid Avg</th>
+                <th>Budget Maximum USD</th>
+                <th>Budget Minimum USD</th>
+                <th>Description</th>
+                <th>Proposal</th>
+                <th>Bid Amount</th>
+                <th>Confirm</th> <!-- New column for confirm button -->
+              </tr>
+            </thead>
+            <!-- Table body -->
+            <tbody>
+              <!-- Iterate over preview items -->
+              <tr v-for="(item, index) in preview" :key="index">
+                <td>{{ item.id }}</td>
+                <td>{{ item.title }}</td>
+                <td>{{ item.seo_url }}</td>
+                <td>{{ formatDate(item.submitdate) }}</td>
+                <td>{{ item.budget_minimum }}</td>
+                <td>{{ item.budget_maximum }}</td>
+                <td>{{ item.currency_code }}</td>
+                <td>{{ item.bid_stats_bid_count }}</td>
+                <td>{{ parseFloat(item.bid_stats_bid_avg).toFixed(1) }}</td>
+                <td>${{ parseFloat(item.budget_maximum_usd).toFixed(0) }}</td>
+                <td>${{ parseFloat(item.budget_minimum_usd).toFixed(0) }}</td>
+                <td>
+                  <button @click="openModal(item.description)">View Description</button>
+                </td>
+                <td>
+                  <!-- Open modal on click -->
+                  <button @click="openProposalModal(item.proposal)">View Proposal</button>
+                </td>
+                <!-- Dynamically set colspan to the number of columns minus 14 -->
+                <td :colspan="projectHeaders.length - 14">
+                  <input class="bid-input" type="number" v-model="item.bidAmount" placeholder="Enter bid amount">
+                </td>
+                <td>
+                  <button @click="confirmBid(index)" :disabled="!item.bidAmount">Confirm</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <p v-else>No projects selected for preview.</p>
+        </div>
+
+      </div>
     </div>
 
      <!-- Info button in the right-side upper corner -->
@@ -184,7 +198,7 @@ export default {
       projects: [],
       selectedProjects: [],
       loading: false,
-      backendUrl: 'http://localhost:5000/',
+      backendUrl: 'https://freelancer-auto-backend-rqvi.onrender.com',
       preview: null,
       previewLoading: false,
       projectHeaders: [
@@ -215,38 +229,65 @@ export default {
       backend_Url: 'http://localhost:5000/',
       showAboutModal: false,
       showVersions: false,
+      nextOffset: 0, // Track offset for pagination
+      oauthToken: '', // Added OAuth Token data property
+      apiKey: '', // Added API Key data property
+      tokensSubmitted: false, // Flag to track if tokens are submitted
     };
   },
   methods: {
+    async submitTokens() {
+      try {
+        const response = await axios.post(`${this.backendUrl}/set_tokens`, {
+          oauth_token: this.oauthToken,
+          api_key: this.apiKey,
+        });
+        console.log(response.data.message);
+        // Optionally, you can clear the input fields after successful submission
+        this.oauthToken = '';
+        this.apiKey = '';
+        // Set tokensSubmitted to true after successful submission
+        this.tokensSubmitted = true;
+      } catch (error) {
+        console.error('Error submitting tokens:', error);
+      }
+    },
     async handleSearch() {
+      // Reset nextOffset when performing a new search
+      this.nextOffset = 0;
       // Set searchClicked to true when search button is clicked
       this.searchClicked = true;
-      
+
       // If query is empty, return and show the message
       if (!this.isQueryTyped) {
         return;
       }
-      
+
       // If query is not empty, proceed with fetching projects
       this.fetchProjects();
     },
     async fetchProjects() {
-      try {
-        this.loading = true;
-        const response = await axios.get(`${this.backendUrl}/search_projects`, {
-          params: {
-            query: this.query,
-          },
-        });
+  try {
+    this.loading = true;
+    // Clear the projects array before fetching new projects
+    this.projects = [];
+    const response = await axios.get(`${this.backendUrl}/search_projects`, {
+      params: {
+        query: this.query,
+        offset: this.nextOffset, // Pass the nextOffset as a parameter
+      },
+    });
 
-        this.projects = response.data;
+    // Concatenate new projects to existing projects array
+    this.projects = this.projects.concat(response.data); // Use concat() to add new projects to existing ones
 
-      } catch (error) {
-        console.error('Error fetching projects:', error);
-      } finally {
-        this.loading = false;
-      }
-    },
+  } catch (error) {
+    console.error('Error fetching projects:', error);
+  } finally {
+    this.loading = false;
+  }
+},
+
     openModal(description) {
       this.showModal = true;
       this.modalDescription = description;
@@ -267,18 +308,18 @@ export default {
       this.renderedProposal = '';
     },
     async generateAndShowProposal(id) {
-        try {
-          const response = await axios.get(`${this.backendUrl}/generate_proposal`, {
-            params: {
-              project_id: id,
-            },
-          });
-          return response.data.proposal || 'No proposal available';
-        } catch (error) {
-          console.error('Error generating proposal:', error);
-          return 'Failed to generate proposal. Please try again later.';
-        }
-      },
+      try {
+        const response = await axios.get(`${this.backendUrl}/generate_proposal`, {
+          params: {
+            project_id: id,
+          },
+        });
+        return response.data.proposal || 'No proposal available';
+      } catch (error) {
+        console.error('Error generating proposal:', error);
+        return 'Failed to generate proposal. Please try again later.';
+      }
+    },
     async previewBid() {
       if (this.selectedProjects.length === 0) {
         this.preview = [];
@@ -346,12 +387,28 @@ export default {
     formatHeader(header) {
       // Capitalize the first letter of each word after an underscore
       let formattedHeader = header.split('_').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
-      
+
       // Check if the header contains 'Usd' and replace it with 'USD'
       formattedHeader = formattedHeader.replace('Usd', 'USD');
-      
+
       return formattedHeader;
     },
+    nextPage() {
+  // Increment nextOffset to fetch the next set of projects
+  console.log('Current nextOffset:', this.nextOffset);
+  this.nextOffset += 10; // Increment by 10 to fetch the next page
+  console.log('Updated nextOffset:', this.nextOffset);
+  // Fetch projects with the updated offset
+  this.fetchProjects();
+},
+
+    previousPage() {
+      // Ensure nextOffset doesn't go below 0
+      this.nextOffset = Math.max(0, this.nextOffset - 10);
+      // Fetch projects with the updated offset
+      this.fetchProjects();
+    },    
+    
     showAbout() {
       this.showAboutModal = true;
       this.showVersions = true;
