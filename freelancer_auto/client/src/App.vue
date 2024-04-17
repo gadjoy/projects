@@ -184,8 +184,7 @@ export default {
       projects: [],
       selectedProjects: [],
       loading: false,
-      backendUrl: 'http://127.0.0.1:5000',
-      apiVersion: 'v1',
+      backendUrl: 'http://localhost:5000/',
       preview: null,
       previewLoading: false,
       projectHeaders: [
@@ -213,7 +212,7 @@ export default {
       frontendVersion: 'v1.0.0',
       frontendModifiedDate: '01-04-2024',
       buildNumber: '001',
-      backend_Url: 'http://127.0.0.1:5000',
+      backend_Url: 'http://localhost:5000/',
       showAboutModal: false,
       showVersions: false,
     };
