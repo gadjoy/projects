@@ -1,14 +1,12 @@
 # Connecting to Github with SSH
 ## Step 1: Generating SSH Key 
-1. Open Terminal/Command Prompt:
-   - If you're on macOS or Linux, you can use Terminal.
+1. Open Terminal/Command Prompt: If you're on macOS or Linux, you can use Terminal.
 2. Generate SSH Key: Type the following command:
-   ```
-  ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
-   ```
-  - Replace `your_email@example.com` with your GitHub email.
-   - Press Enter to accept the default file location and leave the passphrase empty if you don't want to use one.
-   ```
+```
+  ssh-keygen -t ed25519 -C "your_email@example.com"
+  ```
+- Replace `your_email@example.com` with your GitHub email.
+- Press Enter to accept the default file location and leave the passphrase empty if you don't want to use one.
 3. Start SSH Agent: Start the SSH agent to manage your SSH keys:
    ```
    eval "$(ssh-agent -s)"
@@ -20,7 +18,6 @@
 5. Copy SSH Key to Clipboard: Copy your SSH key to the clipboard:
    ```
    cat ~/.ssh/id_ed25519.pub
-   ```
 ## Step 2: Adding SSH Key to GitHub
 1. Open GitHub:
    - Go to GitHub and sign in to your account.
