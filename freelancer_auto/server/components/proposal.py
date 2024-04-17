@@ -2,12 +2,11 @@ import os
 import requests
 import re
 from dotenv import load_dotenv
-def generate_proposal(project_title: str, project_description: str):
-    # set api key and api endpoint
+def generate_proposal(project_title: str, project_description: str, api_key):
+    # Set API endpoint
     load_dotenv()
-    api_key = os.environ.get('GOOGLE_API_KEY')
     endpoint = "https://generativelanguage.googleapis.com/v1beta2"
-
+    
     # generate the prompt to get my proposal
     prompt = f"""
 
