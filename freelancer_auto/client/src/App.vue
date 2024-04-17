@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>FREELANCER AUTO BIDDING</h1>
+    <h1>FREELANCER AUTO BIDDER</h1>
     <!-- Display tokens input if tokens are not submitted -->
     <div v-if="!tokensSubmitted">
       <h2>Enter Tokens</h2>
@@ -178,7 +178,7 @@
   <span>{{ frontendVersion }}</span>
   <span>{{ frontendModifiedDate }}</span>
   <span>{{ buildNumber }}</span>
-  <span>{{ backend_Url }}</span>
+  <span>{{ backendUrl }}</span>
 </AboutPage>
   </div>
 </template>
@@ -198,7 +198,8 @@ export default {
       projects: [],
       selectedProjects: [],
       loading: false,
-      backendUrl: 'https://freelancer-auto-backend-rqvi.onrender.com',
+      // backendUrl: 'https://freelancer-auto-backend-rqvi.onrender.com',
+      backendUrl: 'http://127.0.0.1:5000',
       preview: null,
       previewLoading: false,
       projectHeaders: [
@@ -226,7 +227,6 @@ export default {
       frontendVersion: 'v1.0.0',
       frontendModifiedDate: '01-04-2024',
       buildNumber: '001',
-      backend_Url: 'http://localhost:5000/',
       showAboutModal: false,
       showVersions: false,
       nextOffset: 0, // Track offset for pagination

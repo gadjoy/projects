@@ -3,7 +3,7 @@
       <div class="modal-content">
         <span class="close" @click="closeModal">&times;</span>
         <h2>About</h2>
-        <p>vue@{{ frontendVersion }} &nbsp; Build: {{ buildNumber }}</p>
+        <p>freelancer-auto-bidder@{{ frontendVersion }} &nbsp; Build: {{ buildNumber }}</p>
         <p>{{ frontendModifiedDate }}</p><br>
         <a :href="backendUrl">{{ backendUrl }}</a>
         {{ backendVersion }}
