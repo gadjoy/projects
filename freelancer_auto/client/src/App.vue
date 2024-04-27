@@ -171,7 +171,7 @@ export default {
       projects: [],
       selectedProjects: [],
       loading: false,
-      backendUrl: 'https://freelancer-auto-backend-rqvi.onrender.com',
+      backendUrl: 'http://127.0.0.1:5000',
       preview: null,
       previewLoading: false,
       projectHeaders: [
