@@ -1,16 +1,52 @@
 from flask import Flask, request, jsonify
 from openai import OpenAI
 import os
-from io import BytesIO
 from dotenv import load_dotenv
+from werkzeug.utils import secure_filename
+import tempfile
+from flask_cors import CORS
+import io
+from pydub import AudioSegment
 
 # Load environment variables
 load_dotenv()
 
 app = Flask(__name__)
 
+CORS(app)
+
 # Initialize OpenAI client
 client = OpenAI()
+
+
+@app.route('/generate_question', methods=['GET'])
+def generate_question():
+    prompt = "Generate a general interview question:"
+
+    endpoint = "https://generativelanguage.googleapis.com/v1beta"
+    api_key = os.environ.get('GOOGLE_API_KEY')
+    request_body = {
+        "contents": [
+            {
+                "parts": [
+                    {
+                        "text": prompt
+                    }
+                ]
+            }
+        ]
+    }
+
+    try:
+        response = requests.post(
+            f"{endpoint}/models/gemini-pro:generateContent?key={api_key}",
+            json=request_body
+        )
+        response_json = response.json()
+        generated_question = response_json["candidates"][0]['content']['parts'][0]['text']
+        return jsonify({"generated_question": generated_question}), 200
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
 
 @app.route('/transcribe', methods=['POST'])
 def transcribe_audio():
@@ -22,20 +58,52 @@ def transcribe_audio():
         return jsonify({"error": "No selected file"}), 400
 
     try:
-        # Convert the FileStorage to a BytesIO object
-        file_stream = BytesIO(file.read())
-        file_stream.seek(0)  # Important to rewind after reading for the API call
+        # Create a secure filename
+        filename = secure_filename(file.filename)
+        # Create a temporary file
+        temp_path = os.path.join(tempfile.gettempdir(), filename)
+        file.save(temp_path)
         
-        transcription = client.audio.transcriptions.create(
-            model="whisper-1",
-            file=file_stream
-        )
+        with open(temp_path, 'rb') as audio_file:
+            transcription = client.audio.transcriptions.create(
+                model="whisper-1",
+                file=audio_file
+            )
+        
+        # Clean up the temporary file
+        os.remove(temp_path)
+        
         return jsonify({"transcription": transcription.text}), 200
     except Exception as e:
         return jsonify({"error": str(e)}), 500
 
-@app.route('/generate_content', methods=['POST'])
-def generate_content():
+@app.route('/transcribe_blob', methods=['POST'])
+def transcribe_audio_blob():
+    audio_file = request.files.get('audio')
+    if audio_file:
+        filename = secure_filename(audio_file.filename)
+        filename = os.path.splitext(filename)[0] + ".mp3"  # Change the extension to .mp3
+        temp_path = os.path.join(tempfile.gettempdir(), filename)
+        audio_file.save(temp_path)
+
+        with open(temp_path, 'rb') as audio_file:
+            transcription = client.audio.transcriptions.create(
+                model="whisper-1",
+                file=audio_file
+            )
+        
+        # Clean up the temporary file
+        os.remove(temp_path)
+        
+        return jsonify({"transcription": transcription.text}), 200
+    else:
+        return jsonify({"error": "No file received"}), 400
+
+if __name__ == '__main__':
+    app.run(debug=True)
+
+@app.route('/generate_feedback', methods=['POST'])
+def generate_feedback():
     data = request.get_json()
     if 'text' not in data:
         return jsonify({"error": "No text provided"}), 400
