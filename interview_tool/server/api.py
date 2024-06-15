@@ -1,12 +1,11 @@
 from flask import Flask, request, jsonify
-from openai import OpenAI
+import openai
 import os
 from dotenv import load_dotenv
 from werkzeug.utils import secure_filename
 import tempfile
 from flask_cors import CORS
-import io
-from pydub import AudioSegment
+import requests
 
 # Load environment variables
 load_dotenv()
@@ -16,7 +15,7 @@ app = Flask(__name__)
 CORS(app)
 
 # Initialize OpenAI client
-client = OpenAI()
+openai.api_key = os.environ.get('OPENAI_API_KEY')
 
 
 @app.route('/generate_question', methods=['GET'])
@@ -65,7 +64,7 @@ def transcribe_audio():
         file.save(temp_path)
         
         with open(temp_path, 'rb') as audio_file:
-            transcription = client.audio.transcriptions.create(
+            transcription = openai.Audio.transcribe(
                 model="whisper-1",
                 file=audio_file
             )
@@ -73,7 +72,7 @@ def transcribe_audio():
         # Clean up the temporary file
         os.remove(temp_path)
         
-        return jsonify({"transcription": transcription.text}), 200
+        return jsonify({"transcription": transcription['text']}), 200
     except Exception as e:
         return jsonify({"error": str(e)}), 500
 
@@ -87,7 +86,7 @@ def transcribe_audio_blob():
         audio_file.save(temp_path)
 
         with open(temp_path, 'rb') as audio_file:
-            transcription = client.audio.transcriptions.create(
+            transcription = openai.Audio.transcribe(
                 model="whisper-1",
                 file=audio_file
             )
@@ -95,12 +94,9 @@ def transcribe_audio_blob():
         # Clean up the temporary file
         os.remove(temp_path)
         
-        return jsonify({"transcription": transcription.text}), 200
+        return jsonify({"transcription": transcription['text']}), 200
     else:
         return jsonify({"error": "No file received"}), 400
-
-if __name__ == '__main__':
-    app.run(debug=True)
 
 @app.route('/generate_feedback', methods=['POST'])
 def generate_feedback():
@@ -137,9 +133,3 @@ def generate_feedback():
 
 if __name__ == '__main__':
     app.run(debug=True)
-
-
-# Path: server/test_api.py
-import requests
-from flask import request
-
