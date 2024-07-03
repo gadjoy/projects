@@ -21,17 +21,15 @@ def generate_questions(topic_title, queries_num, level="Easy"):
 
     # Create a well-structured and professional prompt
     prompt = f"""
+    INPUT:
+
     Role: You are an expert in generating interview questions for academic positions with a strong understanding of the client's vision.
 
     Context: The client's requirements for a software project are analyzed. You have a solid understanding of their needs.
 
     Level: Based on the chosen level, provide questions to help the user improve their skills.
 
-    Explore: When refining the prompt, ensure that the field name provided is both specific and relevant to the content of the query.
-    Consider the broader category as well as any subfields that might better capture the essence of the user's request.
-    This will help in providing a clear and concise field name that accurately reflects the user's needs, and store it in new variable.
-
-    Field Name: {field_name}
+    Based on the user number of questions and the topic chosen, you will generate the same number of questions in the list with the index from 1. 
 
     Topic Chosen: {topic_title}
     Number of Questions: {queries_num}
