@@ -1,4 +1,4 @@
-# hello-world
+# chat-with-pdf-vue
 
 ## Project setup
 ```
