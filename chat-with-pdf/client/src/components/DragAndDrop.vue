@@ -1,29 +1,25 @@
 <template>
-    <div class="drag-drop-container">
-      <h1>Drag and Drop</h1>
-      <div class="content">
-        <div class="file-list">
-          <table>
-            <thead>
-              <tr>
-                <th>TITLE</th>
-                <th>ACCESS</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr v-for="(pdf, index) in pdfs" :key="index">
-                <td>{{ pdf.name }}</td>
-                <td>{{ pdf.access.join(', ') }}</td>
-              </tr>
-            </tbody>
-          </table>
+    <div class="container">
+      <div class="row">
+        <!-- Uploaded Files Column -->
+        <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+          <h2>Uploaded Files</h2>
+          <ul>
+            <li v-for="file in files" :key="file" class="file-name">{{ file }}</li>
+          </ul>
         </div>
-        <div class="drag-drop-area" @dragover.prevent @drop.prevent="handleDrop" @click="browseFiles">
-          <i class="fas fa-upload"></i>
-          <p>Drag and Drop or Click to Browse</p>
+
+        <!-- Drag and Drop Area Column -->
+        <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+          <div class="drag-drop-area" @dragover.prevent @drop.prevent="handleDrop" @click="browseFiles">
+            <i class="fas fa-upload"></i>
+            <p>Drag and Drop or Click to Browse</p>
+          </div>
+          <input type="file" ref="fileInput" style="display: none;" @change="handleFileSelect" />
         </div>
       </div>
-      <input type="file" ref="fileInput" style="display: none;" @change="handleFileSelect" />
+
+      <!-- Actions and Access Prompt -->
       <div v-if="pdfs.length > 0" class="actions">
         <button @click="promptForAccess">Set Access</button>
         <button v-if="showChatButton" @click="redirectToChat">Chat with PDF</button>
@@ -38,6 +34,9 @@
   </template>
   
   <script>
+
+  import axios from 'axios';
+
   export default {
     data() {
       return {
@@ -45,9 +44,24 @@
         selectedUsers: [],
         showAccessPrompt: false,
         showChatButton: false,
+        files: []
       };
     },
+    mounted() {
+      this.fetchFiles();
+    },
     methods: {
+      fetchFiles() {
+        axios.get('http://localhost:5000/files')
+        .then(response => {
+          // Handle success
+          this.files = response.data.files;
+        })
+        .catch(error => {
+          // Handle error
+          console.error("Error fetching files:", error);
+        });
+      },
       browseFiles() {
         this.$refs.fileInput.click();
       },
@@ -60,15 +74,32 @@
         this.addFile(file);
       },
       addFile(file) {
-        if (file && file.type === "application/pdf") {
+      if (file && file.type === "application/pdf") {
+        const formData = new FormData();
+        formData.append('file', file);
+
+        axios.post('http://localhost:5000/upload', formData, {
+          headers: {
+            'Content-Type': 'multipart/form-data'
+          }
+        })
+        .then(response => {
+          // Handle success
+          console.log(response.data.message);
           const pdf = { name: file.name, url: URL.createObjectURL(file), access: [] };
           this.pdfs.push(pdf);
           localStorage.setItem('pdfs', JSON.stringify(this.pdfs));
           this.showAccessPrompt = true;
-        } else {
-          alert("Please upload a valid PDF file.");
-        }
-      },
+        })
+        .catch(error => {
+          // Handle error
+          console.error("Error uploading file:", error);
+        });
+      } else {
+        alert("Please upload a valid PDF file.");
+      }
+      this.fetchFiles();
+    },
       promptForAccess() {
         this.showAccessPrompt = true;
       },
@@ -173,6 +204,11 @@
     padding: 20px;
     border-radius: 10px;
     margin-top: 20px;
+  }
+
+  .file-name {
+    word-wrap: break-word;
+    white-space: pre-wrap; /* This will wrap the text and preserve whitespace and line breaks */
   }
   </style>
   

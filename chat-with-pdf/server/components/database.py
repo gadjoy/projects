@@ -1,44 +1,48 @@
-from flask_sqlalchemy import SQLAlchemy
-from werkzeug.security import generate_password_hash, check_password_hash
-from flask_login import LoginManager, UserMixin, login_user, login_required, logout_user
+import sqlite3
+from werkzeug.security import generate_password_hash
 
-app = Flask(__name__)
+def get_user_credentials_by_username(username):
+    conn = sqlite3.connect('site.db')
+    c = conn.cursor()
+    # Selecting only username and password_hash columns
+    c.execute("SELECT username, password FROM user WHERE username = ?", (username,))
+    user_credentials = c.fetchone()
+    conn.close()
+    return user_credentials
 
-
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///site.db'
-app.config['SECRET_KEY'] = 'your-secret-key'
-
-db = SQLAlchemy(app)
-
-class User(UserMixin, db.Model):
-    id = db.Column(db.Integer, primary_key=True)
-    username = db.Column(db.String(20), unique=True, nullable=False)
-    password = db.Column(db.String(80), nullable=False)
-    role = db.Column(db.String(10), nullable=False)  # 'admin' or 'user'
-
-class File(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
-    path = db.Column(db.String(100), nullable=False)
-    user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=True)
-    user = db.relationship('User', backref=db.backref('files', lazy=True))
+def add_user(c, username, password, role):
+    # Check if the user already exists
+    c.execute("SELECT * FROM user WHERE username=?", (username,))
+    if not c.fetchone():
+        # Insert the new user
+        c.execute("INSERT INTO user (username, password, role) VALUES (?, ?, ?)",
+                  (username, generate_password_hash(password), role))
 
 def create_database():
-    """Create the database and tables."""
-    db.create_all()
-    # Create an admin user for testing
-    if not User.query.filter_by(username='admin').first():
-        admin = User(username='admin', password=generate_password_hash('admin123'), role='admin')
-        db.session.add(admin)
-        db.session.commit()
+    """Create the database and tables using sqlite3."""
+    conn = sqlite3.connect('site.db')
+    c = conn.cursor()
 
-    if not User.query.filter_by(username='user1').first():
-        user1 = User(username='user1', password=generate_password_hash('user123'), role='user')
-        db.session.add(user1)
-        db.session.commit()
+    # Create tables
+    c.execute('''CREATE TABLE IF NOT EXISTS user (
+                 id INTEGER PRIMARY KEY,
+                 username TEXT UNIQUE NOT NULL,
+                 password TEXT NOT NULL,
+                 role TEXT NOT NULL)''')
 
-    if not User.query.filter_by(username='user2').first():
-        user2 = User(username='user2', password=generate_password_hash('user123'), role='user')
-        db.session.add(user2)
-        db.session.commit()
-        
+    c.execute('''CREATE TABLE IF NOT EXISTS file (
+                 id INTEGER PRIMARY KEY,
+                 path TEXT NOT NULL,
+                 user_id INTEGER,
+                 FOREIGN KEY(user_id) REFERENCES user(id))''')
+
+    # Check and insert admin user
+    add_user(c, 'admin', 'admin123', 'admin')
+    add_user(c, 'user1', 'user123', 'user')
+    add_user(c, 'user2', 'user123', 'user')
+
+    # Commit and close
+    conn.commit()
+    conn.close()
+
     print("Database and admin user created!")
