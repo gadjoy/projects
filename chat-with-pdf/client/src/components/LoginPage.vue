@@ -1,42 +1,57 @@
 <template>
-    <div class="login">
-      <h2>Login</h2>
-      <div>
-        <label>Username:</label>
-        <input type="text" v-model="username" />
-      </div>
-      <div>
-        <label>Password:</label>
-        <input type="password" v-model="password" />
-      </div>
-      <button @click="login">Login</button>
+  <div class="login">
+    <h2>Login</h2>
+    <div v-if="errorMessage" class="error-message">{{ errorMessage }}</div>
+    <div>
+      <label for="username">Username:</label>
+      <input id="username" type="text" v-model="username" />
     </div>
-  </template>
+    <div>
+      <label for="password">Password:</label>
+      <input id="password" type="password" v-model="password" />
+    </div>
+    <button @click="login">Login</button>
+  </div>
+</template>
   
   <script>
+  import axios from 'axios';
+
   export default {
     data() {
       return {
         username: '',
         password: '',
+        errorMessage: '', // To display login errors
       };
     },
     methods: {
       login() {
-        this.$router.push('/drag-and-drop');
-        // if (this.username && this.password) {
-        //   if (this.username === 'user1' && this.password === 'password1') {
-        //     localStorage.setItem('currentUser', 'USER1');
-        //     this.$router.push('/drag-and-drop');
-        //   } else if (this.username === 'user2' && this.password === 'password2') {
-        //     localStorage.setItem('currentUser', 'USER2');
-        //     this.$router.push('/drag-and-drop');
-        //   } else {
-        //     alert('Invalid username or password');
-        //   }
-        // } else {
-        //   alert('Please enter both username and password');
-        // }
+        axios.post('http://localhost:5000/login', {
+          username: this.username,
+          password: this.password
+        })
+        .then(response => {
+          // Handle response
+          console.log(response.data.message); // Logged in
+          this.$router.push('/drag-and-drop');
+        })
+        .catch(error => {
+          // Handle error
+          if (error.response) {
+            // The request was made and the server responded with a status code
+            // that falls out of the range of 2xx
+            console.log(error.response.data);
+            console.log(error.response.status);
+            this.errorMessage = error.response.data.message || 'An error occurred. Please try again.';
+          } else if (error.request) {
+            // The request was made but no response was received
+            console.log(error.request);
+          } else {
+            // Something happened in setting up the request that triggered an Error
+            console.log('Error', error.message);
+          }
+        });
       }
     }
   };
