@@ -1,23 +1,6 @@
 import sqlite3
 from werkzeug.security import generate_password_hash
 
-def get_user_credentials_by_username(username):
-    conn = sqlite3.connect('site.db')
-    c = conn.cursor()
-    # Selecting only username and password_hash columns
-    c.execute("SELECT username, password FROM user WHERE username = ?", (username,))
-    user_credentials = c.fetchone()
-    conn.close()
-    return user_credentials
-
-def add_user(c, username, password, role):
-    # Check if the user already exists
-    c.execute("SELECT * FROM user WHERE username=?", (username,))
-    if not c.fetchone():
-        # Insert the new user
-        c.execute("INSERT INTO user (username, password, role) VALUES (?, ?, ?)",
-                  (username, generate_password_hash(password), role))
-
 def create_database():
     """Create the database and tables using sqlite3."""
     conn = sqlite3.connect('site.db')
@@ -46,3 +29,32 @@ def create_database():
     conn.close()
 
     print("Database and admin user created!")
+
+def get_user_credentials_by_username(username):
+    conn = sqlite3.connect('site.db')
+    c = conn.cursor()
+    # Selecting only username and password_hash columns
+    c.execute("SELECT username, password FROM user WHERE username = ?", (username,))
+    user_credentials = c.fetchone()
+    conn.close()
+    return user_credentials
+
+def add_user(c, username, password, role):
+    # Check if the user already exists
+    c.execute("SELECT * FROM user WHERE username=?", (username,))
+    if not c.fetchone():
+        # Insert the new user
+        c.execute("INSERT INTO user (username, password, role) VALUES (?, ?, ?)",
+                  (username, generate_password_hash(password), role))
+
+def get_user_role(username):
+    conn = sqlite3.connect('site.db')
+    c = conn.cursor()
+    c.execute('SELECT role FROM user WHERE username = ?', (username,))
+    role = c.fetchone()
+    conn.close()
+    if role:
+        return role[0]
+    else:
+        return None
+

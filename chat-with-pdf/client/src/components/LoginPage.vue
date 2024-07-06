@@ -32,10 +32,15 @@
           password: this.password
         })
         .then(response => {
-          // Handle response
-          console.log(response.data.message); // Logged in
+        // Handle response
+        console.log(response.data.message); // Logged in
+        localStorage.setItem('role', response.data.role);
+        if (response.data.role === 'admin') {
           this.$router.push('/drag-and-drop');
-        })
+        } else {
+          this.$router.push('/pdf-view-chat');
+        }
+      })
         .catch(error => {
           // Handle error
           if (error.response) {
