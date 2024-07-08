@@ -27,15 +27,15 @@
     </div>
     <div v-if="showAccessPrompt" class="access-prompt">
       <h2>Select Users for Access</h2>
-      <label><input type="checkbox" value="USER1" v-model="selectedUsers" /> User1</label>
-      <label><input type="checkbox" value="USER2" v-model="selectedUsers" /> User2</label>
+      <label><input type="checkbox" value="user1" v-model="selectedUsers" /> User1</label>
+      <label><input type="checkbox" value="user2" v-model="selectedUsers" /> User2</label>
       <button @click="setAccess">Set Access</button>
     </div>
   </div>
 </template>
 
-<script>
 
+<script>
 import axios from 'axios';
 
 export default {
@@ -55,11 +55,9 @@ export default {
     fetchFiles() {
       axios.get('http://localhost:5000/files')
         .then(response => {
-          // Handle success
           this.files = response.data.files;
         })
         .catch(error => {
-          // Handle error
           console.error("Error fetching files:", error);
         });
     },
@@ -78,6 +76,7 @@ export default {
       if (file && file.type === "application/pdf") {
         const formData = new FormData();
         formData.append('file', file);
+        this.selectedUsers.forEach(user => formData.append('access_usernames[]', user));
 
         axios.post('http://localhost:5000/upload', formData, {
           headers: {
@@ -85,21 +84,19 @@ export default {
           }
         })
           .then(response => {
-            // Handle success
             console.log(response.data.message);
-            const pdf = { name: file.name, url: URL.createObjectURL(file), access: [] };
+            const pdf = { name: file.name, url: URL.createObjectURL(file), access: this.selectedUsers };
             this.pdfs.push(pdf);
             localStorage.setItem('pdfs', JSON.stringify(this.pdfs));
             this.showAccessPrompt = true;
+            this.fetchFiles();
           })
           .catch(error => {
-            // Handle error
             console.error("Error uploading file:", error);
           });
       } else {
         alert("Please upload a valid PDF file.");
       }
-      this.fetchFiles();
     },
     promptForAccess() {
       this.showAccessPrompt = true;
@@ -108,23 +105,18 @@ export default {
       if (this.selectedUsers.length > 0) {
         const lastPdf = this.pdfs[this.pdfs.length - 1];
         lastPdf.access = this.selectedUsers;
-
-        // Update the local storage
         localStorage.setItem('pdfs', JSON.stringify(this.pdfs));
 
-        // Send the access data to the backend
         axios.post('http://localhost:5000/set-access', {
           pdfName: lastPdf.name,
           access: this.selectedUsers
         })
           .then(response => {
-            // Handle success
             console.log(response.data.message);
             this.showAccessPrompt = false;
             this.showChatButton = true;
           })
           .catch(error => {
-            // Handle error
             console.error("Error setting access:", error);
           });
       } else {
@@ -138,17 +130,16 @@ export default {
       axios.post('/clear-uploads')
         .then(response => {
           console.log(response.data.message);
-          this.fetchFiles(); // Refresh the file list
+          this.fetchFiles();
         })
         .catch(error => {
           console.error("Error clearing files:", error);
         });
-    },
-
-
+    }
   }
 };
 </script>
+
 
 <style scoped>
 .drag-drop-container {
