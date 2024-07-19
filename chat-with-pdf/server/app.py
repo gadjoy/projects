@@ -1,12 +1,15 @@
 from flask import Flask, request, jsonify, send_from_directory
 from werkzeug.utils import secure_filename
 from werkzeug.security import check_password_hash
-import os
-from flask import Flask, request, jsonify
-from werkzeug.utils import secure_filename
+import os,sqlite3
 from flask_cors import CORS
-
-from components.database import create_database, get_user_credentials_by_username
+from components.database import (
+    create_database,
+    get_user_credentials_by_username,
+    get_user_role,
+    upload_file,
+    get_files_by_username,
+)
 
 app = Flask(__name__)
 CORS(app)
@@ -19,19 +22,37 @@ def login():
     password = request.json['password']
     user_credentials = get_user_credentials_by_username(username)
     if user_credentials and check_password_hash(user_credentials[1], password):
-        return jsonify({'message': 'Logged in'})
+        role = get_user_role(username)
+        return jsonify({'message': 'Logged in', 'role': role})
     else:
         return jsonify({'message': 'Invalid credentials'}), 401
 
 @app.route('/upload', methods=['POST'])
-def upload_file():
+def upload():
     file = request.files['file']
+    access_name = request.form['access_username']
+
     if file:
         filename = secure_filename(file.filename)
+        if not os.path.exists('uploads'):
+            os.makedirs('uploads')
         file.save(os.path.join('uploads', filename))
+        upload_file(filename, access_name)
+
         return jsonify({'message': 'File uploaded'})
     else:
         return jsonify({'message': 'Invalid file'}), 400
+
+@app.route('/files', methods=['GET'])
+def get_files():
+    username = request.args.get('username')
+    role = get_user_role(username)
+    if role == 'admin':
+        files = os.listdir('uploads')
+    else:
+        files = get_files_by_username(username)
+    cleaned_files = [file.replace('_', ' ') for file in files]
+    return jsonify({'files': cleaned_files})
 
 @app.route('/retreive/<filename>', methods=['GET'])
 def get_file(filename):
@@ -40,6 +61,7 @@ def get_file(filename):
     except FileNotFoundError:
         return jsonify({'message': 'File not found'}), 404
 
+<<<<<<< HEAD
 # @app.route('/files', methods=['GET'])
 # def get_files():
 #     files = os.listdir('uploads')
@@ -56,6 +78,9 @@ def get_files():
     return jsonify(files)
 
 
+=======
+>>>>>>> origin/vivek/freelancer/dev
 if __name__ == '__main__':
+    # delete_file_table()
     create_database()
     app.run(debug=True)
