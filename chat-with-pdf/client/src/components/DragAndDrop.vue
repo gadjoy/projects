@@ -1,13 +1,5 @@
 <template>
   <div class="container">
-    <div class="row">
-      <!-- Uploaded Files Column -->
-      <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
-        <h2>Uploaded Files</h2>
-        <ul>
-          <li v-for="file in files" :key="file" class="file-name">{{ file }}</li>
-        </ul>
-      </div>
 
       <!-- Drag and Drop Area Column(FOR ADMIN) -->
       <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
@@ -19,21 +11,32 @@
       </div>
     </div>
 
-    <!-- Actions and Access Prompt(ONLY FOR ADMIN) -->
-    <div v-if="pdfs.length > 0" class="actions">
-      <button @click="promptForAccess">Set Access</button>
-      <button @click="clearUploads">Clear All Files</button>
-      <button v-if="showChatButton" @click="redirectToChat">Chat with PDF</button>
+    <div class="row">
+      <!-- Uploaded Files Column -->
+      <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+        <h2>Uploaded Files</h2>
+        <ul>
+          <li v-for="file in files" :key="file" class="file-name">{{ file }}</li>
+        </ul>
+      </div>
     </div>
+    <!-- Actions and Access Prompt(ONLY FOR ADMIN) -->
     <div v-if="showAccessPrompt" class="access-prompt">
       <h2>Select Users for Access</h2>
-      <label><input type="checkbox" value="user1" v-model="selectedUsers" /> User1</label>
-      <label><input type="checkbox" value="user2" v-model="selectedUsers" /> User2</label>
-      <button @click="setAccess">Set Access</button>
+      <div>
+        <label>
+          <input type="radio" value="user1" v-model="selectedUser" /> User1
+        </label>
+        <label>
+          <input type="radio" value="user2" v-model="selectedUser" /> User2
+        </label>
+        <button @click="confirmSelection">Confirm Selection</button>
+      </div>
     </div>
-  </div>
+    <div class="actions">
+      <button @click="redirectToChat">Chat</button>
+    </div>
 </template>
-
 
 <script>
 import axios from 'axios';
@@ -41,43 +44,62 @@ import axios from 'axios';
 export default {
   data() {
     return {
-      pdfs: JSON.parse(localStorage.getItem('pdfs')) || [],
+      pdfs: [],
       selectedUsers: [],
       showAccessPrompt: false,
       showChatButton: false,
       files: [],
+      selectedUser: null,
+      tempFile: null,
+      username: 'admin',
     };
   },
   mounted() {
     this.fetchFiles();
   },
   methods: {
-    fetchFiles() {
-      axios.get('http://localhost:5000/files')
-        .then(response => {
-          this.files = response.data.files;
-        })
-        .catch(error => {
-          console.error("Error fetching files:", error);
-        });
-    },
     browseFiles() {
       this.$refs.fileInput.click();
     },
     handleFileSelect(event) {
       const file = event.target.files[0];
-      this.addFile(file);
+      this.showAccessPrompt = true;
+      this.tempFile = file;
+      this.files.push(file.name);
+      this.pdfs.push(file);
     },
     handleDrop(event) {
       const file = event.dataTransfer.files[0];
-      this.addFile(file);
+      this.showAccessPrompt = true;
+      this.tempFile = file;
+      this.files.push(file.name);
+      this.pdfs.push(file);
+    },
+    confirmSelection() {
+      if (this.selectedUser && !this.selectedUsers.includes(this.selectedUser) && this.tempFile) {
+        this.selectedUsers.push(this.selectedUser);
+        this.addFile(this.tempFile);
+        this.tempFile = null;
+        this.showAccessPrompt = false;
+        this.selectedUser = null;
+      }
+      else {
+        alert("Please select a user for access.");
+      }
     },
     addFile(file) {
       if (file && file.type === "application/pdf") {
         const formData = new FormData();
         formData.append('file', file);
-        this.selectedUsers.forEach(user => formData.append('access_usernames[]', user));
-
+    
+        // Ensure a user is selected
+        if (this.selectedUser) {
+          formData.append('access_username', this.selectedUser);
+        } else {
+          alert("Please select a user for access.");
+          return;
+        }
+    
         axios.post('http://localhost:5000/upload', formData, {
           headers: {
             'Content-Type': 'multipart/form-data'
@@ -85,10 +107,9 @@ export default {
         })
           .then(response => {
             console.log(response.data.message);
-            const pdf = { name: file.name, url: URL.createObjectURL(file), access: this.selectedUsers };
+            const pdf = { name: file.name, url: URL.createObjectURL(file), access: this.selectedUser };
             this.pdfs.push(pdf);
             localStorage.setItem('pdfs', JSON.stringify(this.pdfs));
-            this.showAccessPrompt = true;
             this.fetchFiles();
           })
           .catch(error => {
@@ -98,44 +119,22 @@ export default {
         alert("Please upload a valid PDF file.");
       }
     },
-    promptForAccess() {
-      this.showAccessPrompt = true;
-    },
-    setAccess() {
-      if (this.selectedUsers.length > 0) {
-        const lastPdf = this.pdfs[this.pdfs.length - 1];
-        lastPdf.access = this.selectedUsers;
-        localStorage.setItem('pdfs', JSON.stringify(this.pdfs));
-
-        axios.post('http://localhost:5000/set-access', {
-          pdfName: lastPdf.name,
-          access: this.selectedUsers
+    fetchFiles() {
+      axios.get('http://localhost:5000/files', {
+        params: {
+          username: this.username
+        }
+      })
+        .then(response => {
+          this.files = response.data.files;
         })
-          .then(response => {
-            console.log(response.data.message);
-            this.showAccessPrompt = false;
-            this.showChatButton = true;
-          })
-          .catch(error => {
-            console.error("Error setting access:", error);
-          });
-      } else {
-        alert("Please select at least one user.");
-      }
+        .catch(error => {
+          console.error("Error fetching files:", error);
+        });
     },
     redirectToChat() {
       this.$router.push('/pdf-view-chat');
     },
-    clearUploads() {
-      axios.post('/clear-uploads')
-        .then(response => {
-          console.log(response.data.message);
-          this.fetchFiles();
-        })
-        .catch(error => {
-          console.error("Error clearing files:", error);
-        });
-    }
   }
 };
 </script>
