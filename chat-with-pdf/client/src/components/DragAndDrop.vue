@@ -1,14 +1,12 @@
 <template>
   <div class="container">
-
-      <!-- Drag and Drop Area Column(FOR ADMIN) -->
-      <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
-        <div class="drag-drop-area" @dragover.prevent @drop.prevent="handleDrop" @click="browseFiles">
-          <i class="fas fa-upload"></i>
-          <p>Drag and Drop or Click to Browse</p>
-        </div>
-        <input type="file" ref="fileInput" style="display: none;" @change="handleFileSelect" />
+    <!-- Drag and Drop Area Column(FOR ADMIN) -->
+    <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+      <div class="drag-drop-area" @dragover.prevent @drop.prevent="handleDrop" @click="browseFiles">
+        <i class="fas fa-upload"></i>
+        <p>Drag and Drop or Click to Browse</p>
       </div>
+      <input type="file" ref="fileInput" style="display: none;" @change="handleFileSelect" />
     </div>
 
     <div class="row">
@@ -20,6 +18,7 @@
         </ul>
       </div>
     </div>
+
     <!-- Actions and Access Prompt(ONLY FOR ADMIN) -->
     <div v-if="showAccessPrompt" class="access-prompt">
       <h2>Select Users for Access</h2>
@@ -33,9 +32,11 @@
         <button @click="confirmSelection">Confirm Selection</button>
       </div>
     </div>
+
     <div class="actions">
       <button @click="redirectToChat">Chat</button>
     </div>
+  </div>
 </template>
 
 <script>
@@ -91,7 +92,7 @@ export default {
       if (file && file.type === "application/pdf") {
         const formData = new FormData();
         formData.append('file', file);
-    
+
         // Ensure a user is selected
         if (this.selectedUser) {
           formData.append('access_username', this.selectedUser);
@@ -99,7 +100,7 @@ export default {
           alert("Please select a user for access.");
           return;
         }
-    
+
         axios.post('http://localhost:5000/upload', formData, {
           headers: {
             'Content-Type': 'multipart/form-data'
@@ -138,7 +139,6 @@ export default {
   }
 };
 </script>
-
 
 <style scoped>
 .drag-drop-container {
