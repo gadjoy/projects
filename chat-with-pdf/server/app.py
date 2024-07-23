@@ -61,25 +61,9 @@ def get_file(filename):
     except FileNotFoundError:
         return jsonify({'message': 'File not found'}), 404
 
-<<<<<<< HEAD
-# @app.route('/files', methods=['GET'])
-# def get_files():
-#     files = os.listdir('uploads')
-#     cleaned_files = [file.replace('_', ' ') for file in files]
-#     return jsonify({'files': cleaned_files})
-
-@app.route('/files', methods=['GET'])
-def get_files():
-    upload_folder = 'uploads'
-    # Create the directory if it doesn't exist
-    if not os.path.exists(upload_folder):
-        os.makedirs(upload_folder)
-    files = os.listdir(upload_folder)
-    return jsonify(files)
 
 
-=======
->>>>>>> origin/vivek/freelancer/dev
+
 if __name__ == '__main__':
     # delete_file_table()
     create_database()
