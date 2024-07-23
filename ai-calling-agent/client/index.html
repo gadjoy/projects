@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Calling Agent</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>AI CALLING AGENT</h1>
+        </header>
+        <div class="content">
+            <aside class="sidebar">
+                <button class="call-logs-btn" onclick="fetchCallLogs()">Refresh Call Logs</button>
+                <div id="call-logs"></div>
+            </aside>
+            <main class="main-content">
+                <form id="call-form" class="call-form" enctype="multipart/form-data">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                    <label for="phone_number">Phone No:</label>
+                    <input type="text" id="phone_number" name="phone_number" required>
+                    <label for="script_file">Upload Script:</label>
+                    <input type="file" id="script_file" name="script_file" accept=".txt,.pdf,.docx" required>
+                    <div class="script-container">
+                        <h2>Script Overview</h2>
+                        <p>AI will act as an HR calling from Zendesk(company). Zendesk is hiring for a Frontend Developer role.</p>
+                    </div>
+                    <button type="submit" class="call-btn">CALL</button>
+                </form>
+                <div id="message"></div>
+            </main>
+        </div>
+        <div class="call-recording">
+            <h2>Call Recording</h2>
+            <div id="recordings" class="recording"></div>
+        </div>
+    </div>
+    <script>
+        document.getElementById('call-form').addEventListener('submit', async function(event) {
+            event.preventDefault();
+            
+            const formData = new FormData(this);
+            try {
+                const response = await fetch('/make_call', {
+                    method: 'POST',
+                    body: formData
+                });
+                
+                const result = await response.json();
+                const messageDiv = document.getElementById('message');
+                
+                if (response.ok) {
+                    messageDiv.innerHTML = `<p>${result.message}</p>`;
+                    fetchTranscript();
+                    fetchCallLogs();
+                } else {
+                    messageDiv.innerHTML = `<p style="color:red;">${result.error}</p>`;
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                const messageDiv = document.getElementById('message');
+                messageDiv.innerHTML = `<p style="color:red;">Error: ${error.message}</p>`;
+            }
+        });
+
+        async function fetchTranscript() {
+            const response = await fetch('/get_transcript');
+            const data = await response.json();
+            const recordingDiv = document.getElementById('recordings');
+            recordingDiv.innerHTML = '';
+
+            data.forEach((transcript) => {
+                const para = document.createElement('p');
+                para.innerHTML = `<b>${transcript.speaker}:</b> ${transcript.text}`;
+                recordingDiv.appendChild(para);
+            });
+        }
+
+        async function fetchCallLogs() {
+            const response = await fetch('/get_call_logs');
+            const callLogs = await response.json();
+            const callLogsDiv = document.getElementById('call-logs');
+            callLogsDiv.innerHTML = '';
+
+            callLogs.forEach((log) => {
+                const logDiv = document.createElement('div');
+                logDiv.classList.add('call-log');
+                logDiv.innerHTML = `<b>${log.name}</b> (${log.phone_number}) - ${new Date(log.timestamp).toLocaleString()}`;
+                callLogsDiv.appendChild(logDiv);
+            });
+        }
+
+        fetchCallLogs();
+        fetchTranscript();
+    </script>
+</body>
+</html>
