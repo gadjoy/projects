@@ -1,6 +1,6 @@
 import os
 import requests
-from flask import Flask, request, render_template
+from flask import Flask, request, render_template, redirect, url_for
 from dotenv import load_dotenv
 
 app = Flask(__name__)
@@ -41,7 +41,12 @@ def generate_questions(topic_title, queries_num, level="Easy"):
         response = requests.post(f"{endpoint}/models/text-bison-001:generateText?key={api_key}", json=request_body)
         response.raise_for_status()
         data = response.json()
-        questions = data.get('candidates', [])[0].get('output', '').strip().split('\n')
+        candidates = data.get('candidates', [])
+        if not candidates:
+            return ["No questions generated. Please try again."]
+        questions = candidates[0].get('output', '').strip().split('\n')
+        if not questions or questions == ['']:
+            return ["No questions generated. Please try again."]
         return questions
     except requests.exceptions.RequestException as e:
         return [f"An error occurred: {e}"]
@@ -96,13 +101,12 @@ def get_ai_feedback(question, answer):
         return "Unexpected response format from the API."
 
 @app.route('/', methods=['GET', 'POST'])
-
 def index():
     if request.method == 'POST':
         topic_title = request.form['topic_title']
         queries_num = int(request.form['queries_num'])
         questions = generate_questions(topic_title, queries_num)
-        return render_template('index.html', questions=questions, topic_title=topic_title, queries_num=queries_num)
+        return render_template('questions.html', questions=questions, topic_title=topic_title, queries_num=queries_num)
     return render_template('index.html')
 
 @app.route('/feedback', methods=['POST'])
@@ -110,7 +114,7 @@ def feedback():
     questions = request.form.getlist('questions')
     answers = request.form.getlist('answers')
     feedbacks = [get_ai_feedback(question, answer) for question, answer in zip(questions, answers)]
-    return render_template('index.html', feedbacks=feedbacks)
+    return render_template('feedback.html', feedbacks=feedbacks)
 
 if __name__ == '__main__':
     app.run(debug=True)

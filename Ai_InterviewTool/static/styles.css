@@ -7,7 +7,7 @@ body {
 
 .container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     max-width: 1200px;
     margin: auto;
     background: white;
@@ -17,15 +17,10 @@ body {
 }
 
 h1 {
-    grid-column: span 2;
     text-align: center;
     text-decoration: underline;
     font-weight: bold;
     margin-bottom: 20px;
-}
-
-.left, .right {
-    margin: 10px;
 }
 
 form {
@@ -62,6 +57,7 @@ input, button, textarea {
     padding: 10px;
     background-color: #d9edf7;
     border-radius: 4px;
+    border-left: 5px solid #3498db; /* Add colorful line */
 }
 
 .feedback-text {
@@ -116,4 +112,22 @@ h2 {
 @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
+}
+
+
+.return-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+}
+
+.return-btn:hover {
+    background-color: #218838;
 }

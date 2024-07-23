@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Feedback</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>AI Feedback</h1>
+        <div class="feedback-box">
+            {% if feedbacks %}
+                {% for feedback in feedbacks %}
+                    <div class="ai-feedback-item">
+                        <div class="feedback-text">{{ feedback }}</div>
+                    </div>
+                {% endfor %}
+            {% endif %}
+        </div>
+        <form action="/" method="get">
+            <button type="submit" class="return-btn">Return to Question Generator</button>
+        </form>
+    </div>
+</body>
+</html>
