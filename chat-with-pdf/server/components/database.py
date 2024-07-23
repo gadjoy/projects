@@ -72,13 +72,7 @@ def upload_file(title, access_name):
 def get_files_by_username(username):
     conn = sqlite3.connect('site.db')
     cursor = conn.cursor()
-    cursor.execute('SELECT id FROM user WHERE username=?', (username,))
-    user_id = cursor.fetchone()
-    if user_id:
-        user_id = user_id[0]
-        cursor.execute('SELECT title FROM file WHERE access_id=?', (user_id,))
-    else:
-        cursor.execute('SELECT title FROM file WHERE access_id IS NULL')
+    cursor.execute('SELECT title FROM file WHERE access_name=?', (username,))
     files = cursor.fetchall()
     conn.close()
     return [file[0] for file in files]
