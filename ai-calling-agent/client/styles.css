@@ -1,0 +1,113 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh;
+}
+
+.container {
+    width: 80%;
+    background-color: #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+header {
+    background-color: #4a4a4a;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.content {
+    display: flex;
+    padding: 20px;
+}
+
+.sidebar {
+    background-color: #444;
+    color: white;
+    padding: 20px;
+    width: 20%;
+}
+
+.sidebar .call-logs-btn {
+    background-color: #555;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    color: white;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.sidebar .call-log {
+    background-color: #666;
+    padding: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.main-content {
+    background-color: #e4e4e4;
+    padding: 20px;
+    width: 80%;
+}
+
+.call-form label {
+    display: block;
+    margin-top: 10px;
+}
+
+.call-form input[type="text"],
+.call-form input[type="email"],
+.call-form input[type="file"],
+.call-form textarea {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.call-form textarea {
+    height: 100px;
+}
+
+.call-btn {
+    background-color: #28a745;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.call-recording {
+    background-color: #fff;
+    padding: 20px;
+    width: 100%;
+    margin: 20px 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    overflow-y: auto;
+    max-height: 200px;
+}
+
+.call-recording h2 {
+    text-align: center;
+}
+
+.recording {
+    background-color: #eee;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 20px;
+}

@@ -10,6 +10,7 @@ from components.database import (
     upload_file,
     get_files_by_username,
 )
+from components.gemini import generate_response  # Import the function to generate responses
 
 app = Flask(__name__)
 CORS(app)
@@ -47,12 +48,20 @@ def upload():
 def get_files():
     username = request.args.get('username')
     role = get_user_role(username)
+    
+    # Retrieve all files in the uploads directory
+    all_files = [file for file in os.listdir('uploads') if not os.path.isdir(os.path.join('uploads', file))]
+    
     if role == 'admin':
-        files = os.listdir('uploads')
+        accessible_files = all_files
     else:
-        files = get_files_by_username(username)
-    cleaned_files = [file.replace('_', ' ') for file in files]
-    return jsonify({'files': cleaned_files})
+        accessible_files = get_files_by_username(username)
+    
+    # Filter accessible files to ensure they exist in the uploads folder
+    filtered_files = [file for file in accessible_files if file in all_files]
+    
+    return jsonify({'files': filtered_files})
+
 
 @app.route('/retreive/<filename>', methods=['GET'])
 def get_file(filename):
@@ -60,6 +69,14 @@ def get_file(filename):
         return send_from_directory('uploads', filename)
     except FileNotFoundError:
         return jsonify({'message': 'File not found'}), 404
+    
+@app.route('/chat', methods=['POST'])
+def chat():
+    data = request.json
+    pdf_content = data['pdf_content']
+    user_message = data['message']
+    response = generate_response(pdf_content, user_message)
+    return jsonify({'response': response})
 
 
 

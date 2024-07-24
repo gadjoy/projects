@@ -34,6 +34,7 @@
         .then(response => {
         // Handle response
         console.log(response.data.message); // Logged in
+        localStorage.setItem('username', this.username); // Store username in localStorage
         localStorage.setItem('role', response.data.role);
         if (response.data.role === 'admin') {
           this.$router.push('/drag-and-drop');
