@@ -1,0 +1,134 @@
+{
+    "data": [
+        {
+            "_id": "66910e6a08671cfb53bf120f",
+            "createdAt": "2024-07-12T11:06:37.113Z",
+            "updatedAt": "2024-07-12T11:06:37.113Z",
+            "teamId": "668532958fce2ef47907ae37",
+            "phoneCallId": "66910e03cbb1b4a02049d92f",
+            "text": "Hello?",
+            "spokenText": "Hello?",
+            "speaker": "human"
+        },
+        {
+            "_id": "66910e6a08671cfb53bf1210",
+            "createdAt": "2024-07-12T11:06:37.116Z",
+            "updatedAt": "2024-07-12T11:06:37.116Z",
+            "teamId": "668532958fce2ef47907ae37",
+            "phoneCallId": "66910e03cbb1b4a02049d92f",
+            "text": "Hey, this is Watson calling from ABC Company regarding the frontend developer role, do you have a min to chat?.",
+            "spokenText": "Hey, this is Watson calling from ABC Company regarding the frontend developer role, do you have a min to chat?.",
+            "speaker": "ai"
+        },
+        {
+            "_id": "66910e6a08671cfb53bf1211",
+            "createdAt": "2024-07-12T11:06:47.294Z",
+            "updatedAt": "2024-07-12T11:06:47.294Z",
+            "teamId": "668532958fce2ef47907ae37",
+            "phoneCallId": "66910e03cbb1b4a02049d92f",
+            "text": "Yes.",
+            "spokenText": "Yes.",
+            "speaker": "human"
+        },
+        {
+            "_id": "66910e6a08671cfb53bf1212",
+            "createdAt": "2024-07-12T11:06:47.459Z",
+            "updatedAt": "2024-07-12T11:06:47.459Z",
+            "teamId": "668532958fce2ef47907ae37",
+            "phoneCallId": "66910e03cbb1b4a02049d92f",
+            "text": "great, so many years of experience do you have?.",
+            "spokenText": "great, so many years of experience do you have?.",
+            "speaker": "ai"
+        },
+        {
+            "_id": "66910e6a08671cfb53bf1213",
+            "createdAt": "2024-07-12T11:06:53.142Z",
+            "updatedAt": "2024-07-12T11:06:53.142Z",
+            "teamId": "668532958fce2ef47907ae37",
+            "phoneCallId": "66910e03cbb1b4a02049d92f",
+            "text": "2 years.",
+            "spokenText": "2 years.",
+            "speaker": "human"
+        },
+        {
+            "_id": "66910e6a08671cfb53bf1219",
+            "createdAt": "2024-07-12T11:06:54.733Z",
+            "updatedAt": "2024-07-12T11:06:54.733Z",
+            "teamId": "668532958fce2ef47907ae37",
+            "phoneCallId": "66910e03cbb1b4a02049d92f",
+            "text": "Can you also work on the backend?",
+            "spokenText": "Can you also work on the backend?",
+            "speaker": "ai"
+        },
+        {
+            "_id": "66910e6a08671cfb53bf121b",
+            "createdAt": "2024-07-12T11:06:54.758Z",
+            "updatedAt": "2024-07-12T11:06:54.758Z",
+            "teamId": "668532958fce2ef47907ae37",
+            "phoneCallId": "66910e03cbb1b4a02049d92f",
+            "text": ".",
+            "spokenText": ".",
+            "speaker": "ai"
+        },
+        {
+            "_id": "66910e6a08671cfb53bf121d",
+            "createdAt": "2024-07-12T11:06:59.434Z",
+            "updatedAt": "2024-07-12T11:06:59.434Z",
+            "teamId": "668532958fce2ef47907ae37",
+            "phoneCallId": "66910e03cbb1b4a02049d92f",
+            "text": "Yeah. Okay.",
+            "spokenText": "Yeah. Okay.",
+            "speaker": "human"
+        },
+        {
+            "_id": "66910e6a08671cfb53bf121f",
+            "createdAt": "2024-07-12T11:06:59.582Z",
+            "updatedAt": "2024-07-12T11:06:59.582Z",
+            "teamId": "668532958fce2ef47907ae37",
+            "phoneCallId": "66910e03cbb1b4a02049d92f",
+            "text": "so, are you open to an hour",
+            "spokenText": "so, are you open to an hour",
+            "speaker": "ai"
+        },
+        {
+            "_id": "66910e6a08671cfb53bf1223",
+            "createdAt": "2024-07-12T11:07:05.615Z",
+            "updatedAt": "2024-07-12T11:07:05.615Z",
+            "teamId": "668532958fce2ef47907ae37",
+            "phoneCallId": "66910e03cbb1b4a02049d92f",
+            "text": "Yes. Yes.",
+            "spokenText": "Yes. Yes.",
+            "speaker": "human"
+        },
+        {
+            "_id": "66910e6a08671cfb53bf1225",
+            "createdAt": "2024-07-12T11:07:07.075Z",
+            "updatedAt": "2024-07-12T11:07:07.075Z",
+            "teamId": "668532958fce2ef47907ae37",
+            "phoneCallId": "66910e03cbb1b4a02049d92f",
+            "text": "So, Friday, July twelfth, at Two Fifteen P M, work for you?",
+            "spokenText": "So, Friday, July twelfth, at Two Fifteen P M, work for you?",
+            "speaker": "ai"
+        },
+        {
+            "_id": "66910e6a08671cfb53bf1227",
+            "createdAt": "2024-07-12T11:07:14.586Z",
+            "updatedAt": "2024-07-12T11:07:14.586Z",
+            "teamId": "668532958fce2ef47907ae37",
+            "phoneCallId": "66910e03cbb1b4a02049d92f",
+            "text": "Yeah. Perfect.",
+            "spokenText": "Yeah. Perfect.",
+            "speaker": "human"
+        },
+        {
+            "_id": "66910e6a08671cfb53bf1229",
+            "createdAt": "2024-07-12T11:07:16.216Z",
+            "updatedAt": "2024-07-12T11:07:16.216Z",
+            "teamId": "668532958fce2ef47907ae37",
+            "phoneCallId": "66910e03cbb1b4a02049d92f",
+            "text": "nice, thanks for your time, see you at the interview, bye! .",
+            "spokenText": "nice, thanks for your time, see you at the interview, bye! .",
+            "speaker": "ai"
+        }
+    ]
+}
