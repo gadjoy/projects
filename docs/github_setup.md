@@ -1,14 +1,12 @@
 # Connecting to Github with SSH
 ## Step 1: Generating SSH Key 
-1. Open Terminal/Command Prompt:
-   - If you're on macOS or Linux, you can use Terminal.
+1. Open Terminal/Command Prompt: If you're on macOS or Linux, you can use Terminal.
 2. Generate SSH Key: Type the following command:
-   ```
-  ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
-   ```
-  - Replace `your_email@example.com` with your GitHub email.
-   - Press Enter to accept the default file location and leave the passphrase empty if you don't want to use one.
-   ```
+```
+  ssh-keygen -t ed25519 -C "your_email@example.com"
+  ```
+- Replace `your_email@example.com` with your GitHub email.
+- Press Enter to accept the default file location and leave the passphrase empty if you don't want to use one.
 3. Start SSH Agent: Start the SSH agent to manage your SSH keys:
    ```
    eval "$(ssh-agent -s)"
@@ -17,10 +15,9 @@
    ```
    ssh-add ~/.ssh/id_ed25519
    ```
-5. Copy SSH Key to Clipboard: Copy your SSH key to the clipboard:
+5. Copy SSH Key to Clipboard: Copy your SSH key to the clipboard: **THIS IS THE PUBLIC KEY**
    ```
    cat ~/.ssh/id_ed25519.pub
-   ```
 ## Step 2: Adding SSH Key to GitHub
 1. Open GitHub:
    - Go to GitHub and sign in to your account.
@@ -30,11 +27,18 @@
 3. Add New SSH Key:
    - Click on New SSH key.
    - In the "Title" field, add a descriptive label for the new key.
-   - Paste your SSH key into the "Key" field.
+   - Paste your SSH **PUBLIC KEY** key into the "Key" field.
+   - Click Add SSH key.
+
+4. Test SSH Connection
      ```
      ssh -T git@github.com
      ```
-   - Click Add SSH key.
+     You may see a warning like this:
+     > The authenticity of host 'github.com (IP ADDRESS)' can't be established.
+    > ED25519 key fingerprint is SHA256:+DiY3wvvV6TuJJhbpZisF/zLDA0zPMSvHdkr4UvCOqU.
+    > Are you sure you want to continue connecting (yes/no)?
+
 ## Step 3: Cloning a GitHub Repository
 1. Copy Repository SSH URL:
    - Go to the repository you want to clone on GitHub.
