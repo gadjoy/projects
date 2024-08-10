@@ -39,6 +39,7 @@
   </div>
 </template>
 
+
 <script>
 import axios from 'axios';
 
@@ -92,7 +93,7 @@ export default {
       if (file && file.type === "application/pdf") {
         const formData = new FormData();
         formData.append('file', file);
-
+    
         // Ensure a user is selected
         if (this.selectedUser) {
           formData.append('access_username', this.selectedUser);
@@ -100,7 +101,7 @@ export default {
           alert("Please select a user for access.");
           return;
         }
-
+    
         axios.post('http://localhost:5000/upload', formData, {
           headers: {
             'Content-Type': 'multipart/form-data'
@@ -139,6 +140,7 @@ export default {
   }
 };
 </script>
+
 
 <style scoped>
 .drag-drop-container {
