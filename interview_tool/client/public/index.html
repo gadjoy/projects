@@ -1,17 +1,46 @@
 <!DOCTYPE html>
-<html lang="">
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="icon" href="<%= BASE_URL %>favicon.ico">
-    <title><%= htmlWebpackPlugin.options.title %></title>
+    <title>AI Interview Tool</title>
+    <!-- Include Vue.js script -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
   </head>
   <body>
     <noscript>
-      <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+      <strong>We're sorry but AI Interview Tool doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
     </noscript>
-    <div id="app"></div>
-    <!-- built files will be auto injected -->
+    <div id="app">
+      <!-- Vue.js template code here -->
+      <div class="feedback">
+        <button @click="sendTranscribedText">Get Feedback</button>
+        <button @click="fetchQuestion">Next Question</button>
+        <p>Feedback:</p>
+        <p>{{ feedback }}</p>
+      </div>
+    </div>
+
+    <!-- Include your Vue.js application script -->
+    <script>
+      new Vue({
+        el: '#app',
+        data: {
+          feedback: ''
+        },
+        methods: {
+          sendTranscribedText() {
+            // Logic to send transcribed text and get feedback
+            this.feedback = 'Feedback received!';
+          },
+          fetchQuestion() {
+            // Logic to fetch the next question
+            this.feedback = 'Fetching next question...';
+          }
+        }
+      });
+    </script>
   </body>
 </html>

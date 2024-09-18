@@ -1,0 +1,120 @@
+<template>
+  <div id="feedback-page">
+    <header>AI Interview Tool - Feedback</header>
+    <div id="feedback-content">
+      <div class="transcribed-text">
+        <p>Transcribed/Text Answer:</p>
+        <textarea v-model="transcribedText" rows="5" cols="50" readonly></textarea>
+      </div>
+      <div class="feedback">
+        <p>Feedback:</p>
+        <div>{{ feedback }}</div>
+      </div>
+      <router-link to="/">
+        <button @click="nextQuestion">Next Question</button>
+      </router-link>
+    </div>
+  </div>
+</template>
+
+<script>
+import axios from 'axios';
+
+export default {
+  name: 'Feedback',
+
+  data() {
+    return {
+      transcribedText: this.$route.query.text || '',
+      feedback: ''
+    };
+  },
+
+  methods: {
+    async getFeedback() {
+      try {
+        const response = await axios.post('http://localhost:5000/generate_feedback', { text: this.transcribedText });
+        this.feedback = response.data.generated_content;
+      } catch (error) {
+        console.error('Error getting feedback:', error);
+      }
+    },
+    nextQuestion() {
+      this.$router.push({ path: '/' });
+    }
+  },
+
+  created() {
+    this.getFeedback();
+  }
+}
+</script>
+
+<style scoped>
+#feedback-page {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+header {
+  background-color: #f8d568;
+  padding: 20px;
+  text-align: center;
+  font-weight: bold;
+}
+
+#feedback-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.transcribed-text {
+  flex: 1;
+  background-color: #3478f7;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  margin: 5px;
+  white-space: pre-wrap;
+  overflow: auto;
+}
+
+textarea {
+  width: 80%;
+  padding: 10px;
+  margin-top: 10px;
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.feedback {
+  flex: 1;
+  background-color: #f8d568;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  margin: 5px;
+  white-space: pre-wrap;
+  overflow: auto;
+}
+
+button {
+  background-color: #f8d568;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+button:hover {
+  background-color: #e6c559;
+}
+</style>

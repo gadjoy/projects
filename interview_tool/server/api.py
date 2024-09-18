@@ -1,30 +1,24 @@
-from flask import Flask, request, jsonify
-from openai import OpenAI
 import os
+import requests
+from flask import Flask, request, jsonify
 from dotenv import load_dotenv
 from werkzeug.utils import secure_filename
 import tempfile
 from flask_cors import CORS
-import io
-from pydub import AudioSegment
 
 # Load environment variables
 load_dotenv()
 
 app = Flask(__name__)
-
 CORS(app)
 
-# Initialize OpenAI client
-client = OpenAI()
-
+# Google API key
+api_key = os.environ.get('GOOGLE_API_KEY')
 
 @app.route('/generate_question', methods=['GET'])
 def generate_question():
     prompt = "Generate a general interview question:"
-
-    endpoint = "https://generativelanguage.googleapis.com/v1beta"
-    api_key = os.environ.get('GOOGLE_API_KEY')
+    endpoint = "https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent"
     request_body = {
         "contents": [
             {
@@ -39,7 +33,7 @@ def generate_question():
 
     try:
         response = requests.post(
-            f"{endpoint}/models/gemini-pro:generateContent?key={api_key}",
+            f"{endpoint}?key={api_key}",
             json=request_body
         )
         response_json = response.json()
@@ -57,50 +51,23 @@ def transcribe_audio():
     if file.filename == '':
         return jsonify({"error": "No selected file"}), 400
 
+    filename = secure_filename(file.filename)
+    temp_path = os.path.join(tempfile.gettempdir(), filename)
+    file.save(temp_path)
+    
     try:
-        # Create a secure filename
-        filename = secure_filename(file.filename)
-        # Create a temporary file
-        temp_path = os.path.join(tempfile.gettempdir(), filename)
-        file.save(temp_path)
+        # Assuming the Google API provides a similar service
+        response = requests.post(
+            f"https://your-transcription-api-endpoint?key={api_key}",
+            files={"file": open(temp_path, 'rb')}
+        )
+        response_json = response.json()
+        transcription = response_json.get("transcription", "No transcription available")
         
-        with open(temp_path, 'rb') as audio_file:
-            transcription = client.audio.transcriptions.create(
-                model="whisper-1",
-                file=audio_file
-            )
-        
-        # Clean up the temporary file
         os.remove(temp_path)
-        
-        return jsonify({"transcription": transcription.text}), 200
+        return jsonify({"transcription": transcription}), 200
     except Exception as e:
         return jsonify({"error": str(e)}), 500
-
-@app.route('/transcribe_blob', methods=['POST'])
-def transcribe_audio_blob():
-    audio_file = request.files.get('audio')
-    if audio_file:
-        filename = secure_filename(audio_file.filename)
-        filename = os.path.splitext(filename)[0] + ".mp3"  # Change the extension to .mp3
-        temp_path = os.path.join(tempfile.gettempdir(), filename)
-        audio_file.save(temp_path)
-
-        with open(temp_path, 'rb') as audio_file:
-            transcription = client.audio.transcriptions.create(
-                model="whisper-1",
-                file=audio_file
-            )
-        
-        # Clean up the temporary file
-        os.remove(temp_path)
-        
-        return jsonify({"transcription": transcription.text}), 200
-    else:
-        return jsonify({"error": "No file received"}), 400
-
-if __name__ == '__main__':
-    app.run(debug=True)
 
 @app.route('/generate_feedback', methods=['POST'])
 def generate_feedback():
@@ -110,8 +77,7 @@ def generate_feedback():
 
     prompt = f"This is a recording of a candidate preparing for interview, please provide feedback on how they can improve to impress the interviewer.\n{data['text']}"
 
-    endpoint = "https://generativelanguage.googleapis.com/v1beta"
-    api_key = os.environ.get('GOOGLE_API_KEY')
+    endpoint = "https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent"
     request_body = {
         "contents": [
             {
@@ -126,7 +92,7 @@ def generate_feedback():
 
     try:
         response = requests.post(
-            f"{endpoint}/models/gemini-pro:generateContent?key={api_key}",
+            f"{endpoint}?key={api_key}",
             json=request_body
         )
         response_json = response.json()
@@ -136,10 +102,4 @@ def generate_feedback():
         return jsonify({"error": str(e)}), 500
 
 if __name__ == '__main__':
-    app.run(debug=True)
-
-
-# Path: server/test_api.py
-import requests
-from flask import request
-
+    app.run(debug=True, port=5000)

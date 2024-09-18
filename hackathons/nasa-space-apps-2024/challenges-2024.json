@@ -1,0 +1,1727 @@
+[
+    {
+        "data": {
+            "challenges": {
+                "totalCount": 21,
+                "edges": [
+                    {
+                        "__typename": "ChallengePageEdge",
+                        "cursor": "b2Zmc2V0OjA=",
+                        "node": {
+                            "__typename": "ChallengePage",
+                            "id": "aWQ6MTI1MTA=",
+                            "title": "Beyond Sunlight: An Aquatic Chemosynthetic World",
+                            "featuredImage": {
+                                "id": "aWQ6ODM1MDI=",
+                                "meta": {
+                                    "type": "images.CustomImage",
+                                    "downloadUrl": "https://assets.spaceappschallenge.org/media/original_images/NASA_Space_Apps_2024_Challenge_13.jpg",
+                                    "__typename": "ImageMeta"
+                                },
+                                "title": "NASA Space Apps 2024 Challenge 13",
+                                "alt": "NASA Space Apps 2024 Challenge 13",
+                                "caption": "NASA Space Apps 2024 Challenge 13",
+                                "displaySize": "og",
+                                "rendition": {
+                                    "url": "https://assets.spaceappschallenge.org/media/images/NASA_Space_Apps_2024_Challenge_13.2e16d0ba.fill-300x250.jpg",
+                                    "fullUrl": "https://assets.spaceappschallenge.org/media/images/NASA_Space_Apps_2024_Challenge_13.2e16d0ba.fill-300x250.jpg",
+                                    "height": 250,
+                                    "width": 300,
+                                    "__typename": "BaseImage"
+                                },
+                                "__typename": "DefaultImage"
+                            },
+                            "meta": {
+                                "type": "CHALLENGE",
+                                "slug": "beyond-sunlight-an-aquatic-chemosynthetic-world",
+                                "firstPublishedAt": "2024-08-19T17:43:09.028050Z",
+                                "lastPublishedAt": "2024-09-10T13:58:34.909024Z",
+                                "relativeUrl": "/nasa-space-apps-2024/challenges/beyond-sunlight-an-aquatic-chemosynthetic-world/",
+                                "live": true,
+                                "parent": null,
+                                "__typename": "ExpandedPageMeta"
+                            },
+                            "categories": [
+                                {
+                                    "__typename": "Category",
+                                    "id": 1,
+                                    "name": "Beginner/Youth",
+                                    "slug": "beginneryouth",
+                                    "description": null,
+                                    "priority": 3,
+                                    "color": "#07173F"
+                                },
+                                {
+                                    "__typename": "Category",
+                                    "id": 2,
+                                    "name": "Intermediate",
+                                    "slug": "intermediate",
+                                    "description": null,
+                                    "priority": 2,
+                                    "color": "#FF580A"
+                                },
+                                {
+                                    "__typename": "Category",
+                                    "id": 3,
+                                    "name": "Advanced",
+                                    "slug": "advanced",
+                                    "description": null,
+                                    "priority": 1,
+                                    "color": "#8B0A03"
+                                }
+                            ],
+                            "event": "aWQ6Mg==",
+                            "eventDetails": {
+                                "id": "aWQ6Mg==",
+                                "name": "2024 NASA Space Apps Challenge",
+                                "displayName": "2024 NASA Space Apps Challenge",
+                                "slug": "2024",
+                                "status": 2,
+                                "startDate": "2024-10-04T21:00:00",
+                                "endDate": "2024-10-06T23:59:00",
+                                "__typename": "GlobalEvent"
+                            },
+                            "skills": [
+                                "Arts",
+                                "Astrophysics",
+                                "Climate",
+                                "Diversity & Equity",
+                                "Earth",
+                                "Planets & Moons",
+                                "Space Exploration",
+                                "Sun"
+                            ],
+                            "excerpt": "Earth's ecosystems heavily rely on sunlight, but imagine an ocean world where chemosynthesis, not photosynthesis, sustains life. Your challenge is to design such a world and its diverse ecosystem, pushing the boundaries of astrobiology beyond traditional Earth-like conditions."
+                        }
+                    },
+                    {
+                        "__typename": "ChallengePageEdge",
+                        "cursor": "b2Zmc2V0OjE=",
+                        "node": {
+                            "__typename": "ChallengePage",
+                            "id": "aWQ6MTI1MDU=",
+                            "title": "Chronicles of Exoplanet Exploration",
+                            "featuredImage": {
+                                "id": "aWQ6ODM0OTU=",
+                                "meta": {
+                                    "type": "images.CustomImage",
+                                    "downloadUrl": "https://assets.spaceappschallenge.org/media/original_images/NASA_Space_Apps_2024_Challenge_8.jpg",
+                                    "__typename": "ImageMeta"
+                                },
+                                "title": "NASA Space Apps 2024 Challenge 8",
+                                "alt": "NASA Space Apps 2024 Challenge 8",
+                                "caption": "NASA Space Apps 2024 Challenge 8",
+                                "displaySize": "og",
+                                "rendition": {
+                                    "url": "https://assets.spaceappschallenge.org/media/images/NASA_Space_Apps_2024_Challenge_8.2e16d0ba.fill-300x250.jpg",
+                                    "fullUrl": "https://assets.spaceappschallenge.org/media/images/NASA_Space_Apps_2024_Challenge_8.2e16d0ba.fill-300x250.jpg",
+                                    "height": 250,
+                                    "width": 300,
+                                    "__typename": "BaseImage"
+                                },
+                                "__typename": "DefaultImage"
+                            },
+                            "meta": {
+                                "type": "CHALLENGE",
+                                "slug": "chronicles-of-exoplanet-exploration",
+                                "firstPublishedAt": "2024-08-19T17:44:41.827983Z",
+                                "lastPublishedAt": "2024-09-10T16:26:52.812117Z",
+                                "relativeUrl": "/nasa-space-apps-2024/challenges/chronicles-of-exoplanet-exploration/",
+                                "live": true,
+                                "parent": null,
+                                "__typename": "ExpandedPageMeta"
+                            },
+                            "categories": [
+                                {
+                                    "__typename": "Category",
+                                    "id": 1,
+                                    "name": "Beginner/Youth",
+                                    "slug": "beginneryouth",
+                                    "description": null,
+                                    "priority": 3,
+                                    "color": "#07173F"
+                                },
+                                {
+                                    "__typename": "Category",
+                                    "id": 2,
+                                    "name": "Intermediate",
+                                    "slug": "intermediate",
+                                    "description": null,
+                                    "priority": 2,
+                                    "color": "#FF580A"
+                                },
+                                {
+                                    "__typename": "Category",
+                                    "id": 3,
+                                    "name": "Advanced",
+                                    "slug": "advanced",
+                                    "description": null,
+                                    "priority": 1,
+                                    "color": "#8B0A03"
+                                }
+                            ],
+                            "event": "aWQ6Mg==",
+                            "eventDetails": {
+                                "id": "aWQ6Mg==",
+                                "name": "2024 NASA Space Apps Challenge",
+                                "displayName": "2024 NASA Space Apps Challenge",
+                                "slug": "2024",
+                                "status": 2,
+                                "startDate": "2024-10-04T21:00:00",
+                                "endDate": "2024-10-06T23:59:00",
+                                "__typename": "GlobalEvent"
+                            },
+                            "skills": [
+                                "Arts",
+                                "Astrophysics",
+                                "Diversity & Equity",
+                                "Games",
+                                "Planets & Moons",
+                                "Software",
+                                "Space Exploration"
+                            ],
+                            "excerpt": "Embark on a thrilling journey to revolutionize exoplanet education! The discovery of exoplanets has redefined our understanding of planetary systems, expanding what we know about our place in the universe. From scorching gas giants to potentially habitable rocky worlds, these distant worlds offer a glimpse into the remarkable diversity of planetary configurations. Traditional educational materials about this topic may not be accessible to everyone, particularly those from underserved communities or with limited access to resources. Your challenge is to develop engaging and accessible learning materials that leverage creativity to enlighten students about the wonders of exoplanets."
+                        }
+                    },
+                    {
+                        "__typename": "ChallengePageEdge",
+                        "cursor": "b2Zmc2V0OjI=",
+                        "node": {
+                            "__typename": "ChallengePage",
+                            "id": "aWQ6MTI1MTM=",
+                            "title": "Community Mapping",
+                            "featuredImage": {
+                                "id": "aWQ6ODM1MDY=",
+                                "meta": {
+                                    "type": "images.CustomImage",
+                                    "downloadUrl": "https://assets.spaceappschallenge.org/media/original_images/NASA_Space_Apps_2024_Challenge_16.jpg",
+                                    "__typename": "ImageMeta"
+                                },
+                                "title": "NASA Space Apps 2024 Challenge 16",
+                                "alt": "NASA Space Apps 2024 Challenge 16",
+                                "caption": "NASA Space Apps 2024 Challenge 16",
+                                "displaySize": "og",
+                                "rendition": {
+                                    "url": "https://assets.spaceappschallenge.org/media/images/NASA_Space_Apps_2024_Challenge_16.2e16d0ba.fill-300x250.jpg",
+                                    "fullUrl": "https://assets.spaceappschallenge.org/media/images/NASA_Space_Apps_2024_Challenge_16.2e16d0ba.fill-300x250.jpg",
+                                    "height": 250,
+                                    "width": 300,
+                                    "__typename": "BaseImage"
+                                },
+                                "__typename": "DefaultImage"
+                            },
+                            "meta": {
+                                "type": "CHALLENGE",
+                                "slug": "community-mapping",
+                                "firstPublishedAt": "2024-08-19T17:44:42.021408Z",
+                                "lastPublishedAt": "2024-09-10T13:58:35.125259Z",
+                                "relativeUrl": "/nasa-space-apps-2024/challenges/community-mapping/",
+                                "live": true,
+                                "parent": null,
+                                "__typename": "ExpandedPageMeta"
+                            },
+                            "categories": [
+                                {
+                                    "__typename": "Category",
+                                    "id": 1,
+                                    "name": "Beginner/Youth",
+                                    "slug": "beginneryouth",
+                                    "description": null,
+                                    "priority": 3,
+                                    "color": "#07173F"
+                                },
+                                {
+                                    "__typename": "Category",
+                                    "id": 2,
+                                    "name": "Intermediate",
+                                    "slug": "intermediate",
+                                    "description": null,
+                                    "priority": 2,
+                                    "color": "#FF580A"
+                                },
+                                {
+                                    "__typename": "Category",
+                                    "id": 3,
+                                    "name": "Advanced",
+                                    "slug": "advanced",
+                                    "description": null,
+                                    "priority": 1,
+                                    "color": "#8B0A03"
+                                }
+                            ],
+                            "event": "aWQ6Mg==",
+                            "eventDetails": {
+                                "id": "aWQ6Mg==",
+                                "name": "2024 NASA Space Apps Challenge",
+                                "displayName": "2024 NASA Space Apps Challenge",
+                                "slug": "2024",
+                                "status": 2,
+                                "startDate": "2024-10-04T21:00:00",
+                                "endDate": "2024-10-06T23:59:00",
+                                "__typename": "GlobalEvent"
+                            },
+                            "skills": [
+                                "Arts",
+                                "Climate",
+                                "Diversity & Equity",
+                                "Earth"
+                            ],
+                            "excerpt": "A geographic information system (GIS) can create, manage, analyze, and map many types of data. With GIS and other mapping technologies, you can create a map of an area and layer open data over it spatially to reveal new, enriching insights. Your challenge is to create a map that incorporates open science data to explore how an issue in your community is shaped by the surrounding physical geography. Maybe you’re concerned about food deserts and want to analyze the locations of grocery stores in your neighborhood? Or perhaps you’d like to explore the impacts of pollution on the local water supply? There’s so much space for opportunity—all you have to do is map it!"
+                        }
+                    },
+                    {
+                        "__typename": "ChallengePageEdge",
+                        "cursor": "b2Zmc2V0OjM=",
+                        "node": {
+                            "__typename": "ChallengePage",
+                            "id": "aWQ6MTI1MDg=",
+                            "title": "Create an Orrery Web App that Displays Near-Earth Objects",
+                            "featuredImage": {
+                                "id": "aWQ6ODM0OTk=",
+                                "meta": {
+                                    "type": "images.CustomImage",
+                                    "downloadUrl": "https://assets.spaceappschallenge.org/media/original_images/NASA_Space_Apps_2024_Challenge_11.jpg",
+                                    "__typename": "ImageMeta"
+                                },
+                                "title": "NASA Space Apps 2024 Challenge 11",
+                                "alt": "NASA Space Apps 2024 Challenge 11",
+                                "caption": "NASA Space Apps 2024 Challenge 11",
+                                "displaySize": "og",
+                                "rendition": {
+                                    "url": "https://assets.spaceappschallenge.org/media/images/NASA_Space_Apps_2024_Challenge_11.2e16d0ba.fill-300x250.jpg",
+                                    "fullUrl": "https://assets.spaceappschallenge.org/media/images/NASA_Space_Apps_2024_Challenge_11.2e16d0ba.fill-300x250.jpg",
+                                    "height": 250,
+                                    "width": 300,
+                                    "__typename": "BaseImage"
+                                },
+                                "__typename": "DefaultImage"
+                            },
+                            "meta": {
+                                "type": "CHALLENGE",
+                                "slug": "create-an-orrery-web-app-that-displays-near-earth-objects",
+                                "firstPublishedAt": "2024-08-19T17:44:42.172128Z",
+                                "lastPublishedAt": "2024-09-11T16:27:33.131199Z",
+                                "relativeUrl": "/nasa-space-apps-2024/challenges/create-an-orrery-web-app-that-displays-near-earth-objects/",
+                                "live": true,
+                                "parent": null,
+                                "__typename": "ExpandedPageMeta"
+                            },
+                            "categories": [
+                                {
+                                    "__typename": "Category",
+                                    "id": 2,
+                                    "name": "Intermediate",
+                                    "slug": "intermediate",
+                                    "description": null,
+                                    "priority": 2,
+                                    "color": "#FF580A"
+                                },
+                                {
+                                    "__typename": "Category",
+                                    "id": 3,
+                                    "name": "Advanced",
+                                    "slug": "advanced",
+                                    "description": null,
+                                    "priority": 1,
+                                    "color": "#8B0A03"
+                                }
+                            ],
+                            "event": "aWQ6Mg==",
+                            "eventDetails": {
+                                "id": "aWQ6Mg==",
+                                "name": "2024 NASA Space Apps Challenge",
+                                "displayName": "2024 NASA Space Apps Challenge",
+                                "slug": "2024",
+                                "status": 2,
+                                "startDate": "2024-10-04T21:00:00",
+                                "endDate": "2024-10-06T23:59:00",
+                                "__typename": "GlobalEvent"
+                            },
+                            "skills": [
+                                "Astrophysics",
+                                "Games",
+                                "Planets & Moons",
+                                "Software",
+                                "Space Exploration"
+                            ],
+                            "excerpt": "Since a mechanical model of the solar system was presented to Charles Boyle, 4th Earl of Orrery, in 1713, such models have been referred to as orreries. The first orreries were physical models, but today we can use numerous tools to create virtual orreries that have many more features than their ancient mechanical counterparts. Your challenge is to create an interactive orrery web app that is embedded in a webpage and displays celestial bodies such as planets, Near-Earth Asteroids, Near-Earth Comets, and Potentially Hazardous Asteroids."
+                        }
+                    },
+                    {
+                        "__typename": "ChallengePageEdge",
+                        "cursor": "b2Zmc2V0OjQ=",
+                        "node": {
+                            "__typename": "ChallengePage",
+                            "id": "aWQ6MTI0OTE=",
+                            "title": "Create Your Own Challenge",
+                            "featuredImage": {
+                                "id": "aWQ6OTU3OQ==",
+                                "meta": {
+                                    "type": "images.CustomImage",
+                                    "downloadUrl": "https://assets.spaceappschallenge.org/media/original_images/Astronaut_Woody_Hoburg_takes_an_out-of-this-world_space-selfie.jpg",
+                                    "__typename": "ImageMeta"
+                                },
+                                "title": "Astronaut Woody Hoburg takes an out-of-this-world space-selfie",
+                                "alt": "Astronaut Woody Hoburg takes an out-of-this-world space-selfie",
+                                "caption": "Astronaut Woody Hoburg takes an out-of-this-world space-selfie",
+                                "displaySize": "og",
+                                "rendition": {
+                                    "url": "https://assets.spaceappschallenge.org/media/images/Astronaut_Woody_Hoburg_takes_an_ou.2e16d0ba.fill-300x250.jpg",
+                                    "fullUrl": "https://assets.spaceappschallenge.org/media/images/Astronaut_Woody_Hoburg_takes_an_ou.2e16d0ba.fill-300x250.jpg",
+                                    "height": 250,
+                                    "width": 300,
+                                    "__typename": "BaseImage"
+                                },
+                                "__typename": "DefaultImage"
+                            },
+                            "meta": {
+                                "type": "CHALLENGE",
+                                "slug": "create-your-own-challenge",
+                                "firstPublishedAt": "2024-08-19T17:31:16.479762Z",
+                                "lastPublishedAt": "2024-09-13T17:11:52.404664Z",
+                                "relativeUrl": "/nasa-space-apps-2024/challenges/create-your-own-challenge/",
+                                "live": true,
+                                "parent": null,
+                                "__typename": "ExpandedPageMeta"
+                            },
+                            "categories": [
+                                {
+                                    "__typename": "Category",
+                                    "id": 1,
+                                    "name": "Beginner/Youth",
+                                    "slug": "beginneryouth",
+                                    "description": null,
+                                    "priority": 3,
+                                    "color": "#07173F"
+                                },
+                                {
+                                    "__typename": "Category",
+                                    "id": 2,
+                                    "name": "Intermediate",
+                                    "slug": "intermediate",
+                                    "description": null,
+                                    "priority": 2,
+                                    "color": "#FF580A"
+                                },
+                                {
+                                    "__typename": "Category",
+                                    "id": 3,
+                                    "name": "Advanced",
+                                    "slug": "advanced",
+                                    "description": null,
+                                    "priority": 1,
+                                    "color": "#8B0A03"
+                                }
+                            ],
+                            "event": "aWQ6Mg==",
+                            "eventDetails": {
+                                "id": "aWQ6Mg==",
+                                "name": "2024 NASA Space Apps Challenge",
+                                "displayName": "2024 NASA Space Apps Challenge",
+                                "slug": "2024",
+                                "status": 2,
+                                "startDate": "2024-10-04T21:00:00",
+                                "endDate": "2024-10-06T23:59:00",
+                                "__typename": "GlobalEvent"
+                            },
+                            "skills": [],
+                            "excerpt": "Participants are invited to create their own challenge to tackle during the hackathon. However, please note that while some Local Events may offer awards for \"Create Your Own Challenge\" projects, this challenge is not eligible for Global Judging and projects do not qualify for Global Awards."
+                        }
+                    },
+                    {
+                        "__typename": "ChallengePageEdge",
+                        "cursor": "b2Zmc2V0OjU=",
+                        "node": {
+                            "__typename": "ChallengePage",
+                            "id": "aWQ6MTI1MDA=",
+                            "title": "Exosky!",
+                            "featuredImage": {
+                                "id": "aWQ6ODM0ODk=",
+                                "meta": {
+                                    "type": "images.CustomImage",
+                                    "downloadUrl": "https://assets.spaceappschallenge.org/media/original_images/NASA_Space_Apps_2024_Challenge_3.jpg",
+                                    "__typename": "ImageMeta"
+                                },
+                                "title": "NASA Space Apps 2024 Challenge 3",
+                                "alt": "NASA Space Apps 2024 Challenge 3",
+                                "caption": "NASA Space Apps 2024 Challenge 3",
+                                "displaySize": "og",
+                                "rendition": {
+                                    "url": "https://assets.spaceappschallenge.org/media/images/NASA_Space_Apps_2024_Challenge_3.2e16d0ba.fill-300x250.jpg",
+                                    "fullUrl": "https://assets.spaceappschallenge.org/media/images/NASA_Space_Apps_2024_Challenge_3.2e16d0ba.fill-300x250.jpg",
+                                    "height": 250,
+                                    "width": 300,
+                                    "__typename": "BaseImage"
+                                },
+                                "__typename": "DefaultImage"
+                            },
+                            "meta": {
+                                "type": "CHALLENGE",
+                                "slug": "exosky",
+                                "firstPublishedAt": "2024-08-19T17:43:23.521538Z",
+                                "lastPublishedAt": "2024-09-11T16:09:01.594392Z",
+                                "relativeUrl": "/nasa-space-apps-2024/challenges/exosky/",
+                                "live": true,
+                                "parent": null,
+                                "__typename": "ExpandedPageMeta"
+                            },
+                            "categories": [
+                                {
+                                    "__typename": "Category",
+                                    "id": 2,
+                                    "name": "Intermediate",
+                                    "slug": "intermediate",
+                                    "description": null,
+                                    "priority": 2,
+                                    "color": "#FF580A"
+                                },
+                                {
+                                    "__typename": "Category",
+                                    "id": 3,
+                                    "name": "Advanced",
+                                    "slug": "advanced",
+                                    "description": null,
+                                    "priority": 1,
+                                    "color": "#8B0A03"
+                                }
+                            ],
+                            "event": "aWQ6Mg==",
+                            "eventDetails": {
+                                "id": "aWQ6Mg==",
+                                "name": "2024 NASA Space Apps Challenge",
+                                "displayName": "2024 NASA Space Apps Challenge",
+                                "slug": "2024",
+                                "status": 2,
+                                "startDate": "2024-10-04T21:00:00",
+                                "endDate": "2024-10-06T23:59:00",
+                                "__typename": "GlobalEvent"
+                            },
+                            "skills": [
+                                "Astrophysics",
+                                "Planets & Moons",
+                                "Software"
+                            ],
+                            "excerpt": "What would the night sky look like if you were standing on one of the many exoplanets discovered by astronomers and space missions? The list of 5500+ exoplanets at the NASA Exoplanet Archive can be combined with the latest star catalogs to translate the location and brightness of millions or even billions of stars to another perspective. From that perspective, anyone could use their imagination to draw constellations, much like our ancestors did on Earth thousands of years ago. Your challenge is to develop an app or interface for students that allows them to choose an exoplanet and then either display an interactive star chart or export a high-quality image for printing or viewing on a computer or virtual reality display, where they can draw and name constellations."
+                        }
+                    },
+                    {
+                        "__typename": "ChallengePageEdge",
+                        "cursor": "b2Zmc2V0OjY=",
+                        "node": {
+                            "__typename": "ChallengePage",
+                            "id": "aWQ6MTI1MDQ=",
+                            "title": "Galactic Games: Fun in a Microgravity Environment!",
+                            "featuredImage": {
+                                "id": "aWQ6ODM0OTM=",
+                                "meta": {
+                                    "type": "images.CustomImage",
+                                    "downloadUrl": "https://assets.spaceappschallenge.org/media/original_images/NASA_Space_Apps_2024_Challenge_7.jpg",
+                                    "__typename": "ImageMeta"
+                                },
+                                "title": "NASA Space Apps 2024 Challenge 7",
+                                "alt": "NASA Space Apps 2024 Challenge 7",
+                                "caption": "NASA Space Apps 2024 Challenge 7",
+                                "displaySize": "og",
+                                "rendition": {
+                                    "url": "https://assets.spaceappschallenge.org/media/images/NASA_Space_Apps_2024_Challenge_7.2e16d0ba.fill-300x250.jpg",
+                                    "fullUrl": "https://assets.spaceappschallenge.org/media/images/NASA_Space_Apps_2024_Challenge_7.2e16d0ba.fill-300x250.jpg",
+                                    "height": 250,
+                                    "width": 300,
+                                    "__typename": "BaseImage"
+                                },
+                                "__typename": "DefaultImage"
+                            },
+                            "meta": {
+                                "type": "CHALLENGE",
+                                "slug": "galactic-games-fun-in-a-microgravity-environment",
+                                "firstPublishedAt": "2024-08-19T17:44:42.331662Z",
+                                "lastPublishedAt": "2024-09-10T13:11:23.497588Z",
+                                "relativeUrl": "/nasa-space-apps-2024/challenges/galactic-games-fun-in-a-microgravity-environment/",
+                                "live": true,
+                                "parent": null,
+                                "__typename": "ExpandedPageMeta"
+                            },
+                            "categories": [
+                                {
+                                    "__typename": "Category",
+                                    "id": 1,
+                                    "name": "Beginner/Youth",
+                                    "slug": "beginneryouth",
+                                    "description": null,
+                                    "priority": 3,
+                                    "color": "#07173F"
+                                },
+                                {
+                                    "__typename": "Category",
+                                    "id": 2,
+                                    "name": "Intermediate",
+                                    "slug": "intermediate",
+                                    "description": null,
+                                    "priority": 2,
+                                    "color": "#FF580A"
+                                },
+                                {
+                                    "__typename": "Category",
+                                    "id": 3,
+                                    "name": "Advanced",
+                                    "slug": "advanced",
+                                    "description": null,
+                                    "priority": 1,
+                                    "color": "#8B0A03"
+                                }
+                            ],
+                            "event": "aWQ6Mg==",
+                            "eventDetails": {
+                                "id": "aWQ6Mg==",
+                                "name": "2024 NASA Space Apps Challenge",
+                                "displayName": "2024 NASA Space Apps Challenge",
+                                "slug": "2024",
+                                "status": 2,
+                                "startDate": "2024-10-04T21:00:00",
+                                "endDate": "2024-10-06T23:59:00",
+                                "__typename": "GlobalEvent"
+                            },
+                            "skills": [
+                                "Earth",
+                                "Games",
+                                "Hardware",
+                                "Planets & Moons",
+                                "Software",
+                                "Space Exploration",
+                                "Sun"
+                            ],
+                            "excerpt": "Imagine a scenario where multiple space stations orbit various celestial bodies within the solar system. Astronauts must live, work, and play for long durations in microgravity environments. Not only does living under these conditions impact their physical well-being, sometimes they get bored! Your task is to design a game that leverages the unique challenges and opportunities of a microgravity environment to entertain and contribute to the overall well-being and cohesion of astronaut crews, enhancing their resilience and adaptability in the extraterrestrial frontier."
+                        }
+                    },
+                    {
+                        "__typename": "ChallengePageEdge",
+                        "cursor": "b2Zmc2V0Ojc=",
+                        "node": {
+                            "__typename": "ChallengePage",
+                            "id": "aWQ6MTI1MTQ=",
+                            "title": "Gender and Climate",
+                            "featuredImage": {
+                                "id": "aWQ6ODQzMzg=",
+                                "meta": {
+                                    "type": "images.CustomImage",
+                                    "downloadUrl": "https://assets.spaceappschallenge.org/media/original_images/NASA_Space_Apps_2024_Challenge_17_fiXdD1B.png",
+                                    "__typename": "ImageMeta"
+                                },
+                                "title": "NASA Space Apps 2024 Challenge 17",
+                                "alt": "NASA Space Apps 2024 Challenge 17",
+                                "caption": "NASA Space Apps 2024 Challenge 17",
+                                "displaySize": "og",
+                                "rendition": {
+                                    "url": "https://assets.spaceappschallenge.org/media/images/NASA_Space_Apps_2024_Challenge_17_.2e16d0ba.fill-300x250.png",
+                                    "fullUrl": "https://assets.spaceappschallenge.org/media/images/NASA_Space_Apps_2024_Challenge_17_.2e16d0ba.fill-300x250.png",
+                                    "height": 250,
+                                    "width": 300,
+                                    "__typename": "BaseImage"
+                                },
+                                "__typename": "DefaultImage"
+                            },
+                            "meta": {
+                                "type": "CHALLENGE",
+                                "slug": "gender-and-climate",
+                                "firstPublishedAt": "2024-08-19T17:43:59.357733Z",
+                                "lastPublishedAt": "2024-09-11T16:37:03.813290Z",
+                                "relativeUrl": "/nasa-space-apps-2024/challenges/gender-and-climate/",
+                                "live": true,
+                                "parent": null,
+                                "__typename": "ExpandedPageMeta"
+                            },
+                            "categories": [
+                                {
+                                    "__typename": "Category",
+                                    "id": 2,
+                                    "name": "Intermediate",
+                                    "slug": "intermediate",
+                                    "description": null,
+                                    "priority": 2,
+                                    "color": "#FF580A"
+                                },
+                                {
+                                    "__typename": "Category",
+                                    "id": 3,
+                                    "name": "Advanced",
+                                    "slug": "advanced",
+                                    "description": null,
+                                    "priority": 1,
+                                    "color": "#8B0A03"
+                                }
+                            ],
+                            "event": "aWQ6Mg==",
+                            "eventDetails": {
+                                "id": "aWQ6Mg==",
+                                "name": "2024 NASA Space Apps Challenge",
+                                "displayName": "2024 NASA Space Apps Challenge",
+                                "slug": "2024",
+                                "status": 2,
+                                "startDate": "2024-10-04T21:00:00",
+                                "endDate": "2024-10-06T23:59:00",
+                                "__typename": "GlobalEvent"
+                            },
+                            "skills": [
+                                "Climate",
+                                "Diversity & Equity",
+                                "Earth"
+                            ],
+                            "excerpt": "The United Nations Sustainable Development Goals are a series of targets designed to promote human development and protect the environment. Two of the goals concern gender equality and climate action. While most people might consider these two topics to be quite disparate, they are actually closely related. Your challenge is to model the relationship between climate change and gender inequality, and propose a solution that promotes equality and action to support sustainable development for all."
+                        }
+                    },
+                    {
+                        "__typename": "ChallengePageEdge",
+                        "cursor": "b2Zmc2V0Ojg=",
+                        "node": {
+                            "__typename": "ChallengePage",
+                            "id": "aWQ6MTI1MDM=",
+                            "title": "GLOBE Protocol Games",
+                            "featuredImage": {
+                                "id": "aWQ6ODM0OTI=",
+                                "meta": {
+                                    "type": "images.CustomImage",
+                                    "downloadUrl": "https://assets.spaceappschallenge.org/media/original_images/NASA_Space_Apps_2024_Challenge_6.jpeg",
+                                    "__typename": "ImageMeta"
+                                },
+                                "title": "NASA Space Apps 2024 Challenge 6",
+                                "alt": "NASA Space Apps 2024 Challenge 6",
+                                "caption": "NASA Space Apps 2024 Challenge 6",
+                                "displaySize": "og",
+                                "rendition": {
+                                    "url": "https://assets.spaceappschallenge.org/media/images/NASA_Space_Apps_2024_Challenge_6.2e16d0ba.fill-300x250.jpg",
+                                    "fullUrl": "https://assets.spaceappschallenge.org/media/images/NASA_Space_Apps_2024_Challenge_6.2e16d0ba.fill-300x250.jpg",
+                                    "height": 250,
+                                    "width": 300,
+                                    "__typename": "BaseImage"
+                                },
+                                "__typename": "DefaultImage"
+                            },
+                            "meta": {
+                                "type": "CHALLENGE",
+                                "slug": "globe-protocol-games",
+                                "firstPublishedAt": "2024-08-19T17:44:42.480282Z",
+                                "lastPublishedAt": "2024-09-10T16:20:35.704312Z",
+                                "relativeUrl": "/nasa-space-apps-2024/challenges/globe-protocol-games/",
+                                "live": true,
+                                "parent": null,
+                                "__typename": "ExpandedPageMeta"
+                            },
+                            "categories": [
+                                {
+                                    "__typename": "Category",
+                                    "id": 1,
+                                    "name": "Beginner/Youth",
+                                    "slug": "beginneryouth",
+                                    "description": null,
+                                    "priority": 3,
+                                    "color": "#07173F"
+                                },
+                                {
+                                    "__typename": "Category",
+                                    "id": 2,
+                                    "name": "Intermediate",
+                                    "slug": "intermediate",
+                                    "description": null,
+                                    "priority": 2,
+                                    "color": "#FF580A"
+                                },
+                                {
+                                    "__typename": "Category",
+                                    "id": 3,
+                                    "name": "Advanced",
+                                    "slug": "advanced",
+                                    "description": null,
+                                    "priority": 1,
+                                    "color": "#8B0A03"
+                                }
+                            ],
+                            "event": "aWQ6Mg==",
+                            "eventDetails": {
+                                "id": "aWQ6Mg==",
+                                "name": "2024 NASA Space Apps Challenge",
+                                "displayName": "2024 NASA Space Apps Challenge",
+                                "slug": "2024",
+                                "status": 2,
+                                "startDate": "2024-10-04T21:00:00",
+                                "endDate": "2024-10-06T23:59:00",
+                                "__typename": "GlobalEvent"
+                            },
+                            "skills": [
+                                "Arts",
+                                "Climate",
+                                "Diversity & Equity",
+                                "Earth",
+                                "Games",
+                                "Software"
+                            ],
+                            "excerpt": "Learning about science can be a fun experience! Games that focus on science and environmental issues can create opportunities for players to develop their interests and gain knowledge while engaging with each other in a fun way. Your challenge is to create a game that integrates Global Learning and Observations to Benefit the Environment (GLOBE) Program protocols to help players understand the world around them, develop awareness of one or more local or global environmental topics (e.g., urbanization, water pollution, drought, heat waves, flooding), investigate their local community using GLOBE protocols, or learn scientific principles."
+                        }
+                    },
+                    {
+                        "__typename": "ChallengePageEdge",
+                        "cursor": "b2Zmc2V0Ojk=",
+                        "node": {
+                            "__typename": "ChallengePage",
+                            "id": "aWQ6MTI1MTE=",
+                            "title": "Imagine our Connected Earth",
+                            "featuredImage": {
+                                "id": "aWQ6ODM1MDM=",
+                                "meta": {
+                                    "type": "images.CustomImage",
+                                    "downloadUrl": "https://assets.spaceappschallenge.org/media/original_images/NASA_Space_Apps_2024_Challenge_14.jpg",
+                                    "__typename": "ImageMeta"
+                                },
+                                "title": "NASA Space Apps 2024 Challenge 14",
+                                "alt": "NASA Space Apps 2024 Challenge 14",
+                                "caption": "NASA Space Apps 2024 Challenge 14",
+                                "displaySize": "og",
+                                "rendition": {
+                                    "url": "https://assets.spaceappschallenge.org/media/images/NASA_Space_Apps_2024_Challenge_14.2e16d0ba.fill-300x250.jpg",
+                                    "fullUrl": "https://assets.spaceappschallenge.org/media/images/NASA_Space_Apps_2024_Challenge_14.2e16d0ba.fill-300x250.jpg",
+                                    "height": 250,
+                                    "width": 300,
+                                    "__typename": "BaseImage"
+                                },
+                                "__typename": "DefaultImage"
+                            },
+                            "meta": {
+                                "type": "CHALLENGE",
+                                "slug": "imagine-our-connected-earth",
+                                "firstPublishedAt": "2024-08-19T17:44:42.629900Z",
+                                "lastPublishedAt": "2024-09-10T14:13:08.766179Z",
+                                "relativeUrl": "/nasa-space-apps-2024/challenges/imagine-our-connected-earth/",
+                                "live": true,
+                                "parent": null,
+                                "__typename": "ExpandedPageMeta"
+                            },
+                            "categories": [
+                                {
+                                    "__typename": "Category",
+                                    "id": 2,
+                                    "name": "Intermediate",
+                                    "slug": "intermediate",
+                                    "description": null,
+                                    "priority": 2,
+                                    "color": "#FF580A"
+                                },
+                                {
+                                    "__typename": "Category",
+                                    "id": 3,
+                                    "name": "Advanced",
+                                    "slug": "advanced",
+                                    "description": null,
+                                    "priority": 1,
+                                    "color": "#8B0A03"
+                                }
+                            ],
+                            "event": "aWQ6Mg==",
+                            "eventDetails": {
+                                "id": "aWQ6Mg==",
+                                "name": "2024 NASA Space Apps Challenge",
+                                "displayName": "2024 NASA Space Apps Challenge",
+                                "slug": "2024",
+                                "status": 2,
+                                "startDate": "2024-10-04T21:00:00",
+                                "endDate": "2024-10-06T23:59:00",
+                                "__typename": "GlobalEvent"
+                            },
+                            "skills": [
+                                "Arts",
+                                "Climate",
+                                "Earth",
+                                "Software"
+                            ],
+                            "excerpt": "Our Earth systems are intricately connected on a global scale. For example, climate change can increase the length and severity of droughts, which can make wildfires more prevalent, which can not only lead to poor air quality from smoke, but can also influence ecological succession and forest regeneration. The Earth Information Center works to communicate examples of these interconnections to the public via physical exhibits and an online platform, but new ideas on how to communicate this important message to the public are always welcome! Your challenge is to devise an audio-visual interactive product (e.g., an animation, video, web-based immersive experience, musical application, etc.) that incorporates imagery and data from NASA’s fleet of Earth observing satellites to highlight and explore the interconnections between Earth’s systems, and demonstrate how changes in one system can alter another system."
+                        }
+                    },
+                    {
+                        "__typename": "ChallengePageEdge",
+                        "cursor": "b2Zmc2V0OjEw",
+                        "node": {
+                            "__typename": "ChallengePage",
+                            "id": "aWQ6MTI0OTg=",
+                            "title": "Landsat Reflectance Data: On the Fly and at Your Fingertips",
+                            "featuredImage": {
+                                "id": "aWQ6ODM0ODc=",
+                                "meta": {
+                                    "type": "images.CustomImage",
+                                    "downloadUrl": "https://assets.spaceappschallenge.org/media/original_images/NASA_Space_Apps_2024_Challenge_1.jpg",
+                                    "__typename": "ImageMeta"
+                                },
+                                "title": "NASA Space Apps 2024 Challenge 1",
+                                "alt": "NASA Space Apps 2024 Challenge 1",
+                                "caption": "NASA Space Apps 2024 Challenge 1",
+                                "displaySize": "og",
+                                "rendition": {
+                                    "url": "https://assets.spaceappschallenge.org/media/images/NASA_Space_Apps_2024_Challenge_1.2e16d0ba.fill-300x250.jpg",
+                                    "fullUrl": "https://assets.spaceappschallenge.org/media/images/NASA_Space_Apps_2024_Challenge_1.2e16d0ba.fill-300x250.jpg",
+                                    "height": 250,
+                                    "width": 300,
+                                    "__typename": "BaseImage"
+                                },
+                                "__typename": "DefaultImage"
+                            },
+                            "meta": {
+                                "type": "CHALLENGE",
+                                "slug": "landsat-reflectance-data-on-the-fly-and-at-your-fingertips",
+                                "firstPublishedAt": "2024-08-19T17:44:11.556797Z",
+                                "lastPublishedAt": "2024-09-10T16:19:33.894024Z",
+                                "relativeUrl": "/nasa-space-apps-2024/challenges/landsat-reflectance-data-on-the-fly-and-at-your-fingertips/",
+                                "live": true,
+                                "parent": null,
+                                "__typename": "ExpandedPageMeta"
+                            },
+                            "categories": [
+                                {
+                                    "__typename": "Category",
+                                    "id": 2,
+                                    "name": "Intermediate",
+                                    "slug": "intermediate",
+                                    "description": null,
+                                    "priority": 2,
+                                    "color": "#FF580A"
+                                },
+                                {
+                                    "__typename": "Category",
+                                    "id": 3,
+                                    "name": "Advanced",
+                                    "slug": "advanced",
+                                    "description": null,
+                                    "priority": 1,
+                                    "color": "#8B0A03"
+                                }
+                            ],
+                            "event": "aWQ6Mg==",
+                            "eventDetails": {
+                                "id": "aWQ6Mg==",
+                                "name": "2024 NASA Space Apps Challenge",
+                                "displayName": "2024 NASA Space Apps Challenge",
+                                "slug": "2024",
+                                "status": 2,
+                                "startDate": "2024-10-04T21:00:00",
+                                "endDate": "2024-10-06T23:59:00",
+                                "__typename": "GlobalEvent"
+                            },
+                            "skills": [
+                                "Earth",
+                                "Software"
+                            ],
+                            "excerpt": "Landsat missions have provided the longest continuous dataset of remotely sensed measurements of Earth’s land surface. Comparing ground-based spectral measurements with Landsat Surface Reflectance (SR) data collected at the same time can facilitate experiential learning, encourage scientific exploration with satellite data, foster interdisciplinary and spatial thinking skills, and empower individuals to become informed global citizens. But to compare ground-based measurements with Landsat data, you need to know when Landsat will be passing over a specific land area, and then be able to access the Landsat data collected at that place and time.  Your challenge is to develop a web-based application that supports the comparison of ground-based observations with Landsat data by allowing users to define a target location, receive notifications when Landsat is to pass over that location, and then access and display the corresponding Landsat SR data."
+                        }
+                    },
+                    {
+                        "__typename": "ChallengePageEdge",
+                        "cursor": "b2Zmc2V0OjEx",
+                        "node": {
+                            "__typename": "ChallengePage",
+                            "id": "aWQ6MTI1MTI=",
+                            "title": "Leveraging Earth Observation Data for Informed Agricultural Decision-Making",
+                            "featuredImage": {
+                                "id": "aWQ6ODM1MDU=",
+                                "meta": {
+                                    "type": "images.CustomImage",
+                                    "downloadUrl": "https://assets.spaceappschallenge.org/media/original_images/NASA_Space_Apps_2024_Challenge_15.jpg",
+                                    "__typename": "ImageMeta"
+                                },
+                                "title": "NASA Space Apps 2024 Challenge 15",
+                                "alt": "NASA Space Apps 2024 Challenge 15",
+                                "caption": "NASA Space Apps 2024 Challenge 15",
+                                "displaySize": "og",
+                                "rendition": {
+                                    "url": "https://assets.spaceappschallenge.org/media/images/NASA_Space_Apps_2024_Challenge_15.2e16d0ba.fill-300x250.jpg",
+                                    "fullUrl": "https://assets.spaceappschallenge.org/media/images/NASA_Space_Apps_2024_Challenge_15.2e16d0ba.fill-300x250.jpg",
+                                    "height": 250,
+                                    "width": 300,
+                                    "__typename": "BaseImage"
+                                },
+                                "__typename": "DefaultImage"
+                            },
+                            "meta": {
+                                "type": "CHALLENGE",
+                                "slug": "leveraging-earth-observation-data-for-informed-agricultural-decision-making",
+                                "firstPublishedAt": "2024-08-19T17:44:42.770111Z",
+                                "lastPublishedAt": "2024-09-11T16:32:21.559218Z",
+                                "relativeUrl": "/nasa-space-apps-2024/challenges/leveraging-earth-observation-data-for-informed-agricultural-decision-making/",
+                                "live": true,
+                                "parent": null,
+                                "__typename": "ExpandedPageMeta"
+                            },
+                            "categories": [
+                                {
+                                    "__typename": "Category",
+                                    "id": 2,
+                                    "name": "Intermediate",
+                                    "slug": "intermediate",
+                                    "description": null,
+                                    "priority": 2,
+                                    "color": "#FF580A"
+                                },
+                                {
+                                    "__typename": "Category",
+                                    "id": 3,
+                                    "name": "Advanced",
+                                    "slug": "advanced",
+                                    "description": null,
+                                    "priority": 1,
+                                    "color": "#8B0A03"
+                                }
+                            ],
+                            "event": "aWQ6Mg==",
+                            "eventDetails": {
+                                "id": "aWQ6Mg==",
+                                "name": "2024 NASA Space Apps Challenge",
+                                "displayName": "2024 NASA Space Apps Challenge",
+                                "slug": "2024",
+                                "status": 2,
+                                "startDate": "2024-10-04T21:00:00",
+                                "endDate": "2024-10-06T23:59:00",
+                                "__typename": "GlobalEvent"
+                            },
+                            "skills": [
+                                "Climate",
+                                "Diversity & Equity",
+                                "Earth",
+                                "Hardware",
+                                "Software"
+                            ],
+                            "excerpt": "Farmers face a deluge of water-related challenges due to unpredictable weather, pests, and diseases. These factors can significantly impact crop health, farmers’ profits, and food security. Depending upon the geography, many farmers may face droughts or floods—sometimes both of these extreme events occur within the same season! Your challenge is to design a tool that empowers farmers to easily explore, analyze, and utilize NASA datasets to address these water-related concerns and improve their farming practices."
+                        }
+                    },
+                    {
+                        "__typename": "ChallengePageEdge",
+                        "cursor": "b2Zmc2V0OjEy",
+                        "node": {
+                            "__typename": "ChallengePage",
+                            "id": "aWQ6MTI1MDE=",
+                            "title": "Navigator for the Habitable Worlds Observatory (HWO): Mapping the Characterizable Exoplanets in our Galaxy",
+                            "featuredImage": {
+                                "id": "aWQ6ODM0OTA=",
+                                "meta": {
+                                    "type": "images.CustomImage",
+                                    "downloadUrl": "https://assets.spaceappschallenge.org/media/original_images/NASA_Space_Apps_2024_Challenge_4.jpg",
+                                    "__typename": "ImageMeta"
+                                },
+                                "title": "NASA Space Apps 2024 Challenge 4",
+                                "alt": "NASA Space Apps 2024 Challenge 4",
+                                "caption": "NASA Space Apps 2024 Challenge 4",
+                                "displaySize": "og",
+                                "rendition": {
+                                    "url": "https://assets.spaceappschallenge.org/media/images/NASA_Space_Apps_2024_Challenge_4.2e16d0ba.fill-300x250.jpg",
+                                    "fullUrl": "https://assets.spaceappschallenge.org/media/images/NASA_Space_Apps_2024_Challenge_4.2e16d0ba.fill-300x250.jpg",
+                                    "height": 250,
+                                    "width": 300,
+                                    "__typename": "BaseImage"
+                                },
+                                "__typename": "DefaultImage"
+                            },
+                            "meta": {
+                                "type": "CHALLENGE",
+                                "slug": "navigator-for-the-habitable-worlds-observatory-hwo-mapping-the-characterizable-exoplanets-in-our-galaxy",
+                                "firstPublishedAt": "2024-08-19T17:43:46.360814Z",
+                                "lastPublishedAt": "2024-09-11T16:10:44.532666Z",
+                                "relativeUrl": "/nasa-space-apps-2024/challenges/navigator-for-the-habitable-worlds-observatory-hwo-mapping-the-characterizable-exoplanets-in-our-galaxy/",
+                                "live": true,
+                                "parent": null,
+                                "__typename": "ExpandedPageMeta"
+                            },
+                            "categories": [
+                                {
+                                    "__typename": "Category",
+                                    "id": 2,
+                                    "name": "Intermediate",
+                                    "slug": "intermediate",
+                                    "description": null,
+                                    "priority": 2,
+                                    "color": "#FF580A"
+                                },
+                                {
+                                    "__typename": "Category",
+                                    "id": 3,
+                                    "name": "Advanced",
+                                    "slug": "advanced",
+                                    "description": null,
+                                    "priority": 1,
+                                    "color": "#8B0A03"
+                                }
+                            ],
+                            "event": "aWQ6Mg==",
+                            "eventDetails": {
+                                "id": "aWQ6Mg==",
+                                "name": "2024 NASA Space Apps Challenge",
+                                "displayName": "2024 NASA Space Apps Challenge",
+                                "slug": "2024",
+                                "status": 2,
+                                "startDate": "2024-10-04T21:00:00",
+                                "endDate": "2024-10-06T23:59:00",
+                                "__typename": "GlobalEvent"
+                            },
+                            "skills": [
+                                "Astrophysics",
+                                "Planets & Moons",
+                                "Software",
+                                "Space Exploration"
+                            ],
+                            "excerpt": "Which exoplanets will be observable with the future Habitable Worlds Observatory (HWO)? One way of determining the most interesting exoplanetary targets for HWO would be to visualize which of the currently known exoplanets HWO could potentially observe. Your challenge is to develop an app that enables users to visualize the observational paths across our galaxy to the known exoplanets in the solar neighborhood as a function of their potential for characterization by HWO."
+                        }
+                    },
+                    {
+                        "__typename": "ChallengePageEdge",
+                        "cursor": "b2Zmc2V0OjEz",
+                        "node": {
+                            "__typename": "ChallengePage",
+                            "id": "aWQ6MTI1MDk=",
+                            "title": "PACE in the Classroom",
+                            "featuredImage": {
+                                "id": "aWQ6ODM1MDE=",
+                                "meta": {
+                                    "type": "images.CustomImage",
+                                    "downloadUrl": "https://assets.spaceappschallenge.org/media/original_images/NASA_Space_Apps_2024_Challenge_12.jpg",
+                                    "__typename": "ImageMeta"
+                                },
+                                "title": "NASA Space Apps 2024 Challenge 12",
+                                "alt": "NASA Space Apps 2024 Challenge 12",
+                                "caption": "NASA Space Apps 2024 Challenge 12",
+                                "displaySize": "og",
+                                "rendition": {
+                                    "url": "https://assets.spaceappschallenge.org/media/images/NASA_Space_Apps_2024_Challenge_12.2e16d0ba.fill-300x250.jpg",
+                                    "fullUrl": "https://assets.spaceappschallenge.org/media/images/NASA_Space_Apps_2024_Challenge_12.2e16d0ba.fill-300x250.jpg",
+                                    "height": 250,
+                                    "width": 300,
+                                    "__typename": "BaseImage"
+                                },
+                                "__typename": "DefaultImage"
+                            },
+                            "meta": {
+                                "type": "CHALLENGE",
+                                "slug": "pace-in-the-classroom",
+                                "firstPublishedAt": "2024-08-19T17:44:42.913999Z",
+                                "lastPublishedAt": "2024-09-10T13:58:35.952893Z",
+                                "relativeUrl": "/nasa-space-apps-2024/challenges/pace-in-the-classroom/",
+                                "live": true,
+                                "parent": null,
+                                "__typename": "ExpandedPageMeta"
+                            },
+                            "categories": [
+                                {
+                                    "__typename": "Category",
+                                    "id": 1,
+                                    "name": "Beginner/Youth",
+                                    "slug": "beginneryouth",
+                                    "description": null,
+                                    "priority": 3,
+                                    "color": "#07173F"
+                                },
+                                {
+                                    "__typename": "Category",
+                                    "id": 2,
+                                    "name": "Intermediate",
+                                    "slug": "intermediate",
+                                    "description": null,
+                                    "priority": 2,
+                                    "color": "#FF580A"
+                                },
+                                {
+                                    "__typename": "Category",
+                                    "id": 3,
+                                    "name": "Advanced",
+                                    "slug": "advanced",
+                                    "description": null,
+                                    "priority": 1,
+                                    "color": "#8B0A03"
+                                }
+                            ],
+                            "event": "aWQ6Mg==",
+                            "eventDetails": {
+                                "id": "aWQ6Mg==",
+                                "name": "2024 NASA Space Apps Challenge",
+                                "displayName": "2024 NASA Space Apps Challenge",
+                                "slug": "2024",
+                                "status": 2,
+                                "startDate": "2024-10-04T21:00:00",
+                                "endDate": "2024-10-06T23:59:00",
+                                "__typename": "GlobalEvent"
+                            },
+                            "skills": [
+                                "Arts",
+                                "Climate",
+                                "Earth",
+                                "Games"
+                            ],
+                            "excerpt": "The Plankton Aerosol Cloud ocean Ecosystem (PACE) satellite launched and has begun returning data about Earth’s oceans and atmosphere. NASA’s open science policy allows for all the PACE data to be accessed by the public, but it can be difficult to understand if you are not already familiar with these types of data. Your challenge is to create a digestible set of materials that can be used in classrooms across the world to help students understand the data and information that PACE is gathering, and improve ocean literacy worldwide."
+                        }
+                    },
+                    {
+                        "__typename": "ChallengePageEdge",
+                        "cursor": "b2Zmc2V0OjE0",
+                        "node": {
+                            "__typename": "ChallengePage",
+                            "id": "aWQ6MTI0OTk=",
+                            "title": "SDGs in the Classroom",
+                            "featuredImage": {
+                                "id": "aWQ6ODM0ODg=",
+                                "meta": {
+                                    "type": "images.CustomImage",
+                                    "downloadUrl": "https://assets.spaceappschallenge.org/media/original_images/NASA_Space_Apps_2024_Challenge_2.jpg",
+                                    "__typename": "ImageMeta"
+                                },
+                                "title": "NASA Space Apps 2024 Challenge 2",
+                                "alt": "NASA Space Apps 2024 Challenge 2",
+                                "caption": "NASA Space Apps 2024 Challenge 2",
+                                "displaySize": "og",
+                                "rendition": {
+                                    "url": "https://assets.spaceappschallenge.org/media/images/NASA_Space_Apps_2024_Challenge_2.2e16d0ba.fill-300x250.jpg",
+                                    "fullUrl": "https://assets.spaceappschallenge.org/media/images/NASA_Space_Apps_2024_Challenge_2.2e16d0ba.fill-300x250.jpg",
+                                    "height": 250,
+                                    "width": 300,
+                                    "__typename": "BaseImage"
+                                },
+                                "__typename": "DefaultImage"
+                            },
+                            "meta": {
+                                "type": "CHALLENGE",
+                                "slug": "sdgs-in-the-classroom",
+                                "firstPublishedAt": "2024-08-19T17:44:43.069066Z",
+                                "lastPublishedAt": "2024-09-10T16:12:34.149098Z",
+                                "relativeUrl": "/nasa-space-apps-2024/challenges/sdgs-in-the-classroom/",
+                                "live": true,
+                                "parent": null,
+                                "__typename": "ExpandedPageMeta"
+                            },
+                            "categories": [
+                                {
+                                    "__typename": "Category",
+                                    "id": 1,
+                                    "name": "Beginner/Youth",
+                                    "slug": "beginneryouth",
+                                    "description": null,
+                                    "priority": 3,
+                                    "color": "#07173F"
+                                },
+                                {
+                                    "__typename": "Category",
+                                    "id": 2,
+                                    "name": "Intermediate",
+                                    "slug": "intermediate",
+                                    "description": null,
+                                    "priority": 2,
+                                    "color": "#FF580A"
+                                },
+                                {
+                                    "__typename": "Category",
+                                    "id": 3,
+                                    "name": "Advanced",
+                                    "slug": "advanced",
+                                    "description": null,
+                                    "priority": 1,
+                                    "color": "#8B0A03"
+                                }
+                            ],
+                            "event": "aWQ6Mg==",
+                            "eventDetails": {
+                                "id": "aWQ6Mg==",
+                                "name": "2024 NASA Space Apps Challenge",
+                                "displayName": "2024 NASA Space Apps Challenge",
+                                "slug": "2024",
+                                "status": 2,
+                                "startDate": "2024-10-04T21:00:00",
+                                "endDate": "2024-10-06T23:59:00",
+                                "__typename": "GlobalEvent"
+                            },
+                            "skills": [
+                                "Arts",
+                                "Climate",
+                                "Diversity & Equity",
+                                "Earth",
+                                "Games",
+                                "Software"
+                            ],
+                            "excerpt": "In 2015, the United Nations created the 2030 Sustainable Development Goals (SDG) Agenda—a set of 17 goals focused on addressing global concerns such as climate change, global poverty, pollution, inequality, and many more. As we embark on the halfway point of the SDG Agenda, we aim to find new ways to engage youth with the tools available to advance these goals and measure our progress in achieving them. Your challenge is to develop a lesson plan that educates high school students about an SDG, and can be integrated into a science unit that may already be part of the curriculum (e.g., a unit on weather, geology, soil health, etc.)."
+                        }
+                    },
+                    {
+                        "__typename": "ChallengePageEdge",
+                        "cursor": "b2Zmc2V0OjE1",
+                        "node": {
+                            "__typename": "ChallengePage",
+                            "id": "aWQ6MTI1MDI=",
+                            "title": "Seismic Detection Across the Solar System",
+                            "featuredImage": {
+                                "id": "aWQ6ODg2MQ==",
+                                "meta": {
+                                    "type": "images.CustomImage",
+                                    "downloadUrl": "https://assets.spaceappschallenge.org/media/original_images/PIA25582small.jpg",
+                                    "__typename": "ImageMeta"
+                                },
+                                "title": "PIA25582~small",
+                                "alt": "PIA25582~small",
+                                "caption": "PIA25582~small",
+                                "displaySize": "og",
+                                "rendition": {
+                                    "url": "https://assets.spaceappschallenge.org/media/images/PIA25582small.2e16d0ba.fill-300x250.jpg",
+                                    "fullUrl": "https://assets.spaceappschallenge.org/media/images/PIA25582small.2e16d0ba.fill-300x250.jpg",
+                                    "height": 250,
+                                    "width": 300,
+                                    "__typename": "BaseImage"
+                                },
+                                "__typename": "DefaultImage"
+                            },
+                            "meta": {
+                                "type": "CHALLENGE",
+                                "slug": "seismic-detection-across-the-solar-system",
+                                "firstPublishedAt": "2024-08-19T17:44:43.232479Z",
+                                "lastPublishedAt": "2024-09-11T16:22:04.245300Z",
+                                "relativeUrl": "/nasa-space-apps-2024/challenges/seismic-detection-across-the-solar-system/",
+                                "live": true,
+                                "parent": null,
+                                "__typename": "ExpandedPageMeta"
+                            },
+                            "categories": [
+                                {
+                                    "__typename": "Category",
+                                    "id": 3,
+                                    "name": "Advanced",
+                                    "slug": "advanced",
+                                    "description": null,
+                                    "priority": 1,
+                                    "color": "#8B0A03"
+                                }
+                            ],
+                            "event": "aWQ6Mg==",
+                            "eventDetails": {
+                                "id": "aWQ6Mg==",
+                                "name": "2024 NASA Space Apps Challenge",
+                                "displayName": "2024 NASA Space Apps Challenge",
+                                "slug": "2024",
+                                "status": 2,
+                                "startDate": "2024-10-04T21:00:00",
+                                "endDate": "2024-10-06T23:59:00",
+                                "__typename": "GlobalEvent"
+                            },
+                            "skills": [
+                                "Planets & Moons"
+                            ],
+                            "excerpt": "Planetary seismology missions struggle with the power requirements necessary to send continuous seismic data back to Earth. But only a fraction of this data is scientifically useful! Instead of sending back all the data collected, what if we could program a lander to distinguish signals from noise, and send back only the data we care about? Your challenge is to write a computer program to analyze real data from the Apollo missions and the Mars InSight Lander to identify seismic quakes within the noise!"
+                        }
+                    },
+                    {
+                        "__typename": "ChallengePageEdge",
+                        "cursor": "b2Zmc2V0OjE2",
+                        "node": {
+                            "__typename": "ChallengePage",
+                            "id": "aWQ6MTI1MTg=",
+                            "title": "Show Us What the May 2024 Geomagnetic Storms Looked Like",
+                            "featuredImage": {
+                                "id": "aWQ6ODQxNzE=",
+                                "meta": {
+                                    "type": "images.CustomImage",
+                                    "downloadUrl": "https://assets.spaceappschallenge.org/media/original_images/NASA_Space_Apps_2024_Challenge_20.jpg",
+                                    "__typename": "ImageMeta"
+                                },
+                                "title": "NASA Space Apps 2024 Challenge 20",
+                                "alt": "NASA Space Apps 2024 Challenge 20",
+                                "caption": "NASA Space Apps 2024 Challenge 20",
+                                "displaySize": "og",
+                                "rendition": {
+                                    "url": "https://assets.spaceappschallenge.org/media/images/NASA_Space_Apps_2024_Challenge_20.2e16d0ba.fill-300x250.jpg",
+                                    "fullUrl": "https://assets.spaceappschallenge.org/media/images/NASA_Space_Apps_2024_Challenge_20.2e16d0ba.fill-300x250.jpg",
+                                    "height": 250,
+                                    "width": 300,
+                                    "__typename": "BaseImage"
+                                },
+                                "__typename": "DefaultImage"
+                            },
+                            "meta": {
+                                "type": "CHALLENGE",
+                                "slug": "show-us-what-the-may-2024-geomagnetic-storms-looked-like",
+                                "firstPublishedAt": "2024-08-19T17:44:43.973884Z",
+                                "lastPublishedAt": "2024-09-10T13:58:36.494408Z",
+                                "relativeUrl": "/nasa-space-apps-2024/challenges/show-us-what-the-may-2024-geomagnetic-storms-looked-like/",
+                                "live": true,
+                                "parent": null,
+                                "__typename": "ExpandedPageMeta"
+                            },
+                            "categories": [
+                                {
+                                    "__typename": "Category",
+                                    "id": 1,
+                                    "name": "Beginner/Youth",
+                                    "slug": "beginneryouth",
+                                    "description": null,
+                                    "priority": 3,
+                                    "color": "#07173F"
+                                },
+                                {
+                                    "__typename": "Category",
+                                    "id": 2,
+                                    "name": "Intermediate",
+                                    "slug": "intermediate",
+                                    "description": null,
+                                    "priority": 2,
+                                    "color": "#FF580A"
+                                },
+                                {
+                                    "__typename": "Category",
+                                    "id": 3,
+                                    "name": "Advanced",
+                                    "slug": "advanced",
+                                    "description": null,
+                                    "priority": 1,
+                                    "color": "#8B0A03"
+                                }
+                            ],
+                            "event": "aWQ6Mg==",
+                            "eventDetails": {
+                                "id": "aWQ6Mg==",
+                                "name": "2024 NASA Space Apps Challenge",
+                                "displayName": "2024 NASA Space Apps Challenge",
+                                "slug": "2024",
+                                "status": 2,
+                                "startDate": "2024-10-04T21:00:00",
+                                "endDate": "2024-10-06T23:59:00",
+                                "__typename": "GlobalEvent"
+                            },
+                            "skills": [
+                                "Arts",
+                                "Diversity & Equity",
+                                "Earth",
+                                "Planets & Moons",
+                                "Sun"
+                            ],
+                            "excerpt": "The Sun is highly variable and cycles through periods when its magnetic activity is very high, and times when there is very low or almost no magnetic activity.  This year the Sun was very active! In May 2024 multiple large solar flares created space weather that affected Earth in a variety of ways. Your challenge is to use NASA data to create a visual representation (e.g., a movie, video of a dance, etc.) that helps the public better understand the May 2024 solar storms and their impacts."
+                        }
+                    },
+                    {
+                        "__typename": "ChallengePageEdge",
+                        "cursor": "b2Zmc2V0OjE3",
+                        "node": {
+                            "__typename": "ChallengePage",
+                            "id": "aWQ6MTI1MDc=",
+                            "title": "Symphony of the Stars: Harmonizing the James Webb Space Telescope in Music and Images",
+                            "featuredImage": {
+                                "id": "aWQ6ODM0OTg=",
+                                "meta": {
+                                    "type": "images.CustomImage",
+                                    "downloadUrl": "https://assets.spaceappschallenge.org/media/original_images/NASA_Space_Apps_2024_Challenge_10.jpg",
+                                    "__typename": "ImageMeta"
+                                },
+                                "title": "NASA Space Apps 2024 Challenge 10",
+                                "alt": "NASA Space Apps 2024 Challenge 10",
+                                "caption": "NASA Space Apps 2024 Challenge 10",
+                                "displaySize": "og",
+                                "rendition": {
+                                    "url": "https://assets.spaceappschallenge.org/media/images/NASA_Space_Apps_2024_Challenge_10.2e16d0ba.fill-300x250.jpg",
+                                    "fullUrl": "https://assets.spaceappschallenge.org/media/images/NASA_Space_Apps_2024_Challenge_10.2e16d0ba.fill-300x250.jpg",
+                                    "height": 250,
+                                    "width": 300,
+                                    "__typename": "BaseImage"
+                                },
+                                "__typename": "DefaultImage"
+                            },
+                            "meta": {
+                                "type": "CHALLENGE",
+                                "slug": "symphony-of-the-stars-harmonizing-the-james-webb-space-telescope-in-music-and-images",
+                                "firstPublishedAt": "2024-08-19T17:44:43.366320Z",
+                                "lastPublishedAt": "2024-09-10T13:12:47.284056Z",
+                                "relativeUrl": "/nasa-space-apps-2024/challenges/symphony-of-the-stars-harmonizing-the-james-webb-space-telescope-in-music-and-images/",
+                                "live": true,
+                                "parent": null,
+                                "__typename": "ExpandedPageMeta"
+                            },
+                            "categories": [
+                                {
+                                    "__typename": "Category",
+                                    "id": 1,
+                                    "name": "Beginner/Youth",
+                                    "slug": "beginneryouth",
+                                    "description": null,
+                                    "priority": 3,
+                                    "color": "#07173F"
+                                },
+                                {
+                                    "__typename": "Category",
+                                    "id": 2,
+                                    "name": "Intermediate",
+                                    "slug": "intermediate",
+                                    "description": null,
+                                    "priority": 2,
+                                    "color": "#FF580A"
+                                },
+                                {
+                                    "__typename": "Category",
+                                    "id": 3,
+                                    "name": "Advanced",
+                                    "slug": "advanced",
+                                    "description": null,
+                                    "priority": 1,
+                                    "color": "#8B0A03"
+                                }
+                            ],
+                            "event": "aWQ6Mg==",
+                            "eventDetails": {
+                                "id": "aWQ6Mg==",
+                                "name": "2024 NASA Space Apps Challenge",
+                                "displayName": "2024 NASA Space Apps Challenge",
+                                "slug": "2024",
+                                "status": 2,
+                                "startDate": "2024-10-04T21:00:00",
+                                "endDate": "2024-10-06T23:59:00",
+                                "__typename": "GlobalEvent"
+                            },
+                            "skills": [
+                                "Arts",
+                                "Astrophysics",
+                                "Diversity & Equity",
+                                "Software"
+                            ],
+                            "excerpt": "The James Webb Space Telescope (JWST), with its unprecedented capabilities, is designed to explore some of the most profound topics in astronomy—from the birth of stars and galaxies to the search for signs of life beyond our solar system. Its findings are likely to reshape our understanding of the universe, sparking curiosity and wonder. Your challenge is to capture the spirit of this remarkable mission by creating a collage that merges stunning JWST visuals with a compelling musical backdrop, encapsulating the sense of discovery and cosmic awe that the telescope inspires in a way that appeals to people of all ages."
+                        }
+                    },
+                    {
+                        "__typename": "ChallengePageEdge",
+                        "cursor": "b2Zmc2V0OjE4",
+                        "node": {
+                            "__typename": "ChallengePage",
+                            "id": "aWQ6MTI1MTY=",
+                            "title": "Tell Us a Climate Story!",
+                            "featuredImage": {
+                                "id": "aWQ6ODM1MTE=",
+                                "meta": {
+                                    "type": "images.CustomImage",
+                                    "downloadUrl": "https://assets.spaceappschallenge.org/media/original_images/NASA_Space_Apps_2024_Challenge_19.jpg",
+                                    "__typename": "ImageMeta"
+                                },
+                                "title": "NASA Space Apps 2024 Challenge 19",
+                                "alt": "NASA Space Apps 2024 Challenge 19",
+                                "caption": "NASA Space Apps 2024 Challenge 19",
+                                "displaySize": "og",
+                                "rendition": {
+                                    "url": "https://assets.spaceappschallenge.org/media/images/NASA_Space_Apps_2024_Challenge_19.2e16d0ba.fill-300x250.jpg",
+                                    "fullUrl": "https://assets.spaceappschallenge.org/media/images/NASA_Space_Apps_2024_Challenge_19.2e16d0ba.fill-300x250.jpg",
+                                    "height": 250,
+                                    "width": 300,
+                                    "__typename": "BaseImage"
+                                },
+                                "__typename": "DefaultImage"
+                            },
+                            "meta": {
+                                "type": "CHALLENGE",
+                                "slug": "tell-us-a-climate-story",
+                                "firstPublishedAt": "2024-08-19T17:44:43.507916Z",
+                                "lastPublishedAt": "2024-09-11T17:18:45.007031Z",
+                                "relativeUrl": "/nasa-space-apps-2024/challenges/tell-us-a-climate-story/",
+                                "live": true,
+                                "parent": null,
+                                "__typename": "ExpandedPageMeta"
+                            },
+                            "categories": [
+                                {
+                                    "__typename": "Category",
+                                    "id": 1,
+                                    "name": "Beginner/Youth",
+                                    "slug": "beginneryouth",
+                                    "description": null,
+                                    "priority": 3,
+                                    "color": "#07173F"
+                                },
+                                {
+                                    "__typename": "Category",
+                                    "id": 2,
+                                    "name": "Intermediate",
+                                    "slug": "intermediate",
+                                    "description": null,
+                                    "priority": 2,
+                                    "color": "#FF580A"
+                                },
+                                {
+                                    "__typename": "Category",
+                                    "id": 3,
+                                    "name": "Advanced",
+                                    "slug": "advanced",
+                                    "description": null,
+                                    "priority": 1,
+                                    "color": "#8B0A03"
+                                }
+                            ],
+                            "event": "aWQ6Mg==",
+                            "eventDetails": {
+                                "id": "aWQ6Mg==",
+                                "name": "2024 NASA Space Apps Challenge",
+                                "displayName": "2024 NASA Space Apps Challenge",
+                                "slug": "2024",
+                                "status": 2,
+                                "startDate": "2024-10-04T21:00:00",
+                                "endDate": "2024-10-06T23:59:00",
+                                "__typename": "GlobalEvent"
+                            },
+                            "skills": [
+                                "Arts",
+                                "Climate",
+                                "Diversity & Equity",
+                                "Earth",
+                                "Software"
+                            ],
+                            "excerpt": "Over the last several decades, a huge amount of climate data from numerous sources has been collected. This data is freely available to the public, but making sense of this vast amount of data is not easy! Your challenge is to use the open-source data on the U.S. Greenhouse Gas Center website to tell a compelling story about climate change."
+                        }
+                    },
+                    {
+                        "__typename": "ChallengePageEdge",
+                        "cursor": "b2Zmc2V0OjE5",
+                        "node": {
+                            "__typename": "ChallengePage",
+                            "id": "aWQ6MTI1MTU=",
+                            "title": "Uncover the Role of Greenhouse Gases in Your Neighborhood!",
+                            "featuredImage": {
+                                "id": "aWQ6ODM1MTA=",
+                                "meta": {
+                                    "type": "images.CustomImage",
+                                    "downloadUrl": "https://assets.spaceappschallenge.org/media/original_images/NASA_Space_Apps_2024_Challenge_18.jpg",
+                                    "__typename": "ImageMeta"
+                                },
+                                "title": "NASA Space Apps 2024 Challenge 18",
+                                "alt": "NASA Space Apps 2024 Challenge 18",
+                                "caption": "NASA Space Apps 2024 Challenge 18",
+                                "displaySize": "og",
+                                "rendition": {
+                                    "url": "https://assets.spaceappschallenge.org/media/images/NASA_Space_Apps_2024_Challenge_18.2e16d0ba.fill-300x250.jpg",
+                                    "fullUrl": "https://assets.spaceappschallenge.org/media/images/NASA_Space_Apps_2024_Challenge_18.2e16d0ba.fill-300x250.jpg",
+                                    "height": 250,
+                                    "width": 300,
+                                    "__typename": "BaseImage"
+                                },
+                                "__typename": "DefaultImage"
+                            },
+                            "meta": {
+                                "type": "CHALLENGE",
+                                "slug": "uncover-the-role-of-greenhouse-gases-in-your-neighborhood",
+                                "firstPublishedAt": "2024-08-19T17:44:43.691034Z",
+                                "lastPublishedAt": "2024-09-11T17:17:32.772269Z",
+                                "relativeUrl": "/nasa-space-apps-2024/challenges/uncover-the-role-of-greenhouse-gases-in-your-neighborhood/",
+                                "live": true,
+                                "parent": null,
+                                "__typename": "ExpandedPageMeta"
+                            },
+                            "categories": [
+                                {
+                                    "__typename": "Category",
+                                    "id": 2,
+                                    "name": "Intermediate",
+                                    "slug": "intermediate",
+                                    "description": null,
+                                    "priority": 2,
+                                    "color": "#FF580A"
+                                },
+                                {
+                                    "__typename": "Category",
+                                    "id": 3,
+                                    "name": "Advanced",
+                                    "slug": "advanced",
+                                    "description": null,
+                                    "priority": 1,
+                                    "color": "#8B0A03"
+                                }
+                            ],
+                            "event": "aWQ6Mg==",
+                            "eventDetails": {
+                                "id": "aWQ6Mg==",
+                                "name": "2024 NASA Space Apps Challenge",
+                                "displayName": "2024 NASA Space Apps Challenge",
+                                "slug": "2024",
+                                "status": 2,
+                                "startDate": "2024-10-04T21:00:00",
+                                "endDate": "2024-10-06T23:59:00",
+                                "__typename": "GlobalEvent"
+                            },
+                            "skills": [
+                                "Climate",
+                                "Diversity & Equity",
+                                "Earth",
+                                "Software"
+                            ],
+                            "excerpt": "Human-caused (anthropogenic) greenhouse gas emissions and natural systems that produce and absorb greenhouse gases (sources and sinks) interplay in a complicated manner to contribute to global climate change. As policymakers and citizens race to combat climate change, understanding this interplay is more important than ever. Your challenge is to use a combination of satellite and model-based datasets to map both human-caused and natural greenhouse gas emissions to enable better understanding of how these emissions contribute to a warmer world."
+                        }
+                    },
+                    {
+                        "__typename": "ChallengePageEdge",
+                        "cursor": "b2Zmc2V0OjIw",
+                        "node": {
+                            "__typename": "ChallengePage",
+                            "id": "aWQ6MTI1MDY=",
+                            "title": "Visualize Space Science",
+                            "featuredImage": {
+                                "id": "aWQ6ODM0OTc=",
+                                "meta": {
+                                    "type": "images.CustomImage",
+                                    "downloadUrl": "https://assets.spaceappschallenge.org/media/original_images/NASA_Space_Apps_2024_Challenge_9.jpg",
+                                    "__typename": "ImageMeta"
+                                },
+                                "title": "NASA Space Apps 2024 Challenge 9",
+                                "alt": "NASA Space Apps 2024 Challenge 9",
+                                "caption": "NASA Space Apps 2024 Challenge 9",
+                                "displaySize": "og",
+                                "rendition": {
+                                    "url": "https://assets.spaceappschallenge.org/media/images/NASA_Space_Apps_2024_Challenge_9.2e16d0ba.fill-300x250.jpg",
+                                    "fullUrl": "https://assets.spaceappschallenge.org/media/images/NASA_Space_Apps_2024_Challenge_9.2e16d0ba.fill-300x250.jpg",
+                                    "height": 250,
+                                    "width": 300,
+                                    "__typename": "BaseImage"
+                                },
+                                "__typename": "DefaultImage"
+                            },
+                            "meta": {
+                                "type": "CHALLENGE",
+                                "slug": "visualize-space-science",
+                                "firstPublishedAt": "2024-08-19T17:44:43.826083Z",
+                                "lastPublishedAt": "2024-09-10T13:12:11.162595Z",
+                                "relativeUrl": "/nasa-space-apps-2024/challenges/visualize-space-science/",
+                                "live": true,
+                                "parent": null,
+                                "__typename": "ExpandedPageMeta"
+                            },
+                            "categories": [
+                                {
+                                    "__typename": "Category",
+                                    "id": 2,
+                                    "name": "Intermediate",
+                                    "slug": "intermediate",
+                                    "description": null,
+                                    "priority": 2,
+                                    "color": "#FF580A"
+                                },
+                                {
+                                    "__typename": "Category",
+                                    "id": 3,
+                                    "name": "Advanced",
+                                    "slug": "advanced",
+                                    "description": null,
+                                    "priority": 1,
+                                    "color": "#8B0A03"
+                                }
+                            ],
+                            "event": "aWQ6Mg==",
+                            "eventDetails": {
+                                "id": "aWQ6Mg==",
+                                "name": "2024 NASA Space Apps Challenge",
+                                "displayName": "2024 NASA Space Apps Challenge",
+                                "slug": "2024",
+                                "status": 2,
+                                "startDate": "2024-10-04T21:00:00",
+                                "endDate": "2024-10-06T23:59:00",
+                                "__typename": "GlobalEvent"
+                            },
+                            "skills": [
+                                "Software",
+                                "Space Exploration"
+                            ],
+                            "excerpt": "Biological experiments performed in space are critical to scientific discovery efforts, but they are complex to execute and difficult to conceptualize. For example, these experiments must be loaded into rockets, launched, performed using specialized hardware, and (oftentimes) returned to Earth for analysis. This complexity is a barrier to the broad utilization of this data. Your challenge is to create a tool that can generate informative and compelling visualizations of biological experiments performed in space."
+                        }
+                    }
+                ],
+                "pageInfo": {
+                    "hasNextPage": false,
+                    "__typename": "PageInfo"
+                },
+                "__typename": "ChallengesConnection"
+            }
+        }
+    }
+]

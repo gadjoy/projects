@@ -1,0 +1,110 @@
+{
+    "data": {
+        "hackathons": [
+            {
+                "prize_tracks": [
+                    {
+                        "uuid": "19cb5534535e4deab66594be8c5c5906",
+                        "name": "1. Problem statement shared by Startup India, DPIIT",
+                        "sponsor": null
+                    },
+                    {
+                        "uuid": "87c11af860794bb69e31506a3b54289a",
+                        "name": "2. Problem statement shared by Indian Software Product Industry Roundtable (iSPIRT)",
+                        "sponsor": null
+                    },
+                    {
+                        "uuid": "2a0cc991a37e4f51b0d6a3b75d78e974",
+                        "name": "3. Problem statement shared by People+ai (City AI Engine)",
+                        "sponsor": null
+                    },
+                    {
+                        "uuid": "0cd9d63d5ee04111a0ac187b48eb90c0",
+                        "name": "4. Problem statement shared by People+ai (ConsumeWise)",
+                        "sponsor": null
+                    },
+                    {
+                        "uuid": "c98369f863ab45b69cc2b20e257a14dd",
+                        "name": "5. Problem statement shared by Blume Ventures",
+                        "sponsor": null
+                    },
+                    {
+                        "uuid": "e46984a67e93469a9a82dd25960d2bb0",
+                        "name": "6. Problem statement shared by Antler",
+                        "sponsor": null
+                    },
+                    {
+                        "uuid": "7b36a8e31f634bce804c4517c3030b21",
+                        "name": "7. Problem statement shared by Akasa Air",
+                        "sponsor": null
+                    },
+                    {
+                        "uuid": "59765ae3c49b4f3ba7bcfce00bd3c2fe",
+                        "name": "8. Problem statement shared by PolicyBazaar",
+                        "sponsor": null
+                    },
+                    {
+                        "uuid": "873514836e834049aa77749a1b746db4",
+                        "name": "9. Problem statement shared by BigBasket",
+                        "sponsor": null
+                    },
+                    {
+                        "uuid": "799316f823a445c293a74afe5b2365fc",
+                        "name": "10. Problem statement shared by Glance",
+                        "sponsor": null
+                    },
+                    {
+                        "uuid": "53b5cad8342345e8a2f9feb5f3d5ff74",
+                        "name": "14. Problem statement shared by Sarvam AI",
+                        "sponsor": null
+                    },
+                    {
+                        "uuid": "4d8daedbe53c46a2aeff9822435c8b4a",
+                        "name": "11. Problem statement shared by RateGain",
+                        "sponsor": null
+                    },
+                    {
+                        "uuid": "963ed87632d242608042bebdd428f916",
+                        "name": "12. Problem statement shared by Croma",
+                        "sponsor": null
+                    },
+                    {
+                        "uuid": "a5bb3d38a271454c9f4c436f56a5226a",
+                        "name": "13. Problem statement shared by Network18",
+                        "sponsor": null
+                    },
+                    {
+                        "uuid": "935696727fd8413ba169a0ea6e637493",
+                        "name": "15. Problem statement shared by Jio Finance Limited",
+                        "sponsor": null
+                    },
+                    {
+                        "uuid": "67654f242afb44bf829a9541a002e006",
+                        "name": "16. Problem Statement from Netcore",
+                        "sponsor": null
+                    },
+                    {
+                        "uuid": "bafccc661cd342acb43d18dfec59b21e",
+                        "name": "17. Problem statement shared by Central Cyber Security Agency",
+                        "sponsor": null
+                    },
+                    {
+                        "uuid": "dadcf1f44e2e4b4c88e241d73547b9cb",
+                        "name": "18. Problem statement shared by Central Cyber Security Agency",
+                        "sponsor": null
+                    },
+                    {
+                        "uuid": "e8a2099aa04e4c689c4bcd4258840c9c",
+                        "name": "19. Gemini-powered AI Learning Companion",
+                        "sponsor": null
+                    },
+                    {
+                        "uuid": "1a57b38dee9c41e78aa7ae00d49ef0eb",
+                        "name": "20. Gemini-Enhanced AI for Mental Health & Emotional Support",
+                        "sponsor": null
+                    }
+                ]
+            }
+        ]
+    }
+}
