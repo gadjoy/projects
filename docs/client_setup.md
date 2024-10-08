@@ -2,6 +2,13 @@
 ```
  npm install vue
  ```
+### Start a new vue project and run it
+```
+vue create "project-name"
+npm install
+npm run serve
+```
+
 ### Install Axios using npm:
 ```
  npm install axios
