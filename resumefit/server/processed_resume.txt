@@ -1,0 +1,72 @@
+## Vivekanand Balakrishnan
+### Software Engineer • AI Integration Specialist
+Email: vivekanandb@hotmail.com | Phone: +91-97381-26623  
+GitHub: github.com/vivekanandba | LinkedIn: www.linkedin.com/in/vivekanand-balakrishnan-68448777
+
+---
+
+### Summary
+Experienced Software and Mechanical Engineer with over a decade of expertise in AI-powered applications, aerospace, and medical robotics. Proficient in developing cloud and AI solutions, automating processes, and integrating with complex systems like Microsoft Dynamics 365 Business Central. Adept at leading cross-functional teams and improving operational efficiency. Entrepreneurial and innovative, with strong programming skills in Python and knowledge of healthcare standards such as ISO 13485.
+
+---
+
+### Skills
+
+- **AI & Machine Learning**: OpenAI API, Google Vertex AI, Computer Vision, NLP
+- **Programming Languages & Frameworks**: Python, JavaScript, Flask, Vue.js
+- **Test Automation**: PyTest, Playwright, AI-driven test automation
+- **Cloud & DevOps**: Google Cloud Platform, Docker, Jenkins
+- **Data Management**: SQL, Pandas, MongoDB, MySQL
+- **Integration & APIs**: RESTful APIs, DICOM, HL7, Microsoft Dynamics Integration
+
+---
+
+### Experience
+
+#### AI Integration and Test Automation Specialist | NovaSignal / NeuraSignal | Bangalore, India  
+**Nov 2020 – Present**  
+- Developed AI solutions to enhance application functionality and efficiency.
+- Designed test automation frameworks and scripts using Python and automated methodologies, improving operational efficiency by 30%.
+- Integrated AI-powered applications with cloud platforms, streamlining deployment and testing cycles.
+- Collaborated with cross-functional teams to ensure successful AI integration and deployment.
+- Technologies: Python, Flask, OpenAI API, PyTest, GCP, Docker, Jenkins
+
+#### Founder & Technician | Gadjoy Repair Services | Bangalore, India  
+**Nov 2016 – Jan 2021**  
+- Founded and managed a successful repair service, handling over 1,000 devices monthly.
+- Developed custom software systems for operational efficiency, showcasing entrepreneurial and technical skills.
+
+#### Sr. Engineer | Tech Mahindra | Bangalore, India  
+**Jan 2019 – Jan 2021**  
+- Led teams in aerospace component design, utilizing advanced CAD tools and custom software scripts.
+
+#### Senior Lead Engineer | Legend Technologies | Bangalore, India  
+**Jan 2013 – Jan 2019**  
+- Designed and tested aerospace and locomotive components for major clients, applying strong analytical and management skills.
+
+---
+
+### Education
+**Bachelor of Engineering (Mechanical Engineering)**  
+Visvesvaraya Technological University (VTU) | First Class with Distinction | 2011  
+
+**Specializations**  
+Deep Learning Specialization & Machine Learning Specialization (Andrew Ng)
+
+---
+
+### Patents & Publications
+- **Patent**: System and Method of Generating Image of Vascular Flow Network - US20230329668A1
+- **White Papers**: Published research on aerospace manufacturing and slip ring design.
+
+---
+
+### Volunteer Experience
+- Contributed to IoT-based projects and mentored aspiring engineers in skills development and career growth.
+
+---
+
+### Recommendations for Improvement
+1. **Highlight Dynamics 365 Experience**: Include specific experience or projects related to Microsoft Dynamics 365 Business Central integration.
+2. **Expand on AI Expertise**: Provide more examples of AI integration projects and their impact.
+3. **Certification**: Consider obtaining certifications related to Microsoft Dynamics to strengthen the application.
