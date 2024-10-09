@@ -105,7 +105,7 @@ export default {
       loading: false,
       modalVisible: false,
       modalText: '',
-      backendUrl: 'http://localhost:5001',
+      backendUrl: 'https://resume-fit-4.onrender.com',
     };
   },
   methods: {
