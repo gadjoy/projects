@@ -1,5 +1,5 @@
 from flask import Flask, request, jsonify
-from llm_process import process_resume_with_openai  # Assuming this is your custom module
+from llm_process import process_resume_with_openai
 from cleanup import clean_string, extract_message_content
 from flask_cors import CORS
 import os
@@ -43,4 +43,6 @@ def output_resume():
     return jsonify({"customized_resume": processed_resume}), 200
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    # app.run(debug=True)
+    port = int(os.environ.get('PORT', 10000))  # Use PORT environment variable or default to 10000
+    app.run(host='0.0.0.0', port=port, debug=True)

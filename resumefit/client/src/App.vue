@@ -134,7 +134,7 @@ export default {
       this.isProcessing = true;
 
       try {
-        const response = await axios.post('http://localhost:5000/input', {
+        const response = await axios.post('https://projects-z23q.onrender.com/input', {
           base_resume: this.baseResume,
           job_description: this.jobDescription,
         });
@@ -152,7 +152,7 @@ export default {
     startPollingForCustomizedResume() {
       this.processingInterval = setInterval(async () => {
         try {
-          const result = await axios.get('http://localhost:5000/output');
+          const result = await axios.get('https://projects-z23q.onrender.com/output');
           if (result.data.customized_resume) {
             this.customizedResume = result.data.customized_resume;
             clearInterval(this.processingInterval);
