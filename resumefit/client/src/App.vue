@@ -65,6 +65,10 @@ import html2pdf from 'html2pdf.js';
 
 pdfjsLib.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjsLib.version}/pdf.worker.min.js`;
 
+// const api_server = 'http://localhost:5000'; // Local
+// const api_server = 'https://projects-z23q.onrender.com'; // Render
+const api_server = 'https://resume-fit-api-server-2504145397.asia-northeast1.run.app'; // Google Cloud Run
+
 export default {
   data() {
     return {
@@ -134,7 +138,7 @@ export default {
       this.isProcessing = true;
 
       try {
-        const response = await axios.post('https://projects-z23q.onrender.com/input', {
+        const response = await axios.post(`${api_server}/input`, {
           base_resume: this.baseResume,
           job_description: this.jobDescription,
         });
@@ -152,7 +156,7 @@ export default {
     startPollingForCustomizedResume() {
       this.processingInterval = setInterval(async () => {
         try {
-          const result = await axios.get('https://projects-z23q.onrender.com/output');
+          const result = await axios.get(`${api_server}/output`);
           if (result.data.customized_resume) {
             this.customizedResume = result.data.customized_resume;
             clearInterval(this.processingInterval);

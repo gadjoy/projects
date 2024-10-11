@@ -1,7 +1,7 @@
 import os, json
 from dotenv import load_dotenv
 from openai import OpenAI
-from constants import prompt
+from components.constants import prompt
 
 
 # Load environment variables from .env file

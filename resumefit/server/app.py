@@ -1,11 +1,23 @@
 from flask import Flask, request, jsonify
-from llm_process import process_resume_with_openai
-from cleanup import clean_string, extract_message_content
+from components.llm_process import process_resume_with_openai
+from components.cleanup import clean_string, extract_message_content
 from flask_cors import CORS
 import os
 
 app = Flask(__name__)
 CORS(app)
+
+APP_VERSION = "0.0.1"
+RELEASE_NOTES = "Initial release with basic functionality with docker & gcloud"
+RELEASE_DATE = "2022-10-10"
+
+@app.route('/')
+def home():
+    return jsonify({
+        "app_version": APP_VERSION,
+        "release_notes": RELEASE_NOTES,
+        "release_date": RELEASE_DATE
+    }), 200
 
 @app.route('/input', methods=['POST'])
 def input_resume():
@@ -27,7 +39,9 @@ def input_resume():
     with open('processed_resume.txt', 'w') as file:
         file.write(processed_resume)
     
-    return jsonify({"message": "Resume processed successfully"}), 200
+    response = jsonify({"message": "Resume processed successfully"})
+    response.headers['X-API-Version'] = APP_VERSION
+    return response, 200
 
 @app.route('/output', methods=['GET'])
 def output_resume():
@@ -40,9 +54,10 @@ def output_resume():
     except IOError:
         return jsonify({"error": "Error reading the processed resume file"}), 500
 
-    return jsonify({"customized_resume": processed_resume}), 200
+    response = jsonify({"customized_resume": processed_resume})
+    response.headers['X-API-Version'] = APP_VERSION
+    return response, 200
 
 if __name__ == '__main__':
-    # app.run(debug=True)
-    port = int(os.environ.get('PORT', 10000))  # Use PORT environment variable or default to 10000
+    port = int(os.environ.get('PORT', 8080))  # Use PORT environment variable or default to 8080
     app.run(host='0.0.0.0', port=port, debug=True)

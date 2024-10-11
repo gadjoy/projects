@@ -1,9 +1,8 @@
 import pytest
 import requests
-from flask import Flask
 from threading import Thread
 import time
-from constants import base_resume, job_description
+from components.constants import base_resume, job_description
 
 # Import the Flask app
 from app import app
