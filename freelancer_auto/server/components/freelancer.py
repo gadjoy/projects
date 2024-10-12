@@ -6,7 +6,6 @@ from freelancersdk.resources.projects.helpers import (
     create_get_projects_user_details_object,
     create_get_projects_project_details_object,
 )
-from freelancersdk.resources.users import get_self_user_id
 from freelancersdk.exceptions import BidNotPlacedException
 
 from dotenv import load_dotenv
@@ -68,8 +67,8 @@ def _get_project_by_id(id, oauth_token):
 
 def _place_project_bid(project_id, amount, proposal, oauth_token):
     url = os.environ.get('FLN_URL')
-    session = Session(oauth_token=oauth_token, url=url)
-    my_user_id = get_self_user_id(session)
+    session = Session(oauth_token=oauth_token)
+    my_user_id = session.get_my_user_id()
     bid_data = {
         'project_id': int(project_id),
         'bidder_id': int(my_user_id),

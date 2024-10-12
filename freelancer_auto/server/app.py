@@ -3,9 +3,7 @@ from flask_cors import CORS
 from components.dataframe import create_filtered_df
 from components.proposal import generate_proposal
 from components.freelancer import _get_project_by_id, _place_project_bid
-import requests  # Import the requests module separately
-import os
-import datetime
+from components.database import create_connection, create_tables, update_app, update_user, read_app, read_user
 
 app = Flask(__name__)
 CORS(app, supports_credentials=True)
@@ -83,5 +81,11 @@ def get_version():
         'backend_version': f"api@{backend_version} {build} {backend_modified_date}",
     })
 
-if __name__ == '__main__':
+def main():
+    # Create tables if they don't exist
+    create_tables()
+    # Start the Flask app
     app.run(debug=True, host='0.0.0.0')
+
+if __name__ == '__main__':
+    main()
