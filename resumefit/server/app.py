@@ -7,17 +7,22 @@ import os
 app = Flask(__name__)
 CORS(app)
 
-APP_VERSION = "0.0.1"
-RELEASE_NOTES = "Initial release with basic functionality with docker & gcloud"
-RELEASE_DATE = "2022-10-10"
+API_VERSION = "0.0.2"
+RELEASE_NOTES = "gcp deploy & versioning"
+RELEASE_DATE = "2022-10-11"
 
 @app.route('/')
 def home():
     return jsonify({
-        "app_version": APP_VERSION,
+        "message": "Welcome to the Resume Customizer API",
+        "api_version": API_VERSION,
         "release_notes": RELEASE_NOTES,
         "release_date": RELEASE_DATE
     }), 200
+
+@app.route('/version')
+def version():
+    return jsonify({"version": API_VERSION, "release_date": RELEASE_DATE, "release_notes": RELEASE_NOTES}), 200
 
 @app.route('/input', methods=['POST'])
 def input_resume():
@@ -40,7 +45,7 @@ def input_resume():
         file.write(processed_resume)
     
     response = jsonify({"message": "Resume processed successfully"})
-    response.headers['X-API-Version'] = APP_VERSION
+    response.headers['X-API-Version'] = API_VERSION
     return response, 200
 
 @app.route('/output', methods=['GET'])
@@ -55,7 +60,7 @@ def output_resume():
         return jsonify({"error": "Error reading the processed resume file"}), 500
 
     response = jsonify({"customized_resume": processed_resume})
-    response.headers['X-API-Version'] = APP_VERSION
+    response.headers['X-API-Version'] = API_VERSION
     return response, 200
 
 if __name__ == '__main__':

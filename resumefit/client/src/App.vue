@@ -9,27 +9,38 @@
         <input type="file" @change="handleFileUpload" class="form-control mb-2" />
         <textarea
           v-model="baseResume"
+          :class="{'over-limit': isResumeOverLimit}"
           placeholder="Upload your existing resume"
           class="form-control"
           rows="10"
         ></textarea>
+        <p :class="{'text-danger': isResumeOverLimit, 'text-muted': !isResumeOverLimit}" class="text-center">
+          {{ baseResume.length }}/{{ maxResumeLength }} characters
+        </p>
       </div>
 
       <div class="col-md-6">
         <h3 class="text-center">Job Description</h3>
         <textarea
           v-model="jobDescription"
+          :class="{'over-limit': isJobDescriptionOverLimit}"
           placeholder="Provide the job description for customization"
           class="form-control job-description-box"
         ></textarea>
+        <p :class="{'text-danger': isJobDescriptionOverLimit, 'text-muted': !isJobDescriptionOverLimit}" class="text-center">
+          {{ jobDescription.length }}/{{ maxJobDescriptionLength }} characters
+        </p>
       </div>
     </div>
 
     <div class="row customized-resume mt-4">
       <div class="col-12 text-center">
+        <div v-if="isResumeOverLimit || isJobDescriptionOverLimit" class="alert alert-warning mt-2"> 
+          Character limit exceeded. Please shorten the text.
+        </div>
         <button
           @click="sendOutputToServer"
-          :disabled="isProcessing"
+          :disabled="isProcessing || isResumeOverLimit || isJobDescriptionOverLimit"
           type="button"
           class="btn btn-success mb-3"
         >
@@ -43,6 +54,7 @@
         >
           Download
         </button>
+
         <!-- Spinner -->
         <div v-if="isProcessing" class="spinner-border text-primary" role="status">
           <span class="sr-only">Loading...</span>
@@ -53,6 +65,10 @@
         <div v-html="renderedMarkdown" class="markdown-output"></div>
       </div>
     </div>
+        <!-- Footer Section -->
+        <footer class="text-center mt-4">
+      <p>v{{ apiVersion }} | {{ apiReleaseDate }} | {{ apiServer }}</p>
+    </footer>
   </div>
 </template>
 
@@ -68,6 +84,10 @@ pdfjsLib.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.j
 // const api_server = 'http://localhost:5000'; // Local
 // const api_server = 'https://projects-z23q.onrender.com'; // Render
 const api_server = 'https://resume-fit-api-server-2504145397.asia-northeast1.run.app'; // Google Cloud Run
+const maxTextLength = 6000;
+// const version = '0.0.1';
+// const release_date = '2024-10-12';
+// const release_notes = 'Limit the text characters to 6000 characters.';
 
 export default {
   data() {
@@ -77,11 +97,32 @@ export default {
       customizedResume: '',
       isProcessing: false,
       processingInterval: null,
+      maxResumeLength: maxTextLength,
+      maxJobDescriptionLength: maxTextLength,
+      // readerVersion: version,
+      // readerReleaseDate: release_date,
+      // readerReleaseNotes: release_notes,
+      apiVersion: '',
+      apiReleaseDate: '',
+      apiReleaseNotes: '',
+      apiServer: api_server,
     };
   },
   computed: {
     renderedMarkdown() {
       return marked(this.customizedResume || '');
+    },
+    remainingResumeCharacters() {
+      return this.maxResumeLength - this.baseResume.length;
+    },
+    remainingJobDescriptionCharacters() {
+      return this.maxJobDescriptionLength - this.jobDescription.length;
+    },
+    isResumeOverLimit() {
+      return this.remainingResumeCharacters < 0;
+    },
+    isJobDescriptionOverLimit() {
+      return this.remainingJobDescriptionCharacters < 0;
     },
   },
   methods: {
@@ -189,8 +230,24 @@ export default {
 
       html2pdf().from(element).set(options).save();
     },
+    async fetchApiVersion() {
+      try {
+        const response = await axios.get(`${api_server}/version`);
+        this.apiVersion = response.data.version;
+        this.apiBuild = response.data.build;
+        this.apiReleaseDate = response.data.release_date;
+        this.apiReleaseNotes = response.data.release_notes;
+      } catch (error) {
+        console.error('An error occurred while fetching the API version.', error);
+      }
+    },
   },
+  mounted() {
+    this.fetchApiVersion();
+},
 };
+
+
 </script>
 
 <style scoped>
@@ -202,10 +259,21 @@ textarea {
   width: 100%;
   height: 300px;
   resize: none;
+  text-align: center;
 }
 
 .job-description-box {
   height: 345px; /* Set the height of the job description box to 345px */
+}
+
+/* Highlight when character limit is exceeded */
+.over-limit {
+  border: 2px solid red;
+  background-color: #ffe6e6; /* Light red background */
+}
+
+.text-danger {
+  color: red;
 }
 
 .markdown-output {
