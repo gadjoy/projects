@@ -1,0 +1,20 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+      {
+        "type": "chrome",
+        "request": "launch",
+        "name": "vuejs: chrome",
+        "url": "http://localhost:8080",
+        "webRoot": "/home/vivek/projects/quiz_generator",
+        "breakOnLoad": true,
+        "pathMapping": {
+          "/_karma_webpack_": "/home/vivek/projects/quiz_generator"
+        },
+        "sourceMapPathOverrides": {
+          "webpack:///./src/*": "${webRoot}/*"
+        },
+        "preLaunchTask": "vuejs: start"
+      }
+    ]
+  }
