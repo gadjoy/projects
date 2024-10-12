@@ -1,7 +1,10 @@
 <template>
   <div id="app" class="container mt-5">
     <h1 class="text-center mb-4">Resume Customization</h1>
-    <p class="text-center mb-4">Easily customize your resume for any job. Just upload your resume and paste the job description below.</p>
+    <p class="text-center mb-4">
+      Easily customize your resume for any job. Just upload your resume and
+      paste the job description below.
+    </p>
 
     <div class="row">
       <!-- Upload Section -->
@@ -10,18 +13,29 @@
           <div class="card-body">
             <h5 class="card-title text-center">Upload Resume</h5>
             <div class="mb-4 input-group">
-              <input type="file" class="form-control" @change="handleResumeUpload" accept=".pdf,.docx" />
-              <button @click="submitFiles" class="btn btn-sm btn-custom">Upload</button>
+              <input
+                type="file"
+                class="form-control"
+                @change="handleResumeUpload"
+                accept=".pdf,.docx"
+              />
+              <button @click="submitFiles" class="btn btn-sm btn-custom">
+                Upload
+              </button>
             </div>
             <div class="resume-container">
-              <h6>Uploaded Resume:</h6>
               <textarea
                 v-model="uploadedResumeText"
                 class="form-control resume-text"
                 readonly
                 rows="3"
               ></textarea>
-              <button @click="openModal('uploadedResume')" class="btn btn-sm btn-custom mt-2">See More</button>
+              <button
+                @click="openModal('uploadedResume')"
+                class="btn btn-sm btn-custom mt-2"
+              >
+                See More
+              </button>
             </div>
           </div>
         </div>
@@ -39,7 +53,12 @@
                 placeholder="Paste the job description here..."
                 rows="3"
               ></textarea>
-              <button @click="openModal('jobDescription')" class="btn btn-sm btn-custom mt-2">See More</button>
+              <button
+                @click="openModal('jobDescription')"
+                class="btn btn-sm btn-custom mt-2"
+              >
+                See More
+              </button>
             </div>
           </div>
         </div>
@@ -48,20 +67,36 @@
 
     <!-- Customized Resume Section -->
     <transition name="fade">
-      <div v-if="customizedResume" class="card w-100 mb-4" style="max-width: 1000px; margin: auto;">
-        <div class="card-body">
-          <h5 class="card-title text-center">Customized Resume</h5>
-          <div class="resume-container">
-            <textarea
-              v-model="customizedResume"
-              class="form-control resume-text"
-              readonly
-              rows="3"
-            ></textarea>
-            <button @click="openModal('customizedResume')" class="btn btn-sm btn-custom mt-2">See More</button>
-          </div>
-          <div class="text-center mt-3">
-            <button @click="downloadResume" class="btn btn-sm btn-custom">Download</button>
+      <div
+        v-if="customizedResume"
+        class="w-100 mb-4"
+        style="max-width: 1000px; margin: auto;"
+      >
+        <!-- Centered Download Button placed outside the card -->
+        <div class="text-center mb-3">
+          <button @click="downloadResumeAsWord" class="btn btn-sm btn-custom">
+            Download
+          </button>
+        </div>
+
+        <!-- Customized Resume Section -->
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title text-center">Customized Resume</h5>
+            <div class="resume-container">
+              <textarea
+                v-model="formattedCustomizedResume"
+                class="form-control resume-text"
+                readonly
+                rows="3"
+              ></textarea>
+              <button
+                @click="openModal('customizedResume')"
+                class="btn btn-sm btn-custom mt-2"
+              >
+                See More
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -69,10 +104,16 @@
 
     <!-- Loading Spinner -->
     <div v-if="loading" class="d-flex flex-column align-items-center mt-5">
-      <div class="spinner-border text-primary" role="status" style="width: 3rem; height: 3rem;">
+      <div
+        class="spinner-border text-primary"
+        role="status"
+        style="width: 3rem; height: 3rem;"
+      >
         <span class="visually-hidden">Loading...</span>
       </div>
-      <h5 class="mt-3 text-primary">Generating customized resume, please wait...</h5>
+      <h5 class="mt-3 text-primary">
+        Generating customized resume, please wait...
+      </h5>
     </div>
 
     <!-- Modal for Reviewing Content -->
@@ -93,7 +134,8 @@
 </template>
 
 <script>
-import { jsPDF } from "jspdf";
+import { Document, Packer, Paragraph, TextRun } from "docx";
+import { saveAs } from "file-saver";
 
 export default {
   data() {
@@ -107,6 +149,11 @@ export default {
       modalText: '',
       backendUrl: 'https://resume-fit-4.onrender.com',
     };
+  },
+  computed: {
+    formattedCustomizedResume() {
+      return this.customizedResume ? this.customizedResume.replace(/\*/g, '') : '';
+    },
   },
   methods: {
     handleResumeUpload(event) {
@@ -159,60 +206,38 @@ export default {
         this.loading = false;
       }
     },
-    downloadResume() {
-      const doc = new jsPDF('p', 'mm', 'a4'); // Portrait orientation, millimeters, A4 size
-
-      // Start with a base font size
-      let fontSize = 10;
-      doc.setFontSize(fontSize); // Set initial font size
-      const title = "Customized Resume";
-      const titleHeight = 10;
-
-      // Add title to the first page
-      doc.text(title, 10, titleHeight);
-      let y = titleHeight + 20; // Start placing text below the title
-
-      // Split content into lines for better placement
-      const lines = doc.splitTextToSize(this.customizedResume, 190); // 190mm width for A4
-
-      const maxLinesPerPage = Math.floor(297 / fontSize) - 2; // Max lines per page (A4 height - margins / line height)
-      const totalPages = Math.ceil(lines.length / maxLinesPerPage); // Calculate total pages needed
-
-      // Adjust font size if total pages exceed 2
-      if (totalPages > 2) {
-        fontSize = 8; // Reduce font size
-        doc.setFontSize(fontSize);
+    downloadResumeAsWord() {
+      if (!this.customizedResume) {
+        alert('No customized resume available to download.');
+        return;
       }
 
-      // Recalculate max lines per page with the new font size
-      const adjustedMaxLinesPerPage = Math.floor(297 / fontSize) - 2;
-      const adjustedContentLines = lines.slice(0, adjustedMaxLinesPerPage * 2); // Get only the lines that fit within 2 pages
+      const cleanedResume = this.customizedResume.replace(/\*/g, ''); // Remove asterisks
 
-      adjustedContentLines.forEach((line) => {
-        // Check if we need to add a new page
-        if (y > 297 - 10) { // Check if we need to add a new page before adding the next line
-          doc.addPage();
-          y = titleHeight + 20; // Reset y position for new page
-          doc.setFontSize(fontSize); // Reset font size if it was changed
-        }
-
-        // Check for the words "Customized" and "Resume" to set them as bold
-        const wordsToBold = ['Customized', 'Resume'];
-        const parts = line.split(new RegExp(`(${wordsToBold.join('|')})`, 'g'));
-
-        parts.forEach((part) => {
-          if (wordsToBold.includes(part)) {
-            doc.setFont("Helvetica", "bold"); // Set to bold font
-          } else {
-            doc.setFont("Helvetica", "normal"); // Set to normal font
-          }
-          doc.text(part, 10, y);
-          y += fontSize; // Increase y position by the font size
-        });
+      const lines = cleanedResume.split("\n").map(line => line.trim()).filter(line => line !== "");
+      const doc = new Document({
+        sections: [
+          {
+            properties: {},
+            children: lines.map((line) =>
+              new Paragraph({
+                children: [
+                  new TextRun({
+                    text: line,
+                    break: 1, // Ensure line breaks are handled properly
+                  }),
+                ],
+              })
+            ),
+          },
+        ],
       });
 
-      // Save the PDF
-      doc.save('customized_resume.pdf');
+      Packer.toBlob(doc).then((blob) => {
+        saveAs(blob, "customized_resume.docx");
+      }).catch((error) => {
+        console.error('Error creating Word document:', error);
+      });
     },
     openModal(type) {
       if (type === 'uploadedResume') {
@@ -220,7 +245,7 @@ export default {
       } else if (type === 'jobDescription') {
         this.modalText = this.jobDescription;
       } else if (type === 'customizedResume') {
-        this.modalText = this.customizedResume;
+        this.modalText = this.formattedCustomizedResume; // Display formatted text in modal
       }
       this.modalVisible = true;
     },
@@ -256,7 +281,7 @@ export default {
 }
 
 .resume-text {
-  height: 65px;
+  height: 93px;
 }
 
 .job-description {
