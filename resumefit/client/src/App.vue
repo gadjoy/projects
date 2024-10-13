@@ -38,23 +38,34 @@
         <div v-if="isResumeOverLimit || isJobDescriptionOverLimit" class="alert alert-warning mt-2"> 
           Character limit exceeded. Please shorten the text.
         </div>
+        <div v-if="isLimitExceeded" class="alert alert-danger mt-2">
+          You have reached the usage limit. Please try again later.
+        </div>
         <button
           @click="sendOutputToServer"
-          :disabled="isProcessing || isResumeOverLimit || isJobDescriptionOverLimit"
+          :disabled="isProcessing || isResumeOverLimit || isJobDescriptionOverLimit || isLimitExceeded"
           type="button"
           class="btn btn-success mb-3"
         >
           Customize
         </button>
-        <button
+        <!-- <button
           v-if="customizedResume"
           @click="downloadPDF"
           type="button"
           class="btn btn-primary mb-3 ml-2"
         >
           Download
+        </button> -->
+        <button
+          v-if="customizedResume"
+          type="button"
+          class="btn btn-info mb-3 ml-2"
+          data-toggle="modal"
+          data-target="#downloadModal"
+        >
+          Download
         </button>
-
         <!-- Spinner -->
         <div v-if="isProcessing" class="spinner-border text-primary" role="status">
           <span class="sr-only">Loading...</span>
@@ -65,10 +76,30 @@
         <div v-html="renderedMarkdown" class="markdown-output"></div>
       </div>
     </div>
+
+        <!-- Modal for Download Options -->
+        <div class="modal fade" id="downloadModal" tabindex="-1" role="dialog" aria-labelledby="downloadModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="downloadModalLabel">Download Options</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body d-flex flex-column">
+          <button class="btn btn-primary btn-lg mb-2" @click="downloadFile('pdf')">Download PDF</button>
+          <button class="btn btn-secondary btn-lg" @click="downloadFile('doc')">Download DOCX</button>
+        </div>
+        </div>
+      </div>
+    </div>
+
         <!-- Footer Section -->
         <footer class="text-center mt-4">
       <p>v{{ apiVersion }} | {{ apiReleaseDate }} | {{ apiServer }}</p>
     </footer>
+
   </div>
 </template>
 
@@ -78,13 +109,15 @@ import * as pdfjsLib from 'pdfjs-dist/webpack';
 import { marked } from 'marked';
 import mammoth from 'mammoth';
 import html2pdf from 'html2pdf.js';
+import { setCookie, getCookie } from './cookieUtils';
 
 pdfjsLib.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjsLib.version}/pdf.worker.min.js`;
 
 // const api_server = 'http://localhost:5000'; // Local
 // const api_server = 'https://projects-z23q.onrender.com'; // Render
 const api_server = 'https://resume-fit-api-server-2504145397.asia-northeast1.run.app'; // Google Cloud Run
-const maxTextLength = 6000;
+const maxTextLength = 7000;
+const usage_limit = 10; // Usage limit for the service
 // const version = '0.0.1';
 // const release_date = '2024-10-12';
 // const release_notes = 'Limit the text characters to 6000 characters.';
@@ -106,6 +139,7 @@ export default {
       apiReleaseDate: '',
       apiReleaseNotes: '',
       apiServer: api_server,
+      isLimitExceeded: false,
     };
   },
   computed: {
@@ -241,9 +275,31 @@ export default {
         console.error('An error occurred while fetching the API version.', error);
       }
     },
+    useService() {
+      let usageCount = parseInt(getCookie('usageCount')) || 0;
+      usageCount += 1;
+      setCookie('usageCount', usageCount, 2); // Set cookie for 2 days
+
+      if (usageCount >= usage_limit) {
+        this.isLimitExceeded = true;
+      } else {
+        this.sendOutputToServer();
+      }
+    },
+    checkUsageLimit() {
+      const usageCount = parseInt(getCookie('usageCount')) || 0;
+      if (usageCount >= usage_limit) {
+        this.isLimitExceeded = true;
+      }
+    },
+    downloadFile(fileType) {
+      const url = `${this.apiServer}/download/${fileType}`;
+      window.open(url, '_blank');
+    },
   },
   mounted() {
     this.fetchApiVersion();
+    this.checkUsageLimit();
 },
 };
 
@@ -284,4 +340,6 @@ textarea {
   background-color: #f9f9f9;
   min-height: 300px;
 }
+
+
 </style>

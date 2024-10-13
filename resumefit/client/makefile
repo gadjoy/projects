@@ -1,17 +1,15 @@
-# Makefile
-
 # Variables
 PROJECT_ID := vivek-dev-438315
 BUCKET_NAME := resume-fit-web-server
 BUILD_DIR := dist
 
 # Build the Vue.js application
-build:
+build: clean
 	npm install
 	npm run build
 
 # Deploy to Google Cloud Storage
-deploy: build
+deploy: build clean-bucket
 	gsutil -m rsync -r $(BUILD_DIR) gs://$(BUCKET_NAME)
 
 # Set the bucket to be publicly accessible
@@ -27,4 +25,13 @@ make-public:
 clean:
 	rm -rf $(BUILD_DIR)
 
-.PHONY: build deploy make-public clean
+# Clean the bucket
+clean-bucket:
+	gsutil -m rm -r gs://$(BUCKET_NAME)/**
+
+check-favicon:
+	gsutil cp gs://$(BUCKET_NAME)/favicon.ico /tmp/favicon_remote.ico
+	diff $(BUILD_DIR)/favicon.ico /tmp/favicon_remote.ico
+
+
+.PHONY: build deploy make-public clean clean-bucket

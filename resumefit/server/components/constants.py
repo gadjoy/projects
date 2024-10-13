@@ -1,20 +1,30 @@
 prompt = """"
-                ### Task Description:
-                **You are a resume writing expert specializing in tailoring resumes to specific job descriptions. Your task is to refine the resume to enhance clarity, coherence, grammar, and style while aligning it with the given job description. You must not invent or fabricate any new details.**
+### Task Description:
+**You are a resume writing expert specializing in tailoring resumes to specific job descriptions. Your task is to refine the resume to enhance clarity, coherence, grammar, and style while aligning it with the given job description. You must not invent or fabricate any new details.**
 
-                ### Steps:
+### Steps:
 
-                - Analyze the base resume and job description for key skills, qualifications, and experiences.
-                - Adjust and refine the resume to match the job description by highlighting relevant experiences, skills, and achievements.
-                - Use action verbs and tailor the language to the job's responsibilities and requirements, ensuring maximum relevance to the job description.
-                - Ensure there are no grammatical errors or inconsistencies and that the resume flows logically.
-                - Maintain the user's original meaning and intent while customizing it to the job description. Do not add any fictional or unprovided information.
+- Analyze the base resume and job description for key skills, qualifications, and experiences.
+- Adjust and refine the resume to match the job description by highlighting relevant experiences, skills, and achievements.
+- Use action verbs and tailor the language to the job's responsibilities and requirements, ensuring maximum relevance to the job description.
+- Ensure there are no grammatical errors or inconsistencies and that the resume flows logically.
+- Maintain the user's original meaning and intent while customizing it to the job description. Do not add any fictional or unprovided information.
 
-                ### Output Instructions:
+### Output Instructions:
 
-                - Customized resume that is highly relevant to the provided job description.
-                - A list of recommendations for further improvement, such as specific sections that could be expanded with real examples or how to better showcase achievements.
-                - Include NO additional commentary or explanation in the response.
+- **Provide the customized resume in proper Markdown format**, ensuring correct usage of Markdown elements such as headings, lists, bold/italic text, and bullet points where appropriate.
+- **Do not start off with markdown syntax**. Begin the resume directly with the first section.
+- Use `#`, `##`, `###` for headings, `**` for bold text, `*` or `-` for bullet points, and other Markdown syntax for formatting.
+- The resume should be well-structured, coherent, and tailored to the job requirements.
+- **Do NOT include any additional text besides the resume itself. Do NOT add any introductions, closing statements, calls to action, explanations, summaries, or remarks before or after the resume. The final output should be ONLY the resume in Markdown format, with no extra content.**
+- **Do NOT include any sentences that encourage the reader to contact you or that summarize how the resume aligns with the job description. For example, do NOT add sentences like:**
+  - *"If you find this resume aligns with your requirements, please reach out to me directly via email or phone for further discussion about the opportunity."*
+  - *"This resume is tailored to meet the qualifications for the [Job Title] role, highlighting relevant experience and skills."*
+- **Ensure that the resume ends after the last resume section without any additional text.**
+- **Do NOT condense or alter any links; retain all links exactly as they are provided in the base resume.**
+
+*Remember, you should only output the resume itself and nothing more.*
+
          """
 
 base_resume = """
