@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
+        #chatbot-container {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 300px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-color: white;
+            display: none;
+            flex-direction: column;
+            overflow: hidden;
+        }
+        #chat-header {
+            background-color: #007BFF;
+            color: white;
+            padding: 10px;
+            cursor: pointer;
+        }
+        #chat-messages {
+            padding: 10px;
+            height: 300px;
+            overflow-y: scroll;
+            flex: 1;
+        }
+        #chat-input {
+            display: flex;
+        }
+        #user-input {
+            width: calc(100% - 40px);
+            padding: 10px;
+            border: none;
+            border-top: 1px solid #ccc;
+        }
+        #send-btn {
+            width: 40px;
+            border: none;
+            background-color: #007BFF;
+            color: white;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="chatbot-container">
+        <div id="chat-header" onclick="toggleChat()">Chat with us!</div>
+        <div id="chat-messages"></div>
+        <div id="chat-input">
+            <input type="text" id="user-input" placeholder="Type your question here..." onkeydown="if(event.key === 'Enter') sendMessage()">
+            <button id="send-btn" onclick="sendMessage()">Send</button>
+        </div>
+    </div>
+    <script>
+        function toggleChat() {
+            const chatContainer = document.getElementById('chatbot-container');
+            if (chatContainer.style.display === 'none' || chatContainer.style.display === '') {
+                chatContainer.style.display = 'flex';
+            } else {
+                chatContainer.style.display = 'none';
+            }
+        }
+
+        async function sendMessage() {
+            const userInput = document.getElementById('user-input').value;
+            if (!userInput) return;
+            appendMessage('User', userInput);
+            document.getElementById('user-input').value = '';
+
+            const response = await fetch('/ask', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ user_query: userInput })
+            });
+            const data = await response.json();
+            appendMessage('Bot', data.response);
+        }
+
+        function appendMessage(sender, message) {
+            const messageElement = document.createElement('div');
+            messageElement.textContent = `${sender}: ${message}`;
+            document.getElementById('chat-messages').appendChild(messageElement);
+            document.getElementById('chat-messages').scrollTop = document.getElementById('chat-messages').scrollHeight;
+        }
+    </script>
+</body>
+</html>

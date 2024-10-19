@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interview Question Generator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Interview Question Generator</h1>
+        <div class="left">
+            <form method="post" action="/">
+                <label for="topic_title">Topic Title:</label>
+                <input type="text" id="topic_title" name="topic_title" required>
+                <label for="queries_num">Number of Questions:</label>
+                <input type="number" id="queries_num" name="queries_num" required min="1">
+                <button type="submit" class="submit-btn">Generate Questions</button>
+            </form>
+            {% if questions %}
+                <form method="post" action="/feedback">
+                    <div class="questions">
+                        <h2>Generated Questions for "{{ topic_title }}"</h2>
+                        {% for question in questions %}
+                            <div class="question">
+                                <label>{{ question }}</label>
+                                <textarea name="answers" required></textarea>
+                                <input type="hidden" name="questions" value="{{ question }}">
+                            </div>
+                        {% endfor %}
+                    </div>
+                    <button type="submit" class="submit-btn">Submit for AI Feedback</button>
+                </form>
+            {% endif %}
+        </div>
+        <div class="right">
+            <h2>AI Feedback</h2>
+            <div class="feedback-box">
+                {% if feedbacks %}
+                    {% for feedback in feedbacks %}
+                        <div class="ai-feedback-item">
+                            <div class="feedback-text">{{ feedback }}</div>
+                        </div>
+                    {% endfor %}
+                {% endif %}
+            </div>
+        </div>
+    </div>
+
+    <div class="loading-spinner" id="loadingSpinner"></div>
+
+    <script>
+        document.querySelectorAll('form').forEach(form => {
+            form.addEventListener('submit', function() {
+                document.getElementById('loadingSpinner').style.display = 'block';
+            });
+        });
+    </script>
+</body>
+</html>
