@@ -1,0 +1,21 @@
+{
+    "name": "client",
+    "version": "1.0.0",
+    "description": "AutoReach Content Generator",
+    "main": "src/main.js", 
+    "scripts": {
+      "serve": "vue-cli-service serve",
+      "build": "vue-cli-service build",
+      "lint": "vue-cli-service lint"
+    },
+    "dependencies": {
+      "axios": "^x.x.x",
+      "vue": "^x.x.x"
+    },
+    "devDependencies": {
+      "@vue/cli-service": "^x.x.x"
+    },
+    "author": "Praveen N.",
+    "license": "MIT"
+  }
+  
