@@ -4,6 +4,11 @@ import requests
 from apscheduler.schedulers.background import BackgroundScheduler
 from datetime import datetime
 import atexit
+import os
+from dotenv import load_dotenv
+
+# Load environment variables from .env file
+load_dotenv()
 
 # Initialize Flask app
 app = Flask(__name__)
@@ -11,8 +16,8 @@ app = Flask(__name__)
 # Allow CORS for the specific origin where your Vue app is running (http://localhost:8080)
 CORS(app, resources={r"/*": {"origins": "http://localhost:8080"}})
 
-# Replace with your actual API key
-api_key = "AIzaSyC9AnKg4dNAqCr-Dc0PFxBdOcAoz66lw3Q"
+# Access API key from environment variable
+api_key = os.getenv('API_KEY')
 
 # Initialize APScheduler
 scheduler = BackgroundScheduler()
