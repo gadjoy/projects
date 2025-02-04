@@ -105,7 +105,7 @@ const App = () => {
   const [center, setCenter] = useState({ lat: 13.0827, lng: 80.2707 });
   const [zoom, setZoom] = useState(10);
 
-  const GOOGLE_MAPS_API_KEY = "AIzaSyCE3XCHoxVKC_Dv2UhxI0x6id2MwVy0E2g";
+  const GOOGLE_MAPS_API_KEY = "";
 
   const fetchTrafficData = async () => {
     if (!source || !destination) {
