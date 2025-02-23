@@ -1,0 +1,79 @@
+<div class="title-container">
+  <h1>Art by Priti</h1>
+  <h2>An Online Gallery</h2>
+</div>
+
+<div class="gallery">
+  <figure class="gallery-item">
+    <img class="thumbnail" src="images/art1.jpg" alt="Artwork 1" onclick="openLightbox(this)">
+    <p class="image-size">(91 cm x 61 cm)</p>
+    <figcaption>Geometry and divinity – both can calm and inspire. The beauty of polka dots encased within the beauty of Ganesha.</figcaption>
+  </figure>
+
+  <figure class="gallery-item">
+    <img class="thumbnail" src="images/art2.jpg" alt="Artwork 2" onclick="openLightbox(this)">
+    <p class="image-size">(80 cm x 50 cm)</p>
+    <figcaption>While riding with my son on a bicycle to the Dutch nursery I used to see lots of vibrant Poppies growing along the canal. In this painting I wanted to contrast the red and orange hues of the flowers against slivers and shards of black on a primal white.</figcaption>
+  </figure>
+
+
+  <figure class="gallery-item">
+    <img class="thumbnail" src="images/art3.jpg" alt="Artwork 3" onclick="openLightbox(this)">
+    <p class="image-size">(100 cm x 75 cm)</p>
+    <figcaption>This was done during a time when I felt like I was a willing and eager captive to the joys and charms of Mondrian’s works.</figcaption>
+  </figure>
+
+  <figure class="gallery-item">
+    <img class="thumbnail" src="images/art4.jpg" alt="Artwork 4" onclick="openLightbox(this)">
+    <p class="image-size">(70 cm x 50 cm)</p>
+    <figcaption>Breaking down the fine curlicues of shapes inspired by henna art</figcaption>
+  </figure>
+
+  <figure class="gallery-item">
+    <img class="thumbnail" src="images/art5.jpg" alt="Artwork 5" onclick="openLightbox(this)">
+    <p class="image-size">(85 cm x 55 cm)</p>
+    <figcaption>The contrast between the precision of geometric shapes and the organic shapes of nature has always inspired me.</figcaption>
+  </figure>
+</div>
+
+<!-- Lightbox Modal -->
+<div id="lightbox" class="lightbox">
+  <span class="close" onclick="closeLightbox()">&times;</span>
+  <img class="lightbox-content" id="expandedImg">
+</div>
+
+<script>
+let isZoomed = false;
+
+function openLightbox(imgElement) {
+    var lightbox = document.getElementById("lightbox");
+    var expandedImg = document.getElementById("expandedImg");
+
+    expandedImg.src = imgElement.src;
+    expandedImg.style.transform = "scale(1)"; // Reset zoom on open
+    lightbox.style.display = "flex";
+    isZoomed = false;
+}
+
+function toggleZoom() {
+    var expandedImg = document.getElementById("expandedImg");
+    if (isZoomed) {
+        expandedImg.style.transform = "scale(1)"; // Reset size
+    } else {
+        expandedImg.style.transform = "scale(1.8)"; // Slight zoom
+    }
+    isZoomed = !isZoomed;
+}
+
+/* Close Lightbox */
+function closeLightbox() {
+    document.getElementById("lightbox").style.display = "none";
+}
+
+/* Attach Click Event for Zoom */
+document.addEventListener("DOMContentLoaded", function() {
+    document.getElementById("expandedImg").addEventListener("click", toggleZoom);
+});
+</script>
+
+[Explore Full Gallery →](gallery.qmd) 

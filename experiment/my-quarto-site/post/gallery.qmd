@@ -1,0 +1,15 @@
+<div class="title-container">
+  <h2> Gallery</h2>
+</div>
+
+<div class="homepage-gallery">
+  <figure>
+    <img class="thumbnail" src="images/art1.jpg" alt="Featured Art 1" onclick="openLightbox(this)">
+    <figcaption>Sunset Over the Hills</figcaption>
+  </figure>
+  <figure>
+    <img class="thumbnail" src="images/art2.jpg" alt="Featured Art 2" onclick="openLightbox(this)">
+    <figcaption>Abstract Waves of Emotion</figcaption>
+  </figure>
+</div>
+
