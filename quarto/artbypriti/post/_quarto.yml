@@ -1,0 +1,20 @@
+project:
+  type: website
+
+website:
+  title: "Art by Priti"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - href: gallery.qmd
+        text: Gallery
+      - href: about.qmd
+        text: About
+      - href: contact.qmd
+        text: Contact
+
+format:
+  html:
+    theme: default
+    css: styles.css

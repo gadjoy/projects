@@ -1,292 +1,87 @@
-import React, { useState } from "react";
-import { GoogleMap, LoadScript, DirectionsRenderer, Marker } from "@react-google-maps/api";
-import { DndProvider, useDrag, useDrop } from "react-dnd";
-import { HTML5Backend } from "react-dnd-html5-backend";
-import {
-  Box,
-  TextField,
-  Button,
-  Typography,
-  Grid,
-  CircularProgress,
-  Paper,
-} from "@mui/material";
-import axios from "axios";
+import { useState } from "react";
+import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from "recharts";
+import { GoogleMap, LoadScript, DirectionsRenderer } from "@react-google-maps/api";
 
-const SLOT_TYPE = "SLOT";
+const mapContainerStyle = { width: "100%", height: "400px" };
+const center = { lat: 20.5937, lng: 78.9629 }; // Default center (India)
 
-const DraggableSlot = ({ slot }) => {
-  const [{ isDragging }, drag] = useDrag(() => ({
-    type: SLOT_TYPE,
-    item: { slot },
-    collect: (monitor) => ({
-      isDragging: monitor.isDragging(),
-    }),
-  }));
-
-  return (
-    <Paper
-      ref={drag}
-      elevation={2}
-      sx={{
-        padding: 2,
-        marginBottom: 2,
-        backgroundColor: isDragging ? "primary.light" : "background.paper",
-        borderRadius: 2,
-        cursor: "grab",
-        opacity: isDragging ? 0.7 : 1,
-        transition: "opacity 0.2s",
-      }}
-    >
-      <Typography variant="body1" sx={{ fontWeight: "bold" }}>
-        {slot.slot_time_range}
-      </Typography>
-      <Typography variant="body2">Travel Time: {slot.estimated_travel_time} mins</Typography>
-      <Typography variant="body2">Traffic Level: {slot.traffic_level}</Typography>
-      <Typography variant="body2">Distance: {slot.distance} km</Typography>
-    </Paper>
-  );
-};
-
-const DroppableArea = ({ title, onDrop, slot }) => {
-  const [{ isOver }, drop] = useDrop(() => ({
-    accept: SLOT_TYPE,
-    drop: (item) => onDrop(item.slot),
-    collect: (monitor) => ({
-      isOver: monitor.isOver(),
-    }),
-  }));
-
-  return (
-    <Paper
-      ref={drop}
-      elevation={3}
-      sx={{
-        padding: 3,
-        textAlign: "center",
-        backgroundColor: isOver ? "primary.light" : "background.default",
-        border: "2px dashed",
-        borderColor: isOver ? "primary.main" : "grey.400",
-        borderRadius: 2,
-        minHeight: "120px", // Consistent height to avoid shrinking
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        transition: "background-color 0.3s",
-      }}
-    >
-      {slot ? (
-        <>
-          <Typography variant="h6">{title}</Typography>
-          <Typography variant="body1" sx={{ marginTop: 1 }}>
-            {slot.slot_time_range}
-          </Typography>
-          <Typography variant="body2">Distance: {slot.distance} km</Typography>
-        </>
-      ) : (
-        <Typography variant="body2" color="textSecondary">
-          Drop a slot here
-        </Typography>
-      )}
-    </Paper>
-  );
-};
-
-const App = () => {
+function App() {
   const [source, setSource] = useState("");
   const [destination, setDestination] = useState("");
   const [trafficData, setTrafficData] = useState(null);
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState("");
-  const [toSlot, setToSlot] = useState(null);
-  const [fromSlot, setFromSlot] = useState(null);
   const [directions, setDirections] = useState(null);
-  const [mapInstance, setMapInstance] = useState(null);
-  const [center, setCenter] = useState({ lat: 13.0827, lng: 80.2707 });
-  const [zoom, setZoom] = useState(10);
-
-  const GOOGLE_MAPS_API_KEY = "AIzaSyCE3XCHoxVKC_Dv2UhxI0x6id2MwVy0E2g";
 
   const fetchTrafficData = async () => {
-    if (!source || !destination) {
-      setError("Please fill in both source and destination.");
-      return;
-    }
-
-    setTrafficData(null);
-    setToSlot(null);
-    setFromSlot(null);
-    setError("");
-    setDirections(null);
-    setLoading(true);
-
-    if (mapInstance) {
-      const markers = mapInstance.markers || [];
-      markers.forEach((marker) => marker.setMap(null));
-      mapInstance.markers = [];
-    }
+    if (!source || !destination) return alert("Enter both source and destination!");
 
     try {
-      const response = await axios.get("http://127.0.0.1:8000/traffic_slots/", {
-        params: { source, destination },
-      });
-      setTrafficData(response.data);
+      const response = await fetch(`http://127.0.0.1:8000/traffic_slots/?source=${source}&destination=${destination}`);
+      const data = await response.json();
+      
+      if (!data || !data.traffic_slots || data.traffic_slots.length === 0) {
+        alert("No traffic data available.");
+        return;
+      }
 
-      const directionsService = new window.google.maps.DirectionsService();
+      // Transform data for Recharts
+      const formattedData = data.traffic_slots.map((slot) => ({
+        timeRange: slot.slot_time_range,  // X-axis (Time Slot)
+        travelTime: slot.travel_time_in_minutes, // Y-axis (Travel Time)
+      }));
+
+      setTrafficData(formattedData);
+
+      // Fetch Google Maps Directions
+      const directionsService = new google.maps.DirectionsService();
       directionsService.route(
         {
           origin: source,
           destination: destination,
-          travelMode: window.google.maps.TravelMode.DRIVING,
+          travelMode: google.maps.TravelMode.DRIVING,
         },
         (result, status) => {
-          if (status === "OK") {
-            setDirections(result);
-          } else {
-            setError("Could not fetch directions.");
-          }
+          if (status === "OK") setDirections(result);
         }
       );
-
-      const sourceCoords = {
-        lat: parseFloat(source.split(",")[0]),
-        lng: parseFloat(source.split(",")[1]),
-      };
-      const destinationCoords = {
-        lat: parseFloat(destination.split(",")[0]),
-        lng: parseFloat(destination.split(",")[1]),
-      };
-
-      const midPoint = {
-        lat: (sourceCoords.lat + destinationCoords.lat) / 2,
-        lng: (sourceCoords.lng + destinationCoords.lng) / 2,
-      };
-      setCenter(midPoint);
-    } catch (err) {
-      setError("Failed to fetch traffic data.");
-    } finally {
-      setLoading(false);
+    } catch (error) {
+      console.error("Error fetching traffic data:", error);
     }
   };
 
   return (
-    <DndProvider backend={HTML5Backend}>
-      <Box sx={{ padding: 4, backgroundColor: "grey.100", minHeight: "100vh" }}>
-        <Box
-          sx={{
-            padding: 3,
-            backgroundColor: "primary.main",
-            color: "white",
-            borderRadius: 2,
-            marginBottom: 4,
-            textAlign: "center",
-          }}
-        >
-          <Typography variant="h4">Quick Reach</Typography>
-          <Typography variant="subtitle1">
-            Plan your journey with optimized traffic insights.
-          </Typography>
-        </Box>
+    <div className="app-container">
+      <h1>🚗 Quick Reach Traffic Analyzer</h1>
+      <div className="input-container">
+        <input type="text" placeholder="Enter Source" value={source} onChange={(e) => setSource(e.target.value)} />
+        <input type="text" placeholder="Enter Destination" value={destination} onChange={(e) => setDestination(e.target.value)} />
+        <button onClick={fetchTrafficData}>Check Traffic</button>
+      </div>
 
-        <Grid container spacing={4}>
-          <Grid item xs={12} md={4}>
-            <Box sx={{ marginBottom: 2 }}>
-              <TextField
-                fullWidth
-                label="Source"
-                value={source}
-                onChange={(e) => setSource(e.target.value)}
-                variant="outlined"
-                sx={{ marginBottom: 2 }}
-              />
-              <TextField
-                fullWidth
-                label="Destination"
-                value={destination}
-                onChange={(e) => setDestination(e.target.value)}
-                variant="outlined"
-                sx={{ marginBottom: 2 }}
-              />
-              <Button
-                fullWidth
-                variant="contained"
-                onClick={fetchTrafficData}
-                disabled={loading}
-                color="primary"
-              >
-                {loading ? <CircularProgress size={24} color="inherit" /> : "Get Traffic Slots"}
-              </Button>
-              {error && <Typography color="error" sx={{ marginTop: 2 }}>{error}</Typography>}
-            </Box>
+      {/* Google Maps */}
+      <LoadScript googleMapsApiKey="AIzaSyCE3XCHoxVKC_Dv2UhxI0x6id2MwVy0E2g">
+        <GoogleMap mapContainerStyle={mapContainerStyle} center={center} zoom={5}>
+          {directions && <DirectionsRenderer directions={directions} />}
+        </GoogleMap>
+      </LoadScript>
 
-            {trafficData && (
-              <>
-                <Typography variant="h6" sx={{ marginBottom: 2 }}>
-                  Shortest Travel Slots
-                </Typography>
-                {trafficData.shortest_slots.map((slot, idx) => (
-                  <DraggableSlot key={idx} slot={slot} />
-                ))}
-                <Typography variant="h6" sx={{ marginBottom: 2, marginTop: 4 }}>
-                  Longest Travel Slots
-                </Typography>
-                {trafficData.longest_slots.map((slot, idx) => (
-                  <DraggableSlot key={idx} slot={slot} />
-                ))}
-              </>
-            )}
-          </Grid>
-
-          <Grid item xs={12} md={8}>
-            <Box sx={{ marginBottom: 4 }}>
-              <LoadScript googleMapsApiKey={GOOGLE_MAPS_API_KEY}>
-                <GoogleMap
-                  center={center}
-                  zoom={zoom}
-                  mapContainerStyle={{
-                    width: "100%",
-                    height: "500px",
-                    borderRadius: "8px",
-                  }}
-                  onLoad={(map) => {
-                    setMapInstance(map);
-                    map.markers = [];
-                  }}
-                >
-                  {source && destination && (
-                    <>
-                      <Marker
-                        position={{
-                          lat: parseFloat(source.split(",")[0]),
-                          lng: parseFloat(source.split(",")[1]),
-                        }}
-                      />
-                      <Marker
-                        position={{
-                          lat: parseFloat(destination.split(",")[0]),
-                          lng: parseFloat(destination.split(",")[1]),
-                        }}
-                      />
-                    </>
-                  )}
-                  {directions && <DirectionsRenderer directions={directions} />}
-                </GoogleMap>
-              </LoadScript>
-            </Box>
-
-            <Grid container spacing={4}>
-              <Grid item xs={6}>
-                <DroppableArea title="From Journey" onDrop={setFromSlot} slot={fromSlot} />
-              </Grid>
-              <Grid item xs={6}>
-                <DroppableArea title="To Journey" onDrop={setToSlot} slot={toSlot} />
-              </Grid>
-            </Grid>
-          </Grid>
-        </Grid>
-      </Box>
-    </DndProvider>
+      {/* Traffic Data Graph */}
+      {trafficData && trafficData.length > 0 && (
+        <div className="graph-container">
+          <h2>📊 Travel Time Analysis</h2>
+          <ResponsiveContainer width="100%" height={300}>
+            <LineChart data={trafficData} margin={{ top: 10, right: 30, left: 0, bottom: 0 }}>
+              <CartesianGrid strokeDasharray="3 3" />
+              <XAxis dataKey="timeRange" />
+              <YAxis />
+              <Tooltip />
+              <Legend />
+              <Line type="monotone" dataKey="travelTime" stroke="#82ca9d" strokeWidth={3} />
+            </LineChart>
+          </ResponsiveContainer>
+        </div>
+      )}
+    </div>
   );
-};
+}
 
 export default App;

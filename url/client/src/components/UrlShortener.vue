@@ -1,12 +1,10 @@
 <template>
   <div class="container">
-    <!-- Centered header -->
     <div class="header">
       <h2>Shortify</h2>
     </div>
 
     <div class="content">
-      <!-- Left section for inputting the long URL -->
       <div class="left-section">
         <input
           v-model="longUrl"
@@ -17,7 +15,6 @@
         <button @click="shortenUrl" class="shorten-button">Shorten URL</button>
       </div>
 
-      <!-- Right section to display the shortened URL and short code -->
       <div class="right-section" v-if="shortUrl">
         <h3>Your URL is Ready!</h3>
         <div class="short-url">
@@ -49,7 +46,7 @@ export default {
   methods: {
     async shortenUrl() {
       try {
-        const response = await axios.post('http://localhost:3001/shorten', { longUrl: this.longUrl });
+        const response = await axios.post('https://shortify-tqlk.onrender.com/shorten', { longUrl: this.longUrl });
         this.shortUrl = response.data.shortUrl;
         this.shortCode = response.data.shortCode;
       } catch (error) {
@@ -66,8 +63,8 @@ export default {
 
 <style scoped>
 .container {
-  padding: 100px;
-  max-width: 900px;
+  padding: 40px 20px;
+  max-width: 800px;
   margin: auto;
   background-color: #f8f9fa;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
@@ -76,31 +73,7 @@ export default {
 
 .header {
   text-align: center;
-  margin-bottom: 50px;
-}
-
-.content {
-  display: flex;
-  justify-content: space-between;
-}
-
-.left-section,
-.right-section {
-  width: 45%;
-  padding: 30px;
-  border-radius: 8px;
-}
-
-.left-section {
-  background-color: #fff;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.right-section {
-  background-color: #e9ecef;
-  text-align: left;
-  border-left: 3px solid #6c757d;
-  padding-left: 30px;
+  margin-bottom: 30px;
 }
 
 h2, h3 {
@@ -108,16 +81,37 @@ h2, h3 {
   font-weight: bold;
 }
 
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.left-section,
+.right-section {
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.left-section {
+  background-color: #fff;
+}
+
+.right-section {
+  background-color: #e9ecef;
+}
+
 .url-input {
   width: 100%;
   padding: 10px;
-  margin: 10px 0;
   font-size: 1rem;
   border: 1px solid #ddd;
   border-radius: 5px;
 }
 
 .shorten-button {
+  margin-top: 10px;
   padding: 10px 20px;
   font-size: 1rem;
   color: #fff;
@@ -168,5 +162,17 @@ h2, h3 {
 .short-code p {
   color: #495057;
   font-size: 1rem;
+}
+
+/* Media Queries */
+@media (min-width: 768px) {
+  .content {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .left-section,
+  .right-section {
+    width: 45%;
+  }
 }
 </style>

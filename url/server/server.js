@@ -48,7 +48,7 @@ app.post('/shorten', (req, res) => {
                 return res.status(500).json({ error: 'Failed to shorten URL' });
             }
 
-            const shortUrl = `http://localhost:${PORT}/${shortCode}`;
+            const shortUrl = `https://shortify-tqlk.onrender.com/${shortCode}`;
             console.log(`URL shortened: ${longUrl} -> ${shortUrl}`);
 
             res.json({ shortUrl, shortCode });
