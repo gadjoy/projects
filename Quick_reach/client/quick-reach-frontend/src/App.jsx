@@ -11,6 +11,12 @@ function App() {
   const [trafficData, setTrafficData] = useState(null);
   const [directions, setDirections] = useState(null);
 
+  const [mapInstance, setMapInstance] = useState(null);
+  const [center, setCenter] = useState({ lat: 13.0827, lng: 80.2707 });
+  const [zoom, setZoom] = useState(10);
+
+  const GOOGLE_MAPS_API_KEY = "";
+
   const fetchTrafficData = async () => {
     if (!source || !destination) return alert("Enter both source and destination!");
 
