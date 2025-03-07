@@ -1,0 +1,29 @@
+services:
+  wordpress:
+    image: wordpress
+    platform: linux/amd64  # For Apple Silicon (M1/M2)
+    restart: always
+    ports:
+      - "8080:80"
+    environment:
+      WORDPRESS_DB_HOST: db
+      WORDPRESS_DB_NAME: wordpress
+      WORDPRESS_DB_USER: wp_user
+      WORDPRESS_DB_PASSWORD: wp_password
+    volumes:
+      - ./wp-content:/var/www/html/wp-content
+
+  db:
+    image: mysql:5.7
+    platform: linux/amd64  # Ensure MySQL works on ARM Mac
+    restart: always
+    environment:
+      MYSQL_DATABASE: wordpress
+      MYSQL_USER: wp_user  # Use a non-root user
+      MYSQL_PASSWORD: wp_password
+      MYSQL_ROOT_PASSWORD: root_password  # Define root password
+    volumes:
+      - db_data:/var/lib/mysql
+
+volumes:
+  db_data:
