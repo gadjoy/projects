@@ -1,0 +1,6 @@
+[submodule "sites/artbypriti/quickstart/themes/ananke"]
+	path = sites/artbypriti/quickstart/themes/ananke
+	url = https://github.com/theNewDynamic/gohugo-theme-ananke.git
+[submodule "sites/hugo_test/themes/gallery"]
+	path = sites/hugo_test/themes/gallery
+	url = https://github.com/nicokaiser/hugo-theme-gallery.git
