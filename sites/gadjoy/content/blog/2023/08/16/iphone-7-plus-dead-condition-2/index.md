@@ -1,0 +1,34 @@
+---
+title: "iPhone 7 Plus - Dead Condition"
+date: 2023-08-16T13:36:21
+draft: false
+categories: ['Apple', 'Dead Device']
+tags: ['dead']
+description: "Professional repair service for iPhone 7 Plus. Expert diagnosis and quality repairs in Bangalore."
+slug: "iphone-7-plus-dead-condition-2"
+banner: "img/banners/banner-1.jpg"
+
+author: "Gadjoy Repair Team"
+summary: "Professional dead condition for iPhone 7 Plus. Expert technicians, quality parts, warranty included."
+---
+
+### Before
+
+Device condition before our professional repair service.
+
+### After
+
+Device restored to full working condition after expert repair.
+
+The device was given to us with dead condition
+
+We carried out a chip level service and improved the device performance
+
+### Repair Images
+
+{{< figure src="http://localhost:8080/wp-content/uploads/2023/08/image-64.png" alt="Device repair process step 1" >}}
+
+{{< figure src="http://localhost:8080/wp-content/uploads/2023/08/image-65.png" alt="Device repair process step 2" >}}
+
+{{< figure src="/img/uploads/2023/08/image-64.png" alt="Device repair process step 3" >}}
+
