@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 WordPress to Hugo Migration Script for Gadjoy Repair Service
-Based on artbypriti migration pattern
+Based on the original Gadjoy migration pattern
 """
 
 import os
@@ -19,6 +19,21 @@ class GadjoyMigration:
         self.hugo_content_dir = self.base_dir / "content"
         self.hugo_static_dir = self.base_dir / "static"
         self.migration_log = []
+    
+    def get_db_container_name(self):
+        """Detect the Docker container running the WordPress database (service 'db')."""
+        try:
+            result = subprocess.run(
+                ["docker", "ps", "--filter", "label=com.docker.compose.service=db", "--format", "{{.Names}}"],
+                capture_output=True, text=True
+            )
+            names = [n.strip() for n in result.stdout.splitlines() if n.strip()]
+            if names:
+                return names[0]
+        except Exception:
+            pass
+        # Fallback to common container name from docker-compose
+        return "gadjoy_db_1"
         
     def log(self, message):
         """Log migration messages"""
@@ -29,8 +44,9 @@ class GadjoyMigration:
         """Query WordPress database for posts metadata"""
         self.log("Querying WordPress database for posts...")
         
+        db_container = self.get_db_container_name()
         cmd = [
-            "docker", "exec", "gadjoy-db-1", "mysql", 
+            "docker", "exec", db_container, "mysql", 
             "-u", "root", "-proot_password", "wordpress", 
             "-e", """
             SELECT 
@@ -50,8 +66,9 @@ class GadjoyMigration:
         """Query WordPress database for pages metadata"""
         self.log("Querying WordPress database for pages...")
         
+        db_container = self.get_db_container_name()
         cmd = [
-            "docker", "exec", "gadjoy-db-1", "mysql", 
+            "docker", "exec", db_container, "mysql", 
             "-u", "root", "-proot_password", "wordpress", 
             "-e", """
             SELECT 
@@ -88,6 +105,21 @@ class GadjoyMigration:
         if not content:
             return ""
         
+        # Handle Gutenberg gallery blocks: convert to Hugo figure shortcodes
+        gallery_pattern = r'<!-- wp:gallery.*?-->(.*?)<!-- /wp:gallery -->'
+        def replace_gallery(match):
+            gallery_html = match.group(1)
+            items = re.findall(r'<figure[^>]*>(.*?)</figure>', gallery_html, flags=re.DOTALL)
+            md_parts = []
+            for item in items:
+                src_match = re.search(r'<img [^>]*src="([^"]+)"', item)
+                caption_match = re.search(r'<figcaption>(.*?)</figcaption>', item, flags=re.DOTALL)
+                src = src_match.group(1) if src_match else ''
+                caption = caption_match.group(1).strip() if caption_match else ''
+                md_parts.append(f'{{{{< figure src="{src}" caption="{caption}" >}}}}')
+            return '\n\n'.join(md_parts)
+        content = re.sub(gallery_pattern, replace_gallery, content, flags=re.DOTALL)
+
         # Handle Gutenberg image blocks
         img_pattern = r'<!-- wp:image.*?"src":"([^"]+)".*?-->(.*?)<!-- /wp:image -->'
         content = re.sub(img_pattern, r'![Image](\1)', content, flags=re.DOTALL)
@@ -337,8 +369,13 @@ description: "Professional electronics and mobile device repair services in Bang
         """Run the complete migration process"""
         self.log("Starting Gadjoy WordPress to Hugo migration...")
         
-        # Create content directories
-        (self.hugo_content_dir / "blog").mkdir(parents=True, exist_ok=True)
+        # Clean and recreate blog content directory for a fresh migration
+        blog_dir = self.hugo_content_dir / "blog"
+        if blog_dir.exists():
+            shutil.rmtree(blog_dir)
+            self.log(f"Removed existing blog content at {blog_dir}")
+        blog_dir.mkdir(parents=True, exist_ok=True)
+        # Ensure services and image directories exist
         (self.hugo_content_dir / "services").mkdir(parents=True, exist_ok=True)
         (self.hugo_static_dir / "img").mkdir(parents=True, exist_ok=True)
         

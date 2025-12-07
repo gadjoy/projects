@@ -65,7 +65,7 @@ params:
 
   # Site info
   about_us: "<p>Professional electronics repair service specializing in mobile devices, laptops, and tablets.</p>"
-  copyright: "Copyright (c) 2024, Gadjoy Repair Service; all rights reserved."
+  copyright: "Copyright (c) 2025, Gadjoy Repair Service; all rights reserved."
 
   # Format dates with Go's time formatting
   date_format: "January 2, 2006"

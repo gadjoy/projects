@@ -72,9 +72,13 @@ class MissingImageFixer:
                     clean_path = match
                     if 'localhost:8080/wp-content/' in clean_path:
                         clean_path = clean_path.replace('localhost:8080/wp-content/', '')
-                    if clean_path.startswith('uploads/'):
+                    if clean_path.startswith('/uploads/'):
+                        clean_path = '/img' + clean_path
+                    elif clean_path.startswith('uploads/'):
                         clean_path = '/img/' + clean_path
-                    elif not clean_path.startswith('/'):
+                    elif clean_path.startswith('/'):
+                        clean_path = '/img/uploads' + clean_path
+                    else:
                         clean_path = '/img/uploads/' + clean_path
                     
                     if clean_path not in images:
