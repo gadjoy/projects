@@ -1,0 +1,10 @@
+---
+title: "Gallery Blog"
+listing:
+  contents: "*.qmd"  # Load all qmd files inside post/
+  type: default
+  sort: "date desc"
+  categories: true
+  sort-ui: true
+  filter-ui: true
+---

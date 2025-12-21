@@ -1,0 +1,22 @@
+project:
+  type: website
+
+website:
+  title: "Art by Priti"
+  navbar:
+    left:
+      - href: page/index.qmd
+        text: Home
+      - href: page/about.qmd
+        text: About
+      - href: page/contact-us.qmd
+        text: Contact
+      - text: Gallery Blog
+        href: post/index.qmd  
+
+  page-footer: "© 2025 Art by Priti"
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css

@@ -1,0 +1,470 @@
+---
+title: "Gallery" 
+---
+
+<figure>
+
+- <figure>
+    
+    [![](/page/images/Lifebuoy.jpg)](http://artbypriti.com/wp-content/uploads/2021/02/Lifebuoy.jpg)
+    
+    
+    <figcaption>
+    
+    Lifebuoy
+    
+    </figcaption>
+    
+    </figure>
+    
+- <figure>
+    
+    [![](images/Holland-Distilled-2-scaled.jpg)](http://artbypriti.com/wp-content/uploads/2021/02/Holland-Distilled-2-scaled.jpg)
+    
+    <figcaption>
+    
+    Holland Distilled
+    
+    </figcaption>
+    
+    </figure>
+    
+- <figure>
+    
+    [![](images/Flower-in-a-Geometrical-Box-3-scaled.jpg)](http://artbypriti.com/wp-content/uploads/2021/02/Flower-in-a-Geometrical-Box-3-scaled.jpg)
+    
+    <figcaption>
+    
+    Flower in a geometrical box
+    
+    </figcaption>
+    
+    </figure>
+    
+- <figure>
+    
+    [![](images/With-the-flow-1.jpg)](http://artbypriti.com/wp-content/uploads/2021/02/With-the-flow-1.jpg)
+    
+    <figcaption>
+    
+    With the flow
+    
+    </figcaption>
+    
+    </figure>
+    
+- <figure>
+    
+    [![](images/Tulip-with-Polka-dots-1.jpg)](http://artbypriti.com/wp-content/uploads/2021/02/Tulip-with-Polka-dots-1.jpg)
+    
+    <figcaption>
+    
+    Tulip with polka dots
+    
+    </figcaption>
+    
+    </figure>
+    
+- <figure>
+    
+    [![](images/Tulip-with-Polka-dots-2-1.jpg)](http://artbypriti.com/wp-content/uploads/2021/02/Tulip-with-Polka-dots-2-1.jpg)
+    
+    <figcaption>
+    
+    Tulip with Polka dots 2
+    
+    </figcaption>
+    
+    </figure>
+    
+- <figure>
+    
+    [![](images/Tripping-in-Micronized-Land-1.jpg)](http://artbypriti.com/wp-content/uploads/2021/02/Tripping-in-Micronized-Land-1.jpg)
+    
+    <figcaption>
+    
+    (91 cm X 61 cm)
+
+Breaking down the fine curlicues of shapes inspired by henna art
+    
+</figcaption>
+    
+ </figure>
+    
+- <figure>
+    
+    [![](images/The-explorer-1.jpg)](http://artbypriti.com/wp-content/uploads/2021/02/The-explorer-1.jpg)
+    
+    <figcaption>
+    
+    The Explorer
+    
+    </figcaption>
+    
+    </figure>
+    
+- <figure>
+    
+    [![](images/Terrace-View-Banglore-1.jpg)](http://artbypriti.com/wp-content/uploads/2021/02/Terrace-View-Banglore-1.jpg)
+    
+    <figcaption>
+    
+    Terrace Views - Bangalore
+    
+    </figcaption>
+    
+    </figure>
+    
+- <figure>
+    
+    [![](images/Symbiotica-1.jpg)](http://artbypriti.com/wp-content/uploads/2021/02/Symbiotica-1.jpg)
+    
+    <figcaption>
+    
+    Symbiotica
+    
+    </figcaption>
+    
+    </figure>
+    
+- <figure>
+    
+    [![](images/Soup-bowl-and-vegetables-1.jpg)](http://artbypriti.com/wp-content/uploads/2021/02/Soup-bowl-and-vegetables-1.jpg)
+    
+    <figcaption>
+    
+    Glimpses into a kitchen
+    
+    </figcaption>
+    
+    </figure>
+    
+- <figure>
+    
+    [![](images/Scenes-from-Shanghai-1.jpg)](http://artbypriti.com/wp-content/uploads/2021/02/Scenes-from-Shanghai-1.jpg)
+    
+    <figcaption>
+    
+    Scenes from Shanghai
+    
+    </figcaption>
+    
+    </figure>
+    
+- <figure>
+    
+    [![](images/Scenes-from-Holland-2-1.jpg)](http://artbypriti.com/wp-content/uploads/2021/02/Scenes-from-Holland-2-1.jpg)
+    
+    <figcaption>
+    
+    Scenes from Holland
+    
+    </figcaption>
+    
+    </figure>
+    
+- <figure>
+    
+    [![](images/red-Green-Blue-1.jpg)](http://artbypriti.com/wp-content/uploads/2021/02/red-Green-Blue-1.jpg)
+    
+    <figcaption>
+    
+    Red Green & Blue
+    
+    </figcaption>
+    
+    </figure>
+    
+- <figure>
+    
+    [![](images/OM-with-Bandhani-1.jpg)](http://artbypriti.com/wp-content/uploads/2021/02/OM-with-Bandhani-1.jpg)
+    
+    <figcaption>
+    
+    OM with bandhani
+    
+    </figcaption>
+    
+    </figure>
+    
+- [![](images/Mosaic-Modern-Ganesha-1.jpg)](http://artbypriti.com/wp-content/uploads/2021/02/Mosaic-Modern-Ganesha-1.jpg)
+- <figure>
+    
+    [![](images/Mondrian-Style-with-face-1-753x1024.jpg)](http://artbypriti.com/wp-content/uploads/2021/02/Mondrian-Style-with-face-1.jpg)
+    
+    <figcaption>
+    
+    Prisoner of Mondrian
+    
+    </figcaption>
+    
+    </figure>
+    
+- <figure>
+    
+    [![](images/Mondrian-Mosaic-1-980x1024.jpg)](http://artbypriti.com/wp-content/uploads/2021/02/Mondrian-Mosaic-1.jpg)
+    
+    <figcaption>
+    
+    Mondrian Mosaic
+    
+    </figcaption>
+    
+    </figure>
+    
+- <figure>
+    
+    [![](images/Lotus-series-1-1-1024x1024.jpg)](http://artbypriti.com/wp-content/uploads/2021/02/Lotus-series-1-1.jpg)
+    
+    <figcaption>
+    
+    Lotus Series 1
+    
+    </figcaption>
+    
+    </figure>
+    
+- <figure>
+    
+    [![](images/Lotus-Impressionism-1-1024x824.jpg)](http://artbypriti.com/wp-content/uploads/2021/02/Lotus-Impressionism-1.jpg)
+    
+    <figcaption>
+    
+    Impressions of Lotuses
+    
+    </figcaption>
+    
+    </figure>
+    
+- <figure>
+    
+    [![](images/Life-force-1-880x1024.jpg)](http://artbypriti.com/wp-content/uploads/2021/02/Life-force-1.jpg)
+    
+    <figcaption>
+    
+    Life Force
+    
+    </figcaption>
+    
+    </figure>
+    
+- <figure>
+    
+    [![](images/Lemon-and-Pot-Contemporary-1-1024x821.jpg)](http://artbypriti.com/wp-content/uploads/2021/02/Lemon-and-Pot-Contemporary-1.jpg)
+    
+    <figcaption>
+    
+    Lemon and a pot
+    
+    </figcaption>
+    
+    </figure>
+    
+- <figure>
+    
+    [![](images/Holland-Distilled-1.jpg)](http://artbypriti.com/wp-content/uploads/2021/02/Holland-Distilled-1.jpg)
+    
+    <figcaption>
+    
+    Holland Distilled
+    
+    </figcaption>
+    
+    </figure>
+    
+- <figure>
+    
+    [![](images/Ganesha-with-lines-1-741x1024.jpg)](http://artbypriti.com/wp-content/uploads/2021/02/Ganesha-with-lines-1.jpg)
+    
+    <figcaption>
+    
+    Ganesha in linear relief
+    
+    </figcaption>
+    
+    </figure>
+    
+- <figure>
+    
+    [![](images/Ganesha-Modern-Polka-dots-1-825x1024.jpg)](http://artbypriti.com/wp-content/uploads/2021/02/Ganesha-Modern-Polka-dots-1.jpg)
+    
+    <figcaption>
+    
+    Ganesha in polka dots
+    
+    </figcaption>
+    
+    </figure>
+    
+- <figure>
+    
+    [![](images/Ganesha-in-Blocks-1-922x1024.jpg)](http://artbypriti.com/wp-content/uploads/2021/02/Ganesha-in-Blocks-1.jpg)
+    
+    <figcaption>
+    
+    Ganesha in blocks
+    
+    </figcaption>
+    
+    </figure>
+    
+- <figure>
+    
+    [![](images/Floating-Vegetables-1-1024x533.jpg)](http://artbypriti.com/wp-content/uploads/2021/02/Floating-Vegetables-1.jpg)
+    
+    <figcaption>
+    
+    Vegetables in Negative Space
+    
+    </figcaption>
+    
+    </figure>
+    
+- <figure>
+    
+    [![](images/Fall-Ganesha-1-838x1024.jpg)](http://artbypriti.com/wp-content/uploads/2021/02/Fall-Ganesha-1.jpg)
+    
+    <figcaption>
+    
+    Fall Ganesha
+    
+    </figcaption>
+    
+    </figure>
+    
+- <figure>
+    
+    [![](images/Pear-with-Pink-Background-1-811x1024.jpg)](http://artbypriti.com/wp-content/uploads/2021/02/Pear-with-Pink-Background-1.jpg)
+    
+    <figcaption>
+    
+    Pear
+    
+    </figcaption>
+    
+    </figure>
+    
+- <figure>
+    
+    [![](images/Pear-Pointlism-1-1024x699.jpg)](http://artbypriti.com/wp-content/uploads/2021/02/Pear-Pointlism-1.jpg)
+    
+    <figcaption>
+    
+    Orange and Pear
+    
+    </figcaption>
+    
+    </figure>
+    
+- <figure>
+    
+    [![](images/Dragon-Fruit-scaled.jpg)](http://artbypriti.com/wp-content/uploads/2021/02/Dragon-Fruit-scaled.jpg)
+    
+    <figcaption>
+    
+    Dragonfruit
+    
+    </figcaption>
+    
+    </figure>
+    
+- <figure>
+    
+    [![](images/Pear-1024x1021.jpg)](http://artbypriti.com/wp-content/uploads/2021/02/Pear-scaled.jpg)
+    
+    <figcaption>
+    
+    Pear
+    
+    </figcaption>
+    
+    </figure>
+    
+- <figure>
+    
+    [![](images/Eggplant-825x1024.jpg)](http://artbypriti.com/wp-content/uploads/2021/02/Eggplant.jpg)
+    
+    <figcaption>
+    
+    Eggplant
+    
+    </figcaption>
+    
+    </figure>
+    
+- <figure>
+    
+    [![](images/Banana-1007x1024.jpg)](http://artbypriti.com/wp-content/uploads/2021/02/Banana.jpg)
+    
+    <figcaption>
+    
+    Banana
+    
+    </figcaption>
+    
+    </figure>
+    
+- <figure>
+    
+    [![](images/Apple-with-dots-1024x1015.jpg)](http://artbypriti.com/wp-content/uploads/2021/02/Apple-with-dots.jpg)
+    
+    <figcaption>
+    
+    Apple with Dots
+    
+    </figcaption>
+    
+    </figure>
+    
+- <figure>
+    
+    [![](images/Mangosteen-1024x775.jpg)](http://artbypriti.com/wp-content/uploads/2021/02/Mangosteen-scaled.jpg)
+    
+    <figcaption>
+    
+    Mangosteen
+    
+    </figcaption>
+    
+    </figure>
+    
+- <figure>
+    
+    [![](images/Olive-1024x1010.jpg)](http://artbypriti.com/wp-content/uploads/2021/02/Olive.jpg)
+    
+    <figcaption>
+    
+    Olive
+    
+    </figcaption>
+    
+    </figure>
+    
+- <figure>
+    
+    [![](images/pomergranate-844x1024.jpg)](http://artbypriti.com/wp-content/uploads/2021/02/pomergranate.jpg)
+    
+    <figcaption>
+    
+    Pomegranate
+    
+    </figcaption>
+    
+    </figure>
+    
+- <figure>
+    
+    [![](images/Lemon.jpg)](http://artbypriti.com/wp-content/uploads/2021/02/Lemon.jpg)
+    
+    <figcaption>
+    
+    Lemon
+    
+    </figcaption>
+    
+    </figure>
+    
+
+
+
+</figure>

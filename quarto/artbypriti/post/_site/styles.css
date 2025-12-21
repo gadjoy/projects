@@ -74,7 +74,7 @@ body {
 }
 
 /* Gallery Section - Centered */
-.gallery {
+ .gallery {
   display: flex;
   flex-direction: column; /* Arrange images one by one */
   align-items: center;
@@ -234,7 +234,7 @@ body {
 }
 
 .image-size {
-  font-style: italic;
+  font-style: normal;
   font-size: 14px;
   margin-top: 10px;
   color: #5a4635;
@@ -246,11 +246,72 @@ body {
   display: none;
 }
 .gallery-item figcaption {
-  font-size: 11px; /* Adjust the size */
-  font-style: normal; 
-  color: #2d2323; /* Soft gray color */
-  text-align: center; /* Center aligns the text */
-  margin-top: 8px; /* Adds spacing from the image */
-  line-height: 2; /* Improves readability */
-  font-weight: normal; /* Makes text bold */
+  font-size: 12px;
+  font-style: normal;
+  color: #2d2323;
+  text-align: center;
+  margin-top: 3px;
+  line-height: 1.2;
+  font-weight: 500; /* Medium weight for better visibility */
+  font-family: 'Inter', sans-serif; /* Modern and easy to read */
+}
+
+/* Gallery Heading */
+.gallery-item h2 {
+  font-size: 1.2em;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+/* Make Heading Clickable */
+.gallery-item h2 a {
+  text-decoration: none;
+  color: #5a4635; /* Matching theme */
+  font-weight: bold;
+  transition: color 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+.gallery-item h2 a:hover {
+  color: #d2a679; /* Highlight effect */
+}
+#commentSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  margin-top: 20px;
+}
+
+#commentBox {
+  width: 50%; /* Adjust as needed */
+  height: 100px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  resize: none;
+  text-align: left;
+}
+
+button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.comments-list {
+  margin-top: 15px;
+  width: 50%;
+  text-align: left;
 }

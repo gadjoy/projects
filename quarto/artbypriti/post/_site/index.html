@@ -132,7 +132,10 @@ An Online Gallery
 </div>
 <div class="gallery">
 <figure class="gallery-item figure">
-<img class="thumbnail figure-img" src="images/art1.jpg" alt="Artwork 1" onclick="openLightbox(this)">
+<h3 class="anchored">
+<a href="./art1" onclick="openImagePage(event, 'art1')">Geometry and Divinity</a>
+</h3>
+<img class="thumbnail figure-img" src="images/art1.jpg" alt="Artwork 1">
 <p class="image-size">
 (91 cm x 61 cm)
 </p>
@@ -141,80 +144,153 @@ Geometry and divinity – both can calm and inspire. The beauty of polka dots en
 </figcaption>
 </figure>
 <figure class="gallery-item figure">
-<img class="thumbnail figure-img" src="images/art2.jpg" alt="Artwork 2" onclick="openLightbox(this)">
+<h3 class="anchored">
+<a href="./art2" onclick="openImagePage(event, 'art2')">Poppies by the Canal</a>
+</h3>
+<img class="thumbnail figure-img" src="images/art2.jpg" alt="Artwork 2">
 <p class="image-size">
 (80 cm x 50 cm)
 </p>
 <figcaption>
-While riding with my son on a bicycle to the Dutch nursery I used to see lots of vibrant Poppies growing along the canal. In this painting I wanted to contrast the red and orange hues of the flowers against slivers and shards of black on a primal white.
+While riding with my son on a bicycle to the Dutch nursery…
 </figcaption>
 </figure>
 <figure class="gallery-item figure">
-<img class="thumbnail figure-img" src="images/art3.jpg" alt="Artwork 3" onclick="openLightbox(this)">
+<h3 class="anchored">
+<a href="./art3" onclick="openImagePage(event, 'art3')">Mondrian Influence</a>
+</h3>
+<img class="thumbnail figure-img" src="images/art3.jpg" alt="Artwork 3">
 <p class="image-size">
 (100 cm x 75 cm)
 </p>
 <figcaption>
-This was done during a time when I felt like I was a willing and eager captive to the joys and charms of Mondrian’s works.
-</figcaption>
-</figure>
-<figure class="gallery-item figure">
-<img class="thumbnail figure-img" src="images/art4.jpg" alt="Artwork 4" onclick="openLightbox(this)">
-<p class="image-size">
-(70 cm x 50 cm)
-</p>
-<figcaption>
-Breaking down the fine curlicues of shapes inspired by henna art
-</figcaption>
-</figure>
-<figure class="gallery-item figure">
-<img class="thumbnail figure-img" src="images/art5.jpg" alt="Artwork 5" onclick="openLightbox(this)">
-<p class="image-size">
-(85 cm x 55 cm)
-</p>
-<figcaption>
-The contrast between the precision of geometric shapes and the organic shapes of nature has always inspired me.
+This was done during a time when I felt like I was a willing and eager captive to Mondrian’s works.
 </figcaption>
 </figure>
 </div>
-<!-- Lightbox Modal -->
-<div id="lightbox" class="lightbox">
-<p><span class="close" onclick="closeLightbox()">×</span> <img class="lightbox-content" id="expandedImg"></p>
+<div id="image-page" class="image-page" style="display: none;">
+<span class="close" onclick="closeImagePage()">×</span> <img class="expanded-image" id="fullImage">
+<div id="commentSection" class="comment-section">
+<pre><code>&lt;h3&gt;Leave a Comment&lt;/h3&gt;
+&lt;textarea id="commentBox" placeholder="Write your comment..."&gt;&lt;/textarea&gt;
+&lt;button onclick="submitComment()"&gt;Submit&lt;/button&gt;
+&lt;div id="commentsList" class="comments-list"&gt;&lt;/div&gt;</code></pre>
+</div>
 </div>
 <script>
-let isZoomed = false;
-
-function openLightbox(imgElement) {
-    var lightbox = document.getElementById("lightbox");
-    var expandedImg = document.getElementById("expandedImg");
-
-    expandedImg.src = imgElement.src;
-    expandedImg.style.transform = "scale(1)"; // Reset zoom on open
-    lightbox.style.display = "flex";
-    isZoomed = false;
+function openImagePage(event, imageId) {
+    event.preventDefault();
+    history.pushState({ page: imageId }, "", "/" + imageId);
+    showImageFromURL();
 }
 
-function toggleZoom() {
-    var expandedImg = document.getElementById("expandedImg");
-    if (isZoomed) {
-        expandedImg.style.transform = "scale(1)"; // Reset size
+function showImageFromURL() {
+    let path = window.location.pathname.substring(1);
+    if (path.startsWith("art")) {
+        document.querySelector(".gallery").style.display = "none";
+        document.getElementById("image-page").style.display = "block";
+        document.getElementById("fullImage").src = `images/${path}.jpg`;
+
+        // Ensure the comment section is correctly inserted
+        let commentSection = document.getElementById("commentSection");
+        commentSection.innerHTML = `
+            <h3>Leave a Comment</h3>
+            <textarea id="commentBox" placeholder="Write your comment..."></textarea>
+            <button onclick="submitComment()">Submit</button>
+            <div id="commentsList" class="comments-list"></div>
+        `;
+        commentSection.style.display = "block";
     } else {
-        expandedImg.style.transform = "scale(1.8)"; // Slight zoom
+        showHomePage();
     }
-    isZoomed = !isZoomed;
 }
 
-/* Close Lightbox */
-function closeLightbox() {
-    document.getElementById("lightbox").style.display = "none";
+function closeImagePage() {
+    history.pushState(null, "", "/");
+    showHomePage();
 }
 
-/* Attach Click Event for Zoom */
-document.addEventListener("DOMContentLoaded", function() {
-    document.getElementById("expandedImg").addEventListener("click", toggleZoom);
+function showHomePage() {
+    let gallery = document.querySelector(".gallery");
+    gallery.style.display = "grid";  // Ensures proper arrangement
+    gallery.style.gridTemplateColumns = "repeat(auto-fit, minmax(250px, 1fr))";
+    gallery.style.gap = "20px";
+    gallery.style.justifyContent = "center";
+
+    gallery.style.visibility = "visible";
+    document.getElementById("image-page").style.display = "none";
+}
+
+// Handle browser back button
+window.addEventListener("popstate", function (event) {
+    if (event.state && event.state.page) {
+        showImageFromURL(); // Go back to the correct image page
+    } else {
+        showHomePage(); // Reset layout when returning to home page
+    }
 });
+
+function submitComment() {
+    let commentText = document.getElementById("commentBox").value;
+    if (commentText.trim() !== "") {
+        let commentList = document.getElementById("commentsList");
+        let newComment = document.createElement("p");
+        newComment.textContent = commentText;
+        commentList.appendChild(newComment);
+        document.getElementById("commentBox").value = "";
+    }
+}
+
+
 </script>
-<p><a href="./gallery.html">Explore Full Gallery →</a></p>
+<style>
+.image-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+.expanded-image {
+    max-width: 80%;
+    height: auto;
+    margin-bottom: 20px;
+}
+.comment-section {
+    margin-top: 20px;
+    width: 60%;
+    background: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    display: block;
+}
+textarea {
+    width: 100%;
+    height: 100px;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+button {
+    padding: 8px 12px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #0056b3;
+}
+.comments-list {
+    margin-top: 15px;
+    padding: 10px;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+}
+</style>
 
 
 
